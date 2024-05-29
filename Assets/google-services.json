@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "715064483574",
+    "project_id": "drawcolor-302f7",
+    "storage_bucket": "drawcolor-302f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715064483574:android:70da4912d955baffaf16d7",
+        "android_client_info": {
+          "package_name": "com.gks.colorasmr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ5zAugds3ecgEtcJWWBsWe8V5MbXmJt8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
