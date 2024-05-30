@@ -28,6 +28,10 @@ public class GridBase : MonoBehaviour
             {
                 return item;
             }
+            if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Slime)
+            {
+                return item;
+            }
 
             if (item.barrierBase != null &&  item.barrierBase.barrierType == BarrierType.Boom)
             {
@@ -40,21 +44,7 @@ public class GridBase : MonoBehaviour
         }
         return null;
     }
-    public GridBase GetNextGrid(GridBase oldGrid)
-    {
-        foreach (var item in lsGridBase)
-        {
-            if (item.barrierBase == null && item != oldGrid)
-            {
-                return item;
-            }
-            if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.ComeThrough && item != oldGrid)
-            {
-                return item;
-            }
-        }
-        return null;
-    }
+  
     public GridBase GetNextGrid(  List<int> idOlds)
     {
         foreach (var item in lsGridBase)

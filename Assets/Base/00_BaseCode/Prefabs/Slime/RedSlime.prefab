@@ -50,10 +50,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2343997275664704268}
-  barrierType: 0
+  barrierType: 3
   gridBase: {fileID: 0}
   wasTakeDame: 0
-  Hp: 2
+  Hp: 1
   Speed: 0.5
   slimeType: 0
   fSMController: {fileID: 2343997275207472802}

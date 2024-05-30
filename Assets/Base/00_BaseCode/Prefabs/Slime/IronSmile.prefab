@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4214117353387545340}
-  barrierType: 0
+  barrierType: 3
   gridBase: {fileID: 0}
   wasTakeDame: 0
   Hp: 10

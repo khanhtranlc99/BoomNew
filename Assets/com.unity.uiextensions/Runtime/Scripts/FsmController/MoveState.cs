@@ -179,7 +179,7 @@ public class MoveState : SlimeStateBase
                             data.fSMController.ChangeState(StateType.Hide);
                         });
                     }
-                    if (tempGrid.barrierBase.barrierType == BarrierType.Boom)
+                    if (tempGrid.barrierBase.barrierType == BarrierType.Boom || tempGrid.barrierBase.barrierType == BarrierType.Slime)
                     {
 
                         StartCoroutine(Helper.StartAction(delegate

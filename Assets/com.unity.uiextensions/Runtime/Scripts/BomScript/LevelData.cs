@@ -4,12 +4,20 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 public class LevelData : SerializedMonoBehaviour
 {
+    public bool isSlimeLevel;
+    public bool isTimeLevel;
+
+    [ShowIf("isSlimeLevel", true)] public Data conditionSlimes;
+    [ShowIf("isTimeLevel", true)] public DataTime conditionTime;
+
+    public int boomLimit;
     public static LevelData Instance;
     public GameObject[,] gridArray  = new GameObject[6,9];
     public GameObject[,] barrialArray = new GameObject[6, 9];
     public Transform parentTranform;
     public List<BarrierBase> lsBarrial;
     public List<GridBase> gridBasesId;
+
 
    
     public GridBase GridBase(int id)
@@ -103,4 +111,24 @@ public class LevelData : SerializedMonoBehaviour
         }
     }
     
+}
+
+[System.Serializable]
+public class Data
+{
+    public List<DataSlime> lsDataSlime;
+
+}
+
+[System.Serializable]
+public class DataSlime
+{
+    public int countSlime;
+    public SlimeType slimeType;
+}
+
+[System.Serializable]
+public class DataTime
+{
+    public float time;
 }

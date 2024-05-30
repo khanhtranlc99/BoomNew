@@ -27,7 +27,7 @@ public class DieState : SlimeStateBase
     public void HandleActionDie()
     {
         data.gridBase.barrierBase = null;
-        Destroy(this.gameObject);
+        Destroy(data.gameObject);
     }
 
 
