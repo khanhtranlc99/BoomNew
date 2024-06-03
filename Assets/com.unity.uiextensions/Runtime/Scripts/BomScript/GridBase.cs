@@ -62,7 +62,28 @@ public class GridBase : MonoBehaviour
         }
         return null;
     }
-  
+    public GridBase GetNextGrid(bool slimeFind)
+    {
+        foreach (var item in lsGridBase)
+        {
+            if (item.barrierBase == null)
+            {
+                return item;
+            }
+           
+
+            if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Boom)
+            {
+                return item;
+            }
+            if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.ComeThrough)
+            {
+                return item;
+            }
+        }
+        return null;
+    }
+
     public GridBase GetNextGrid(  List<int> idOlds)
     {
         foreach (var item in lsGridBase)
