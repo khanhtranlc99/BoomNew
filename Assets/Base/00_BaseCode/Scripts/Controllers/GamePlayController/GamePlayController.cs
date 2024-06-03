@@ -16,9 +16,10 @@ public enum StateGame
 
 public class GamePlayController : Singleton<GamePlayController>
 {
+    public StateGame stateGame;
     public PlayerContain playerContain;
     public GameScene gameScene;
-
+    
  
 
     protected override void OnAwake()
@@ -31,8 +32,10 @@ public class GamePlayController : Singleton<GamePlayController>
 
     public void Init()
     {
+     
         playerContain.Init();
-        gameScene.Init();
+        gameScene.Init(playerContain.levelData);
+        stateGame = StateGame.Playing;
         //GameController.Instance.AnalyticsController.LoadingComplete();
         //GameController.Instance.admobAds.canShowOpenAppAds = true;
         //if (Application.internetReachability != NetworkReachability.NotReachable)
@@ -40,7 +43,17 @@ public class GamePlayController : Singleton<GamePlayController>
         //    GameController.Instance.admobAds.ShowOpenAppAdsInGame();
         //}
     }
-
+    public void HandleCheckLose()
+    {
+        if (stateGame == StateGame.Playing)
+        {
+            if (playerContain.boomInputController.countBoom <= 0 && gameScene.targetController.isLose)
+            {
+                stateGame = StateGame.Lose;
+                LoseBox.Setup().Show();
+            }
+        }
+    }
   
 
 }

@@ -18,7 +18,7 @@ public class HideState : SlimeStateBase
     {
       
         data.HandleHide(false);
-        data.gridBase.barrierBase.gameObject.GetComponent<Bloomsom>().slimeBase = data;
+        data.gridBase.barrierBase.gameObject.GetComponent<Bloomsom>().slimeBase.Add( data);
         data.gridBase.barrierBase.gameObject.GetComponent<Bloomsom>().HandleSlimeHide();
  
     }
@@ -29,6 +29,10 @@ public class HideState : SlimeStateBase
         {
             Debug.LogError("UpdateState");
             data.fSMController.ChangeState(StateType.Move);
+        }
+        if (data.Hp <= 0)
+        {
+            data.fSMController.ChangeState(StateType.Die);
         }
     }
 }

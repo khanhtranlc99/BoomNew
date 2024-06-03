@@ -15,7 +15,7 @@ public static class StringHelper
     public const string CURRENT_LEVEL = "CURRENT_LEVEL";
     public const string CURRENT_LEVEL_PLAY = "CURRENT_LEVEL_PLAY";
     public const string PATH_CONFIG_LEVEL = "Levels/LevelData_";
-    public const string PATH_CONFIG_LEVEL_TEST = "LevelTest/Level_{0}";
+    public const string PATH_CONFIG_LEVEL_TEST = "Levels/Level_{0}";
     public const string PATH_CONFIG_LEVEL_SPECIAL = "SpecialLevel/Level_{0}";
     public const string LEVEL_DEMO_IMAGE_WIN = "Demo/lv";
     public const string LEVEL_DEMO_IMAGE_NOT_WIN = "Demo/bw_lv";
@@ -61,6 +61,11 @@ public static class StringHelper
 
     public const string NUMBER_REWARD_SHOWED = "number_reward_showed";
     public const string NUMBER_INTER_SHOWED = "number_inter_showed";
+
+    public const string TNT_BOOSTER = "tnt_booster";
+    public const string ROCKET_BOOSTER = "rocket_booster";
+    public const string FREE_BOOSTER = "free_booster";
+    public const string ATOM_BOOSTER = "atom_booster";
 
 }
 

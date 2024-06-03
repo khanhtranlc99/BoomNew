@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Sirenix.OdinInspector;
 public class GridBase : MonoBehaviour
 {
     public int id;
@@ -10,8 +10,11 @@ public class GridBase : MonoBehaviour
     public BarrierBase barrierBase;
     public List<GridBase> lsGridBase;
     public Vector2 vectorIJ;
+    public SpriteRenderer spriteRenderer;
+    public Sprite freeGrid;
+    public Sprite normalGrid;
+    public bool isFree;
 
- 
 
     //private void OnTriggerEnter2D(Collider2D collision)
     //{
@@ -20,6 +23,21 @@ public class GridBase : MonoBehaviour
     //        lsGridBase.Add(collision.gameObject.GetComponent<GridBase>());
     //    }
     //}
+    public GridBase GetNextGridForGhostSlime()
+    {     
+        return lsGridBase[Random.RandomRange(0, lsGridBase.Count)];
+    }
+    public GridBase GetNextGridForGhostSlime(List<int> idOlds)
+    {
+        foreach (var item in lsGridBase)
+        {
+            if (  !idOlds.Contains(item.id))
+            {
+                return item;
+            }          
+        }
+        return null;
+    }
     public GridBase GetNextGrid()
     {
         foreach(var item in lsGridBase)
@@ -105,5 +123,23 @@ public class GridBase : MonoBehaviour
             lsGridBase.Add(item);
         }
 
+    }
+
+    public void HandleFreeGrid()
+    {
+        isFree = true;
+        spriteRenderer.sprite = freeGrid;
+    }
+
+    [Button]
+    private void HandleTools()
+    {
+        foreach(var item in lsGridBase)
+        {
+            if(item == null)
+            {
+                lsGridBase.Remove(item);
+            }
+        }
     }
 }

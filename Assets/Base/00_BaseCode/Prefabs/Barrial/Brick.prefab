@@ -96,9 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8433fd0654a000f4a8d25f03528848b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 2
-  wasTakeDame: 0
   spriteRenderer: {fileID: 4584222608937964058}
+  barrierType: 0
+  gridBase: {fileID: 0}
+  wasTakeDame: 0
+  Hp: 2
 --- !u!61 &4584222608937964053
 BoxCollider2D:
   m_ObjectHideFlags: 0

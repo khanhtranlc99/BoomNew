@@ -30,6 +30,7 @@ public class MoveState : SlimeStateBase
             data.fSMController.ChangeState(StateType.Die);
         }
     }
+   
     public override void EndState()
     {
         this.transform.DOKill();
@@ -73,33 +74,83 @@ public class MoveState : SlimeStateBase
                 }
                 else
                 {
-                    
-                    nextGrid = tempGrid;
-                    if (nextGrid.transform.position.x < this.transform.position.x)
-                    {
-                        this.transform.localScale = new Vector3(-1, 1, 1);
-                    }
-                    if (nextGrid.transform.position.x > this.transform.position.x)
-                    {
-                        this.transform.localScale = new Vector3(1, 1, 1);
-                    }
-                    data.spriteRenderer.DOKill();
-                    data.spriteRenderer.DOFade(0, data.Speed);
-                    if (oldGrid.barrierBase == data)
-                    {
-                        oldGrid.barrierBase = null;
-                    }
-                    oldGrid = nextGrid;
-                    //oldGrid.barrierBase = data;
-                    data.gridBase = oldGrid;
-                    idOld.Add(oldGrid.id);
-
-                    this.transform.DOMove(nextGrid.transform.position, data.Speed).OnComplete(delegate
+                    Debug.LogError("???");
+                    if (tempGrid.barrierBase.barrierType == BarrierType.ComeThrough)
                     {
 
-                        //Debug.LogError("ChangeState(StateType.Hide)");
-                        data.fSMController.ChangeState(StateType.Hide);
-                    });
+                        nextGrid = tempGrid;
+                        if (nextGrid.transform.position.x < this.transform.position.x)
+                        {
+                            this.transform.localScale = new Vector3(-1, 1, 1);
+                        }
+                        if (nextGrid.transform.position.x > this.transform.position.x)
+                        {
+                            this.transform.localScale = new Vector3(1, 1, 1);
+                        }
+                        data.spriteRenderer.DOKill();
+                        data.spriteRenderer.DOFade(0, data.Speed);
+                        if (oldGrid.barrierBase == data)
+                        {
+                            oldGrid.barrierBase = null;
+                        }
+
+                        oldGrid = nextGrid;
+                        //oldGrid.barrierBase = data;
+                        data.gridBase = oldGrid;
+                        idOld.Add(oldGrid.id);
+
+                        this.transform.DOMove(nextGrid.transform.position, data.Speed).OnComplete(delegate
+                        {
+
+                            //Debug.LogError("ChangeState(StateType.Hide)");
+                            data.fSMController.ChangeState(StateType.Hide);
+                        });
+                    }
+                    if (tempGrid.barrierBase.barrierType == BarrierType.Boom || tempGrid.barrierBase.barrierType == BarrierType.Slime)
+                    {
+
+                        StartCoroutine(Helper.StartAction(delegate
+                        {
+
+                            //Debug.LogError("tempGrid.barrierBase == null");
+                            nextGrid = tempGrid;
+                            if (nextGrid.transform.position.x < this.transform.position.x)
+                            {
+                                this.transform.localScale = new Vector3(-1, 1, 1);
+                            }
+                            if (nextGrid.transform.position.x > this.transform.position.x)
+                            {
+                                this.transform.localScale = new Vector3(1, 1, 1);
+                            }
+
+                            if (oldGrid.barrierBase == data)
+                            {
+                                oldGrid.barrierBase = null;
+                            }
+                            oldGrid = nextGrid;
+                            oldGrid.barrierBase = data;
+                            idOld.Add(oldGrid.id);
+
+
+
+                            this.transform.DOMove(nextGrid.transform.position, data.Speed).OnComplete(delegate
+                            {
+
+
+                                HandleMove();
+                            });
+
+
+                        }, () => tempGrid.barrierBase == null));
+
+
+                        bool isWait()
+                        {
+                            
+                            return tempGrid.barrierBase == null;
+                        }
+                    }
+                 
                 }
             }
         }
@@ -113,7 +164,7 @@ public class MoveState : SlimeStateBase
             if (idOld.Count <= 0)
             {
                 tempGrid = oldGrid.GetNextGrid();
-                Debug.LogError("GetNextGrid(111)");
+                //Debug.LogError("GetNextGrid(111)");
 
             }
             if (tempGrid != null)
@@ -121,7 +172,7 @@ public class MoveState : SlimeStateBase
                
                 if (tempGrid.barrierBase == null)
                 {
-                    Debug.LogError("tempGrid.barrierBase == null");
+                    //Debug.LogError("tempGrid.barrierBase == null");
                     nextGrid = tempGrid;
                     if(nextGrid.transform.position.x < this.transform.position.x)
                     {
@@ -139,7 +190,7 @@ public class MoveState : SlimeStateBase
                     oldGrid = nextGrid;
                     oldGrid.barrierBase = data;
                     idOld.Add(oldGrid.id);
-                  
+                    
                     this.transform.DOMove(nextGrid.transform.position, data.Speed).OnComplete(delegate {
 
                    
@@ -185,7 +236,7 @@ public class MoveState : SlimeStateBase
                         StartCoroutine(Helper.StartAction(delegate
                         {
 
-                            Debug.LogError("tempGrid.barrierBase == null");
+                            //Debug.LogError("tempGrid.barrierBase == null");
                             nextGrid = tempGrid;
                             if (nextGrid.transform.position.x < this.transform.position.x)
                             {
@@ -227,7 +278,7 @@ public class MoveState : SlimeStateBase
             {
 
              
-                Debug.LogError("tempGrid == null");
+                //Debug.LogError("tempGrid == null");
                 try
                 {
                     idOld.Remove(idOld[idOld.Count - 2]);
@@ -239,7 +290,7 @@ public class MoveState : SlimeStateBase
                 coutLoop += 1;
                 if (coutLoop > 3)
                 {
-                    Debug.LogError("Clear");
+                    //Debug.LogError("Clear");
                     idOld.Clear();
                     coutLoop = 0;
                 }
@@ -247,10 +298,12 @@ public class MoveState : SlimeStateBase
 
             }
         }
-     
+    }
+    public void HandleClear()
+    {
 
-
-
+      
+ 
     }
 
 }

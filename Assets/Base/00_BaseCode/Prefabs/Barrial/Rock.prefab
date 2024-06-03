@@ -122,6 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3e0caa973aaa547891f0da1bc33e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 3
-  wasTakeDame: 0
   spriteRenderer: {fileID: 5673685862883326826}
+  barrierType: 0
+  gridBase: {fileID: 0}
+  wasTakeDame: 0
+  Hp: 3

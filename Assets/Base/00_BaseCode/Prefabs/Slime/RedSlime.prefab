@@ -54,7 +54,7 @@ MonoBehaviour:
   gridBase: {fileID: 0}
   wasTakeDame: 0
   Hp: 1
-  Speed: 0.5
+  Speed: 1
   slimeType: 0
   fSMController: {fileID: 2343997275207472802}
   animator: {fileID: 2343997275664704309}
@@ -236,6 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 4
   data: {fileID: 0}
+  vfxDie: {fileID: 113050520052486705, guid: 618686b248677d64399462fabc842d3b, type: 3}
 --- !u!95 &2343997275664704309
 Animator:
   serializedVersion: 3

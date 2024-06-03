@@ -12,39 +12,66 @@ public class LevelData : SerializedMonoBehaviour
 
     public int boomLimit;
     public static LevelData Instance;
-    public GameObject[,] gridArray  = new GameObject[6,9];
+    public GameObject[,] gridArray = new GameObject[6, 9];
     public GameObject[,] barrialArray = new GameObject[6, 9];
     public Transform parentTranform;
-    public List<BarrierBase> lsBarrial;
+    public List<BarrierBase> lsSmiles;
     public List<GridBase> gridBasesId;
 
 
-   
+
     public GridBase GridBase(int id)
     {
         for (int i = 0; i < gridBasesId.Count; i++)
         {
-            if(gridBasesId[i].id == id)
+            if (gridBasesId[i].id == id)
             {
                 return gridBasesId[i];
             }
         }
         return null;
     }
-    
-    public void Awake()
+    public BarrierBase GetRandomSlime
     {
-        Instance = this;
+        get
+        {
+            var temp = new List<BarrierBase>();
+            foreach (var item in lsSmiles)
+            {
+                if (item != null)
+                {
+                    temp.Add(item);
+                }
+            }
+            return temp[Random.Range(0, temp.Count)];
+        }   
     }
+
 
 
     public void Init()
     {
-        foreach(var item in lsBarrial)
+        foreach (var item in lsSmiles)
         {
             item.Init();
         }
     }
+    public bool isAllSlimeDie
+    {
+        get
+        {
+            foreach (var item in lsSmiles)
+            {
+                if (item != null)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+  
+    
 
     [Button]
     public void SpawnBarrial()
@@ -62,6 +89,17 @@ public class LevelData : SerializedMonoBehaviour
                 }
 
             }
+        }
+    }
+    public void HandleFreezeBooster()
+    {
+        foreach (var item in lsSmiles)
+        {
+            if(item != null)
+            {
+                item.gameObject.GetComponent<SlimeBase>().HandlePause();
+            }
+          
         }
     }
 
@@ -123,8 +161,9 @@ public class Data
 [System.Serializable]
 public class DataSlime
 {
-    public int countSlime;
     public SlimeType slimeType;
+    public int countSlime;
+
 }
 
 [System.Serializable]

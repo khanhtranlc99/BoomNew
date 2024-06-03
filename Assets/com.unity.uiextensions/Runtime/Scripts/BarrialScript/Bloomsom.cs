@@ -6,7 +6,7 @@ using DG.Tweening;
 public class Bloomsom : BarrierBase
 {
     int random = 0;
-    public SlimeBase slimeBase;
+    public List< SlimeBase> slimeBase = new List<SlimeBase>();
     public override void Init()
     {
 
@@ -47,14 +47,14 @@ public class Bloomsom : BarrierBase
         barrierType = BarrierType.Block;
         transform.DOShakePosition(1, 0.1f, 1, 1).SetDelay(0.5f).OnComplete(delegate
         {
-            if(random == 1)
-            {
+            //if(random == 1)
+            //{
                 HandleSlimeOut();
-            }
-            else
-            {
-                HandleSlimeHide();
-            }
+            //}
+            //else
+            //{
+            //    HandleSlimeHide();
+            //}
           
         });
      
@@ -63,12 +63,20 @@ public class Bloomsom : BarrierBase
     {
       
         barrierType = BarrierType.ComeThrough;
-        if(slimeBase != null)
+        for(int i = slimeBase.Count - 1; i >=  0; i --)
         {
-            slimeBase.fSMController.ChangeState(StateType.Move);
-            Debug.LogError("StateType.Move");
-            slimeBase = null;
+            if (slimeBase[i] != null)
+            {
+                slimeBase[i].fSMController.ChangeState(StateType.Move);
+                //Debug.LogError("StateType.Move");
+                slimeBase.Remove(slimeBase[i]);
+            }
         }
+        foreach (var item in slimeBase)
+        {
+           
+        }
+   
        
     }
    

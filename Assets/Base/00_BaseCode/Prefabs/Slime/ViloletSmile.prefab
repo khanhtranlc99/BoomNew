@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 4
   data: {fileID: 0}
+  vfxDie: {fileID: 5846197982006230550, guid: 6d80326312a61ca499b2cf433ae03267, type: 3}
 --- !u!95 &659896964945188854
 Animator:
   serializedVersion: 3
@@ -172,7 +173,7 @@ MonoBehaviour:
   wasTakeDame: 0
   Hp: 10
   Speed: 0.5
-  slimeType: 0
+  slimeType: 3
   fSMController: {fileID: 659896965542921630}
   animator: {fileID: 659896964945188854}
   collider2D: {fileID: 659896965542921602}

@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DG.Tweening;
 public class DieState : SlimeStateBase
 {
+    public GameObject vfxDie;
+    SlimeTarget slimeTarget;
     public override void EndState()
     {
 
@@ -26,6 +28,17 @@ public class DieState : SlimeStateBase
 
     public void HandleActionDie()
     {
+        slimeTarget = GamePlayController.Instance.gameScene.targetController.GetSlimeTarget(data.slimeType);
+        var temp = SimplePool2.Spawn(vfxDie);
+        temp.transform.parent = GamePlayController.Instance.gameScene.canvas;
+        temp.transform.position = this.transform.position;
+        temp.transform.localScale = new Vector3(1, 1, 1);   
+        temp.transform.DOMove(slimeTarget.icon.position, 1).SetDelay(0.1f).SetEase(Ease.OutBack).OnComplete(delegate {
+
+            slimeTarget.HandleSubtraction();
+            SimplePool2.Despawn(temp.gameObject);
+        });
+
         data.gridBase.barrierBase = null;
         Destroy(data.gameObject);
     }

@@ -10,14 +10,37 @@ using UnityEngine.Events;
 
 public class GameScene : BaseScene
 {
+    public TargetController targetController;
+    public Text tvLevel;
+    public Button settinBtn;
+    public Transform canvas;
+    public CanvasGroup canvasGroupBot;
+    public GameObject botObj;
    
-    public void Init()
+
+
+    public void Init(LevelData levelData)
     {
-      
+        targetController.Init(levelData);
+    }
+
+    public void HideBotUI( Action callBack)
+    {
+        canvasGroupBot.DOFade(0, 0.5f).OnComplete(delegate {
+            callBack?.Invoke();
+            botObj.SetActive(false);
+        });
+    }
+    public void ShowBotUI(Action callBack)
+    {
+        canvasGroupBot.DOFade(1, 0.5f).OnComplete(delegate {
+            callBack?.Invoke();
+            botObj.SetActive(true);
+        });
     }
 
     public override void OnEscapeWhenStackBoxEmpty()
     {
-        throw new NotImplementedException();
+         
     }
 }

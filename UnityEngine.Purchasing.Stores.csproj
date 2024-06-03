@@ -130,9 +130,9 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Runtime\Stores\AppleAppStore\AppleProductMetadata.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Runtime\Stores\Android\GooglePlay\AAR\Models\GoogleBillingStrings.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Runtime\Stores\Android\GooglePlay\AAR\Interfaces\IGooglePlayStoreService.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Runtime\Stores\Android\GooglePlay\AAR\Interfaces\ISkuDetailsQueryResponse.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Runtime\Stores\BaseStore\INativeStoreProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Runtime\Stores\Android\GooglePlay\AAR\Interfaces\IGoogleBillingClient.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Runtime\Stores\Android\GooglePlay\AAR\Interfaces\ISkuDetailsQueryResponse.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Runtime\Stores\Android\GooglePlay\Interfaces\IGooglePlayStoreExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Runtime\Stores\Android\AndroidStore.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Runtime\Stores\Android\GooglePlay\AAR\Interfaces\ISkuDetailsConverter.cs" />

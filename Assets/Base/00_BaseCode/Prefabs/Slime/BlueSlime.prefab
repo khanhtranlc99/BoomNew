@@ -118,6 +118,7 @@ MonoBehaviour:
   state: 4
   data: {fileID: 0}
   redSlime: {fileID: 2343997275207472829, guid: 7fd97e77370cde04d8840a81402737a2, type: 3}
+  vfxDie: {fileID: 9003868237489677301, guid: 42722d4382cb1724b9c0b73b694d1451, type: 3}
 --- !u!1 &7070618898779168003
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +174,7 @@ MonoBehaviour:
   wasTakeDame: 0
   Hp: 2
   Speed: 0.5
-  slimeType: 0
+  slimeType: 1
   fSMController: {fileID: 7070618898779168005}
   animator: {fileID: 7070618898288519338}
   collider2D: {fileID: 6169325274295918187}

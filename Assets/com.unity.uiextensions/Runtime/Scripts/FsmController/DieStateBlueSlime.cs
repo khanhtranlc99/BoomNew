@@ -5,6 +5,8 @@ using DG.Tweening;
 public class DieStateBlueSlime : SlimeStateBase
 {
     public SlimeBase redSlime;
+    SlimeTarget slimeTarget;
+    public GameObject vfxDie;
     public override void EndState()
     {
   
@@ -27,7 +29,7 @@ public class DieStateBlueSlime : SlimeStateBase
     public void HandleActionDie()
     {
 
-      
+       
         var temp = new List<GridBase>();
         foreach(var item in data.gridBase.lsGridBase)
         {
@@ -48,6 +50,8 @@ public class DieStateBlueSlime : SlimeStateBase
             red_2.gridBase = temp[1];
             red_2.transform.position = this.transform.position;
             red_2.transform.DOJump(temp[1].transform.position, 0.2f, 1, 0.3f).OnComplete(delegate { red_2.Init();  });
+            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_1);
+            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_2);
         }
         if (temp.Count == 1)
         {
@@ -61,6 +65,8 @@ public class DieStateBlueSlime : SlimeStateBase
             red_2.gridBase = temp[0];
             red_2.transform.position = this.transform.position;
             red_2.transform.DOJump(temp[0].transform.position, 0.2f, 1, 0.3f).OnComplete(delegate { red_2.Init(); });
+            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_1);
+            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_2);
         }
         if (temp.Count == 0)
         {
@@ -74,10 +80,20 @@ public class DieStateBlueSlime : SlimeStateBase
             red_2.gridBase = data.gridBase;
             red_2.transform.position = this.transform.position;
             red_2.transform.DOJump(data.gridBase.transform.position, 0.2f, 1, 0.3f).OnComplete(delegate { red_2.Init(); });
+            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_1);
+            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_2);
         }
 
+        slimeTarget = GamePlayController.Instance.gameScene.targetController.GetSlimeTarget(data.slimeType);
+        var tempvfx = SimplePool2.Spawn(vfxDie);
+        tempvfx.transform.parent = GamePlayController.Instance.gameScene.canvas;
+        tempvfx.transform.position = this.transform.position;
+        tempvfx.transform.localScale = new Vector3(1, 1, 1);
+        tempvfx.transform.DOMove(slimeTarget.icon.position, 1).SetDelay(0.1f).SetEase(Ease.OutBack).OnComplete(delegate {
 
-
+            slimeTarget.HandleSubtraction();
+            SimplePool2.Despawn(tempvfx.gameObject);
+        });
         Destroy(data.gameObject);
     }
 

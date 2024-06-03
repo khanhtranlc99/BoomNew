@@ -186,6 +186,61 @@ public class UseProfile : MonoBehaviour
     }
 
 
+    public static int TNT_Booster
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(StringHelper.TNT_BOOSTER, 5);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.TNT_BOOSTER, value);
+            PlayerPrefs.Save();
+            EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.CHANGE_TNT_BOOSTER);
+        }
+    }
+
+    public static int Roket_Booster
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(StringHelper.ROCKET_BOOSTER, 10);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.ROCKET_BOOSTER, value);
+            PlayerPrefs.Save();
+            EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.CHANGE_ROCKET_BOOSTER);
+        }
+    }
+    public static int Freeze_Booster
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(StringHelper.FREE_BOOSTER, 10);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.FREE_BOOSTER, value);
+            PlayerPrefs.Save();
+            EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.CHANGE_FREEZE_BOOSTER);
+
+        }
+    }
+    public static int Atom_Booster
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(StringHelper.ATOM_BOOSTER, 10);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.ATOM_BOOSTER, value);
+            PlayerPrefs.Save();
+            EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.CHANGE_ATOM_BOOSTER);
+        }
+    }
+
     public static int NumberOfDisplayedInterstitialD0_D1
     {
         get

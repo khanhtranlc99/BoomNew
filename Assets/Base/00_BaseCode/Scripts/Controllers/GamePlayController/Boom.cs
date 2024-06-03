@@ -39,10 +39,10 @@ public class Boom : BarrierBase
 
             // Tạo phần tử phía phải
             Vector3 rightPosition = centerPosition + new Vector3(spacing, 0, 0) * i;
-            SimplePool2.Spawn(flame, rightPosition, Quaternion.identity);
-
-        
+            SimplePool2.Spawn(flame, rightPosition, Quaternion.identity);   
         }
+
+
     }
 
 

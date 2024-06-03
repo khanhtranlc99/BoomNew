@@ -124,8 +124,8 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\Analytics\PackageKey\IAnalyticsPackageKeyHolder.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\Analytics\Helpers\GameServices\GameServicesEventSenderHelpers.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\ServiceProjectSettings\PurchasingServiceIdentifier.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\Analytics\Signatures\SignatureDefinitions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\AppleXMLProductCatalogExporter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\Analytics\Signatures\SignatureDefinitions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\Common\Entity\IapMenuConsts.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\ServiceProjectSettings\UI\Views\IPurchasingSettingsUIBlock.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\Obfuscation\Service\ObfuscationGenerator.cs" />

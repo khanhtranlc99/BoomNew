@@ -27,7 +27,7 @@ public class StartLoading : MonoBehaviour
         yield return new WaitForSeconds(1);
         progressBar.fillAmount = 0f;
         
-        var _asyncOperation = SceneManager.LoadSceneAsync("GamePlay", LoadSceneMode.Single);
+        var _asyncOperation = SceneManager.LoadSceneAsync("HomeScene", LoadSceneMode.Single);
        
         while (!_asyncOperation.isDone)
         {

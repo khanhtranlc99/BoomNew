@@ -32,15 +32,20 @@ public class SlimeBase : BarrierBase
             wasTakeDame = true;
             Hp -= 1;
             StartCoroutine(HandleCountDown());
-            spriteRenderer.DOFade(0.5f, 0.5f).OnComplete(delegate {
-                spriteRenderer.DOFade(1, 0.5f).OnComplete(delegate {
-                    spriteRenderer.DOFade(0.5f, 0.3f).OnComplete(delegate {
-                        spriteRenderer.DOFade(1, 0.3f).OnComplete(delegate {
-                    
+            if (fSMController.currentState.state != StateType.Hide)
+            {
+           
+                spriteRenderer.DOFade(0.5f, 0.5f).OnComplete(delegate {
+                    spriteRenderer.DOFade(1, 0.5f).OnComplete(delegate {
+                        spriteRenderer.DOFade(0.5f, 0.3f).OnComplete(delegate {
+                            spriteRenderer.DOFade(1, 0.3f).OnComplete(delegate {
+
+                            });
                         });
                     });
-                });                           
-            });
+                });
+            }
+         
            
            
         }
@@ -62,5 +67,17 @@ public class SlimeBase : BarrierBase
         yield return new WaitForSeconds(1.6f);
         wasTakeDame = false;
     }
+    public void HandlePause()
+    {
+        this.transform.DOPause();
+        StartCoroutine(HandleFree());
+    }
+    public IEnumerator HandleFree()
+    {
+        yield return new WaitForSeconds(5);
+        this.transform.DOPlay();
+    }
+
+
 
 }

@@ -12,6 +12,9 @@ public class Flame : MonoBehaviour
     public IEnumerator Stop()
     {
         yield return new WaitForSeconds(0.4f);
+      
+            GamePlayController.Instance.HandleCheckLose();
+    
         SimplePool2.Despawn(this.gameObject);
     }
 
