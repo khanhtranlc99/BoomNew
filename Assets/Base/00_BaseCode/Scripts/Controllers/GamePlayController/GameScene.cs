@@ -22,6 +22,7 @@ public class GameScene : BaseScene
     public void Init(LevelData levelData)
     {
         targetController.Init(levelData);
+        settinBtn.onClick.AddListener(delegate { SettingBox.Setup().Show(); });
     }
 
     public void HideBotUI( Action callBack)

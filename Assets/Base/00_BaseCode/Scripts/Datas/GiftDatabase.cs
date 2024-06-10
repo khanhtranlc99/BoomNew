@@ -50,17 +50,37 @@ public class GiftDatabase : SerializedScriptableObject
                 GameController.Instance.useProfile.IsRemoveAds = true;
            
                 break;
-            case GiftType.DestroyScewBooster:
-                UseProfile.DestroyScewBooster += amount;
-             
-            
-                break;
-            case GiftType.DrillBooster:
-                UseProfile.DrillBooster += amount;
-             
-                break;
-         
+            case GiftType.TNT_Booster:
+                UseProfile.TNT_Booster += amount;
+                EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.CHANGE_ATOM_BOOSTER);
 
+                break;
+            case GiftType.Rocket_Booster:
+                UseProfile.Roket_Booster += amount;
+                EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.CHANGE_ROCKET_BOOSTER);
+                break;
+            case GiftType.Freeze_Booster:
+                UseProfile.Freeze_Booster += amount;
+                EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.CHANGE_FREEZE_BOOSTER);
+                break;
+
+            case GiftType.Atom_Booster:
+                UseProfile.Atom_Booster += amount;
+                EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.CHANGE_ATOM_BOOSTER);
+                break;
+
+            case GiftType.FlameUp_Item:
+                UseProfile.FlameUp_Item += amount;
+                EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.FLAMEUP_ITEM);
+                break;
+            case GiftType.FastBoom_Item:
+                UseProfile.FastBoom_Item += amount;
+                EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.FASTBOOM_ITEM);
+                break;
+            case GiftType.TimeBoom_Item:
+                UseProfile.TimeBoom_Item += amount;
+                EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.TIMEBOOM_ITEM);
+                break;
 
         }
     }
@@ -91,9 +111,15 @@ public enum GiftType
     RemoveAds = 1,
     Coin = 2,
     Heart = 3,
-    DestroyScewBooster = 4,
-    DrillBooster = 5,
-    ShuffleBooster = 6
+    TNT_Booster = 4,
+    Rocket_Booster = 5,
+    Freeze_Booster = 6,
+    Atom_Booster = 7,
+    FlameUp_Item = 8,
+    FastBoom_Item = 9,
+    TimeBoom_Item = 10,
+    Boom_Normal = 11,
+
 
 
 

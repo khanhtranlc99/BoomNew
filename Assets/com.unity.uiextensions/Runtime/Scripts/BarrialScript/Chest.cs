@@ -20,7 +20,11 @@ public class Chest : BarrierBase
             {
                 gridBase.barrierBase = null;
                 transform.DOShakePosition(0.3f, 0.1f, 1, 1).OnComplete(delegate {
-                    spriteRenderer.DOFade(0, 0.3f).OnComplete(delegate { Destroy(this.gameObject); });
+                    spriteRenderer.DOFade(0, 0.3f).OnComplete(delegate { 
+                        
+                        
+                        
+                        Destroy(this.gameObject); });
                 });
 
             }

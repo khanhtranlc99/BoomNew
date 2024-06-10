@@ -9,7 +9,7 @@ public class Bloomsom : BarrierBase
     public List< SlimeBase> slimeBase = new List<SlimeBase>();
     public override void Init()
     {
-
+        EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.FREEZE, HandlePause);
     }
     public override void TakeDame()
     {
@@ -72,13 +72,24 @@ public class Bloomsom : BarrierBase
                 slimeBase.Remove(slimeBase[i]);
             }
         }
-        foreach (var item in slimeBase)
-        {
-           
-        }
+     
    
        
     }
-   
+    public void HandlePause(object param)
+    {
+        this.transform.DOPause();
+        StartCoroutine(HandleFree());
+    }
+    public IEnumerator HandleFree()
+    {
+        yield return new WaitForSeconds(5);
+        this.transform.DOPlay();
+    }
+    public void OnDestroy()
+    {
+        this.transform.DOKill();
+      EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.FREEZE, HandlePause);
+    }
 }
 

@@ -86,13 +86,23 @@ public class TNT_Booster : MonoBehaviour
 
     public void HandleTNT_Booster()
     {
-        GamePlayController.Instance.gameScene.HideBotUI(delegate {
-            panelTut.SetActive(true);
-            canvasGroup.DOFade(1,0.3f);
-        });
-        UseProfile.TNT_Booster -= 1;
-        GamePlayController.Instance.playerContain.boomInputController.enabled = false;
-        wasUseTNT_Booster = true;
+        if (UseProfile.TNT_Booster >= 1)
+        {
+            GamePlayController.Instance.gameScene.HideBotUI(delegate {
+                panelTut.SetActive(true);
+                canvasGroup.DOFade(1, 0.3f);
+            });
+            UseProfile.TNT_Booster -= 1;
+            GamePlayController.Instance.playerContain.boomInputController.enabled = false;
+            wasUseTNT_Booster = true;
+
+        }
+        else
+        {
+            SuggetBox.Setup(GiftType.TNT_Booster).Show();
+        }
+
+
     }
 
 

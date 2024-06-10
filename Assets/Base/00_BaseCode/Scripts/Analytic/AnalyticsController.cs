@@ -522,10 +522,10 @@ public enum ActionWatchVideo
     Daily = 7,
     UnlockPic = 9,
     RewardEndGame = 10,
-    DrillBooster,
-    DestroyScewBooster,
-    HoldAds,
-    Reload
+    TNT_Booster =11,
+    Rocket_Booster =12,
+    Freeze_Booster = 13,
+    Atom_Booste = 14
 }
 
 public enum ActionShowInter

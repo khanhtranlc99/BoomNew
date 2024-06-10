@@ -100,6 +100,13 @@ public class GridBase : MonoBehaviour
         return null;
     }
 
+    public GridBase GetRandomGrid
+    {
+        get
+        {
+            return lsGridBase[Random.RandomRange(0, lsGridBase.Count)];
+        }
+    }
     public void Save()
     {
         var lsid = new List<int>();
@@ -150,6 +157,11 @@ public class GridBase : MonoBehaviour
     {
         isFree = true;
         spriteRenderer.sprite = freeGrid;
+    }
+    public void HandleUnFreeze()
+    {
+        isFree = false;
+        spriteRenderer.sprite = normalGrid;
     }
 
     [Button]

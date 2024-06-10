@@ -6,10 +6,12 @@ public class Boom : BarrierBase
 {
     public Flame flame;
     public float spacing = 0;
+    
+
 
     public void HandleExplosion()
     {
-        SpawnCross(1);
+        SpawnCross(UseProfile.FlameUp_Item);
         gridBase.barrierBase = null;
         SimplePool2.Despawn(this.gameObject);
     

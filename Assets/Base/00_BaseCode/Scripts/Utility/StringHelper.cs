@@ -67,6 +67,10 @@ public static class StringHelper
     public const string FREE_BOOSTER = "free_booster";
     public const string ATOM_BOOSTER = "atom_booster";
 
+    public const string FLAMEUP_ITEM = "flameup_item";
+    public const string FASTBOOM_ITEM = "fastboom_item";
+    public const string TIMEBOOM_ITEM = "timeboom_item";
+
 }
 
 public class PathPrefabs

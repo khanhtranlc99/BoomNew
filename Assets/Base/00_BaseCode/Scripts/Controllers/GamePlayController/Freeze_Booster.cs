@@ -80,9 +80,15 @@ public class Freeze_Booster : MonoBehaviour
 
     public void HandleFreezeBooster()
     {
-        UseProfile.Freeze_Booster -= 1;
-        //freezeBooster.interactable = false;
-        GamePlayController.Instance.playerContain.levelData.HandleFreezeBooster();
+        if(UseProfile.Freeze_Booster >= 1)
+        {
+            UseProfile.Freeze_Booster -= 1;
+            GamePlayController.Instance.playerContain.levelData.HandleFreezeBooster();
+        }
+        else
+        {
+            SuggetBox.Setup(GiftType.Freeze_Booster).Show();
+        }
 
     }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 public class PackInShop : MonoBehaviour
 {
     public TypePackIAP typePackIAP;
@@ -11,28 +12,15 @@ public class PackInShop : MonoBehaviour
     {
         //tvBuy.text = "" + ;
     
-        tvBuy.text =  "" + GameController.Instance.iapController.GetPriceNotInapp(this.typePackIAP);      
+        tvBuy.text =  "" + GameController.Instance.iapController.GetPrice(this.typePackIAP);      
         btnBuy.onClick.AddListener(delegate { ButtonOnClick(); });
     
     }
 
     public void ButtonOnClick()
     {
-        var temp = GameController.Instance.iapController.GetPriceNotInapp(this.typePackIAP);
-        if(UseProfile.Coin >= temp)
-        {
-            GameController.Instance.iapController.BuyProductNotInapp(typePackIAP);
-        }
-        else
-        {
-            GameController.Instance.moneyEffectController.SpawnEffectText_FlyUp
-                               (
-                               btnBuy.transform.position,
-                               "No Enought Coin",
-                               Color.white,
-                               isSpawnItemPlayer: true
-                               );
-        }
+        Debug.LogError("123132132132132_" + typePackIAP.ToString()) ;
+        GameController.Instance.iapController.BuyProduct(typePackIAP);
     }
       
 }

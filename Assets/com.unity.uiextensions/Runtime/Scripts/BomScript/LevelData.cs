@@ -93,14 +93,15 @@ public class LevelData : SerializedMonoBehaviour
     }
     public void HandleFreezeBooster()
     {
-        foreach (var item in lsSmiles)
-        {
-            if(item != null)
-            {
-                item.gameObject.GetComponent<SlimeBase>().HandlePause();
-            }
-          
-        }
+        //foreach (var item in lsSmiles)
+        //{
+        //    if(item != null)
+        //    {
+        //        item.gameObject.GetComponent<SlimeBase>().HandlePause();
+        //    }
+
+        //}
+        EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.FREEZE);
     }
 
     //[Button]

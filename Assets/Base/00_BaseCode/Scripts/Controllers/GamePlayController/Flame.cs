@@ -24,5 +24,12 @@ public class Flame : MonoBehaviour
         {
             collision.gameObject.GetComponent<BarrierBase>().TakeDame();
         }
+        if (collision.gameObject.tag == "Grid")
+        {
+           if (collision.gameObject.GetComponent<GridBase>().isFree)
+            {
+                collision.gameObject.GetComponent<GridBase>().HandleUnFreeze();
+            }
+        }
     }
 }

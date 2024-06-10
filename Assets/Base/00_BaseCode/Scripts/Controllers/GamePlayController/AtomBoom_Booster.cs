@@ -46,7 +46,7 @@ public class AtomBoom_Booster : MonoBehaviour
 
         void HandleUnlock()
         {
-            btnAtom_Booster.onClick.AddListener(HandleTNT_Booster);
+            btnAtom_Booster.onClick.AddListener(HandleAtom_Booster);
             if (UseProfile.Atom_Booster > 0)
             {
                 objNum.SetActive(true);
@@ -85,15 +85,23 @@ public class AtomBoom_Booster : MonoBehaviour
 
 
 
-    public void HandleTNT_Booster()
+    public void HandleAtom_Booster()
     {
-        GamePlayController.Instance.gameScene.HideBotUI(delegate {
-            panelTut.SetActive(true);
-            canvasGroup.DOFade(1, 0.3f);
-        });
-        UseProfile.Atom_Booster -= 1;
-        GamePlayController.Instance.playerContain.boomInputController.enabled = false;
-        wasUseTNT_Booster = true;
+        if(UseProfile.Atom_Booster >= 1)
+        {
+            GamePlayController.Instance.gameScene.HideBotUI(delegate {
+                panelTut.SetActive(true);
+                canvasGroup.DOFade(1, 0.3f);
+            });
+            UseProfile.Atom_Booster -= 1;
+            GamePlayController.Instance.playerContain.boomInputController.enabled = false;
+            wasUseTNT_Booster = true;
+        }
+        else
+        {
+            SuggetBox.Setup(GiftType.Atom_Booster).Show();
+        }
+ 
     }
 
 

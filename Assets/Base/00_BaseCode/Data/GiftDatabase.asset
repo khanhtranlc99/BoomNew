@@ -16,10 +16,15 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 21300000, guid: fd13d5f7e6cb12241b61e9d17aa934a4, type: 3}
-    - {fileID: 21300000, guid: f61f1a2d53f49c24dab57089e5f8aeb7, type: 3}
-    - {fileID: 21300000, guid: 65f0e363b74cf5845ab8c3fbc14f39ac, type: 3}
-    - {fileID: 21300000, guid: 9a49c4e4aad52934ca007b724090d7a9, type: 3}
+    - {fileID: 21300000, guid: f087a46cf59e9c94fbd66db9dd2eda88, type: 3}
+    - {fileID: 21300000, guid: cc7980148948f8c4fa8a89410bb998f7, type: 3}
+    - {fileID: 21300000, guid: 6272cadcd73edf14d960ccfa2867ed52, type: 3}
+    - {fileID: 21300000, guid: 11afe4dd6864d7847afa3e14922b5b3e, type: 3}
+    - {fileID: 21300000, guid: cf8d6049fe538bd40b619fe24b65fd88, type: 3}
+    - {fileID: -3303560728709481006, guid: cb4dafae7ddb0234e941f10c68d5da1f, type: 3}
+    - {fileID: 4812063627863018945, guid: cb4dafae7ddb0234e941f10c68d5da1f, type: 3}
+    - {fileID: 5496973489950920597, guid: cb4dafae7ddb0234e941f10c68d5da1f, type: 3}
+    - {fileID: -2403053856042497464, guid: cb4dafae7ddb0234e941f10c68d5da1f, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -44,7 +49,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 9
     - Name: 
       Entry: 7
       Data: 
@@ -120,6 +125,111 @@ MonoBehaviour:
     - Name: giftSprite
       Entry: 10
       Data: 3
+    - Name: giftAnim
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 7
+    - Name: $v
+      Entry: 7
+      Data: 6|Gift, Assembly-CSharp
+    - Name: giftSprite
+      Entry: 10
+      Data: 4
+    - Name: giftAnim
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 8
+    - Name: $v
+      Entry: 7
+      Data: 7|Gift, Assembly-CSharp
+    - Name: giftSprite
+      Entry: 10
+      Data: 5
+    - Name: giftAnim
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 9
+    - Name: $v
+      Entry: 7
+      Data: 8|Gift, Assembly-CSharp
+    - Name: giftSprite
+      Entry: 10
+      Data: 6
+    - Name: giftAnim
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 10
+    - Name: $v
+      Entry: 7
+      Data: 9|Gift, Assembly-CSharp
+    - Name: giftSprite
+      Entry: 10
+      Data: 7
+    - Name: giftAnim
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 11
+    - Name: $v
+      Entry: 7
+      Data: 10|Gift, Assembly-CSharp
+    - Name: giftSprite
+      Entry: 10
+      Data: 8
     - Name: giftAnim
       Entry: 6
       Data: 

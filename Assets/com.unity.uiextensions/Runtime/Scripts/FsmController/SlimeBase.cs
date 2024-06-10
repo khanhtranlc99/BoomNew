@@ -23,6 +23,7 @@ public class SlimeBase : BarrierBase
     public override void Init()
     {
         fSMController.Init(this);
+        EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.FREEZE , HandlePause);
     }
 
     public override void TakeDame()
@@ -67,7 +68,7 @@ public class SlimeBase : BarrierBase
         yield return new WaitForSeconds(1.6f);
         wasTakeDame = false;
     }
-    public void HandlePause()
+    public void HandlePause(object param)
     {
         this.transform.DOPause();
         StartCoroutine(HandleFree());
@@ -76,6 +77,10 @@ public class SlimeBase : BarrierBase
     {
         yield return new WaitForSeconds(5);
         this.transform.DOPlay();
+    }
+    public void OnDestroy()
+    {
+        EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.FREEZE, HandlePause);
     }
 
 

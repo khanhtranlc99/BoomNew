@@ -136,7 +136,7 @@ public class UseProfile : MonoBehaviour
     {
         get
         {
-            return PlayerPrefs.GetInt(StringHelper.COIN, 0);
+            return PlayerPrefs.GetInt(StringHelper.COIN, 100);
         }
         set
         {
@@ -184,8 +184,6 @@ public class UseProfile : MonoBehaviour
 
         }
     }
-
-
     public static int TNT_Booster
     {
         get
@@ -199,7 +197,6 @@ public class UseProfile : MonoBehaviour
             EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.CHANGE_TNT_BOOSTER);
         }
     }
-
     public static int Roket_Booster
     {
         get
@@ -240,6 +237,53 @@ public class UseProfile : MonoBehaviour
             EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.CHANGE_ATOM_BOOSTER);
         }
     }
+
+    public static int FlameUp_Item
+    {
+        get
+        {
+            if(PlayerPrefs.GetInt(StringHelper.FLAMEUP_ITEM, 1) >= 3)
+            {
+                return 3;
+            }
+            return PlayerPrefs.GetInt(StringHelper.FLAMEUP_ITEM, 1);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.FLAMEUP_ITEM, value);
+            PlayerPrefs.Save();
+            EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.FLAMEUP_ITEM);
+        }
+    }
+    public static int FastBoom_Item
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(StringHelper.FASTBOOM_ITEM, 0);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.FASTBOOM_ITEM, value);
+            PlayerPrefs.Save();
+            EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.FASTBOOM_ITEM);
+        }
+    }
+    public static int TimeBoom_Item
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(StringHelper.TIMEBOOM_ITEM, 0);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.TIMEBOOM_ITEM, value);
+            PlayerPrefs.Save();
+            EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.TIMEBOOM_ITEM);
+        }
+    }
+
+
+
 
     public static int NumberOfDisplayedInterstitialD0_D1
     {

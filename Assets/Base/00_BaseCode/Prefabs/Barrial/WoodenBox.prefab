@@ -122,6 +122,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae40dc39e1b0e040a3c84c8d4ca8a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 1
-  wasTakeDame: 0
   spriteRenderer: {fileID: 1654534025234303236}
+  barrierType: 0
+  gridBase: {fileID: 0}
+  wasTakeDame: 0
+  Hp: 0
+  lsGiftInGames:
+  - giftType: 2
+    percentUp: 100
+    percentDown: 70
+    count: 10
+  - giftType: 8
+    percentUp: 70
+    percentDown: 55
+    count: 1
+  - giftType: 11
+    percentUp: 55
+    percentDown: 35
+    count: 1
+  - giftType: 4
+    percentUp: 35
+    percentDown: 20
+    count: 1
+  - giftType: 5
+    percentUp: 20
+    percentDown: 10
+    count: 1
+  - giftType: 6
+    percentUp: 10
+    percentDown: 5
+    count: 1
+  - giftType: 9
+    percentUp: 5
+    percentDown: 2
+    count: 1
+  - giftType: 10
+    percentUp: 2
+    percentDown: 1
+    count: 1
+  - giftType: 7
+    percentUp: 1
+    percentDown: 0
+    count: 1

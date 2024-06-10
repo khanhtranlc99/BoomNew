@@ -64,7 +64,6 @@ dependencies {
     implementation 'com.facebook.android:facebook-login:[16.0,17)' // Assets/Base/FacebookSDK/Plugins/Editor/Dependencies.xml:7
     implementation 'com.facebook.android:facebook-share:[16.0,17)' // Assets/Base/FacebookSDK/Plugins/Editor/Dependencies.xml:8
     implementation 'com.google.android.gms:play-services-base:18.1.0' // Packages/com.google.firebase.app/Firebase/Editor/AppDependencies.xml:17
-    implementation 'com.google.android.ump:user-messaging-platform:2.1.0' // Assets/MaxSdk/AppLovin/Editor/Dependencies.xml:5
     implementation 'com.google.firebase:firebase-analytics:21.1.1' // Packages/com.google.firebase.analytics/Firebase/Editor/AnalyticsDependencies.xml:13
     implementation 'com.google.firebase:firebase-analytics-unity:9.5.0' // Packages/com.google.firebase.analytics/Firebase/Editor/AnalyticsDependencies.xml:18
     implementation 'com.google.firebase:firebase-app-unity:9.5.0' // Packages/com.google.firebase.app/Firebase/Editor/AppDependencies.xml:22
@@ -78,7 +77,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging-unity:9.5.0' // Packages/com.google.firebase.messaging/Firebase/Editor/MessagingDependencies.xml:22
     implementation 'com.parse.bolts:bolts-android:1.4.0' // Assets/Base/FacebookSDK/Plugins/Editor/Dependencies.xml:4
     implementation 'com.squareup.picasso:picasso:2.71828' // Assets/MaxSdk/Mediation/InMobi/Editor/Dependencies.xml:5
-    configurations.all{exclude group:'com.android.billingclient',module:'billing'}
+       configurations.all{exclude group:'com.android.billingclient',module:'billing'}
 // Android Resolver Dependencies End
 **DEPS**}
 
