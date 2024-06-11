@@ -114,8 +114,8 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\Analytics\Entity\GameServices\GameServicesEventActions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\ServiceProjectSettings\Entity\Consts\SettingsUIConstants.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\ServiceProjectSettings\UI\Views\Obfuscator\AppleObfuscatorSection.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\IAPButtonEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\IAPButtonEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\ServiceProjectSettings\Service\Networking\AuthSignatureWebRequests.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\ServiceProjectSettings\UI\Views\GooglePlayConfigurationSettingsBlock.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\ServiceProjectSettings\Presenter\PurchasingDisabledState.cs" />
@@ -123,8 +123,8 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\Obfuscation\Service\ObfuscationMigration.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\Analytics\PackageKey\IAnalyticsPackageKeyHolder.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\Analytics\Helpers\GameServices\GameServicesEventSenderHelpers.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\ServiceProjectSettings\PurchasingServiceIdentifier.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\AppleXMLProductCatalogExporter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\ServiceProjectSettings\PurchasingServiceIdentifier.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\Analytics\Signatures\SignatureDefinitions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\Common\Entity\IapMenuConsts.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.9.4\Editor\ServiceProjectSettings\UI\Views\IPurchasingSettingsUIBlock.cs" />

@@ -19,7 +19,7 @@ public class PlayerContain : MonoBehaviour
         string pathLevel = StringHelper.PATH_CONFIG_LEVEL_TEST;
 
         Debug.LogError(string.Format(pathLevel, UseProfile.CurrentLevel));
-        levelData = Instantiate(Resources.Load<LevelData>(string.Format(pathLevel, UseProfile.CurrentLevel)));
+        //levelData = Instantiate(Resources.Load<LevelData>(string.Format(pathLevel, UseProfile.CurrentLevel)));
         levelData.Init();
         boomInputController.Init(levelData);
         TNT_Booster.Init();

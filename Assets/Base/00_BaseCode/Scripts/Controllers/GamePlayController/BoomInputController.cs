@@ -37,6 +37,18 @@ public class BoomInputController : MonoBehaviour
         }
         
     }
+    public void HandlePlus(int param)
+    {
+        countBoom += param;
+        tvBoom.text = "" + countBoom;
+
+        iconBoom.transform.DOKill();
+        iconBoom.transform.DOScale(new Vector3(1.7f, 1.7f, 1.7f), 0.5f).OnComplete(delegate {
+            iconBoom.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.5f);
+        });
+
+       
+    }
 
     private void TweenText()
     {

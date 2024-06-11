@@ -162,8 +162,8 @@
     <Compile Include="Library\PackageCache\com.unity.recorder@3.0.3\Editor\Sources\Recorders\MovieRecorder\MovieRecorder.cs" />
     <Compile Include="Library\PackageCache\com.unity.recorder@3.0.3\Editor\Sources\Recorders\AOVRecorder\AOVRecorderSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.recorder@3.0.3\Editor\Timeline\RecorderClip.cs" />
-    <Compile Include="Library\PackageCache\com.unity.recorder@3.0.3\Editor\Sources\Recorders\_Inputs\Audio\AudioInputSettingsPropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.recorder@3.0.3\Editor\Sources\Recorders\ImageRecorder\ImageRecorderSettings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.recorder@3.0.3\Editor\Sources\Recorders\_Inputs\Audio\AudioInputSettingsPropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.recorder@3.0.3\Editor\Sources\Recorders\ImageRecorder\ImageRecorderEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.recorder@3.0.3\Editor\Sources\OutputResolutionPropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.recorder@3.0.3\Editor\Sources\Recorders\_Legacy\BaseFCRecorderSettings.cs" />

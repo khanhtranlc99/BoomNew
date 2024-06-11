@@ -128,39 +128,56 @@ MonoBehaviour:
   wasTakeDame: 0
   Hp: 0
   lsGiftInGames:
-  - giftType: 2
+  - sprite: {fileID: 0}
+    giftType: 2
     percentUp: 100
     percentDown: 70
     count: 10
-  - giftType: 8
+  - sprite: {fileID: 0}
+    giftType: 8
     percentUp: 70
     percentDown: 55
     count: 1
-  - giftType: 11
+  - sprite: {fileID: 0}
+    giftType: 11
     percentUp: 55
     percentDown: 35
     count: 1
-  - giftType: 4
+  - sprite: {fileID: 0}
+    giftType: 4
     percentUp: 35
     percentDown: 20
     count: 1
-  - giftType: 5
+  - sprite: {fileID: 0}
+    giftType: 5
     percentUp: 20
     percentDown: 10
     count: 1
-  - giftType: 6
+  - sprite: {fileID: 0}
+    giftType: 6
     percentUp: 10
     percentDown: 5
     count: 1
-  - giftType: 9
+  - sprite: {fileID: 0}
+    giftType: 9
     percentUp: 5
     percentDown: 2
     count: 1
-  - giftType: 10
+  - sprite: {fileID: 0}
+    giftType: 10
     percentUp: 2
     percentDown: 1
     count: 1
-  - giftType: 7
+  - sprite: {fileID: 0}
+    giftType: 7
     percentUp: 1
     percentDown: 0
     count: 1
+  itemInGame: {fileID: 4929554592798478034, guid: 3a211219e76db164d800083326622601, type: 3}
+  randomGift: 0
+  currentGift:
+    sprite: {fileID: 0}
+    giftType: 0
+    percentUp: 0
+    percentDown: 0
+    count: 0

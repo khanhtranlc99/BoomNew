@@ -964,6 +964,10 @@
       <Project>{ECF0125F-3E67-1AAC-5E99-51C997F223A3}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="spine-unity.csproj">
+      <Project>{CC3D35CB-1E77-61BB-8953-DDC7B4531A35}</Project>
+      <Name>spine-unity</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{304B92E1-4D68-44D4-890D-14C04ADFD1CF}</Project>
       <Name>Unity.Timeline</Name>
@@ -1067,6 +1071,10 @@
     <ProjectReference Include="UnityEditor.Purchasing.csproj">
       <Project>{9F31FD0A-3A98-A827-F7C1-064ED7382708}</Project>
       <Name>UnityEditor.Purchasing</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-editor.csproj">
+      <Project>{E2C18EE4-6F9A-F893-6220-C0E94CC7EB11}</Project>
+      <Name>spine-unity-editor</Name>
     </ProjectReference>
     <ProjectReference Include="MaxSdk.Scripts.csproj">
       <Project>{77487273-EAD6-BDC1-1CE5-48BB3EFAAE00}</Project>

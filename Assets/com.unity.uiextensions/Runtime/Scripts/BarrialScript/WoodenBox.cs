@@ -6,7 +6,7 @@ public class WoodenBox : BarrierBase
 {
     public List<GiftInGame> lsGiftInGames;
     public ItemInGame itemInGame;
-    public int randomGift;
+    public float randomGift;
     public GiftInGame currentGift;
     public override void Init()
     {
@@ -49,15 +49,22 @@ public class WoodenBox : BarrierBase
             }
         }
         var temp = SimplePool2.Spawn(itemInGame  );
-        temp.transform.parent =  GamePlayController.Instance.playerContain.levelData.transform;
+        temp.transform.parent =  GamePlayController.Instance.gameScene.canvas.transform;
         temp.transform.position = this.transform.position;
- 
+        temp.transform.localScale = new Vector3(1, 1, 1);
+        temp.Init(currentGift, gridBase.GetRandomGrid.transform);
+      //  temp.HandleJump(gridBase.GetRandomGrid.transform.position, null);
+
+       
+
+
         Destroy(this.gameObject);
     }
 }
 [System.Serializable]
 public class GiftInGame
 {
+    public Sprite sprite;
     public GiftType giftType;
     public float percentUp;
     public float percentDown;

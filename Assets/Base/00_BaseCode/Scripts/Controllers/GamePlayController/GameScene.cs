@@ -16,7 +16,7 @@ public class GameScene : BaseScene
     public Transform canvas;
     public CanvasGroup canvasGroupBot;
     public GameObject botObj;
-   
+  
 
 
     public void Init(LevelData levelData)

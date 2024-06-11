@@ -89,9 +89,9 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SignalR\JsonEncoders\DefaultJsonEncoder.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Connections\WebGLConnection.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Decompression\InfTree.cs" />
-    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\macs\HMac.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Utility\Event\IMultiSceneSingleton.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Controls\ComboBox\DropDownList.cs" />
+    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\macs\HMac.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\DsaKeyGenerationParameters.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\BomScript\MapController.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\SceneBase.cs" />
@@ -243,8 +243,8 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\pkcs\RSASSAPSSparams.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\BerApplicationSpecific.cs" />
     <Compile Include="Assets\Base\FacebookSDK\Examples\Mobile\Scripts\SubMenus\AppRequests.cs" />
-    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\oiw\ElGamalParameter.cs" />
     <Compile Include="Assets\Base\3Party\Joker2X\Localize\Scripts\Internal\BetterList.cs" />
+    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\oiw\ElGamalParameter.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x9\ECNamedCurveTable.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\OidTokenizer.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsClientContextImpl.cs" />
@@ -431,6 +431,7 @@
     <Compile Include="Assets\D.A. Assets\Shared\DACycles.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\DerTaggedObject.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x509\ReasonFlags.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\ItemInGame.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecT409K1Curve.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Core\SettingsBinder.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\AvatarBar.cs" />
@@ -660,9 +661,9 @@
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Controls\RescalingPanels\ResizePanel.cs" />
     <Compile Include="Assets\D.A. Assets\Shared\DAJson\DAJson.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Layout\FancyScrollView\Core\FancyScrollView.cs" />
-    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GameController.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\DHKeyParameters.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\digests\MD5Digest.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GameController.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\AbstractTlsSignerCredentials.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\util\io\pem\PemGenerationException.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Decompression\ZlibConstants.cs" />
@@ -811,8 +812,8 @@
     <Compile Include="Assets\Base\3Party\Joker2X\Localize\Scripts\Internal\EditorCoroutine.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\SignatureAndHashAlgorithm.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Controls\Old\Stepper.cs" />
-    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x509\DistributionPoint.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\MusicManager\PlaySoundOnClick.cs" />
+    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x509\DistributionPoint.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\ServerSentEvents\Message.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\WebSocket\Frames\WebSocketFrameTypes.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Controls\Accordion\Tweening\ITweenValue.cs" />
@@ -1006,9 +1007,9 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\util\Times.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Controls\ColorPicker\ColorLabel.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\DerBoolean.cs" />
-    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\multiplier\GlvMultiplier.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\util\date\DateTimeObject.cs" />
     <Compile Include="Assets\Base\FacebookSDK\Examples\Windows\FBWindowsFriendsManager.cs" />
+    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\multiplier\GlvMultiplier.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsContext.cs" />
     <Compile Include="Assets\Base\FacebookSDK\Examples\Windows\FBWindowsPhysicalGamepadManager.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Core\FcuEvents.cs" />
@@ -1046,7 +1047,6 @@
     <Compile Include="Assets\Base\FacebookSDK\Examples\Windows\FBWindowsADSManager.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\agreement\DHBasicAgreement.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\ICertificateVerifyer.cs" />
-    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\Examples\HTTP\TextureDownloadSample.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Utilities\ScrollRectExtensions.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\HTTPUpdateDelegator.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Project\CurrentProject.cs" />
@@ -1054,6 +1054,7 @@
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Model\TagConfig.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\DerSet.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\CertificateStatus.cs" />
+    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\Examples\HTTP\TextureDownloadSample.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\anssi\ANSSIObjectIdentifiers.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Drawers\Canvas\ImageDrawer.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Utility\GetSheet\GetTypeLevel.cs" />
@@ -1080,9 +1081,9 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Extensions\CircularBuffer.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\AbstractTlsContext.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\ECPointMap.cs" />
-    <Compile Include="Assets\Base\00_BaseCode\Scripts\HomeScene\LableRank.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\SlimeTarget.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecT163R2Curve.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\HomeScene\LableRank.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\Examples\SampleSelector.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsServerContext.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\misc\MiscObjectIdentifiers.cs" />
@@ -1111,8 +1112,8 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\cryptopro\ECGOST3410NamedCurves.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecT571K1Point.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\DerIA5String.cs" />
-    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\DerObjectIdentifier.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\modes\gcm\IGcmMultiplier.cs" />
+    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\DerObjectIdentifier.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP521R1Point.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\macs\ISO9797Alg3Mac.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\ec\CustomNamedCurves.cs" />
@@ -1176,10 +1177,10 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x509\CRLNumber.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\Examples\Helpers\CodeBlocks.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Utilities\UISelectableExtension.cs" />
-    <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Layout\FancyScrollView\GridView\IFancyGridViewContext.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Forms\Implementations\HTTPUrlEncodedForm.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Utilities\BezierPath.cs" />
     <Compile Include="Assets\D.A. Assets\Shared\DAGradient\DAColorBlender.cs" />
+    <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Layout\FancyScrollView\GridView\IFancyGridViewContext.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Utilities\ScrollRectLinker.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Forms\Implementations\RawJSonForm.cs" />
     <Compile Include="Assets\D.A. Assets\Shared\HamburgerItem.cs" />
@@ -1399,15 +1400,15 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\Examples\SignalR\SimpleStreamingSample.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Core\FcuConfig.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Drawers\Canvas\AutoLayoutDrawers\GridLayoutDrawer.cs" />
-    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\PlayerContain.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\field\GenericPolynomialExtensionField.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\PlayerContain.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\DERGenerator.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\TargetController.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\engines\RijndaelEngine.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\Examples\HTTP\AssetBundleSample.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\signers\DsaSigner.cs" />
-    <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\FsmController\DieState.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\ServerSentEvents\EventSourceResponse.cs" />
+    <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\FsmController\DieState.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Layout\FancyScrollView\Scroller\MovementDirection.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsECDHKeyExchange.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Core\FigmaSession.cs" />
@@ -1471,13 +1472,13 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\digests\WhirlpoolDigest.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP192R1FieldElement.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Sprite\SpriteColorizer.cs" />
-    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\ItemInGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UIAdditive.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Base\3Party\Adjust\Windows\WindowsUap.dll" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x86\XInputInterface.dll" />
+    <None Include="Assets\Spine\version.txt" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\cdt2d.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UI Particle Add.shader" />
@@ -1580,6 +1581,7 @@
     <None Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Integration\readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Base\3Party\NiceVibrations\readme.txt" />
+    <None Include="Assets\Base\00_BaseCode\Animations\SlimeSpine\Untitled-1.atlas.txt" />
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\link.xml" />
     <None Include="Assets\Base\3Party\Adjust\Windows\WU10\AdjustUAP10.dll" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\XInputDotNetPure.dll" />
@@ -2336,6 +2338,10 @@
       <Project>{ECF0125F-3E67-1AAC-5E99-51C997F223A3}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="spine-unity.csproj">
+      <Project>{CC3D35CB-1E77-61BB-8953-DDC7B4531A35}</Project>
+      <Name>spine-unity</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{304B92E1-4D68-44D4-890D-14C04ADFD1CF}</Project>
       <Name>Unity.Timeline</Name>
@@ -2439,6 +2445,10 @@
     <ProjectReference Include="UnityEditor.Purchasing.csproj">
       <Project>{9F31FD0A-3A98-A827-F7C1-064ED7382708}</Project>
       <Name>UnityEditor.Purchasing</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-editor.csproj">
+      <Project>{E2C18EE4-6F9A-F893-6220-C0E94CC7EB11}</Project>
+      <Name>spine-unity-editor</Name>
     </ProjectReference>
     <ProjectReference Include="MaxSdk.Scripts.csproj">
       <Project>{77487273-EAD6-BDC1-1CE5-48BB3EFAAE00}</Project>

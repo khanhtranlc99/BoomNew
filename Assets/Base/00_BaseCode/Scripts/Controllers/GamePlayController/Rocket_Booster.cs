@@ -55,7 +55,7 @@ public class Rocket_Booster : MonoBehaviour
                 tvNum.gameObject.SetActive(false);
                 parentTvCoin.SetActive(true);
             }
-            EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.CHANGE_TNT_BOOSTER, ChangeText);
+            EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.CHANGE_ROCKET_BOOSTER, ChangeText);
         }
         void HandleLock()
         {
@@ -128,6 +128,6 @@ public class Rocket_Booster : MonoBehaviour
     }
     public void OnDestroy()
     {
-        EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.CHANGE_TNT_BOOSTER, ChangeText);
+        EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.CHANGE_ROCKET_BOOSTER, ChangeText);
     }
 }

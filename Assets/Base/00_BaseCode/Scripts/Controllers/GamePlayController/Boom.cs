@@ -11,7 +11,7 @@ public class Boom : BarrierBase
 
     public void HandleExplosion()
     {
-        SpawnCross(UseProfile.FlameUp_Item);
+        SpawnCross(1 +UseProfile.FlameUp_Item);
         gridBase.barrierBase = null;
         SimplePool2.Despawn(this.gameObject);
     
