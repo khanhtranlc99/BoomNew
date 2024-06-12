@@ -1472,6 +1472,10 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\digests\WhirlpoolDigest.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP192R1FieldElement.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Sprite\SpriteColorizer.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\FastBoom.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\TimeBoom.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\InfoDataLevel.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\UI\InfoLevelBox.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UIAdditive.shader" />

@@ -101,9 +101,8 @@ public class PathPrefabs
 
 
     public const string BIG_REMOVE_ADS_PACK_BOX = "UI/Popups/PackBoxes/BigRemoveAdsPackBox";
-    public const string SALE_WEEKEND_1_PACK_BOX = "UI/Popups/PackBoxes/SaleWeekend1PackBox";
-    public const string MINI_GAME_CONNECT_BIRD_BOX = "UI/Popups/ConnectBirdMGBox";
-    public const string CONNECT_BIRD_MINI_GAME_SHOP_BOX = "UI/Popups/ConnectBirdMiniGameShop";
+ 
+  
     public const string REWARD_CONNECT_BIRD_MN_BOX = "UI/Popups/RewardConnectBirdMNBox";
     public const string POPUP_DAILY_REWARD = "UI/Popups/PopupDailyReward";
     public const string POPUP_PAUSE_BOX = "UI/Popups/PauseBox";
@@ -112,9 +111,10 @@ public class PathPrefabs
     public const string OPEN_GIFT_BOX = "UI/Popups/OpenGiftBox";
     public const string SHOP_PACK_BOX = "UI/Popups/ShopPackBox";
     public const string LEVEL_GIFT_BOX = "UI/Popups/LevelGiftBox";
-    public const string EGG_GIFT_BOX = "UI/Popups/EggGiftBox";
+  
     public const string AD_BREAK_BOX = "UI/Popups/AdBreakBox";
-    public const string POPUP_GALLARY = "UI/Popups/PopupGallary";
+ 
+    public const string INFO_LEVEL_BOX = "UI/Popups/InfoLevelBox";
 }
 
 public class SceneName

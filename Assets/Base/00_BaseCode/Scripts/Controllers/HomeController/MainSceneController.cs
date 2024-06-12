@@ -7,9 +7,11 @@ using UnityEngine.UI;
 public class MainSceneController : SceneBase
 {
     public Button btnHome;
+    public Text tvLevel;
     public RandomWatchVideo btnReward;
     public override void Init()
     {
+        tvLevel.text = "Level " + UseProfile.CurrentLevel;
         btnHome.onClick.AddListener(delegate { OnClickPlay(); });
         btnReward.Init();
     }
@@ -18,7 +20,7 @@ public class MainSceneController : SceneBase
 
     private void OnClickPlay()
     {
-     
-        SceneManager.LoadScene("GamePlay");
+
+        InfoLevelBox.Setup().Show();
     }
 }

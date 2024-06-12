@@ -10,7 +10,7 @@ public class FlameUp_Item : MonoBehaviour
     public int num;
     public Text tvNum;
     public GameObject icon;
-
+    public Button btnFastBoom;
     public void Init()
     {
         if(UseProfile.FlameUp_Item >= 1)

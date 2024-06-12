@@ -96,6 +96,13 @@ public class BoomInputController : MonoBehaviour
                         
                         }
                     }
+                    if (selectedObject.barrierBase != null)
+                    {
+                        if (selectedObject.barrierBase.GetComponent<TimeBoom>() != null )
+                        {
+                            selectedObject.barrierBase.GetComponent<TimeBoom>().HandleExplosion();
+                        }
+                    }
                 }
                 // Kiểm tra xem đối tượng đã chọn có phải là A, B, C hoặc D không
              

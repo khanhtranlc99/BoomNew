@@ -31,14 +31,14 @@ public class LevelData : SerializedMonoBehaviour
         }
         return null;
     }
-    public BarrierBase GetRandomSlime
+    public BarrierBase GetRandomSlimeForRocketBooster
     {
         get
         {
             var temp = new List<BarrierBase>();
             foreach (var item in lsSmiles)
             {
-                if (item != null)
+                if (item != null && item.Hp > 0)
                 {
                     temp.Add(item);
                 }
