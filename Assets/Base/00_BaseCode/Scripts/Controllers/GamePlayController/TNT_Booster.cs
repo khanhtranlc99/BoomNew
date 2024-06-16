@@ -24,13 +24,13 @@ public class TNT_Booster : MonoBehaviour
     {
         selectedObject = null;
              wasUseTNT_Booster = false;
-        if (UseProfile.CurrentLevel >= 1)
+        if (UseProfile.CurrentLevel >= 3)
         {
 
             unLockIcon.gameObject.SetActive(true);
             lockIcon.gameObject.SetActive(false);
             HandleUnlock();
-            Debug.LogError("HandleUnlock"); 
+          
 
         }
         else
@@ -39,7 +39,7 @@ public class TNT_Booster : MonoBehaviour
             lockIcon.gameObject.SetActive(true);
             objNum.SetActive(false);
             HandleLock();
-            Debug.LogError("HandleLock");
+           
         }
 
 
@@ -179,6 +179,7 @@ public class TNT_Booster : MonoBehaviour
         tvNum.text = UseProfile.TNT_Booster.ToString();
         if (UseProfile.TNT_Booster > 0)
         {
+            objNum.SetActive(true);
             tvNum.gameObject.SetActive(true);
             tvNum.text = UseProfile.TNT_Booster.ToString();
             parentTvCoin.SetActive(false);
@@ -188,6 +189,7 @@ public class TNT_Booster : MonoBehaviour
             objNum.SetActive(false);
             tvNum.gameObject.SetActive(false);
             parentTvCoin.SetActive(true);
+
         }
     }
     public void OnDestroy()

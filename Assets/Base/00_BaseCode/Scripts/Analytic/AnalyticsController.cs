@@ -525,7 +525,9 @@ public enum ActionWatchVideo
     TNT_Booster =11,
     Rocket_Booster =12,
     Freeze_Booster = 13,
-    Atom_Booste = 14
+    Atom_Booste = 14,
+    ReviveFreeLoseBox = 15,
+    HeartInHearPopup = 16
 }
 
 public enum ActionShowInter

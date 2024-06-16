@@ -26,7 +26,7 @@ MonoBehaviour:
       Data: 0|System.Collections.Generic.List`1[[IAPPack, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 11
     - Name: 
       Entry: 7
       Data: 1|IAPPack, Assembly-CSharp
@@ -41,7 +41,7 @@ MonoBehaviour:
       Data: 0
     - Name: typeBuy
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: shortID
       Entry: 1
       Data: valuepack
@@ -99,7 +99,7 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: price
-      Entry: 3
+      Entry: 4
       Data: 10
     - Name: tittle
       Entry: 6
@@ -133,7 +133,7 @@ MonoBehaviour:
       Data: 0
     - Name: typeBuy
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: shortID
       Entry: 1
       Data: shinypack
@@ -203,7 +203,7 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: price
-      Entry: 3
+      Entry: 4
       Data: 50
     - Name: tittle
       Entry: 6
@@ -237,7 +237,7 @@ MonoBehaviour:
       Data: 0
     - Name: typeBuy
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: shortID
       Entry: 1
       Data: hugepack
@@ -307,7 +307,7 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: price
-      Entry: 3
+      Entry: 4
       Data: 80
     - Name: tittle
       Entry: 6
@@ -341,7 +341,7 @@ MonoBehaviour:
       Data: 0
     - Name: typeBuy
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: shortID
       Entry: 1
       Data: megapack
@@ -411,7 +411,7 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: price
-      Entry: 3
+      Entry: 4
       Data: 100
     - Name: tittle
       Entry: 6
@@ -445,7 +445,7 @@ MonoBehaviour:
       Data: 0
     - Name: typeBuy
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: shortID
       Entry: 1
       Data: masterpack
@@ -515,7 +515,487 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: price
+      Entry: 4
+      Data: 150
+    - Name: tittle
+      Entry: 6
+      Data: 
+    - Name: icon
+      Entry: 6
+      Data: 
+    - Name: isSale
+      Entry: 5
+      Data: false
+    - Name: idSale
+      Entry: 6
+      Data: 
+    - Name: percentSale
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 16|IAPPack, Assembly-CSharp
+    - Name: namePack
+      Entry: 1
+      Data: coinpack150
+    - Name: type
       Entry: 3
+      Data: 11
+    - Name: productType
+      Entry: 3
+      Data: 0
+    - Name: typeBuy
+      Entry: 3
+      Data: 0
+    - Name: shortID
+      Entry: 1
+      Data: coinpack150
+    - Name: itemsResult
+      Entry: 7
+      Data: 17|System.Collections.Generic.Dictionary`2[[GiftType, Assembly-CSharp],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 18|System.Collections.Generic.EnumEqualityComparer`1[[GiftType, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 3
+      Data: 150
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: defaultPrice
+      Entry: 1
+      Data: 150
+    - Name: price
+      Entry: 4
+      Data: 150
+    - Name: tittle
+      Entry: 6
+      Data: 
+    - Name: icon
+      Entry: 6
+      Data: 
+    - Name: isSale
+      Entry: 5
+      Data: false
+    - Name: idSale
+      Entry: 6
+      Data: 
+    - Name: percentSale
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 19|IAPPack, Assembly-CSharp
+    - Name: namePack
+      Entry: 1
+      Data: coinpack700
+    - Name: type
+      Entry: 3
+      Data: 12
+    - Name: productType
+      Entry: 3
+      Data: 0
+    - Name: typeBuy
+      Entry: 3
+      Data: 0
+    - Name: shortID
+      Entry: 1
+      Data: coinpack700
+    - Name: itemsResult
+      Entry: 7
+      Data: 20|System.Collections.Generic.Dictionary`2[[GiftType, Assembly-CSharp],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 21|System.Collections.Generic.EnumEqualityComparer`1[[GiftType, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 3
+      Data: 700
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: defaultPrice
+      Entry: 1
+      Data: 150
+    - Name: price
+      Entry: 4
+      Data: 150
+    - Name: tittle
+      Entry: 6
+      Data: 
+    - Name: icon
+      Entry: 6
+      Data: 
+    - Name: isSale
+      Entry: 5
+      Data: false
+    - Name: idSale
+      Entry: 6
+      Data: 
+    - Name: percentSale
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 22|IAPPack, Assembly-CSharp
+    - Name: namePack
+      Entry: 1
+      Data: coinpack1800
+    - Name: type
+      Entry: 3
+      Data: 13
+    - Name: productType
+      Entry: 3
+      Data: 0
+    - Name: typeBuy
+      Entry: 3
+      Data: 0
+    - Name: shortID
+      Entry: 1
+      Data: coinpack1800
+    - Name: itemsResult
+      Entry: 7
+      Data: 23|System.Collections.Generic.Dictionary`2[[GiftType, Assembly-CSharp],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 24|System.Collections.Generic.EnumEqualityComparer`1[[GiftType, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 3
+      Data: 1800
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: defaultPrice
+      Entry: 1
+      Data: 150
+    - Name: price
+      Entry: 4
+      Data: 150
+    - Name: tittle
+      Entry: 6
+      Data: 
+    - Name: icon
+      Entry: 6
+      Data: 
+    - Name: isSale
+      Entry: 5
+      Data: false
+    - Name: idSale
+      Entry: 6
+      Data: 
+    - Name: percentSale
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 25|IAPPack, Assembly-CSharp
+    - Name: namePack
+      Entry: 1
+      Data: coinpack4000
+    - Name: type
+      Entry: 3
+      Data: 14
+    - Name: productType
+      Entry: 3
+      Data: 0
+    - Name: typeBuy
+      Entry: 3
+      Data: 0
+    - Name: shortID
+      Entry: 1
+      Data: coinpack4000
+    - Name: itemsResult
+      Entry: 7
+      Data: 26|System.Collections.Generic.Dictionary`2[[GiftType, Assembly-CSharp],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 27|System.Collections.Generic.EnumEqualityComparer`1[[GiftType, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 3
+      Data: 4000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: defaultPrice
+      Entry: 1
+      Data: 150
+    - Name: price
+      Entry: 4
+      Data: 150
+    - Name: tittle
+      Entry: 6
+      Data: 
+    - Name: icon
+      Entry: 6
+      Data: 
+    - Name: isSale
+      Entry: 5
+      Data: false
+    - Name: idSale
+      Entry: 6
+      Data: 
+    - Name: percentSale
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 28|IAPPack, Assembly-CSharp
+    - Name: namePack
+      Entry: 1
+      Data: coinpack7000
+    - Name: type
+      Entry: 3
+      Data: 15
+    - Name: productType
+      Entry: 3
+      Data: 0
+    - Name: typeBuy
+      Entry: 3
+      Data: 0
+    - Name: shortID
+      Entry: 1
+      Data: coinpack7000
+    - Name: itemsResult
+      Entry: 7
+      Data: 29|System.Collections.Generic.Dictionary`2[[GiftType, Assembly-CSharp],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 30|System.Collections.Generic.EnumEqualityComparer`1[[GiftType, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 3
+      Data: 7000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: defaultPrice
+      Entry: 1
+      Data: 150
+    - Name: price
+      Entry: 4
+      Data: 150
+    - Name: tittle
+      Entry: 6
+      Data: 
+    - Name: icon
+      Entry: 6
+      Data: 
+    - Name: isSale
+      Entry: 5
+      Data: false
+    - Name: idSale
+      Entry: 6
+      Data: 
+    - Name: percentSale
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 31|IAPPack, Assembly-CSharp
+    - Name: namePack
+      Entry: 1
+      Data: coinpack150000
+    - Name: type
+      Entry: 3
+      Data: 16
+    - Name: productType
+      Entry: 3
+      Data: 0
+    - Name: typeBuy
+      Entry: 3
+      Data: 0
+    - Name: shortID
+      Entry: 1
+      Data: coinpack150000
+    - Name: itemsResult
+      Entry: 7
+      Data: 32|System.Collections.Generic.Dictionary`2[[GiftType, Assembly-CSharp],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 33|System.Collections.Generic.EnumEqualityComparer`1[[GiftType, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 3
+      Data: 150000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: defaultPrice
+      Entry: 1
+      Data: 150
+    - Name: price
+      Entry: 4
       Data: 150
     - Name: tittle
       Entry: 6
@@ -543,7 +1023,7 @@ MonoBehaviour:
       Data: 
     - Name: lstPacksNotInapp
       Entry: 7
-      Data: 16|System.Collections.Generic.List`1[[IAPPack, Assembly-CSharp]], mscorlib
+      Data: 34|System.Collections.Generic.List`1[[IAPPack, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 0

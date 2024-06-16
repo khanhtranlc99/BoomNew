@@ -5,26 +5,21 @@ using UnityEngine;
 using UnityEngine.Purchasing;
 using UnityEngine.Events;
 using Newtonsoft.Json;
+using com.adjust.sdk;
+
 public enum TypePackIAP
 {
-    NoAdsCoinPack = 0,
-    NoAdsHeartPack = 1,
-    NoAdsPack = 2,
-    GoodsPass = 3,
-    SuperGamePack = 4,
-    Special_Pack = 5,
-    ValuePack = 6,
-    ShinyPack = 7,
-    HugePack = 8,
-    MegaPack = 9,
-    MasterPack = 10,
-    CoinPack_500 = 11,
-    CoinPack_1000 = 12,
 
-
+    CoinPack_150 = 1,
+    CoinPack_700 = 2,
+    CoinPack_1800 = 3,
+    CoinPack_4000 = 4,
+    CoinPack_7000 = 5,
+    CoinPack_15000 = 6,
+    Starter_Pack = 7,
+    No_Ads = 8
 
 }
-
 
 [CreateAssetMenu(menuName = "ScriptableObject/IAPDatabase", fileName = "IAPDatabase.asset")]
 public class IAPDatabase : SerializedScriptableObject
@@ -82,7 +77,7 @@ public class IAPPack
     {
         get
         {
-            return string.Format("{0}.{1}", ConfigGameBase.package_name, shortID);
+            return shortID;
         }
     }
     public string ProductID_Origin
@@ -111,7 +106,7 @@ public class IAPPack
     //                Kiểu     Số lượng
 
     [HideIf("typeBuy", TypeBuy.Free)] public string defaultPrice;
-    [ShowIf("isNotInappPack")][HideIf("typeBuy", TypeBuy.Free)] public int price;
+    [ShowIf("isNotInappPack")] [HideIf("typeBuy", TypeBuy.Free)] public float price;
     public string tittle;
     public Sprite icon;
 
@@ -120,30 +115,44 @@ public class IAPPack
     [ShowIf("isSale", true)] public float percentSale;
     public void Claim(bool isIapInited = true)
     {
+
         int value = 0;
         GiftType typeItem = GiftType.Coin;
-
-        foreach (var item in itemsResult)
+        if (type == TypePackIAP.Starter_Pack)
         {
-            switch (type)
-            {
-            
-                case TypePackIAP.NoAdsCoinPack:
-                    break;
-                case TypePackIAP.NoAdsHeartPack:
-
-                    break;
-                case TypePackIAP.NoAdsPack:
-                    GameController.Instance.useProfile.IsRemoveAds = true;
-                    //GameController.Instance.admobAds.DestroyBanner();
-                    EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.REMOVE_ADS);
-              
-                    break;
-
-      
-            }
+            //UseProfile.WasBoughtStarterPack = true;
+            //EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.BY_STARTER_PACK);
 
         }
+        foreach (var item in itemsResult)
+        {
+
+            List<GiftRewardShow> giftRewardShows = new List<GiftRewardShow>();
+            giftRewardShows.Add(new GiftRewardShow() { amount = item.Value, type = item.Key });
+
+            if (type != TypePackIAP.Starter_Pack)
+            {
+                PopupRewardBase.Setup(false).Show(giftRewardShows, delegate { });
+            }
+            else
+            {
+                PopupRewardBase.Setup(true).Show(giftRewardShows, delegate { });
+            }
+
+
+        }
+        try
+        {
+            AdjustEvent adjustEvent = new AdjustEvent(namePack);
+            adjustEvent.setRevenue(price, "$");
+            adjustEvent.setTransactionId("transactionId");
+            Adjust.trackEvent(adjustEvent);
+        }
+        catch
+        {
+
+        }
+
         if (typeBuy == TypeBuy.Coin)
         {
             List<GiftRewardShow> lstReward = new List<GiftRewardShow>();
@@ -198,7 +207,7 @@ public class IAPPack
             {
                 GameController.Instance.dataContain.giftDatabase.Claim(item.Key, item.Value);
             }
-                
+
             if (typeBuy == TypeBuy.Inapp && productType == ProductType.NonConsumable)
             {
                 if (isIapInited)
@@ -208,12 +217,12 @@ public class IAPPack
                         if (lstReward.Count <= 1)
                         {
                             //  RewardIAPBox.Setup2().Show(lstReward, actionClaim: () => { actClaimDone?.Invoke(); });
-                           // NotificationPopup.instance.AddNotification("Buy Success!");
+                            // NotificationPopup.instance.AddNotification("Buy Success!");
                         }
                         else
                         {
                             //  RewardIAPBox.Setup2(true).Show(lstReward, actionClaim: () => { actClaimDone?.Invoke(); });
-                        //    NotificationPopup.instance.AddNotification("Buy Success!");
+                            //    NotificationPopup.instance.AddNotification("Buy Success!");
                         }
                     }
                 }
@@ -223,16 +232,17 @@ public class IAPPack
                 if (lstReward.Count <= 1)
                 {
                     // RewardIAPBox.Setup2().Show(lstReward, actionClaim: () => { actClaimDone?.Invoke(); });
-                 //   NotificationPopup.instance.AddNotification("Buy Success!");
+                    //   NotificationPopup.instance.AddNotification("Buy Success!");
                 }
                 else
                 {
                     //   RewardIAPBox.Setup2(true).Show(lstReward, actionClaim: () => { actClaimDone?.Invoke(); });
-                   // NotificationPopup.instance.AddNotification("Buy Success!");
+                    // NotificationPopup.instance.AddNotification("Buy Success!");
                 }
-            }    
-        
+            }
+
             IsBought = true;
+
         }
     }
 

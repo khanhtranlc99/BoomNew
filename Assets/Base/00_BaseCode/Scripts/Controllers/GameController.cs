@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
 
     public AnalyticsController AnalyticsController;
     public IapController iapController;
+    public HeartGame heartGame;
     [HideInInspector] public SceneType currentScene;
 
     public StartLoading startLoading;
@@ -70,6 +71,7 @@ public class GameController : MonoBehaviour
         iapController.Init();
         MMVibrationManager.SetHapticsActive(useProfile.OnVibration);
         startLoading.Init();
+        heartGame.Init();
     }
 
     public void LoadScene(string sceneName)

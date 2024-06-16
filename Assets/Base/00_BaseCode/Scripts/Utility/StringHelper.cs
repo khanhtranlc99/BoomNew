@@ -70,7 +70,8 @@ public static class StringHelper
     public const string FLAMEUP_ITEM = "flameup_item";
     public const string FASTBOOM_ITEM = "fastboom_item";
     public const string TIMEBOOM_ITEM = "timeboom_item";
-
+    public const string WINSTREAK = "winstreak";
+    public const string TIME_LAST_OVER_HEALTH = "TIME_LAST_OVER_HEALTH";
 }
 
 public class PathPrefabs
@@ -115,6 +116,10 @@ public class PathPrefabs
     public const string AD_BREAK_BOX = "UI/Popups/AdBreakBox";
  
     public const string INFO_LEVEL_BOX = "UI/Popups/InfoLevelBox";
+
+    public const string BACK_HOME_BOX = "UI/Popups/BackHomeBox";
+    public const string SHOP_COIN_BOX = "UI/Popups/ShopCoinBox";
+    public const string HEART_BOX = "UI/Popups/HeartBox";
 }
 
 public class SceneName

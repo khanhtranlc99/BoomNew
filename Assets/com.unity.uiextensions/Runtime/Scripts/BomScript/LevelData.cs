@@ -11,17 +11,25 @@ public class LevelData : SerializedMonoBehaviour
     [ShowIf("isTimeLevel", true)] public DataTime conditionTime;
 
     public int boomLimit;
-    public static LevelData Instance;
+    public static LevelData Instance ;
     public GameObject[,] gridArray = new GameObject[6, 9];
+    public GameObject[,] gridArrayCurrent = new GameObject[6, 9];
     public GameObject[,] barrialArray = new GameObject[6, 9];
+    public Transform parentGrid;
     public Transform parentTranform;
+ 
     public List<BarrierBase> lsSmiles;
+    public List<BarrierBase> lsBloomSoms;
     public List<GridBase> gridBasesId;
 
-
-
+    private void OnDrawGizmos()
+    {
+        Instance = this;
+    }
+   
     public GridBase GridBase(int id)
     {
+        Debug.LogError("GridBasesId.Count_" + gridBasesId.Count);
         for (int i = 0; i < gridBasesId.Count; i++)
         {
             if (gridBasesId[i].id == id)
@@ -51,9 +59,25 @@ public class LevelData : SerializedMonoBehaviour
 
     public void Init()
     {
+        ShuffleBase();
+
+        Invoke(nameof(InitBase),2);
+      
+      
+   
+    }
+    void InitBase()
+    {
         foreach (var item in lsSmiles)
         {
             item.Init();
+        }
+        if (lsBloomSoms.Count > 0)
+        {
+            foreach (var item in lsBloomSoms)
+            {
+                item.Init();
+            }
         }
     }
     public bool isAllSlimeDie
@@ -70,8 +94,31 @@ public class LevelData : SerializedMonoBehaviour
             return true;
         }
     }
-  
-    
+
+    [Button]
+    private void HandleSpawnGrid()
+    {
+        for (int i = 0; i < gridArray.GetLength(0); i++)
+        {
+            for (int j = 0; j < gridArray.GetLength(1); j++)
+            {
+                if (gridArray[i, j] != null)
+                {
+                    float scaleFactor = 0.7f;
+                    var temp = Instantiate(gridArray[i, j], new Vector3(i, j) * scaleFactor, Quaternion.identity);
+                    temp.transform.parent = parentGrid;
+                    temp.GetComponent<GridBase>().vectorIJ = new Vector2(i, j);
+                    gridArrayCurrent[i, j] = temp;
+                    gridBasesId.Add(temp.gameObject.GetComponent<GridBase>());
+                }
+            }
+        }
+        for (int i = 0; i < gridBasesId.Count; i++)
+        {
+            gridBasesId[i].id = i;
+        }
+
+    }
 
     [Button]
     public void SpawnBarrial()
@@ -82,15 +129,24 @@ public class LevelData : SerializedMonoBehaviour
             {
                 if(barrialArray[i,j] != null)
                 {
-                   var temp = Instantiate(barrialArray[i, j].gameObject, gridArray[i, j].transform.position, Quaternion.identity);
-                    temp.GetComponent<BarrierBase>().gridBase = gridArray[i, j].GetComponent<GridBase>();
-                    gridArray[i, j].GetComponent<GridBase>().barrierBase = temp.GetComponent<BarrierBase>();
+                   var temp = Instantiate(barrialArray[i, j].gameObject, gridArrayCurrent[i, j].transform.position, Quaternion.identity);
+                    temp.GetComponent<BarrierBase>().gridBase = gridArrayCurrent[i, j].GetComponent<GridBase>();
+                    gridArrayCurrent[i, j].GetComponent<GridBase>().barrierBase = temp.GetComponent<BarrierBase>();
                     temp.transform.parent = parentTranform;
+                    if(temp.gameObject.GetComponent<SlimeBase>() != null)
+                    {
+                        lsSmiles.Add(temp.gameObject.GetComponent<SlimeBase>());                   
+                    }
+                    if (temp.gameObject.GetComponent<Bloomsom>() != null)
+                    {
+                        lsBloomSoms.Add(temp.gameObject.GetComponent<Bloomsom>());
+                    }
                 }
 
             }
         }
     }
+      
     public void HandleFreezeBooster()
     {
         //foreach (var item in lsSmiles)
@@ -120,6 +176,7 @@ public class LevelData : SerializedMonoBehaviour
         {
             gridBasesId[i].Save();
         }
+        Debug.LogError("save");
     }
     [Button]
     private void Load()
@@ -128,19 +185,10 @@ public class LevelData : SerializedMonoBehaviour
         {
             gridBasesId[i].Load();
         }
+        TestLoadVecIJ();
+        Debug.LogError("load");
     }
-    [Button]
-    private void LoadVecIJ()
-    {
-        for (int i = 0; i < gridArray.GetLength(0); i++)
-        {
-            for (int j = 0; j < gridArray.GetLength(1); j++)
-            {
-                gridArray[i, j].gameObject.GetComponent<GridBase>().vectorIJ = new Vector2(i, j);
 
-            }
-        }
-    }
     [Button]
     private void TestLoadVecIJ()
     {
@@ -149,7 +197,31 @@ public class LevelData : SerializedMonoBehaviour
             gridBasesId[i].HandleVectorIJ();
         }
     }
-    
+    [Button]
+    private void ClearBarrial()
+    {
+        for (int i = 0; i < barrialArray.GetLength(0); i++)
+        {
+            for (int j = 0; j < barrialArray.GetLength(1); j++)
+            {
+                barrialArray[i, j] = null;
+                
+            }
+        }
+     
+        lsBloomSoms.Clear();
+        lsSmiles.Clear();
+        Debug.LogError("clear");
+    }
+ 
+    private void ShuffleBase()
+    {
+        for (int i = 0; i < gridBasesId.Count; i++)
+        {
+            gridBasesId[i].lsGridBase.Shuffle();
+        }
+    }
+
 }
 
 [System.Serializable]

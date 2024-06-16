@@ -23,6 +23,8 @@ public class GameScene : BaseScene
     {
         targetController.Init(levelData);
         settinBtn.onClick.AddListener(delegate { SettingBox.Setup().Show(); });
+        tvLevel.text = "Level" + "\n" + UseProfile.CurrentLevel;
+
     }
 
     public void HideBotUI( Action callBack)

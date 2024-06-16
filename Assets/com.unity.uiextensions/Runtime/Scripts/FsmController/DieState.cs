@@ -6,6 +6,8 @@ public class DieState : SlimeStateBase
 {
     public GameObject vfxDie;
     SlimeTarget slimeTarget;
+    public ItemInGame itemInGame;
+    public int countCoin;
     public override void EndState()
     {
 
@@ -28,6 +30,13 @@ public class DieState : SlimeStateBase
 
     public void HandleActionDie()
     {
+        var tempGift = SimplePool2.Spawn(itemInGame);
+        var currentGift = new GiftInGame() { giftType = GiftType.Coin, count = countCoin };
+        tempGift.transform.parent = GamePlayController.Instance.gameScene.canvas.transform;
+        tempGift.transform.position = this.transform.position;
+        tempGift.transform.localScale = new Vector3(1, 1, 1);
+        tempGift.Init(currentGift, this.transform);
+
         slimeTarget = GamePlayController.Instance.gameScene.targetController.GetSlimeTarget(data.slimeType);
         var temp = SimplePool2.Spawn(vfxDie);
         temp.transform.parent = GamePlayController.Instance.gameScene.canvas;

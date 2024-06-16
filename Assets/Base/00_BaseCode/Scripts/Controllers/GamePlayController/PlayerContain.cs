@@ -13,22 +13,37 @@ public class PlayerContain : MonoBehaviour
     public FlameUp_Item flameUp_Item;
     public FastBoom_Item fastBoom_Item;
     public TimeBoom_Item timeBoom_Item;
-    
+    public PopupPrepageGame prepageGame;
+    public int totalCoin;
+
     public void Init()
     {
+        totalCoin = 0;
         string pathLevel = StringHelper.PATH_CONFIG_LEVEL_TEST;
-
         Debug.LogError(string.Format(pathLevel, UseProfile.CurrentLevel));
-        //levelData = Instantiate(Resources.Load<LevelData>(string.Format(pathLevel, UseProfile.CurrentLevel)));
-        levelData.Init();
-        boomInputController.Init(levelData);
-        TNT_Booster.Init();
-        atomBoom_Booster.Init();
-        rocket_Booster.Init();
-        freeze_Booster.Init();
-        flameUp_Item.Init();
-        fastBoom_Item.Init();
-        timeBoom_Item.Init();
+        levelData = Instantiate(Resources.Load<LevelData>(string.Format(pathLevel, UseProfile.CurrentLevel)));
+        GamePlayController.Instance.gameScene.Init(levelData);
+        prepageGame.Init(delegate {
+
+
+            levelData.Init();
+            boomInputController.Init(levelData);
+            TNT_Booster.Init();
+            atomBoom_Booster.Init();
+            rocket_Booster.Init();
+            freeze_Booster.Init();
+            flameUp_Item.Init();
+            fastBoom_Item.Init();
+            timeBoom_Item.Init();
+
+
+        });
+
+ 
+     
+
+  
+    
     }
 
     

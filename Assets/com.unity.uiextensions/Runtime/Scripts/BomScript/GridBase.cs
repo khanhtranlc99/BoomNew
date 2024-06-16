@@ -18,7 +18,7 @@ public class GridBase : MonoBehaviour
 
     //private void OnTriggerEnter2D(Collider2D collision)
     //{
-    //    if(collision.gameObject.tag == "Grid")
+    //    if (collision.gameObject.tag == "Grid")
     //    {
     //        lsGridBase.Add(collision.gameObject.GetComponent<GridBase>());
     //    }
@@ -72,14 +72,7 @@ public class GridBase : MonoBehaviour
             }
            
 
-            if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Boom)
-            {
-                return item;
-            }
-            if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.ComeThrough)
-            {
-                return item;
-            }
+     
         }
         return null;
     }
@@ -122,9 +115,11 @@ public class GridBase : MonoBehaviour
     {
         var data = PlayerPrefs.GetString("GridBase" + id.ToString());
         var tempLoad = JsonConvert.DeserializeObject<List<int>>(data);
+      
+       
         foreach (var item in tempLoad)
         {
-
+         
             lsGridBase.Add(LevelData.Instance.GridBase(item));
         }
     }

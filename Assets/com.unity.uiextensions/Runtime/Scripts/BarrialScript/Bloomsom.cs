@@ -11,6 +11,13 @@ public class Bloomsom : BarrierBase
     {
         EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.FREEZE, HandlePause);
     }
+    private void Update()
+    {
+        if(gridBase.barrierBase != this)
+        {
+            Destroy(this.gameObject);
+        }    
+    }
     public override void TakeDame()
     {
         if (!wasTakeDame)

@@ -25,7 +25,7 @@ public class AtomBoom_Booster : MonoBehaviour
     {
         selectedObject = null;
         wasUseTNT_Booster = false;
-        if (UseProfile.CurrentLevel >= 1)
+        if (UseProfile.CurrentLevel >= 9)
         {
 
             unLockIcon.gameObject.SetActive(true);
@@ -178,6 +178,7 @@ public class AtomBoom_Booster : MonoBehaviour
         tvNum.text = UseProfile.Atom_Booster.ToString();
         if (UseProfile.Atom_Booster > 0)
         {
+            objNum.SetActive(true);
             tvNum.gameObject.SetActive(true);
             tvNum.text = UseProfile.Atom_Booster.ToString();
             parentTvCoin.SetActive(false);

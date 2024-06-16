@@ -20,13 +20,13 @@ public class Freeze_Booster : MonoBehaviour
     {
 
  
-        if (UseProfile.CurrentLevel >= 1)
+        if (UseProfile.CurrentLevel >= 7)
         {
 
             unLockIcon.gameObject.SetActive(true);
             lockIcon.gameObject.SetActive(false);
             HandleUnlock();
-            Debug.LogError("HandleUnlock");
+        
 
         }
         else
@@ -35,7 +35,7 @@ public class Freeze_Booster : MonoBehaviour
             lockIcon.gameObject.SetActive(true);
             objNum.SetActive(false);
             HandleLock();
-            Debug.LogError("HandleLock");
+        
         }
 
 
@@ -100,6 +100,7 @@ public class Freeze_Booster : MonoBehaviour
         tvNum.text = UseProfile.Freeze_Booster.ToString();
         if (UseProfile.Freeze_Booster > 0)
         {
+            objNum.SetActive(true);
             tvNum.gameObject.SetActive(true);
             tvNum.text = UseProfile.Freeze_Booster.ToString();
             parentTvCoin.SetActive(false);

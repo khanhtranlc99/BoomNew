@@ -66,7 +66,7 @@ public class MoveState : SlimeStateBase
                     oldGrid = nextGrid;
 
                     oldGrid.barrierBase = data;
-                    this.transform.DOMove(nextGrid.transform.position, data.Speed).OnComplete(delegate {
+                    this.transform.DOMove(nextGrid.transform.position,Random.RandomRange(data.Speed, data.Speed+0.2f)).OnComplete(delegate {
                      
                         idOld.Add(oldGrid.id);
                         HandleMove();
@@ -99,7 +99,7 @@ public class MoveState : SlimeStateBase
                         data.gridBase = oldGrid;
                         idOld.Add(oldGrid.id);
 
-                        this.transform.DOMove(nextGrid.transform.position, data.Speed).OnComplete(delegate
+                        this.transform.DOMove(nextGrid.transform.position, Random.RandomRange(data.Speed, data.Speed + 0.2f)).OnComplete(delegate
                         {
 
                             //Debug.LogError("ChangeState(StateType.Hide)");
@@ -129,13 +129,13 @@ public class MoveState : SlimeStateBase
                             oldGrid = nextGrid;
                             oldGrid.barrierBase = data;
                             idOld.Add(oldGrid.id);
-                            this.transform.DOMove(nextGrid.transform.position, data.Speed).OnComplete(delegate
+                            this.transform.DOMove(nextGrid.transform.position, Random.RandomRange(data.Speed, data.Speed + 0.2f)).OnComplete(delegate
                             {
                                 HandleMove();
                             });
 
 
-                        }, () => tempGrid.barrierBase == null));
+                        }, () => FindNextMove));
                       
                     }
                     if (tempGrid.barrierBase.barrierType == BarrierType.Slime)
@@ -162,13 +162,13 @@ public class MoveState : SlimeStateBase
                                 oldGrid = nextGrid;
                                 oldGrid.barrierBase = data;
                                 idOld.Add(oldGrid.id);
-                                this.transform.DOMove(nextGrid.transform.position, data.Speed).OnComplete(delegate
+                                this.transform.DOMove(nextGrid.transform.position, Random.RandomRange(data.Speed, data.Speed + 0.2f)).OnComplete(delegate
                                 {
                                     HandleMove();
                                 });
 
 
-                            }, () => Test));
+                            }, () => FindNextMove));
                        
                     }
 
@@ -244,7 +244,7 @@ public class MoveState : SlimeStateBase
                         data.gridBase = oldGrid;
                         idOld.Add(oldGrid.id);
                       
-                        this.transform.DOMove(nextGrid.transform.position, data.Speed).OnComplete(delegate
+                        this.transform.DOMove(nextGrid.transform.position, Random.RandomRange(data.Speed, data.Speed + 0.2f)).OnComplete(delegate
                         {
               
                             //Debug.LogError("ChangeState(StateType.Hide)");
@@ -278,7 +278,7 @@ public class MoveState : SlimeStateBase
 
                        
 
-                            this.transform.DOMove(nextGrid.transform.position, data.Speed).OnComplete(delegate
+                            this.transform.DOMove(nextGrid.transform.position, Random.RandomRange(data.Speed, data.Speed + 0.2f)).OnComplete(delegate
                             {
                             
 
@@ -286,7 +286,7 @@ public class MoveState : SlimeStateBase
                             });
 
 
-                        }, () => tempGrid.barrierBase == null));
+                        }, () => FindNextMove));
                     }
                     if (tempGrid.barrierBase.barrierType == BarrierType.Slime)
                     {
@@ -311,13 +311,13 @@ public class MoveState : SlimeStateBase
                             oldGrid = nextGrid;
                             oldGrid.barrierBase = data;
                             idOld.Add(oldGrid.id);
-                            this.transform.DOMove(nextGrid.transform.position, data.Speed).OnComplete(delegate
+                            this.transform.DOMove(nextGrid.transform.position, Random.RandomRange(data.Speed, data.Speed + 0.2f)).OnComplete(delegate
                             {
                                 HandleMove();
                             });
 
 
-                        }, () => Test));
+                        }, () => FindNextMove));
                     }
 
 
@@ -358,7 +358,7 @@ public class MoveState : SlimeStateBase
     }
 
 
-    public bool Test
+    public bool FindNextMove
     {
         get
         {

@@ -237,6 +237,8 @@ MonoBehaviour:
   state: 4
   data: {fileID: 0}
   vfxDie: {fileID: 113050520052486705, guid: 618686b248677d64399462fabc842d3b, type: 3}
+  itemInGame: {fileID: 4929554592798478034, guid: 3a211219e76db164d800083326622601, type: 3}
+  countCoin: 1
 --- !u!95 &2343997275664704309
 Animator:
   serializedVersion: 3

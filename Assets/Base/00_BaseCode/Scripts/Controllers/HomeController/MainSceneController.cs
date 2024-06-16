@@ -8,10 +8,13 @@ public class MainSceneController : SceneBase
 {
     public Button btnHome;
     public Text tvLevel;
+    public Text tvLevelBtn;
     public RandomWatchVideo btnReward;
+    public InfoDataLevel infoDataLevel;
     public override void Init()
     {
-        tvLevel.text = "Level " + UseProfile.CurrentLevel;
+        tvLevel.text =   UseProfile.CurrentLevel.ToString();
+        tvLevelBtn.text = "Level " + UseProfile.CurrentLevel;
         btnHome.onClick.AddListener(delegate { OnClickPlay(); });
         btnReward.Init();
     }
@@ -21,6 +24,6 @@ public class MainSceneController : SceneBase
     private void OnClickPlay()
     {
 
-        InfoLevelBox.Setup().Show();
+        InfoLevelBox.Setup(infoDataLevel.lsInfoDatas[UseProfile.CurrentLevel - 1]).Show();
     }
 }

@@ -19,6 +19,7 @@ public class HomeScene : BaseScene
     public HorizontalScrollSnap horizontalScrollSnap;
     public List<MenuTabButton> lsMenuTabButtons;
     public List<SceneBase> lsSceneBases;
+    public CoinHeartBar coinHeartBar;
     public void ShowGift()
     {
         
@@ -47,7 +48,7 @@ public class HomeScene : BaseScene
 
     public void Init()
     {
-
+        coinHeartBar.Init();
 
         foreach (var item in lsMenuTabButtons)
         {

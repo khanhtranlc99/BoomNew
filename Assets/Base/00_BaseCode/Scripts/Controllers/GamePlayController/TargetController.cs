@@ -6,8 +6,10 @@ public class TargetController : MonoBehaviour
 {
     public List<SlimeTarget> lsSlimeTargets;
     public Transform tranformSlimeTarget;
+    public Transform tranformSlimeTargetLarge;
     public List<SlimeTarget> lsCurrentSlimeTargets;
 
+    public Transform tranformSlimePrepage;
     public SlimeTarget GetSlimeTargetPrefab(SlimeType param)
     {
         foreach(var item in lsSlimeTargets)
@@ -41,10 +43,29 @@ public class TargetController : MonoBehaviour
             foreach (var item in levelData.conditionSlimes.lsDataSlime)
             {
                 var temp = Instantiate(GetSlimeTargetPrefab(item.slimeType), tranformSlimeTarget).GetComponent<SlimeTarget>();
+                if(levelData.conditionSlimes.lsDataSlime.Count > 4)
+                {
+                    temp.transform.parent = tranformSlimeTargetLarge.transform;
+                }
+                else
+                {
+                    temp.transform.parent = tranformSlimeTarget.transform;
+                }
+          
+
                 temp.Init(item.countSlime);
                 lsCurrentSlimeTargets.Add(temp);
             }
+            foreach (var item in levelData.conditionSlimes.lsDataSlime)
+            {
+                var temp = Instantiate(GetSlimeTargetPrefab(item.slimeType), tranformSlimeTarget).GetComponent<SlimeTarget>();
+                temp.transform.parent = tranformSlimePrepage.transform;
+                temp.Init(item.countSlime);
+         
+            }
         }
+
+
      
     }
     public bool isLose

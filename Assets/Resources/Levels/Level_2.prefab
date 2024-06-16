@@ -101,7 +101,8 @@ MonoBehaviour:
   gridBase: {fileID: 4606858334819801320}
   wasTakeDame: 0
   Hp: 0
-  slimeBase: {fileID: 0}
+  slimeBase:
+  - {fileID: 0}
 --- !u!61 &3989765603734511856
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -367,7 +368,8 @@ MonoBehaviour:
   gridBase: {fileID: 4606858334975886065}
   wasTakeDame: 0
   Hp: 0
-  slimeBase: {fileID: 0}
+  slimeBase:
+  - {fileID: 0}
 --- !u!61 &3989765604044779599
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -495,7 +497,8 @@ MonoBehaviour:
   gridBase: {fileID: 4606858335485087267}
   wasTakeDame: 0
   Hp: 0
-  slimeBase: {fileID: 0}
+  slimeBase:
+  - {fileID: 0}
 --- !u!61 &3989765604218140506
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1131,7 +1134,8 @@ MonoBehaviour:
   gridBase: {fileID: 4606858333644564851}
   wasTakeDame: 0
   Hp: 0
-  slimeBase: {fileID: 0}
+  slimeBase:
+  - {fileID: 0}
 --- !u!61 &3989765604681506230
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1259,7 +1263,8 @@ MonoBehaviour:
   gridBase: {fileID: 4606858335406031268}
   wasTakeDame: 0
   Hp: 0
-  slimeBase: {fileID: 0}
+  slimeBase:
+  - {fileID: 0}
 --- !u!61 &3989765604804439460
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1385,6 +1390,8 @@ MonoBehaviour:
   state: 4
   data: {fileID: 0}
   vfxDie: {fileID: 113050520052486705, guid: 618686b248677d64399462fabc842d3b, type: 3}
+  itemInGame: {fileID: 4929554592798478034, guid: 3a211219e76db164d800083326622601, type: 3}
+  countCoin: 1
 --- !u!95 &3989765605051396756
 Animator:
   serializedVersion: 3
@@ -1643,7 +1650,8 @@ MonoBehaviour:
   gridBase: {fileID: 4606858334549842841}
   wasTakeDame: 0
   Hp: 0
-  slimeBase: {fileID: 0}
+  slimeBase:
+  - {fileID: 0}
 --- !u!61 &3989765605188917811
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1771,7 +1779,8 @@ MonoBehaviour:
   gridBase: {fileID: 4606858334295410827}
   wasTakeDame: 0
   Hp: 0
-  slimeBase: {fileID: 0}
+  slimeBase:
+  - {fileID: 0}
 --- !u!61 &3989765605221639670
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1897,6 +1906,8 @@ MonoBehaviour:
   state: 4
   data: {fileID: 0}
   vfxDie: {fileID: 113050520052486705, guid: 618686b248677d64399462fabc842d3b, type: 3}
+  itemInGame: {fileID: 4929554592798478034, guid: 3a211219e76db164d800083326622601, type: 3}
+  countCoin: 1
 --- !u!95 &3989765605260408362
 Animator:
   serializedVersion: 3
@@ -2017,7 +2028,8 @@ MonoBehaviour:
   gridBase: {fileID: 4606858334301702084}
   wasTakeDame: 0
   Hp: 0
-  slimeBase: {fileID: 0}
+  slimeBase:
+  - {fileID: 0}
 --- !u!61 &3989765605409248766
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3552,9 +3564,186 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: barrialArray
+    - Name: gridArrayCurrent
       Entry: 7
       Data: 1|UnityEngine.GameObject[,], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 54
+    - Name: ranks
+      Entry: 1
+      Data: 6|9
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: barrialArray
+      Entry: 7
+      Data: 2|UnityEngine.GameObject[,], UnityEngine.CoreModule
     - Name: 
       Entry: 12
       Data: 54
@@ -3737,66 +3926,46 @@ MonoBehaviour:
       countSlime: 2
   conditionTime:
     time: 0
-  boomLimit: 100
+  boomLimit: 10
+  parentGrid: {fileID: 0}
   parentTranform: {fileID: 4606858335111523626}
   lsSmiles:
   - {fileID: 3989765605087024670}
   - {fileID: 3989765604041512093}
+  lsBloomSoms:
+  - {fileID: 3989765605409248764}
+  - {fileID: 3989765604681506228}
+  - {fileID: 3989765604804439466}
+  - {fileID: 3989765605221639668}
+  - {fileID: 3989765604218140504}
+  - {fileID: 3989765605188917809}
+  - {fileID: 3989765604044779597}
+  - {fileID: 3989765603734511862}
   gridBasesId:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 4606858334692189251}
   - {fileID: 4606858333875555908}
   - {fileID: 4606858333644564851}
   - {fileID: 4606858334301702084}
   - {fileID: 4606858333779200781}
   - {fileID: 4606858334422668135}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 4606858335192830633}
   - {fileID: 4606858334877512814}
   - {fileID: 4606858334295410827}
   - {fileID: 4606858335406031268}
   - {fileID: 4606858334805147966}
   - {fileID: 4606858335578834836}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 4606858334515694627}
   - {fileID: 4606858333593398646}
   - {fileID: 4606858334549842841}
   - {fileID: 4606858335485087267}
   - {fileID: 4606858335544448846}
   - {fileID: 4606858333505865322}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 4606858335574618245}
   - {fileID: 4606858335337285884}
   - {fileID: 4606858334819801320}
   - {fileID: 4606858334975886065}
   - {fileID: 4606858335421592535}
   - {fileID: 4606858334092112909}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &4606858334340544616
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,6 +27,7 @@ public class ItemInGame : MonoBehaviour
         switch (currentGift.giftType)
         {
             case GiftType.Coin:
+                GamePlayController.Instance.playerContain.totalCoin += currentGift.count;
                 HandleJump(post.position, delegate {
                     HandleFadeOff();
                 });

@@ -21,7 +21,7 @@ public class Rocket_Booster : MonoBehaviour
     {
        
         wasUseTNT_Booster = false;
-        if (UseProfile.CurrentLevel >= 1)
+        if (UseProfile.CurrentLevel >= 5)
         {
 
             unLockIcon.gameObject.SetActive(true);
@@ -120,6 +120,7 @@ public class Rocket_Booster : MonoBehaviour
         tvNum.text = UseProfile.Roket_Booster.ToString();
         if (UseProfile.Roket_Booster > 0)
         {
+            objNum.SetActive(true);
             tvNum.gameObject.SetActive(true);
             tvNum.text = UseProfile.Roket_Booster.ToString();
             parentTvCoin.SetActive(false);

@@ -396,14 +396,7 @@ public class IapController : MonoBehaviour, IStoreListener
 
         return item.defaultPrice;
     }
-
-    public int GetPriceNotInapp(TypePackIAP typePack)
-    {
-        var item = inappDatabase.GetPackNotInapp(typePack);
-
-        return item.price;
-    }
-
+ 
 
 
     public void BuyProduct(TypePackIAP typePack)
@@ -556,7 +549,7 @@ public class IapController : MonoBehaviour, IStoreListener
 
             if (myCoin >= item.price)
             {
-                GameController.Instance.dataContain.giftDatabase.Claim(GiftType.Coin, -item.price);
+                GameController.Instance.dataContain.giftDatabase.Claim(GiftType.Coin, -(int)item.price);
                 item.Claim();
 
                 //RewardIAPBox rwBox = RewardIAPBox.Setup();

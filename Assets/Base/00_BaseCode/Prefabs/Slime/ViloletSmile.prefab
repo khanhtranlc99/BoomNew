@@ -99,6 +99,8 @@ MonoBehaviour:
   state: 4
   data: {fileID: 0}
   vfxDie: {fileID: 5846197982006230550, guid: 6d80326312a61ca499b2cf433ae03267, type: 3}
+  itemInGame: {fileID: 4929554592798478034, guid: 3a211219e76db164d800083326622601, type: 3}
+  countCoin: 2
 --- !u!95 &659896964945188854
 Animator:
   serializedVersion: 3
@@ -171,7 +173,7 @@ MonoBehaviour:
   barrierType: 3
   gridBase: {fileID: 0}
   wasTakeDame: 0
-  Hp: 10
+  Hp: 2
   Speed: 0.5
   slimeType: 3
   fSMController: {fileID: 659896965542921630}

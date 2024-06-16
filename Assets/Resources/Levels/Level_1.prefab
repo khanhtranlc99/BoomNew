@@ -2751,7 +2751,7 @@ MonoBehaviour:
   lsGridBase:
   - {fileID: 6335901533878289785}
   - {fileID: 6335901533769505172}
-  vectorIJ: {x: 0, y: 5}
+  vectorIJ: {x: 0, y: 6}
   spriteRenderer: {fileID: 6335901533069668217}
   freeGrid: {fileID: 21300000, guid: ea7ccb1f18586c749bef6019c28e8072, type: 3}
   normalGrid: {fileID: 21300000, guid: 166f2f8548592f34aac2310ccf4360ee, type: 3}
@@ -5600,9 +5600,186 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: barrialArray
+    - Name: gridArrayCurrent
       Entry: 7
       Data: 1|UnityEngine.GameObject[,], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 54
+    - Name: ranks
+      Entry: 1
+      Data: 6|9
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: barrialArray
+      Entry: 7
+      Data: 2|UnityEngine.GameObject[,], UnityEngine.CoreModule
     - Name: 
       Entry: 12
       Data: 54
@@ -5785,68 +5962,40 @@ MonoBehaviour:
       countSlime: 4
   conditionTime:
     time: 0
-  boomLimit: 100
+  boomLimit: 10
+  parentGrid: {fileID: 0}
   parentTranform: {fileID: 6335901533720733207}
   lsSmiles:
   - {fileID: 8048146927697931828}
   - {fileID: 8048146927654049984}
   - {fileID: 8048146927808146663}
   - {fileID: 8048146926674828126}
+  lsBloomSoms: []
   gridBasesId:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 6335901533069668222}
   - {fileID: 6335901533878289785}
   - {fileID: 6335901534118142542}
   - {fileID: 6335901534521494777}
   - {fileID: 6335901533983293488}
   - {fileID: 6335901534409709658}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 6335901533769505172}
   - {fileID: 6335901533019029331}
   - {fileID: 6335901534531978166}
   - {fileID: 6335901533564357273}
   - {fileID: 6335901532944566787}
   - {fileID: 6335901533382708393}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 6335901534450304798}
   - {fileID: 6335901534168655435}
   - {fileID: 6335901533212528804}
   - {fileID: 6335901533342434590}
   - {fileID: 6335901533417561203}
   - {fileID: 6335901534247849303}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 6335901533395270584}
   - {fileID: 6335901533494559681}
   - {fileID: 6335901532942439381}
   - {fileID: 6335901532781889996}
   - {fileID: 6335901533544233194}
   - {fileID: 6335901534865588016}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &6335901534521494783
 GameObject:
   m_ObjectHideFlags: 0
@@ -6722,6 +6871,8 @@ MonoBehaviour:
   state: 4
   data: {fileID: 0}
   vfxDie: {fileID: 113050520052486705, guid: 618686b248677d64399462fabc842d3b, type: 3}
+  itemInGame: {fileID: 4929554592798478034, guid: 3a211219e76db164d800083326622601, type: 3}
+  countCoin: 1
 --- !u!95 &8048146926664647653
 Animator:
   serializedVersion: 3
@@ -6978,6 +7129,8 @@ MonoBehaviour:
   state: 4
   data: {fileID: 0}
   vfxDie: {fileID: 113050520052486705, guid: 618686b248677d64399462fabc842d3b, type: 3}
+  itemInGame: {fileID: 4929554592798478034, guid: 3a211219e76db164d800083326622601, type: 3}
+  countCoin: 1
 --- !u!95 &8048146926710353309
 Animator:
   serializedVersion: 3
@@ -7223,6 +7376,8 @@ MonoBehaviour:
   state: 4
   data: {fileID: 0}
   vfxDie: {fileID: 113050520052486705, guid: 618686b248677d64399462fabc842d3b, type: 3}
+  itemInGame: {fileID: 4929554592798478034, guid: 3a211219e76db164d800083326622601, type: 3}
+  countCoin: 1
 --- !u!95 &8048146926785572856
 Animator:
   serializedVersion: 3
@@ -7341,6 +7496,8 @@ MonoBehaviour:
   state: 4
   data: {fileID: 0}
   vfxDie: {fileID: 113050520052486705, guid: 618686b248677d64399462fabc842d3b, type: 3}
+  itemInGame: {fileID: 4929554592798478034, guid: 3a211219e76db164d800083326622601, type: 3}
+  countCoin: 1
 --- !u!95 &8048146927129199513
 Animator:
   serializedVersion: 3

@@ -714,6 +714,52 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054042802}
   m_Enabled: 1
+--- !u!1 &1233693552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1233693553}
+  - component: {fileID: 1233693554}
+  m_Layer: 0
+  m_Name: HeartInGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1233693553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233693552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8893301430582999387}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1233693554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233693552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bafcb3d4782864946a67e69bf43cd4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeUpHeartGame: 600
+  wasCoolDown: 0
+  currentCoolDown: 0
 --- !u!1 &1305630023
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,7 +828,7 @@ GameObject:
   - component: {fileID: 1441733744}
   - component: {fileID: 1441733746}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1778,6 +1824,7 @@ MonoBehaviour:
   admobAds: {fileID: 1573333644}
   AnalyticsController: {fileID: 7749172274503695240}
   iapController: {fileID: 5348018437005545746}
+  heartGame: {fileID: 1233693554}
   currentScene: 0
   startLoading: {fileID: 2054971388}
 --- !u!114 &8396620061103310618
@@ -1828,6 +1875,7 @@ Transform:
   - {fileID: 1196834010983042740}
   - {fileID: 3946952760424984085}
   - {fileID: 954486347}
+  - {fileID: 1233693553}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

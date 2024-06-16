@@ -19,8 +19,8 @@ public class GamePlayController : Singleton<GamePlayController>
     public StateGame stateGame;
     public PlayerContain playerContain;
     public GameScene gameScene;
-    
- 
+
+
 
     protected override void OnAwake()
     {
@@ -33,8 +33,11 @@ public class GamePlayController : Singleton<GamePlayController>
     public void Init()
     {
      
-        playerContain.Init();
-        gameScene.Init(playerContain.levelData);
+
+            playerContain.Init();
+    
+   
+  
         stateGame = StateGame.Playing;
         //GameController.Instance.AnalyticsController.LoadingComplete();
         //GameController.Instance.admobAds.canShowOpenAppAds = true;
@@ -49,6 +52,7 @@ public class GamePlayController : Singleton<GamePlayController>
         {
             if (playerContain.boomInputController.countBoom <= 0 && gameScene.targetController.isLose)
             {
+                GamePlayController.Instance.playerContain.boomInputController.enabled = true;
                 stateGame = StateGame.Lose;
                 LoseBox.Setup().Show();
             }

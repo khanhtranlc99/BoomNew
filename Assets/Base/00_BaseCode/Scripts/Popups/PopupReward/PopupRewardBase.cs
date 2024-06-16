@@ -39,6 +39,7 @@ public class PopupRewardBase : BaseBox
             instance = Instantiate(Resources.Load<PopupRewardBase>(PathPrefabs.POPUP_REWARD_BASE));
         }
         //instance.Show();
+        instance.popupCanvas.sortingOrder = 10000;
         return instance;
 
     }

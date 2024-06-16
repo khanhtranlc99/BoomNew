@@ -55,7 +55,29 @@ public class UseProfile : MonoBehaviour
             PlayerPrefs.Save();
         }
     }
-
+    public static DateTime TimeLastOverHealth
+    {
+        get
+        {
+            if (PlayerPrefs.HasKey(StringHelper.TIME_LAST_OVER_HEALTH))
+            {
+                var temp = Convert.ToInt64(PlayerPrefs.GetString(StringHelper.TIME_LAST_OVER_HEALTH));
+                return DateTime.FromBinary(temp);
+            }
+            else
+            {
+                var newDateTime = DateTime.Now;
+                PlayerPrefs.SetString(StringHelper.TIME_LAST_OVER_HEALTH, newDateTime.ToBinary().ToString());
+                PlayerPrefs.Save();
+                return newDateTime;
+            }
+        }
+        set
+        {
+            PlayerPrefs.SetString(StringHelper.TIME_LAST_OVER_HEALTH, value.ToBinary().ToString());
+            PlayerPrefs.Save();
+        }
+    }
     #region ChestDataKey
     public static int EggChest
     {
@@ -136,7 +158,7 @@ public class UseProfile : MonoBehaviour
     {
         get
         {
-            return PlayerPrefs.GetInt(StringHelper.COIN, 100);
+            return PlayerPrefs.GetInt(StringHelper.COIN, 0);
         }
         set
         {
@@ -149,7 +171,7 @@ public class UseProfile : MonoBehaviour
     {
         get
         {
-            return PlayerPrefs.GetInt(StringHelper.HEART, 0);
+            return PlayerPrefs.GetInt(StringHelper.HEART, 5);
         }
         set
         {
@@ -237,7 +259,23 @@ public class UseProfile : MonoBehaviour
             EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.CHANGE_ATOM_BOOSTER);
         }
     }
-
+    public static int WinStreak
+    {
+        get
+        {
+            if (PlayerPrefs.GetInt(StringHelper.WINSTREAK, 0) >= 5)
+            {
+                return 5;
+            }
+            return PlayerPrefs.GetInt(StringHelper.WINSTREAK, 0);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.WINSTREAK, value);
+            PlayerPrefs.Save();
+        
+        }
+    }
     public static int FlameUp_Item
     {
         get

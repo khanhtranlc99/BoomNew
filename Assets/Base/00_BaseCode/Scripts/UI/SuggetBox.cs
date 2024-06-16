@@ -119,13 +119,12 @@ public class SuggetBox : BaseBox
     {
         if(UseProfile.Coin >= price)
         {
-            UseProfile.Coin -= price;
-            //UseProfile.SpentCoin += price;
+            UseProfile.Coin -= price;      
             HandleClaimGift();
         }
         else
         {
-            //ShopCoinBox.Setup().Show();
+            ShopCoinBox.Setup().Show();
         }    
 
 
