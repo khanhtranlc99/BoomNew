@@ -1160,6 +1160,74 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1844287473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1844287474}
+  - component: {fileID: 1844287475}
+  m_Layer: 0
+  m_Name: QuestController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1844287474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844287473}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8893301430582999387}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1844287475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844287473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524771e438925294aa925e6fb1c2805b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lsQuestData:
+  - lsQuest:
+    - idQuest: 0
+      giftType: 0
+      numGift: 0
+      targetType: 0
+      numTarget: 0
+    - idQuest: 0
+      giftType: 0
+      numGift: 0
+      targetType: 0
+      numTarget: 0
+    - idQuest: 0
+      giftType: 0
+      numGift: 0
+      targetType: 0
+      numTarget: 0
+    minPercent: 0
+    maxPercent: 0
+  currentQuest:
+    idQuest: 0
+    giftType: 0
+    numGift: 0
+    targetType: 0
+    numTarget: 0
 --- !u!1 &2054971387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,6 +1894,7 @@ MonoBehaviour:
   iapController: {fileID: 5348018437005545746}
   heartGame: {fileID: 1233693554}
   currentScene: 0
+  questController: {fileID: 1844287475}
   startLoading: {fileID: 2054971388}
 --- !u!114 &8396620061103310618
 MonoBehaviour:
@@ -1876,6 +1945,7 @@ Transform:
   - {fileID: 3946952760424984085}
   - {fileID: 954486347}
   - {fileID: 1233693553}
+  - {fileID: 1844287474}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

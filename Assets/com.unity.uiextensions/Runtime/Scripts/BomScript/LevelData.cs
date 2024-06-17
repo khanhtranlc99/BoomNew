@@ -39,6 +39,18 @@ public class LevelData : SerializedMonoBehaviour
         }
         return null;
     }
+    public GridBase GridBaseNull()
+    {
+        Debug.LogError("GridBasesId.Count_" + gridBasesId.Count);
+        for (int i = 0; i < gridBasesId.Count; i++)
+        {
+           if(gridBasesId[i].barrierBase == null)
+            {
+                return gridBasesId[i];
+            }
+        }
+        return null;
+    }
     public BarrierBase GetRandomSlimeForRocketBooster
     {
         get

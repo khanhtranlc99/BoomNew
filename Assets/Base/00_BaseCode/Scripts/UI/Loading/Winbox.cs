@@ -31,6 +31,7 @@ public class Winbox : BaseBox
 
         tvCoin.text = "" + GamePlayController.Instance.playerContain.totalCoin;
         coinHeartBar.Init();
+        UseProfile.WinStreak += 1;
     }   
     public void InitState()
     {

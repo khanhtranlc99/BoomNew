@@ -31,7 +31,7 @@ public class AtomBoom_Booster : MonoBehaviour
             unLockIcon.gameObject.SetActive(true);
             lockIcon.gameObject.SetActive(false);
             HandleUnlock();
-            Debug.LogError("HandleUnlock");
+        
 
         }
         else
@@ -40,7 +40,7 @@ public class AtomBoom_Booster : MonoBehaviour
             lockIcon.gameObject.SetActive(true);
             objNum.SetActive(false);
             HandleLock();
-            Debug.LogError("HandleLock");
+       
         }
 
 
@@ -89,6 +89,8 @@ public class AtomBoom_Booster : MonoBehaviour
     {
         if(UseProfile.Atom_Booster >= 1)
         {
+        
+            GamePlayController.Instance.playerContain.tutorial_Atom.NextTut();
             GamePlayController.Instance.gameScene.HideBotUI(delegate {
                 panelTut.SetActive(true);
                 canvasGroup.DOFade(1, 0.3f);

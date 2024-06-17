@@ -49,6 +49,7 @@ public class DieState : SlimeStateBase
         });
 
         data.gridBase.barrierBase = null;
+        GameController.Instance.questController.HandleCheckCompleteQuest(data.questTargetType);
         Destroy(data.gameObject);
     }
 

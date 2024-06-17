@@ -101,6 +101,7 @@ public class DieStateBlueSlime : SlimeStateBase
             slimeTarget.HandleSubtraction();
             SimplePool2.Despawn(tempvfx.gameObject);
         });
+        GameController.Instance.questController.HandleCheckCompleteQuest(data.questTargetType);
         Destroy(data.gameObject);
     }
 

@@ -85,7 +85,7 @@ public class Rocket_Booster : MonoBehaviour
     { 
         if (UseProfile.Roket_Booster >= 1)
         {
-         
+            GamePlayController.Instance.playerContain.tutorial_Rocket.NextTut();
             var target = GamePlayController.Instance.playerContain.levelData.GetRandomSlimeForRocketBooster;
             if(target != null)
             {

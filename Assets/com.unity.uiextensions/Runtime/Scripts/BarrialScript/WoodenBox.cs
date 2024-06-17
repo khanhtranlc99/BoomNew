@@ -53,10 +53,10 @@ public class WoodenBox : BarrierBase
         temp.transform.position = this.transform.position;
         temp.transform.localScale = new Vector3(1, 1, 1);
         temp.Init(currentGift, gridBase.GetRandomGrid.transform);
-      //  temp.HandleJump(gridBase.GetRandomGrid.transform.position, null);
+        //  temp.HandleJump(gridBase.GetRandomGrid.transform.position, null);
 
-       
 
+        GameController.Instance.questController.HandleCheckCompleteQuest(questTargetType);
 
         Destroy(this.gameObject);
     }

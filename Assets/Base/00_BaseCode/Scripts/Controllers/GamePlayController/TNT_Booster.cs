@@ -88,6 +88,8 @@ public class TNT_Booster : MonoBehaviour
     {
         if (UseProfile.TNT_Booster >= 1)
         {
+            GamePlayController.Instance.playerContain.tutorial_Rocket.NextTut();
+  
             GamePlayController.Instance.gameScene.HideBotUI(delegate {
                 panelTut.SetActive(true);
                 canvasGroup.DOFade(1, 0.3f);

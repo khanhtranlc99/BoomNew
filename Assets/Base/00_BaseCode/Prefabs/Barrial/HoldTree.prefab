@@ -96,9 +96,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bbf48be91e9d74418f7942745977ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 1
-  wasTakeDame: 0
   spriteRenderer: {fileID: 561385205327335025}
+  barrierType: 0
+  questTargetType: 1
+  gridBase: {fileID: 0}
+  wasTakeDame: 0
+  Hp: 0
 --- !u!61 &561385205327335027
 BoxCollider2D:
   m_ObjectHideFlags: 0

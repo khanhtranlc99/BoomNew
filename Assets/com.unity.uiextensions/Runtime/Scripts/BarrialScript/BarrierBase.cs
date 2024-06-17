@@ -15,6 +15,7 @@ public abstract class BarrierBase : MonoBehaviour
    
     public SpriteRenderer spriteRenderer;
     public BarrierType barrierType;
+    public QuestTargetType questTargetType;
      public GridBase gridBase;
     public bool wasTakeDame = false;
     public int Hp;

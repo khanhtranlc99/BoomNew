@@ -58,7 +58,7 @@ public class Chest : BarrierBase
 
 
 
-
+        GameController.Instance.questController.HandleCheckCompleteQuest(questTargetType);
         Destroy(this.gameObject);
     }
 }

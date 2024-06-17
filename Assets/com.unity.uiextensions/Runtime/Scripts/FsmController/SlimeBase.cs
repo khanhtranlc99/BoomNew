@@ -16,6 +16,7 @@ public class SlimeBase : BarrierBase
 {
     public float Speed;
     public SlimeType slimeType;
+   
     public SlimeFSMController fSMController;
     public Animator animator;
     public CircleCollider2D collider2D;

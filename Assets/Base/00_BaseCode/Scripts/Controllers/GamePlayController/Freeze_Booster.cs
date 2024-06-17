@@ -82,6 +82,7 @@ public class Freeze_Booster : MonoBehaviour
     {
         if(UseProfile.Freeze_Booster >= 1)
         {
+            GamePlayController.Instance.playerContain.tutorial_Freeze.NextTut();
             UseProfile.Freeze_Booster -= 1;
             GamePlayController.Instance.playerContain.levelData.HandleFreezeBooster();
         }

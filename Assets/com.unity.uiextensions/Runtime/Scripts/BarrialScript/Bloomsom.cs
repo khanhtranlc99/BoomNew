@@ -31,12 +31,13 @@ public class Bloomsom : BarrierBase
                 gridBase.barrierBase = null;
                 transform.DOKill();
                 transform.DOShakePosition(0.3f, 0.1f, 1, 1).OnComplete(delegate {
-                    spriteRenderer.DOFade(0, 0.3f).OnComplete(delegate { 
-                        
+                    spriteRenderer.DOFade(0, 0.3f).OnComplete(delegate {
+
                         //if(slimeBase != null)
                         //{
                         //    HandleSlimeOut();
                         //}
+                        GameController.Instance.questController.HandleCheckCompleteQuest( questTargetType);
                         Destroy(this.gameObject); 
                     
                     

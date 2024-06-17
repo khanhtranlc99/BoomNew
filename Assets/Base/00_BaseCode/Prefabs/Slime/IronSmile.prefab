@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4214117353387545340}
   barrierType: 3
+  questTargetType: 8
   gridBase: {fileID: 0}
   wasTakeDame: 0
   Hp: 3

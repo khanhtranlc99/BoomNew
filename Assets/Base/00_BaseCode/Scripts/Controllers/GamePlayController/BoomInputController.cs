@@ -92,6 +92,11 @@ public class BoomInputController : MonoBehaviour
                                 selectedObject.barrierBase = boom;
                                 boom.gridBase = selectedObject;
                                 HandleSubtraction();
+                                GamePlayController.Instance.playerContain.tutorial_BoomInput.NextTut();
+                                GamePlayController.Instance.playerContain.tutorial_TNT.StartTut();
+                                GamePlayController.Instance.playerContain.tutorial_Rocket.StartTut();
+                                GamePlayController.Instance.playerContain.tutorial_Freeze.StartTut();
+                                GamePlayController.Instance.playerContain.tutorial_Atom.StartTut();
                             }
                         
                         }

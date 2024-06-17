@@ -87,7 +87,7 @@ public class BackHomeBox : BaseBox
             GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () => { Next(); }, actionWatchLog: "ResetSceneAtLoseBox");
             void Next()
             {
-         
+                UseProfile.WinStreak -= 1;
                 GameController.Instance.heartGame.HandleCoolDown();
                 Close();
                 Initiate.Fade("GamePlay", Color.black, 1.5f);
@@ -108,7 +108,7 @@ public class BackHomeBox : BaseBox
         GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () => { Next(); }, actionWatchLog: "BackHomeLoseBox");
         void Next()
         {
-   
+            UseProfile.WinStreak -= 1;
             GameController.Instance.heartGame.HandleCoolDown();
 
             Close();
