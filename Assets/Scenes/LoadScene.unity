@@ -1206,27 +1206,237 @@ MonoBehaviour:
   lsQuestData:
   - lsQuest:
     - idQuest: 0
-      giftType: 0
-      numGift: 0
+      giftType: 2
       targetType: 0
-      numTarget: 0
-    - idQuest: 0
-      giftType: 0
-      numGift: 0
-      targetType: 0
-      numTarget: 0
-    - idQuest: 0
-      giftType: 0
-      numGift: 0
-      targetType: 0
-      numTarget: 0
+      numGift: 100
+      numTarget: 50
+    - idQuest: 1
+      giftType: 2
+      targetType: 2
+      numGift: 100
+      numTarget: 50
+    - idQuest: 2
+      giftType: 2
+      targetType: 3
+      numGift: 100
+      numTarget: 50
+    - idQuest: 3
+      giftType: 2
+      targetType: 6
+      numGift: 100
+      numTarget: 50
+    - idQuest: 4
+      giftType: 2
+      targetType: 7
+      numGift: 100
+      numTarget: 50
+    - idQuest: 5
+      giftType: 2
+      targetType: 8
+      numGift: 100
+      numTarget: 50
+    - idQuest: 6
+      giftType: 2
+      targetType: 9
+      numGift: 100
+      numTarget: 50
+    - idQuest: 7
+      giftType: 2
+      targetType: 10
+      numGift: 100
+      numTarget: 50
     minPercent: 0
-    maxPercent: 0
+    maxPercent: 60
+  - lsQuest:
+    - idQuest: 8
+      giftType: 2
+      targetType: 0
+      numGift: 200
+      numTarget: 100
+    - idQuest: 9
+      giftType: 2
+      targetType: 2
+      numGift: 200
+      numTarget: 100
+    - idQuest: 10
+      giftType: 2
+      targetType: 3
+      numGift: 200
+      numTarget: 100
+    - idQuest: 11
+      giftType: 2
+      targetType: 6
+      numGift: 200
+      numTarget: 100
+    - idQuest: 12
+      giftType: 2
+      targetType: 7
+      numGift: 200
+      numTarget: 100
+    - idQuest: 13
+      giftType: 2
+      targetType: 8
+      numGift: 200
+      numTarget: 100
+    - idQuest: 14
+      giftType: 2
+      targetType: 9
+      numGift: 200
+      numTarget: 100
+    - idQuest: 15
+      giftType: 2
+      targetType: 10
+      numGift: 200
+      numTarget: 100
+    minPercent: 60
+    maxPercent: 90
+  - lsQuest:
+    - idQuest: 16
+      giftType: 4
+      targetType: 0
+      numGift: 1
+      numTarget: 150
+    - idQuest: 17
+      giftType: 4
+      targetType: 2
+      numGift: 1
+      numTarget: 150
+    - idQuest: 18
+      giftType: 4
+      targetType: 3
+      numGift: 1
+      numTarget: 150
+    - idQuest: 19
+      giftType: 4
+      targetType: 6
+      numGift: 1
+      numTarget: 150
+    - idQuest: 20
+      giftType: 4
+      targetType: 7
+      numGift: 1
+      numTarget: 150
+    - idQuest: 21
+      giftType: 4
+      targetType: 8
+      numGift: 1
+      numTarget: 150
+    - idQuest: 22
+      giftType: 4
+      targetType: 9
+      numGift: 1
+      numTarget: 150
+    - idQuest: 23
+      giftType: 4
+      targetType: 10
+      numGift: 1
+      numTarget: 150
+    minPercent: 90
+    maxPercent: 95
+  - lsQuest:
+    - idQuest: 24
+      giftType: 5
+      targetType: 0
+      numGift: 1
+      numTarget: 200
+    - idQuest: 25
+      giftType: 2
+      targetType: 2
+      numGift: 1
+      numTarget: 200
+    - idQuest: 26
+      giftType: 2
+      targetType: 3
+      numGift: 1
+      numTarget: 200
+    - idQuest: 27
+      giftType: 2
+      targetType: 6
+      numGift: 1
+      numTarget: 200
+    - idQuest: 28
+      giftType: 2
+      targetType: 7
+      numGift: 1
+      numTarget: 200
+    - idQuest: 29
+      giftType: 2
+      targetType: 8
+      numGift: 1
+      numTarget: 200
+    - idQuest: 30
+      giftType: 2
+      targetType: 9
+      numGift: 1
+      numTarget: 200
+    - idQuest: 31
+      giftType: 2
+      targetType: 10
+      numGift: 1
+      numTarget: 200
+    minPercent: 95
+    maxPercent: 99
+  - lsQuest:
+    - idQuest: 32
+      giftType: 6
+      targetType: 0
+      numGift: 1
+      numTarget: 500
+    - idQuest: 33
+      giftType: 6
+      targetType: 2
+      numGift: 1
+      numTarget: 500
+    - idQuest: 34
+      giftType: 6
+      targetType: 3
+      numGift: 1
+      numTarget: 500
+    - idQuest: 35
+      giftType: 6
+      targetType: 6
+      numGift: 1
+      numTarget: 500
+    - idQuest: 36
+      giftType: 6
+      targetType: 7
+      numGift: 1
+      numTarget: 500
+    minPercent: 99
+    maxPercent: 99.8
+  - lsQuest:
+    - idQuest: 37
+      giftType: 7
+      targetType: 0
+      numGift: 1
+      numTarget: 1000
+    - idQuest: 38
+      giftType: 7
+      targetType: 2
+      numGift: 1
+      numTarget: 1000
+    - idQuest: 39
+      giftType: 7
+      targetType: 3
+      numGift: 1
+      numTarget: 1000
+    - idQuest: 40
+      giftType: 7
+      targetType: 6
+      numGift: 1
+      numTarget: 1000
+    - idQuest: 41
+      giftType: 7
+      targetType: 7
+      numGift: 1
+      numTarget: 1000
+    minPercent: 99.8
+    maxPercent: 100
   currentQuest:
     idQuest: 0
     giftType: 0
-    numGift: 0
     targetType: 0
+    numGift: 0
     numTarget: 0
 --- !u!1 &2054971387
 GameObject:

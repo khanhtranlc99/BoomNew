@@ -20,6 +20,7 @@ public class HomeScene : BaseScene
     public List<MenuTabButton> lsMenuTabButtons;
     public List<SceneBase> lsSceneBases;
     public CoinHeartBar coinHeartBar;
+    public QuestBar questBar;
     public void ShowGift()
     {
         
@@ -49,7 +50,7 @@ public class HomeScene : BaseScene
     public void Init()
     {
         coinHeartBar.Init();
-
+        questBar.Init();
         foreach (var item in lsMenuTabButtons)
         {
             item.Init(this);
@@ -144,7 +145,7 @@ public class HomeScene : BaseScene
     }
     private void OnSettingClick()
     {
-        SettingBox.Setup().Show();
+        SettingBox.Setup(false).Show();
         MMVibrationManager.Haptic(HapticTypes.MediumImpact);
     }
 

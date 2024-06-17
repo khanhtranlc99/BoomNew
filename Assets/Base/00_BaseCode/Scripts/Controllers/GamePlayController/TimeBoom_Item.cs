@@ -19,6 +19,7 @@ public class TimeBoom_Item : MonoBehaviour
         {
             icon.SetActive(true);
             tvNum.text = "" + UseProfile.TimeBoom_Item;
+            GamePlayController.Instance.playerContain.tutorial_TimeBoom.StartTut();
         }
         btnTimeBoom.onClick.AddListener(delegate { HandleTimeBoom(); });
         EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.TIMEBOOM_ITEM, HandleShowTimeBoom_Itemp);
@@ -72,6 +73,7 @@ public class TimeBoom_Item : MonoBehaviour
     private void HandleTimeBoom()
     {
         GamePlayController.Instance.playerContain.boomInputController.enabled = false;
+        GamePlayController.Instance.playerContain.tutorial_TimeBoom.NextTut();
         wasUseTimeBoom = true;
         btnTimeBoom.interactable = false;
     }

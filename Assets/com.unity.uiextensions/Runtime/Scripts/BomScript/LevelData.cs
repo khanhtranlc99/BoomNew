@@ -78,6 +78,11 @@ public class LevelData : SerializedMonoBehaviour
       
    
     }
+    public void Init (bool noWait)
+    {
+        ShuffleBase();
+        InitBase();
+    }    
     void InitBase()
     {
         foreach (var item in lsSmiles)
@@ -233,6 +238,23 @@ public class LevelData : SerializedMonoBehaviour
             gridBasesId[i].lsGridBase.Shuffle();
         }
     }
+    public GridBase newGrid;
+    [Button]
+    private void Test()
+    {
+        
+               for (int i = 0; i < gridArray.GetLength(0); i++)
+        {
+            for (int j = 0; j < gridArray.GetLength(1); j++)
+            {
+                if(gridArray[i,j] != null)
+                {
+                    gridArray[i, j] = newGrid.gameObject;
+                }    
+
+            }
+        }
+    }    
 
 }
 

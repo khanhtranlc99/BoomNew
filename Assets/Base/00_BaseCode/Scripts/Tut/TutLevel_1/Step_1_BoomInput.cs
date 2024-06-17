@@ -10,9 +10,9 @@ public class Step_1_BoomInput : TutorialBase
         if(currentHand != null)
         {
             Destroy(currentHand.gameObject);
-        }    
+        }
 
-        return true;
+     return base.IsCanShowTut(); ;
     }
 
     public override void StartTut()
@@ -20,8 +20,12 @@ public class Step_1_BoomInput : TutorialBase
         Debug.LogError("Step_1_BoomInput");
         if (UseProfile.CurrentLevel == 1)
         {
+            if (currentHand != null)
+            {
+                return;
+            }
             currentHand = SimplePool2.Spawn(handTut);
-            currentHand.transform.position = GamePlayController.Instance.playerContain.levelData.gridBasesId[20].transform.position;
+            currentHand.transform.position = GamePlayController.Instance.playerContain.levelData.gridBasesId[19].transform.position;
 
         }
     }

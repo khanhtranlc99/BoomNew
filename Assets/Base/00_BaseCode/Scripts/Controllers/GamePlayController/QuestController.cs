@@ -36,7 +36,7 @@ public class QuestController : MonoBehaviour
     {
         get
         {
-            var temp = Random.Range(0, 100);
+            float temp = Random.Range(0, 100);
             foreach(var item in lsQuestData)
             {
                 if(temp >= item.minPercent && temp < item.maxPercent)
@@ -105,8 +105,8 @@ public class QuestController : MonoBehaviour
 public class QuestData
 {
     public List<Quest> lsQuest;
-    public int minPercent;
-    public int maxPercent;
+    public float minPercent;
+    public float maxPercent;
     public Quest GetRandomQuest
     {
         get
@@ -121,11 +121,9 @@ public class QuestData
 public class Quest
 {
     public int idQuest;
-
     public GiftType giftType;
-    public int numGift;
-
     public QuestTargetType targetType;
+    public int numGift;
     public int numTarget;
 
 }

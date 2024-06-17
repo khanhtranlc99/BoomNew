@@ -92,8 +92,12 @@ public class TargetController : MonoBehaviour
                 return;
             }
         }
-        GamePlayController.Instance.stateGame = StateGame.Win;
-        Winbox.Setup().Show();       
+        if(GamePlayController.Instance.stateGame == StateGame.Playing)
+        {
+            GamePlayController.Instance.stateGame = StateGame.Win;
+            Winbox.Setup().Show();
+        }    
+  
     }
 
 }

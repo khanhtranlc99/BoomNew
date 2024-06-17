@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
+
 public class SettingBox : BaseBox
 {
     #region instance
-    private static SettingBox instance;
-    public static SettingBox Setup( bool isSaveBox = false, Action actionOpenBoxSave = null)
+    public static SettingBox instance;
+    public static SettingBox Setup(bool isOffButton, bool isSaveBox = false, Action actionOpenBoxSave = null)
     {
         if (instance == null)
         {
@@ -15,7 +17,7 @@ public class SettingBox : BaseBox
             instance.Init();
         }
 
-        instance.InitState();
+        instance.InitState(isOffButton);
         return instance;
     }
     #endregion
@@ -42,7 +44,11 @@ public class SettingBox : BaseBox
     [SerializeField] private Sprite spriteVMusicOff;
     [SerializeField] private Sprite spriteVSoundOff;
 
+ 
+    public Button btnHome;
+    public Button btnRestart;
 
+    public bool isGameplay;
  
     #endregion
     private void Init()
@@ -51,15 +57,37 @@ public class SettingBox : BaseBox
         btnVibration.onClick.AddListener(delegate { OnClickBtnVibration(); });
         btnMusic.onClick.AddListener(delegate { OnClickBtnMusic(); });
         btnSound.onClick.AddListener(delegate { OnClickBtnSound(); });
-
-
-
-
+      
+  
+        btnHome.onClick.AddListener(delegate { HandleBtnHome(); });
+        btnRestart.onClick.AddListener(delegate { HandleBtnRestart(); });
     }
-    private void InitState()
+    private void InitState(bool param)
     {
+        isGameplay = param;
+        if (param)
+        {
+            
+            btnHome.gameObject.SetActive(true);
+            btnRestart.gameObject.SetActive(true);
+            GamePlayController.Instance.playerContain.boomInputController.enabled = false;
+        }    
+        else
+        {
+         
+            btnHome.gameObject.SetActive(false);
+            btnRestart.gameObject.SetActive(false);
+        }    
+    
         SetUpBtn();
+       
     }
+
+    public void OffBtn()
+    {
+        btnHome.gameObject.SetActive(false);
+        btnRestart.gameObject.SetActive(false);
+    }    
     private void SetUpBtn()
     {
         if (GameController.Instance.useProfile.OnVibration)
@@ -144,19 +172,55 @@ public class SettingBox : BaseBox
 
     private void OnClickButtonClose()
     {
-
-        GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () => { Next(); }, actionWatchLog: "SettingBox");
+       
+        GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () => { Next(); }, actionWatchLog: "BtnCloseSettingBox");
 
         void Next()
         {
-                
-            GameController.Instance.musicManager.PlayClickSound();
+            if(isGameplay)
+            {
+                GamePlayController.Instance.playerContain.boomInputController.enabled = true;
+
+            }    
+        
             Close();
 
         }
   
     }
 
+
+    public void HandleBtnHome()
+    {
+
+        //GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () => { Next(); }, actionWatchLog: "BtnBackHomeSettingBox");
+
+        //void Next()
+        //{
+ 
+        //    Close();
+        //    Initiate.Fade("HomeScene", Color.black, 1.5f);
+
+        //}
+
+        BackHomeBox.Setup(TypeBackHOme.BackHome).Show();
+
+
+
+    }
+    public void HandleBtnRestart()
+    {
+        //GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () => { Next(); }, actionWatchLog: "Restart");
+        //void Next()
+        //{
+        //    Close();
+        //    Initiate.Fade("GamePlay", Color.black, 1.5f);
+        //}
+        Close();
+        BackHomeBox.Setup(TypeBackHOme.ResetLevel).Show();
+
+
+    }
     private void OnClickRestorePurchase()
     {
         GameController.Instance.iapController.RestorePurchases();

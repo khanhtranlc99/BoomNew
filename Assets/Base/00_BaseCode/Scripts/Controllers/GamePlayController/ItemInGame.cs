@@ -115,6 +115,61 @@ public class ItemInGame : MonoBehaviour
                 break;
         }
     }
+
+    public void Init(GiftInGame giftInGame, Vector3 post, Action callBack)
+    {
+
+
+        currentGift = giftInGame;
+        spriteRenderer.sprite = GameController.Instance.dataContain.giftDatabase.GetIconItem(currentGift.giftType);
+        tvCount.text = giftInGame.count.ToString();
+        playerContain = GamePlayController.Instance.playerContain;
+
+        switch (currentGift.giftType)
+        {
+           
+            case GiftType.FlameUp_Item:
+                HandleJump(post, delegate {
+                    playerContain.flameUp_Item.ShowIcon(delegate {
+                        this.transform.parent = playerContain.flameUp_Item.icon.transform;
+                        this.transform.DOLocalMove(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(delegate {
+                            Debug.LogError("currentGift.count_" + currentGift.count);
+                            UseProfile.FlameUp_Item += currentGift.count;
+                            callBack?.Invoke();
+                            SimplePool2.Despawn(this.gameObject);
+                        });
+                    });
+                });
+                break;
+            case GiftType.FastBoom_Item:
+
+                HandleJump(post, delegate {
+                    playerContain.fastBoom_Item.ShowIcon(delegate {
+                        this.transform.parent = playerContain.fastBoom_Item.icon.transform;
+                        this.transform.DOLocalMove(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(delegate {
+                            UseProfile.FastBoom_Item += currentGift.count;
+                            callBack?.Invoke();
+                            SimplePool2.Despawn(this.gameObject);
+                        });
+                    });
+                });
+                break;
+            case GiftType.TimeBoom_Item:
+
+                HandleJump(post, delegate {
+                    playerContain.timeBoom_Item.ShowIcon(delegate {
+                        this.transform.parent = playerContain.timeBoom_Item.icon.transform;
+                        this.transform.DOLocalMove(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(delegate {
+                            UseProfile.TimeBoom_Item += currentGift.count;
+                            callBack?.Invoke();
+                            SimplePool2.Despawn(this.gameObject);
+                        });
+                    });
+                });
+                break;
+            
+        }
+    }
     public void HandleJump(Vector3 paramPost, Action callBack)
     {
         this.transform.DOJump(paramPost, 1,1,1).SetEase(Ease.Linear).OnComplete(delegate {

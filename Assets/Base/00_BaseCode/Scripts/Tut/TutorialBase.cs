@@ -38,7 +38,7 @@ public abstract class TutorialBase : MonoBehaviour
 
     public virtual void OnEndTut()
     {
-   
+        PlayerPrefs.SetInt(StringHelper.IS_DONE_TUT + nameTut, 1);
     }
 
     protected virtual void OnUpdate()

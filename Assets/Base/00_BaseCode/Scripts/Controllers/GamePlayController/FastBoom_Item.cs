@@ -19,6 +19,7 @@ public class FastBoom_Item : MonoBehaviour
         {
             icon.SetActive(true);
             tvNum.text = "" + UseProfile.FastBoom_Item;
+            GamePlayController.Instance.playerContain.tutorial_FastBoom.StartTut();
         }
         wasUseFastBoom = false;
         btnFastBoom.onClick.AddListener(delegate { HandleBtnFastBoom(); });
@@ -78,6 +79,7 @@ public class FastBoom_Item : MonoBehaviour
     public void HandleBtnFastBoom()
     {
         GamePlayController.Instance.playerContain.boomInputController.enabled = false;
+        GamePlayController.Instance.playerContain.tutorial_FastBoom.NextTut();
         wasUseFastBoom = true;
         btnFastBoom.interactable = false;
     }

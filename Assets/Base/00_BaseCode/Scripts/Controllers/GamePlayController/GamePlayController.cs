@@ -53,8 +53,12 @@ public class GamePlayController : Singleton<GamePlayController>
             if (playerContain.boomInputController.countBoom <= 0 && gameScene.targetController.isLose)
             {
                 GamePlayController.Instance.playerContain.boomInputController.enabled = true;
-                stateGame = StateGame.Lose;
-                LoseBox.Setup().Show();
+                if(stateGame == StateGame.Playing)
+                {
+                    stateGame = StateGame.Lose;
+                    LoseBox.Setup().Show();
+                }    
+          
             }
         }
     }

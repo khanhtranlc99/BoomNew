@@ -20,17 +20,38 @@ public class PlayerContain : MonoBehaviour
     public TutorialFunController tutorial_Rocket;
     public TutorialFunController tutorial_Freeze;
     public TutorialFunController tutorial_Atom;
+    public TutorialFunController tutorial_FastBoom;
+    public TutorialFunController tutorial_TimeBoom;
     public int totalCoin;
 
     public void Init()
     {
         totalCoin = 0;
+        UseProfile.FlameUp_Item = 0;
+        UseProfile.TimeBoom_Item = 0;
+        UseProfile.FastBoom_Item = 0;
         string pathLevel = StringHelper.PATH_CONFIG_LEVEL_TEST;
         Debug.LogError(string.Format(pathLevel, UseProfile.CurrentLevel));
         levelData = Instantiate(Resources.Load<LevelData>(string.Format(pathLevel, UseProfile.CurrentLevel)));
         GamePlayController.Instance.gameScene.Init(levelData);
         prepageGame.Init(delegate {
-            levelData.Init();
+             if(UseProfile.WinStreak > 0)
+            {
+                winStreakController.Init(delegate {
+                    levelData.Init(true);
+                    SetUp();
+                });
+            }    
+             else
+            {
+                levelData.Init();
+                SetUp();
+            }    
+    
+        });  
+
+        void SetUp()
+        {
             boomInputController.Init(levelData);
             TNT_Booster.Init();
             atomBoom_Booster.Init();
@@ -45,14 +66,9 @@ public class PlayerContain : MonoBehaviour
             tutorial_TNT.Init();
             tutorial_BoomInput.Init();
             tutorial_BoomInput.StartTut();
-            Debug.LogError("tutorial_BoomInput");
-        });
-
- 
-     
-
-  
-    
+            tutorial_FastBoom.Init();
+            tutorial_TimeBoom.Init();
+        }
     }
 
     

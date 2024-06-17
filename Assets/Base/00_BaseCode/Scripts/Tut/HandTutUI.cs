@@ -9,7 +9,7 @@ public class HandTutUI : MonoBehaviour
     void Start()
     {
         firstPost = this.transform.position;
-        //HandleMove();
+        HandleMove();
     }
 
     private void HandleMove()

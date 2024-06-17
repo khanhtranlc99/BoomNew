@@ -22,7 +22,7 @@ public class GameScene : BaseScene
     public void Init(LevelData levelData)
     {
         targetController.Init(levelData);
-        settinBtn.onClick.AddListener(delegate { SettingBox.Setup().Show(); });
+        settinBtn.onClick.AddListener(delegate { SettingBox.Setup(true).Show(); });
         tvLevel.text = "Level" + "\n" + UseProfile.CurrentLevel;
 
     }

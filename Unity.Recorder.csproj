@@ -807,13 +807,13 @@
       <Project>{304B92E1-4D68-44D4-890D-14C04ADFD1CF}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{65089AAE-A169-1732-B4EF-68F680DFAE0B}</Project>
-      <Name>UnityEditor.UI</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{7630B8D0-EB0E-DB57-64DC-E632CBA95F60}</Project>
       <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{65089AAE-A169-1732-B4EF-68F680DFAE0B}</Project>
+      <Name>UnityEditor.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -946,13 +946,13 @@
       <Project>{C8F5CE2B-3760-4949-DFC8-45D075B49206}</Project>
       <Name>Unity.Services.Core.Registration</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{65089AAE-A169-1732-B4EF-68F680DFAE0B}</Project>
-      <Name>UnityEditor.UI</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{7630B8D0-EB0E-DB57-64DC-E632CBA95F60}</Project>
       <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{65089AAE-A169-1732-B4EF-68F680DFAE0B}</Project>
+      <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
       <Project>{8B4B1567-223B-8B92-690A-F3072DF2BD99}</Project>

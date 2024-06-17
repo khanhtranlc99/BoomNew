@@ -44,7 +44,7 @@ public class Winbox : BaseBox
     {
         UseProfile.CurrentLevel += 1;
         UseProfile.Coin += GamePlayController.Instance.playerContain.totalCoin;
-        Initiate.Fade("GamePlay", Color.black, 2f);
+        Initiate.Fade("HomeScene", Color.black, 2f);
     }    
     private void HandleReward()
     {

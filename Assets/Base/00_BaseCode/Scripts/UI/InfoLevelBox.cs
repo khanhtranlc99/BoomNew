@@ -66,7 +66,7 @@ public class InfoLevelBox : BaseBox
         {
             for (int i = 0; i < UseProfile.WinStreak; i++)
             {
-                lsWinStreak[UseProfile.WinStreak].color = Color.yellow;
+                lsWinStreak[i].color = Color.yellow;
             }
         }
    

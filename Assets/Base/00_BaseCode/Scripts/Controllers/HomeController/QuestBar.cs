@@ -11,6 +11,7 @@ public class QuestBar : MonoBehaviour
     public Text tvContent;
     public Quest currentQuest;
     public List<TargetData> lsTargetDatas;
+    public Text tvCount;
     public TargetData GetTargetData(QuestTargetType param)
     {
         foreach(var item in lsTargetDatas)
@@ -38,6 +39,7 @@ public class QuestBar : MonoBehaviour
             {
                 barAmount.DOFillAmount(1, 0.7f).OnComplete(delegate { HandleClaimGift(); });
             }
+            tvCount.text = "" + currentQuest.numGift;
         }
     }
 
