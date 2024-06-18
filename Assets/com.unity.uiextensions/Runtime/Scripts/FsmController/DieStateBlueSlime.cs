@@ -9,6 +9,7 @@ public class DieStateBlueSlime : SlimeStateBase
     public GameObject vfxDie;
     public ItemInGame itemInGame;
     public int countCoin;
+    GiftInGame currentGift;
     public override void EndState()
     {
   
@@ -17,6 +18,8 @@ public class DieStateBlueSlime : SlimeStateBase
     public override void Init(SlimeBase slimeBase)
     {
         data = slimeBase;
+        SimplePool2.PoolPreLoad(redSlime.gameObject,2, GamePlayController.Instance.playerContain.levelData.transform);
+         currentGift = new GiftInGame() { giftType = GiftType.Coin, count = countCoin };
     }
 
     public override void StartState()
@@ -30,13 +33,7 @@ public class DieStateBlueSlime : SlimeStateBase
     }
     public void HandleActionDie()
     {
-        var tempGift = SimplePool2.Spawn(itemInGame);
-        var currentGift = new GiftInGame() { giftType = GiftType.Coin, count = countCoin };
-        tempGift.transform.parent = GamePlayController.Instance.gameScene.canvas.transform;
-        tempGift.transform.position = this.transform.position;
-        tempGift.transform.localScale = new Vector3(1, 1, 1);
-        tempGift.Init(currentGift, this.transform);
-
+       
         var temp = new List<GridBase>();
         foreach(var item in data.gridBase.lsGridBase)
         {
@@ -90,6 +87,13 @@ public class DieStateBlueSlime : SlimeStateBase
             GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_1);
             GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_2);
         }
+
+        var tempGift = SimplePool2.Spawn(itemInGame);
+      
+        tempGift.transform.parent = GamePlayController.Instance.gameScene.canvas.transform;
+        tempGift.transform.position = this.transform.position;
+        tempGift.transform.localScale = new Vector3(1, 1, 1);
+        tempGift.Init(currentGift, this.transform);
 
         slimeTarget = GamePlayController.Instance.gameScene.targetController.GetSlimeTarget(data.slimeType);
         var tempvfx = SimplePool2.Spawn(vfxDie);

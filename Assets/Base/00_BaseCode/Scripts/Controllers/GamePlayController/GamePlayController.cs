@@ -19,13 +19,15 @@ public class GamePlayController : Singleton<GamePlayController>
     public StateGame stateGame;
     public PlayerContain playerContain;
     public GameScene gameScene;
-
+    public ItemInGame itemInGame;
+    public Flame flame;
 
 
     protected override void OnAwake()
     {
-      //  GameController.Instance.currentScene = SceneType.GamePlay;
+        //  GameController.Instance.currentScene = SceneType.GamePlay;
 
+     
         Init();
 
     }
@@ -35,9 +37,9 @@ public class GamePlayController : Singleton<GamePlayController>
      
 
             playerContain.Init();
-    
-   
-  
+
+        SimplePool2.Preload(itemInGame.gameObject, 10, this.transform);
+        SimplePool2.Preload(flame.gameObject, 50, this.transform);
         stateGame = StateGame.Playing;
         //GameController.Instance.AnalyticsController.LoadingComplete();
         //GameController.Instance.admobAds.canShowOpenAppAds = true;

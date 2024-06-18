@@ -1751,6 +1751,8 @@ MonoBehaviour:
   stateGame: 0
   playerContain: {fileID: 39208332}
   gameScene: {fileID: 1395710098}
+  itemInGame: {fileID: 4929554592798478034, guid: 3a211219e76db164d800083326622601, type: 3}
+  flame: {fileID: 6872330641066631044, guid: 0cb53581e7204974c8bd9ed5c4e6fba3, type: 3}
 --- !u!4 &274261229
 Transform:
   m_ObjectHideFlags: 0

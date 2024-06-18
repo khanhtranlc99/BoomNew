@@ -24,6 +24,7 @@ public class TNT_Booster : MonoBehaviour
     {
         selectedObject = null;
              wasUseTNT_Booster = false;
+        SimplePool2.Preload(flameVfx.gameObject,1, post);
         if (UseProfile.CurrentLevel >= 3)
         {
 
@@ -152,7 +153,7 @@ public class TNT_Booster : MonoBehaviour
             {
                 if (selectedObject != null)
                 {
-                    var boom = SimplePool2.Spawn(TNT_Boom_Prefab, post.position /*selectedObject.transform.position*/, Quaternion.identity);
+                    var boom = SimplePool2.Spawn(TNT_Boom_Prefab, post.position  , Quaternion.identity);
                     boom.transform.DOMove(selectedObject.transform.position, 0.35f).SetEase(Ease.OutFlash).OnComplete(delegate { boom.HandleExplosion(); });
                     wasUseTNT_Booster = false;
                     GamePlayController.Instance.playerContain.boomInputController.enabled = true;
