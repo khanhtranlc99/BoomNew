@@ -1,0 +1,27 @@
+
+Blue slime.png
+size: 108,140
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Die
+  rotate: false
+  xy: 4, 8
+  size: 60, 48
+  orig: 60, 48
+  offset: 0, 0
+  index: -1
+Eyes close
+  rotate: false
+  xy: 4, 60
+  size: 95, 75
+  orig: 95, 75
+  offset: 0, 0
+  index: -1
+Eyes open
+  rotate: true
+  xy: 68, 4
+  size: 52, 36
+  orig: 52, 36
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,34 @@
+
+Fast Slime.png
+size: 212,88
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 4, 7
+  size: 95, 75
+  orig: 95, 75
+  offset: 0, 0
+  index: -1
+Die
+  rotate: true
+  xy: 103, 22
+  size: 60, 48
+  orig: 60, 48
+  offset: 0, 0
+  index: -1
+Eyes open
+  rotate: false
+  xy: 155, 46
+  size: 52, 36
+  orig: 52, 36
+  offset: 0, 0
+  index: -1
+lightning
+  rotate: true
+  xy: 155, 4
+  size: 38, 37
+  orig: 38, 37
+  offset: 0, 0
+  index: -1

@@ -1515,6 +1515,7 @@
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\cdt2d.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UI Particle Add.shader" />
+    <None Include="Assets\Base\00_BaseCode\Anim\steel\ex steel\Steel slime.atlas.txt" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\robust-in-sphere.txt" />
     <None Include="Assets\Base\FacebookSDK\link.xml" />
     <None Include="Assets\Base\FacebookSDK\Plugins\iOS\Facebook.Unity.IOS.dll" />
@@ -1570,6 +1571,7 @@
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\NoEditor\Sirenix.Serialization.dll" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\robust-orientation.txt" />
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UI Particle MultiplyDouble.shader" />
+    <None Include="Assets\Base\00_BaseCode\Anim\dark\ex dark\Dark blue slime.atlas.txt" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x86\libssl-3.dll" />
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.xml" />
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll" />
@@ -1607,11 +1609,13 @@
     <None Include="Assets\Base\3Party\Adjust\Windows\Stubs\Win81Interface.dll" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x86\tinyxml2.dll" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\robust-sum.txt" />
+    <None Include="Assets\Base\00_BaseCode\Anim\ghost\ex1\Ghost slime.atlas.txt" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\svg-path-contours.txt" />
     <None Include="Assets\MaxSdk\Mediation\MediationAdapters.txt" />
     <None Include="Assets\Demigiant\DOTweenPro\DOTweenPro.dll" />
     <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
     <None Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Integration\readme.txt" />
+    <None Include="Assets\Base\00_BaseCode\Anim\ex\Untitled-1.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Base\3Party\NiceVibrations\readme.txt" />
     <None Include="Assets\Base\00_BaseCode\Animations\SlimeSpine\Untitled-1.atlas.txt" />
@@ -1640,6 +1644,7 @@
     <None Include="Assets\Base\3Party\Best HTTP (Pro)\link.xml" />
     <None Include="Assets\Base\3Party\Adjust\Windows\W81\AdjustWP81.dll" />
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\NoEmitAndNoEditor\Sirenix.Utilities.dll" />
+    <None Include="Assets\Base\00_BaseCode\Anim\blue\ex blue\Blue slime.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\two-sum.txt" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
@@ -1649,11 +1654,13 @@
     <None Include="Assets\Base\3Party\Best HTTP (Pro)\ReleaseNotes.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\robust-subtract.txt" />
+    <None Include="Assets\Base\00_BaseCode\Anim\green\ex green\Green slime.atlas.txt" />
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll" />
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Serialization.xml" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x86\libcrypto-3.dll" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x64\WebView2Loader.dll" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\binary-search-bounds.txt" />
+    <None Include="Assets\Base\00_BaseCode\Anim\fast\ex fast\Fast Slime.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UIParticleHidden.shader" />
   </ItemGroup>

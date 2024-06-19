@@ -1,0 +1,27 @@
+
+Dark blue slime.png
+size: 104,144
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 4, 62
+  size: 95, 78
+  orig: 95, 78
+  offset: 0, 0
+  index: -1
+Die
+  rotate: false
+  xy: 4, 10
+  size: 60, 48
+  orig: 60, 48
+  offset: 0, 0
+  index: -1
+Eyes open
+  rotate: true
+  xy: 68, 4
+  size: 54, 31
+  orig: 54, 31
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,62 @@
+
+Steel slime.png
+size: 204,196
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Armor
+  rotate: false
+  xy: 4, 99
+  size: 108, 92
+  orig: 108, 92
+  offset: 0, 0
+  index: -1
+Armor broken
+  rotate: false
+  xy: 4, 8
+  size: 107, 87
+  orig: 107, 87
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 116, 96
+  size: 95, 75
+  orig: 95, 75
+  offset: 0, 0
+  index: -1
+Die
+  rotate: false
+  xy: 115, 44
+  size: 60, 48
+  orig: 60, 48
+  offset: 0, 0
+  index: -1
+Group 9
+  rotate: false
+  xy: 115, 4
+  size: 52, 36
+  orig: 52, 36
+  offset: 0, 0
+  index: -1
+Layer 1253
+  rotate: true
+  xy: 179, 42
+  size: 50, 18
+  orig: 50, 18
+  offset: 0, 0
+  index: -1
+Layer 1262 copy 2
+  rotate: false
+  xy: 171, 22
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+Layer 1262 copy 6
+  rotate: false
+  xy: 171, 22
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
