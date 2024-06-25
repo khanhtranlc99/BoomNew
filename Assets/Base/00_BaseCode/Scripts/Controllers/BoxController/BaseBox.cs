@@ -53,12 +53,12 @@ public abstract class BaseBox : MonoBehaviour
 
         if (this.mainPanel != null)
         {
-            var tweenAnimation = this.mainPanel.GetComponent<DOTweenAnimation>();
-            if (tweenAnimation != null)
-            {
-                tweenAnimation.isIndependentUpdate = true;//Không phục thuộc vào time scale
-                isAnim = false;
-            }
+            //var tweenAnimation = this.mainPanel.GetComponent<DOTweenAnimation>();
+            //if (tweenAnimation != null)
+            //{
+            //    tweenAnimation.isIndependentUpdate = true;//Không phục thuộc vào time scale
+            //    isAnim = false;
+            //}
         }
 
         OnAwake();

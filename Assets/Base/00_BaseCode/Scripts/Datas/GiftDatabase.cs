@@ -119,6 +119,9 @@ public enum GiftType
     FastBoom_Item = 9,
     TimeBoom_Item = 10,
     Boom_Normal = 11,
+    Boom_Start = 12,
+    Fire_Start = 13,
+    Heart_Unlimit = 14,
 
 
 

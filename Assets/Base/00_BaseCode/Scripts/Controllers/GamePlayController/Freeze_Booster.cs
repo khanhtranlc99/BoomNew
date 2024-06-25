@@ -23,7 +23,7 @@ public class Freeze_Booster : MonoBehaviour
         if (UseProfile.CurrentLevel >= 7)
         {
 
-            unLockIcon.gameObject.SetActive(true);
+            //unLockIcon.gameObject.SetActive(true);
             lockIcon.gameObject.SetActive(false);
             HandleUnlock();
         
@@ -31,7 +31,7 @@ public class Freeze_Booster : MonoBehaviour
         }
         else
         {
-            unLockIcon.gameObject.SetActive(false);
+            //unLockIcon.gameObject.SetActive(false);
             lockIcon.gameObject.SetActive(true);
             objNum.SetActive(false);
             HandleLock();

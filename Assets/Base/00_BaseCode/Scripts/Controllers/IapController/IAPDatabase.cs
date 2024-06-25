@@ -9,15 +9,15 @@ using com.adjust.sdk;
 
 public enum TypePackIAP
 {
+    PremiumPacks,
+    FirePacks,
+    BoomPacks,
+    SupportPacks,
+    ImmortalPacks,
+    CoinPacks_1,
+    CoinPacks_2,
+    CoinPacks_3
 
-    CoinPack_150 = 1,
-    CoinPack_700 = 2,
-    CoinPack_1800 = 3,
-    CoinPack_4000 = 4,
-    CoinPack_7000 = 5,
-    CoinPack_15000 = 6,
-    Starter_Pack = 7,
-    No_Ads = 8
 
 }
 
@@ -118,7 +118,7 @@ public class IAPPack
 
         int value = 0;
         GiftType typeItem = GiftType.Coin;
-        if (type == TypePackIAP.Starter_Pack)
+        if (type == TypePackIAP.PremiumPacks)
         {
             //UseProfile.WasBoughtStarterPack = true;
             //EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.BY_STARTER_PACK);
@@ -129,15 +129,15 @@ public class IAPPack
 
             List<GiftRewardShow> giftRewardShows = new List<GiftRewardShow>();
             giftRewardShows.Add(new GiftRewardShow() { amount = item.Value, type = item.Key });
-
-            if (type != TypePackIAP.Starter_Pack)
-            {
-                PopupRewardBase.Setup(false).Show(giftRewardShows, delegate { });
-            }
-            else
-            {
-                PopupRewardBase.Setup(true).Show(giftRewardShows, delegate { });
-            }
+            PopupRewardBase.Setup(false).Show(giftRewardShows, delegate { });
+            //if (type != TypePackIAP.PremiumPacks)
+            //{
+            //    PopupRewardBase.Setup(false).Show(giftRewardShows, delegate { });
+            //}
+            //else
+            //{
+            //    PopupRewardBase.Setup(true).Show(giftRewardShows, delegate { });
+            //}
 
 
         }

@@ -1,0 +1,34 @@
+
+Steel slime.png
+size: 348,104
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Armor
+  rotate: false
+  xy: 4, 7
+  size: 108, 92
+  orig: 108, 92
+  offset: 0, 0
+  index: -1
+Armor broken
+  rotate: false
+  xy: 116, 12
+  size: 107, 87
+  orig: 107, 87
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 227, 4
+  size: 95, 75
+  orig: 95, 75
+  offset: 0, 0
+  index: -1
+Group 9
+  rotate: true
+  xy: 306, 47
+  size: 52, 36
+  orig: 52, 36
+  offset: 0, 0
+  index: -1

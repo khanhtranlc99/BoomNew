@@ -1,0 +1,41 @@
+
+Green slime.png
+size: 168,132
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Die
+  rotate: true
+  xy: 113, 68
+  size: 60, 48
+  orig: 60, 48
+  offset: 0, 0
+  index: -1
+Eyes open
+  rotate: false
+  xy: 53, 11
+  size: 52, 36
+  orig: 52, 36
+  offset: 0, 0
+  index: -1
+Wing
+  rotate: true
+  xy: 113, 22
+  size: 42, 47
+  orig: 42, 47
+  offset: 0, 0
+  index: -1
+Wing copy
+  rotate: false
+  xy: 4, 4
+  size: 45, 43
+  orig: 45, 43
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 4, 51
+  size: 105, 77
+  orig: 105, 77
+  offset: 0, 0
+  index: -1

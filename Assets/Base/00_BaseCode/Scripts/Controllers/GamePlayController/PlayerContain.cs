@@ -32,24 +32,25 @@ public class PlayerContain : MonoBehaviour
         UseProfile.FastBoom_Item = 0;
         string pathLevel = StringHelper.PATH_CONFIG_LEVEL_TEST;
         Debug.LogError(string.Format(pathLevel, UseProfile.CurrentLevel));
-        levelData = Instantiate(Resources.Load<LevelData>(string.Format(pathLevel, UseProfile.CurrentLevel)));
+        //levelData = Instantiate(Resources.Load<LevelData>(string.Format(pathLevel, UseProfile.CurrentLevel)));
         GamePlayController.Instance.gameScene.Init(levelData);
-        prepageGame.Init(delegate {
-             if(UseProfile.WinStreak > 0)
-            {
-                winStreakController.Init(delegate {
-                    levelData.Init(true);
-                    SetUp();
-                });
-            }    
-             else
-            {
-                levelData.Init();
-                SetUp();
-            }    
-    
-        });  
+        //prepageGame.Init(delegate {
+        //     if(UseProfile.WinStreak > 0)
+        //    {
+        //        winStreakController.Init(delegate {
+        //            levelData.Init(true);
+        //            SetUp();
+        //        });
+        //    }    
+        //     else
+        //    {
+        //        levelData.Init();
+        //        SetUp();
+        //    }    
 
+        //});  
+        levelData.Init(true);
+        SetUp();
         void SetUp()
         {
             boomInputController.Init(levelData);

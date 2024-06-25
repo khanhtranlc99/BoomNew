@@ -23,7 +23,6 @@ public class MainSceneController : SceneBase
 
     private void OnClickPlay()
     {
-
         InfoLevelBox.Setup(infoDataLevel.lsInfoDatas[UseProfile.CurrentLevel - 1]).Show();
     }
 }

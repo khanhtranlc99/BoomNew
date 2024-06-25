@@ -24,7 +24,7 @@ public class Rocket_Booster : MonoBehaviour
         if (UseProfile.CurrentLevel >= 5)
         {
 
-            unLockIcon.gameObject.SetActive(true);
+            //unLockIcon.gameObject.SetActive(true);
             lockIcon.gameObject.SetActive(false);
             HandleUnlock();
             Debug.LogError("HandleUnlock");
@@ -32,7 +32,7 @@ public class Rocket_Booster : MonoBehaviour
         }
         else
         {
-            unLockIcon.gameObject.SetActive(false);
+            //unLockIcon.gameObject.SetActive(false);
             lockIcon.gameObject.SetActive(true);
             objNum.SetActive(false);
             HandleLock();

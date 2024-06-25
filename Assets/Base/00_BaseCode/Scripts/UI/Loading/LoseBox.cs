@@ -85,7 +85,7 @@ public class LoseBox : BaseBox
     public void HandleClose()
     {
 
-        Close();
+        //Close();
         BackHomeBox.Setup(TypeBackHOme.BackHome).Show();
 
     }

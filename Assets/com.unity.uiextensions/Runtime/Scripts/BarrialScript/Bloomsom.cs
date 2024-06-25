@@ -7,6 +7,7 @@ public class Bloomsom : BarrierBase
 {
     int random = 0;
     public List< SlimeBase> slimeBase = new List<SlimeBase>();
+    public List<Lear> lsLear;
     public override void Init()
     {
         EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.FREEZE, HandlePause);
@@ -53,18 +54,31 @@ public class Bloomsom : BarrierBase
        
         random = Random.Range(0,2);
         barrierType = BarrierType.Block;
-        transform.DOShakePosition(1, 0.1f, 1, 1).SetDelay(0.5f).OnComplete(delegate
+        for(int i = 0; i < lsLear.Count; i ++)
         {
-            //if(random == 1)
-            //{
-                HandleSlimeOut();
-            //}
-            //else
-            //{
-            //    HandleSlimeHide();
-            //}
+            int index = i;
+            lsLear[index].HandleMove(delegate { 
+            
+                if(index >= lsLear.Count -1)
+                {
+                    HandleSlimeOut();
+                }
+            
+            });
+ 
+        }
+        //transform.DOShakePosition(1, 0.1f, 1, 1).SetDelay(0.5f).OnComplete(delegate
+        //{
+        //    //if(random == 1)
+        //    //{
+        //        HandleSlimeOut();
+        //    //}
+        //    //else
+        //    //{
+        //    //    HandleSlimeHide();
+        //    //}
           
-        });
+        //});
      
     }
     private void HandleSlimeOut()

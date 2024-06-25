@@ -597,7 +597,7 @@ public class UseProfile : MonoBehaviour
             }
             else
             {
-                var newDateTime = UnbiasedTime.Instance.Now().AddDays(-1);
+                var newDateTime = DateTime.Now.AddDays(-1);
                 PlayerPrefs.SetString(StringHelper.LAST_TIME_ONLINE, newDateTime.ToBinary().ToString());
                 PlayerPrefs.Save();
                 return newDateTime;

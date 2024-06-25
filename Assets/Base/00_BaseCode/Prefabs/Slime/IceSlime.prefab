@@ -56,7 +56,7 @@ MonoBehaviour:
   wasTakeDame: 0
   Hp: 10
   Speed: 1.1
-  slimeType: 3
+  slimeType: 5
   fSMController: {fileID: 2444341948764018391}
   animator: {fileID: 2444341949745729094}
   collider2D: {fileID: 2444341948764018389}
@@ -211,7 +211,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 4841561795629220455, guid: 944c6fc68f150d54c99489ef0e9f5676, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

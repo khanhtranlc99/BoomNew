@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2550375533306605913}
   m_Layer: 0
   m_Name: TimeBoom
-  m_TagString: Untagged
+  m_TagString: Boom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,6 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   barrierType: 2
+  questTargetType: 0
   gridBase: {fileID: 0}
   wasTakeDame: 0
   Hp: 0

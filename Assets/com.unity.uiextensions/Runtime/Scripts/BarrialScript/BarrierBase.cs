@@ -7,7 +7,8 @@ public enum BarrierType
     Block,
     ComeThrough,
     Boom,
-    Slime
+    Slime,
+ 
 }
 public abstract class BarrierBase : MonoBehaviour
 {

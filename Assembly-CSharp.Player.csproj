@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\Player\</OutputPath>
-    <DefineConstants>UNITY_2020_3_38;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;MOREMOUNTAINS_NICEVIBRATIONS;DREAMTECK_SPLINES;JSONNET_EXISTS;TextMeshPro;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2020_3_38;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;MOREMOUNTAINS_NICEVIBRATIONS;DREAMTECK_SPLINES;JSONNET_EXISTS;TextMeshPro;DOTWEEN;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -73,6 +73,7 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\security\MacUtilities.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\generators\ElGamalKeyPairGenerator.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Primitives\UILineRendererList.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\ShopBox.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\util\zlib\ZStream.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\GSocket\GSocket.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\modes\gcm\IGcmExponentiator.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\DsaKeyGenerationParameters.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\BomScript\MapController.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\SceneBase.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\ButtonShopController.cs" />
     <Compile Include="Assets\Base\FacebookSDK\Examples\Mobile\Scripts\LogView.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\GamePlayController.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Drawers\Canvas\AutoLayoutDrawers\ContentSizeFitterDrawer.cs" />
@@ -148,6 +150,7 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\raw\Nat576.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Controls\ReorderableList\ReorderableListElement.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\generators\DHKeyGeneratorHelper.cs" />
+    <Compile Include="Assets\Demigiant\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP256K1Curve.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\Floor.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\engines\RC4Engine.cs" />
@@ -260,6 +263,7 @@
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Model\Settings\UnityTextSettings.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Primitives\UICircle.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsAgreementCredentials.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\Scroller.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\IapController\IapController.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\MenuSystem\Menu.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Utilities\UIScrollToSelection.cs" />
@@ -322,6 +326,7 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\BerSet.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Utilities\UI_TweenScale.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x509\X509Extensions.cs" />
+    <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\BarrialScript\Lear.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\IapController\IAPDatabase.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\FlameVfx.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP160R2Curve.cs" />
@@ -422,7 +427,6 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\security\cert\CertificateEncodingException.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\util\io\pem\PemWriter.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Popups\ConfirmBox\ConfirmBox.cs" />
-    <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\IDSA.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\ElGamalKeyGenerationParameters.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\DHKeyGenerationParameters.cs" />
@@ -463,6 +467,7 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\DsaPublicKeyParameters.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Popups\ShopCoinBox.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\macs\VMPCMac.cs" />
+    <Compile Include="Assets\Demigiant\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsRsaKeyExchange.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\CertificateStatusRequest.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsSessionImpl.cs" />
@@ -532,6 +537,7 @@
     <Compile Include="Assets\D.A. Assets\Shared\DAGradient\DAGradient.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Forms\HTTPFieldData.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\Rocket_Booster.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\SpineExtension.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\BarrialScript\WoodenBox.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Controls\Old\CooldownButton.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SignalR\Messages\IServerMessage.cs" />
@@ -558,6 +564,7 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Statistics\Statistics.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\GOST3410Parameters.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP256R1Curve.cs" />
+    <Compile Include="Assets\Demigiant\Modules\DOTweenModulePhysics2D.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\ElGamalKeyParameters.cs" />
     <Compile Include="Assets\D.A. Assets\Shared\SVGMeshUnity\Internals\Curve.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Tut\Tut_FastBoom\Step_1_FastBoom.cs" />
@@ -574,6 +581,7 @@
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Model\Settings\DebugSettings.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Drawers\Canvas\TextDrawer.cs" />
     <Compile Include="Assets\Base\FacebookSDK\Examples\Mobile\Scripts\ConsoleBase.cs" />
+    <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\BarrialScript\MoveRock.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Datas\BirdChestData.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\IndefiniteLengthInputStream.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP224R1Point.cs" />
@@ -685,6 +693,7 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsProtocol.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\util\io\FilterStream.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Decompression\ZlibCodec.cs" />
+    <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\BarrialScript\Spike.cs" />
     <Compile Include="Assets\Base\3Party\Adjust\Unity\AdjustEnvironment.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Layout\TileSizeFitter.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Controls\Old\BoxSlider.cs" />
@@ -738,11 +747,12 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\engines\VMPCKSA3Engine.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Layout\FancyScrollView\ScrollRect\FancyScrollRect.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\BERGenerator.cs" />
+    <Compile Include="Assets\Demigiant\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\signers\GOST3410Signer.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecT233R1Point.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Extensions\HeaderValue.cs" />
-    <Compile Include="Assets\D.A. Assets\Shared\FlexibleGridLayoutGroup.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\TimeBoom.cs" />
+    <Compile Include="Assets\D.A. Assets\Shared\FlexibleGridLayoutGroup.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\engines\RC2Engine.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP384R1Curve.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\engines\SEEDEngine.cs" />
@@ -878,6 +888,7 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Decompression\Deflate.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\engines\DesEngine.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Extensions\AdaptivityExtensions.cs" />
+    <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\BarrialScript\SlimeBox.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\util\Platform.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Layout\FancyScrollView\GridView\FancyCellGroup.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Utility\EffectMoney\MoneyEffect.cs" />
@@ -945,6 +956,7 @@
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Core\AssetTools.cs" />
     <Compile Include="Assets\Base\3Party\Joker2X\Localize\Scripts\UI\UILocalizeFirstUpper.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\GSocket\GServices.cs" />
+    <Compile Include="Assets\Demigiant\Modules\DOTweenModuleEPOOutline.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Model\Settings\MPUIKitSettings.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\macs\GOST28147Mac.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\AbstractTlsKeyExchange.cs" />
@@ -971,8 +983,9 @@
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Utility\ReadOnlyAttribute.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Drawers\Canvas\GameObjectDrawer.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Layout\CardUI\3D Cards\CardExpanding3D.cs" />
-    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\TNT_Booster.cs" />
+    <Compile Include="Assets\Demigiant\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Utilities\UIHighlightable.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\TNT_Booster.cs" />
     <Compile Include="Assets\D.A. Assets\Shared\UpdateBool.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsCredentials.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Project\ProjectImporter.cs" />
@@ -1034,6 +1047,7 @@
     <Compile Include="Assets\Base\FacebookSDK\Examples\Windows\FBWindowsFriendsManager.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\multiplier\GlvMultiplier.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsContext.cs" />
+    <Compile Include="Assets\Demigiant\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Base\FacebookSDK\Examples\Windows\FBWindowsPhysicalGamepadManager.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Core\FcuEvents.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Datas\LevelChestData.cs" />
@@ -1090,6 +1104,7 @@
     <Compile Include="Assets\Base\00_BaseCode\Scripts\GSocket\Context.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Utilities\UIScrollToSelectionXY.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\util\Strings.cs" />
+    <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\BarrialScript\BlackHold.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecT233R1Curve.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Utilities\ReadOnlyAttribute.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Effects\CurlyUI\CUIMisc.cs" />
@@ -1117,6 +1132,7 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\DigitallySigned.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\DatagramTransport.cs" />
     <Compile Include="Assets\D.A. Assets\Shared\DAGradient\DAColorBlendMode.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\ButtonShop.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\util\FilterStream.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Model\Settings\Shapes2DSettings.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SignalRCore\HelperClasses.cs" />
@@ -1142,9 +1158,10 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\macs\ISO9797Alg3Mac.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\ec\CustomNamedCurves.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Analytic\RemoteConfigController.cs" />
+    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\engines\NoekeonEngine.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\Asn1InputStream.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Utilities\UIExtensionMethods.cs" />
-    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\engines\NoekeonEngine.cs" />
+    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SocketIO\Events\EventDescriptor.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Utilities\TestCompression.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\engines\RC6Engine.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\Examples\Plugin\CacheMaintenanceSample.cs" />
@@ -1153,7 +1170,6 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\raw\Nat160.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP160K1Point.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\field\GF2Polynomial.cs" />
-    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SocketIO\Events\EventDescriptor.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\ParametersWithSalt.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\BarrialScript\Tree.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP160K1Curve.cs" />
@@ -1388,11 +1404,12 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x509\TBSCertificateStructure.cs" />
     <Compile Include="Assets\Base\FacebookSDK\Examples\CloudAndroid\Scripts\AdsPage.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\modes\CtsBlockCipher.cs" />
+    <Compile Include="Assets\Demigiant\Modules\DOTweenModuleSprite.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\engines\RC564Engine.cs" />
-    <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Effects\ShaderEffects\UIAdditiveEffect.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsDssSigner.cs" />
-    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\MaxFragmentLength.cs" />
+    <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Effects\ShaderEffects\UIAdditiveEffect.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\cryptopro\GOST3410ParamSetParameters.cs" />
+    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\MaxFragmentLength.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\UIWindowBase.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\generators\RsaKeyPairGenerator.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\ISigner.cs" />
@@ -1504,7 +1521,9 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\digests\WhirlpoolDigest.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP192R1FieldElement.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Sprite\SpriteColorizer.cs" />
-    <Compile Include="Assets\Base\00_BaseCode\Scripts\SpineExtension.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\PackInShopAds.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\PackInShopCoin.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\PackInShopAdsCoin.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UIAdditive.shader" />
@@ -1518,14 +1537,12 @@
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\robust-in-sphere.txt" />
     <None Include="Assets\Base\FacebookSDK\link.xml" />
     <None Include="Assets\Base\FacebookSDK\Plugins\iOS\Facebook.Unity.IOS.dll" />
-    <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
     <None Include="Assets\Base\3Party\Adjust\Android\AdjustAndroidManifest.xml" />
     <None Include="Assets\Base\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\parse-svg-path.txt" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x64\libssl-3-x64.dll" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x86\zlib1.dll" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\robust-scale.txt" />
-    <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.dll" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x86\LibFBGPlatform.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UIScreen.shader" />
@@ -1537,28 +1554,29 @@
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\NoEmitAndNoEditor\Sirenix.Serialization.dll" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x86\libcurl.dll" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\two-product.txt" />
+    <None Include="Assets\Base\00_BaseCode\Anim\green\Green slime.atlas.txt" />
     <None Include="Assets\Base\3Party\Adjust\Windows\WindowsPcl.dll" />
-    <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
     <None Include="Assets\Base\3Party\Adjust\Windows\Stubs\Win10Interface.dll" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\LibFBGManaged.dll" />
-    <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />
+    <None Include="Assets\Base\00_BaseCode\Anim\blue\Blue slime.atlas.txt" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x64\tinyxml2.dll" />
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UILinearDodge.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UI Particle Alpha Blend.shader" />
     <None Include="Assets\StreamingAssets\build_info.txt" />
     <None Include="Assets\Base\3Party\Best HTTP (Pro)\license.txt" />
+    <None Include="Assets\Demigiant\DOTween.dll" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\SVGMeshUnity.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
     <None Include="Assets\Base\3Party\Adjust\Windows\WS\AdjustWS.dll" />
-    <None Include="Assets\Demigiant\DOTween\DOTween.XML" />
+    <None Include="Assets\Base\00_BaseCode\Anim\fast\Fast Slime.atlas.txt" />
     <None Include="Assets\Base\3Party\Adjust\Windows\WU10\Win10Interface.dll" />
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.xml" />
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll" />
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\SoftMaskShader.shader" />
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll" />
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />
+    <None Include="Assets\Demigiant\readme.txt" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Settings\Facebook.Unity.Settings.dll" />
     <None Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\API.txt" />
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UI Particle Premultiply Blend.shader" />
@@ -1566,7 +1584,9 @@
     <None Include="Assets\Base\3Party\Adjust\Windows\WS\WinWsInterface.dll" />
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UI Particle VertexLit Blended.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Base\00_BaseCode\Anim\steel\Steel slime.atlas.txt" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Canvas\Facebook.Unity.Canvas.dll" />
+    <None Include="Assets\Base\00_BaseCode\Anim\ice\Untitled-1.atlas.txt" />
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\NoEditor\Sirenix.Serialization.dll" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\robust-orientation.txt" />
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UI Particle MultiplyDouble.shader" />
@@ -1580,14 +1600,13 @@
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UI Particle AddMultiply.shader" />
     <None Include="Assets\Base\3Party\Adjust\Windows\Stubs\WinWsInterface.dll" />
     <None Include="Assets\Base\3Party\NiceVibrations\Common\Plugins\Android\AndroidManifest.xml" />
-    <None Include="Assets\Demigiant\DOTween\DOTween43.dll" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Utilities.xml" />
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\Base\00_BaseCode\Anim\ghost\Ghost slime.atlas.txt" />
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UI Particle Blend.shader" />
-    <None Include="Assets\Demigiant\DOTween\DOTween.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\Base\3Party\NiceVibrations\OlderVersions\v1.7\NiceVibrations-v-1-7-readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
@@ -1597,10 +1616,9 @@
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x64\LibFBGUI.dll" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\svg-arc-to-cubic-bezier.txt" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x86\WebView2Loader.dll" />
-    <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
+    <None Include="Assets\Demigiant\DOTween.XML" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x64\libcurl.dll" />
-    <None Include="Assets\Demigiant\DOTween\DOTween46.dll" />
     <None Include="Assets\Base\Plugins\Sirenix\Readme.txt" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x64\libcrypto-3-x64.dll" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x64\XInputInterface.dll" />
@@ -1609,8 +1627,7 @@
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\robust-sum.txt" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\svg-path-contours.txt" />
     <None Include="Assets\MaxSdk\Mediation\MediationAdapters.txt" />
-    <None Include="Assets\Demigiant\DOTweenPro\DOTweenPro.dll" />
-    <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
+    <None Include="Assets\Base\00_BaseCode\Anim\dark\Dark blue slime.atlas.txt" />
     <None Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Integration\readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Base\3Party\NiceVibrations\readme.txt" />
@@ -1618,7 +1635,6 @@
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\link.xml" />
     <None Include="Assets\Base\3Party\Adjust\Windows\WU10\AdjustUAP10.dll" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\XInputDotNetPure.dll" />
-    <None Include="Assets\Demigiant\DOTweenPro\DOTweenPro.XML" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Android\Facebook.Unity.Android.dll" />
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UISoftAdditive.shader" />
     <None Include="Assets\Base\00_BaseCode\Scripts\Utility\CrystalFramework\Utility\Demos\SafeAreaDemo.txt" />
@@ -1632,7 +1648,6 @@
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UIImageCrop.shader" />
     <None Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\License.txt" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x64\zlib1.dll" />
-    <None Include="Assets\Demigiant\DOTween\readme.txt" />
     <None Include="Assets\Base\3Party\Joker2X\FileHelpers.dll" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x86\LibFBGUI.dll" />
     <None Include="Assets\Base\3Party\Adjust\Windows\Newtonsoft.Json.dll" />
@@ -1643,7 +1658,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\two-sum.txt" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\Demigiant\DOTween\DOTween50.dll" />
     <None Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Third-Party Notices.txt" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\Facebook.Unity.Windows.dll" />
     <None Include="Assets\Base\3Party\Best HTTP (Pro)\ReleaseNotes.txt" />
@@ -1652,6 +1666,7 @@
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll" />
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Serialization.xml" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x86\libcrypto-3.dll" />
+    <None Include="Assets\Base\00_BaseCode\WaterShader\CFX_Demo_WaterWiggle.shader" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Windows\x64\WebView2Loader.dll" />
     <None Include="Assets\D.A. Assets\Shared\SVGMeshUnity\LICENSES\binary-search-bounds.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
@@ -1907,9 +1922,6 @@
     <Reference Include="Sirenix.Serialization.Config">
       <HintPath>Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween46">
-      <HintPath>Assets\Demigiant\DOTween\DOTween46.dll</HintPath>
-    </Reference>
     <Reference Include="Firebase.TaskExtension">
       <HintPath>Library\PackageCache\com.google.firebase.app@18c3e06f7f0f\Firebase\Plugins\Firebase.TaskExtension.dll</HintPath>
     </Reference>
@@ -1934,14 +1946,11 @@
     <Reference Include="Firebase.Crashlytics">
       <HintPath>Library\PackageCache\com.google.firebase.crashlytics@36b50a7241bd\Firebase\Plugins\Firebase.Crashlytics.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets\Demigiant\DOTween\DOTween.dll</HintPath>
-    </Reference>
     <Reference Include="Firebase.App">
       <HintPath>Library\PackageCache\com.google.firebase.app@18c3e06f7f0f\Firebase\Plugins\Firebase.App.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween50">
-      <HintPath>Assets\Demigiant\DOTween\DOTween50.dll</HintPath>
+    <Reference Include="DOTween">
+      <HintPath>Assets\Demigiant\DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
@@ -1955,14 +1964,8 @@
     <Reference Include="FileHelpers">
       <HintPath>Assets\Base\3Party\Joker2X\FileHelpers.dll</HintPath>
     </Reference>
-    <Reference Include="DOTweenPro">
-      <HintPath>Assets\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
-    </Reference>
     <Reference Include="LitJson">
       <HintPath>Assets\Plugins\LitJson.dll</HintPath>
-    </Reference>
-    <Reference Include="DemiLib">
-      <HintPath>Assets\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tasks">
       <HintPath>Library\PackageCache\com.google.firebase.app@18c3e06f7f0f\Parse\Plugins\dotNet45\Unity.Tasks.dll</HintPath>
@@ -1978,9 +1981,6 @@
     </Reference>
     <Reference Include="Facebook.Unity">
       <HintPath>Assets\Base\FacebookSDK\Plugins\Facebook.Unity.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween43">
-      <HintPath>Assets\Demigiant\DOTween\DOTween43.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:\Unity2020.3.15f2\2020.3.38f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

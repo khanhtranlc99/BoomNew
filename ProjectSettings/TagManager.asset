@@ -17,6 +17,7 @@ TagManager:
   - Grid
   - Barrial
   - Slime
+  - Boom
   layers:
   - Default
   - TransparentFX

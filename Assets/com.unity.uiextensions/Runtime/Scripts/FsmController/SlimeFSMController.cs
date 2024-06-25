@@ -9,7 +9,6 @@ public class SlimeFSMController : MonoBehaviour
     public SlimeStateBase hideState;
     public SlimeStateBase dieState;
     private bool wasUse;
-
     public SlimeStateBase currentState;
 
 
@@ -23,7 +22,7 @@ public class SlimeFSMController : MonoBehaviour
         ChangeState(StateType.Move);
     }
 
-    public void ChangeState(StateType newState, bool isInit = false)
+    public void ChangeState(StateType newState )
     {
         if (currentState != null)
         {
@@ -56,6 +55,17 @@ public class SlimeFSMController : MonoBehaviour
 
         currentState.StartState();
     }
+    public void Stop()
+    {
+
+        if (currentState != null)
+        {
+            currentState.EndState();
+        }
+        //currentState = moveState;
+        //currentState.StartState();
+    }
+
 
 
     private void Update()

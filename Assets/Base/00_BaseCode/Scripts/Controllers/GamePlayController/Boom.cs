@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DG.Tweening;
 public class Boom : BarrierBase
 {
     public Flame flame;
@@ -47,10 +47,11 @@ public class Boom : BarrierBase
 
     }
 
-
+    
     private void OnDisable()
     {
         this.transform.position = new Vector3(-5, 0, 0);
+        this.gameObject.GetComponent<CircleCollider2D>().enabled = true;
     }
 
     public override void Init()

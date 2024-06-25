@@ -136,9 +136,9 @@ public class SuggetBox : BaseBox
    
         GamePlayController.Instance.playerContain.boomInputController.enabled = true;
         Close();
-        GameController.Instance.dataContain.giftDatabase.Claim(currentGift, 3);
+        GameController.Instance.dataContain.giftDatabase.Claim(currentGift, 1);
         List<GiftRewardShow> giftRewardShows = new List<GiftRewardShow>();
-        giftRewardShows.Add(new GiftRewardShow() { amount = 3, type = currentGift });
+        giftRewardShows.Add(new GiftRewardShow() { amount = 1, type = currentGift });
         PopupRewardBase.Setup(false).Show(giftRewardShows, delegate { });
 
     }

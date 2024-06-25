@@ -216,7 +216,7 @@ public class SettingBox : BaseBox
         //    Close();
         //    Initiate.Fade("GamePlay", Color.black, 1.5f);
         //}
-        Close();
+        //Close();
         BackHomeBox.Setup(TypeBackHOme.ResetLevel).Show();
 
 

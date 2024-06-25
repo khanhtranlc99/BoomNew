@@ -37,7 +37,7 @@ public class GamePlayController : Singleton<GamePlayController>
      
 
             playerContain.Init();
-
+        SimplePool2.ClearPool();
         SimplePool2.Preload(itemInGame.gameObject, 10, this.transform);
         SimplePool2.Preload(flame.gameObject, 50, this.transform);
         stateGame = StateGame.Playing;

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1058387292483280551}
   m_Layer: 0
   m_Name: FastBoom
-  m_TagString: Untagged
+  m_TagString: Boom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   barrierType: 2
+  questTargetType: 0
   gridBase: {fileID: 0}
   wasTakeDame: 0
   Hp: 0

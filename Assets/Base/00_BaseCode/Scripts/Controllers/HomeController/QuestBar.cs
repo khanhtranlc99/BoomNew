@@ -9,6 +9,7 @@ public class QuestBar : MonoBehaviour
     public Image iconTarget;
     public Image iconGift;
     public Text tvContent;
+    public Text tvContent_2;
     public Quest currentQuest;
     public List<TargetData> lsTargetDatas;
     public Text tvCount;
@@ -31,6 +32,7 @@ public class QuestBar : MonoBehaviour
             iconTarget.sprite = GetTargetData(currentQuest.targetType).icon;
             iconGift.sprite = GameController.Instance.dataContain.giftDatabase.GetIconItem(currentQuest.giftType);
             tvContent.text = QuestController.ProgessQuest + "/" + currentQuest.numTarget;
+            tvContent_2.text = QuestController.ProgessQuest + "/" + currentQuest.numTarget;
             if (QuestController.ProgessQuest < currentQuest.numTarget)
             {
                 barAmount.DOFillAmount(QuestController.ProgessQuest / currentQuest.numTarget, 0.7f);

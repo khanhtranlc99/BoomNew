@@ -19,7 +19,7 @@ public class DieStateBlueSlime : SlimeStateBase
     {
         data = slimeBase;
         SimplePool2.PoolPreLoad(redSlime.gameObject,2, GamePlayController.Instance.playerContain.levelData.transform);
-         currentGift = new GiftInGame() { giftType = GiftType.Coin, count = countCoin };
+        currentGift = new GiftInGame() { giftType = GiftType.Coin, count = countCoin };
     }
 
     public override void StartState()
@@ -33,63 +33,9 @@ public class DieStateBlueSlime : SlimeStateBase
     }
     public void HandleActionDie()
     {
-       
-        var temp = new List<GridBase>();
-        foreach(var item in data.gridBase.lsGridBase)
-        {
-            if(item.barrierBase == null)
-            {
-                temp.Add(item);
-            }
-        }
-        if(temp.Count >= 2)
-        {
-            data.gridBase.barrierBase = null;
-            var red_1 = Instantiate(redSlime ,GamePlayController.Instance.playerContain.levelData.transform);
-            red_1.gridBase = temp[0];
-            red_1.transform.position = this.transform.position;         
-            red_1.transform.DOJump(temp[0].transform.position, 0.2f,1,0.3f).OnComplete(delegate { red_1.Init();  });
+        SpawnRed();
 
-            var red_2 = Instantiate(redSlime, GamePlayController.Instance.playerContain.levelData.transform);
-            red_2.gridBase = temp[1];
-            red_2.transform.position = this.transform.position;
-            red_2.transform.DOJump(temp[1].transform.position, 0.2f, 1, 0.3f).OnComplete(delegate { red_2.Init();  });
-            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_1);
-            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_2);
-        }
-        if (temp.Count == 1)
-        {
-            var red_1 = Instantiate(redSlime, GamePlayController.Instance.playerContain.levelData.transform);
-            red_1.gridBase = data.gridBase;
-            red_1.transform.position = this.transform.position;
-            red_1.transform.DOJump(data.gridBase.transform.position, 0.2f, 1, 0.3f).OnComplete(delegate { red_1.Init(); });
-
-
-            var red_2 = Instantiate(redSlime, GamePlayController.Instance.playerContain.levelData.transform);
-            red_2.gridBase = temp[0];
-            red_2.transform.position = this.transform.position;
-            red_2.transform.DOJump(temp[0].transform.position, 0.2f, 1, 0.3f).OnComplete(delegate { red_2.Init(); });
-            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_1);
-            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_2);
-        }
-        if (temp.Count == 0)
-        {
-            var red_1 = Instantiate(redSlime, GamePlayController.Instance.playerContain.levelData.transform);
-            red_1.gridBase = data.gridBase;
-            red_1.transform.position = this.transform.position;
-            red_1.transform.DOJump(data.gridBase.transform.position, 0.2f, 1, 0.3f).OnComplete(delegate { red_1.Init(); });
-
-
-            var red_2 = Instantiate(redSlime, GamePlayController.Instance.playerContain.levelData.transform);
-            red_2.gridBase = data.gridBase;
-            red_2.transform.position = this.transform.position;
-            red_2.transform.DOJump(data.gridBase.transform.position, 0.2f, 1, 0.3f).OnComplete(delegate { red_2.Init(); });
-            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_1);
-            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_2);
-        }
-
-        var tempGift = SimplePool2.Spawn(itemInGame);
-      
+        var tempGift = SimplePool2.Spawn(itemInGame);    
         tempGift.transform.parent = GamePlayController.Instance.gameScene.canvas.transform;
         tempGift.transform.position = this.transform.position;
         tempGift.transform.localScale = new Vector3(1, 1, 1);
@@ -107,6 +53,70 @@ public class DieStateBlueSlime : SlimeStateBase
         });
         GameController.Instance.questController.HandleCheckCompleteQuest(data.questTargetType);
         Destroy(data.gameObject);
+    }
+
+
+    private void SpawnRed()
+    {
+        var temp = new List<GridBase>();
+        foreach (var item in data.gridBase.lsGridBase)
+        {
+            if (item.barrierBase == null)
+            {
+                temp.Add(item);
+            }
+        }
+
+
+        if (temp.Count >= 2)
+        {
+            data.gridBase.barrierBase = null;
+            var red_1 = Instantiate(redSlime, GamePlayController.Instance.playerContain.levelData.transform);
+            red_1.gridBase = temp[0];
+            red_1.transform.position = this.transform.position;
+            red_1.transform.DOJump(temp[0].transform.position, 0.2f, 1, 0.3f).OnComplete(delegate { red_1.Init(); });
+
+            var red_2 = Instantiate(redSlime, GamePlayController.Instance.playerContain.levelData.transform);
+            red_2.gridBase = temp[1];
+            red_2.transform.position = this.transform.position;
+            red_2.transform.DOJump(temp[1].transform.position, 0.2f, 1, 0.3f).OnComplete(delegate { red_2.Init(); });
+            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_1);
+            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_2);
+            return;
+        }
+        if (temp.Count == 1)
+        {
+            var red_1 = Instantiate(redSlime, GamePlayController.Instance.playerContain.levelData.transform);
+            red_1.gridBase = data.gridBase;
+            red_1.transform.position = this.transform.position;
+            red_1.transform.DOJump(data.gridBase.transform.position, 0.2f, 1, 0.3f).OnComplete(delegate { red_1.Init(); });
+
+
+            var red_2 = Instantiate(redSlime, GamePlayController.Instance.playerContain.levelData.transform);
+            red_2.gridBase = temp[0];
+            red_2.transform.position = this.transform.position;
+            red_2.transform.DOJump(temp[0].transform.position, 0.2f, 1, 0.3f).OnComplete(delegate { red_2.Init(); });
+            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_1);
+            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_2);
+            return;
+        }
+        if (temp.Count == 0)
+        {
+            var red_1 = Instantiate(redSlime, GamePlayController.Instance.playerContain.levelData.transform);
+            red_1.gridBase = data.gridBase;
+            red_1.transform.position = this.transform.position;
+            red_1.transform.DOJump(data.gridBase.transform.position, 0.2f, 1, 0.3f).OnComplete(delegate { red_1.Init(); });
+
+
+            var red_2 = Instantiate(redSlime, GamePlayController.Instance.playerContain.levelData.transform);
+            red_2.gridBase = data.gridBase;
+            red_2.transform.position = this.transform.position;
+            red_2.transform.DOJump(data.gridBase.transform.position, 0.2f, 1, 0.3f).OnComplete(delegate { red_2.Init(); });
+            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_1);
+            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_2);
+            return;
+        }
+
     }
 
 }

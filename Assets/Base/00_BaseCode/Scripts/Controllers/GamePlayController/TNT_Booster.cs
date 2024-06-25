@@ -28,7 +28,7 @@ public class TNT_Booster : MonoBehaviour
         if (UseProfile.CurrentLevel >= 3)
         {
 
-            unLockIcon.gameObject.SetActive(true);
+            //unLockIcon.gameObject.SetActive(true);
             lockIcon.gameObject.SetActive(false);
             HandleUnlock();
           
@@ -36,7 +36,7 @@ public class TNT_Booster : MonoBehaviour
         }
         else
         {
-            unLockIcon.gameObject.SetActive(false);
+            //unLockIcon.gameObject.SetActive(false);
             lockIcon.gameObject.SetActive(true);
             objNum.SetActive(false);
             HandleLock();

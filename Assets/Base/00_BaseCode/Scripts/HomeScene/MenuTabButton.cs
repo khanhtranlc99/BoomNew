@@ -23,7 +23,7 @@ public class MenuTabButton : MonoBehaviour
     {
       
         homeScene = paramHomeScene;
-        button.onClick.AddListener(delegate { homeScene.HandleClickButton(buttonType); });
+        button.onClick.AddListener(delegate {   });
         isSelected = false;
     }
    

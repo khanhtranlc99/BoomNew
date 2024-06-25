@@ -14,8 +14,9 @@ public class GridBase : MonoBehaviour
     public Sprite freeGrid;
     public Sprite normalGrid;
     public bool isFree;
+    public GameObject ice;
 
-
+   
     //private void OnTriggerEnter2D(Collider2D collision)
     //{
     //    if (collision.gameObject.tag == "Grid")
@@ -59,6 +60,7 @@ public class GridBase : MonoBehaviour
             {        
                 return item;
             }
+           
         }
         return null;
     }
@@ -85,7 +87,7 @@ public class GridBase : MonoBehaviour
             {
                 return item;
             }
-            if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.ComeThrough && !idOlds.Contains(item.id))
+            if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.ComeThrough  && !idOlds.Contains(item.id))
             {
                 return item;
             }
@@ -148,15 +150,53 @@ public class GridBase : MonoBehaviour
 
     }
 
+    public GridBase GetGrid(MoveBlockType moveBlockType)
+    {
+        var temp_0 = new Vector2( );
+        switch (moveBlockType)
+        {
+            case MoveBlockType.Up:
+                temp_0 = new Vector2(vectorIJ.x, vectorIJ.y + 1);
+                break;
+            case MoveBlockType.Down:
+                temp_0 = new Vector2(vectorIJ.x, vectorIJ.y - 1);
+                break;
+            case MoveBlockType.Left:
+                temp_0 = new Vector2(vectorIJ.x - 1, vectorIJ.y);
+                break;
+            case MoveBlockType.Right:
+                temp_0 = new Vector2(vectorIJ.x + 1, vectorIJ.y);
+                break;
+
+        }
+
+        foreach(var item in lsGridBase)
+        {
+            if(item.vectorIJ == temp_0)
+            {
+                return item;
+            }
+        }
+
+        return null;
+
+
+
+    }
+
+
+
     public void HandleFreeGrid()
     {
         isFree = true;
-        spriteRenderer.sprite = freeGrid;
+        ice.gameObject.SetActive(true);
+ 
     }
     public void HandleUnFreeze()
     {
         isFree = false;
-        spriteRenderer.sprite = normalGrid;
+        ice.gameObject.SetActive(false);
+  
     }
 
     [Button]

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using UnityEditor;
+
 public class LevelData : SerializedMonoBehaviour
 {
     public bool isSlimeLevel;
@@ -122,6 +124,7 @@ public class LevelData : SerializedMonoBehaviour
                 if (gridArray[i, j] != null)
                 {
                     float scaleFactor = 0.7f;
+
                     var temp = Instantiate(gridArray[i, j], new Vector3(i, j) * scaleFactor, Quaternion.identity);
                     temp.transform.parent = parentGrid;
                     temp.GetComponent<GridBase>().vectorIJ = new Vector2(i, j);
@@ -146,7 +149,11 @@ public class LevelData : SerializedMonoBehaviour
             {
                 if(barrialArray[i,j] != null)
                 {
-                   var temp = Instantiate(barrialArray[i, j].gameObject, gridArrayCurrent[i, j].transform.position, Quaternion.identity);
+                    //GameObject spawnedObject = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
+      
+                    var temp = (GameObject)PrefabUtility.InstantiatePrefab(barrialArray[i, j].gameObject);
+                    temp.transform.position = gridArrayCurrent[i, j].transform.position;
+             
                     temp.GetComponent<BarrierBase>().gridBase = gridArrayCurrent[i, j].GetComponent<GridBase>();
                     gridArrayCurrent[i, j].GetComponent<GridBase>().barrierBase = temp.GetComponent<BarrierBase>();
                     temp.transform.parent = parentTranform;

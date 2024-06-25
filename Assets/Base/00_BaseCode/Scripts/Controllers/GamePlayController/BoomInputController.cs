@@ -26,8 +26,8 @@ public class BoomInputController : MonoBehaviour
         tvBoom.text = "" + countBoom;
 
         iconBoom.transform.DOKill();
-        iconBoom.transform.DOScale(new Vector3(1.7f, 1.7f, 1.7f), 0.5f).OnComplete(delegate {
-            iconBoom.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.5f);
+        iconBoom.transform.DOScale(new Vector3(1.3f, 1.3f, 1.3f), 0.5f).OnComplete(delegate {
+            iconBoom.transform.DOScale(new Vector3(1, 1, 1), 0.5f);
         });
 
         if (countBoom <= 3 && !tweenText)
@@ -43,10 +43,11 @@ public class BoomInputController : MonoBehaviour
         tvBoom.text = "" + countBoom;
 
         iconBoom.transform.DOKill();
-        iconBoom.transform.DOScale(new Vector3(1.7f, 1.7f, 1.7f), 0.5f).OnComplete(delegate {
-            iconBoom.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.5f);
+        iconBoom.transform.DOScale(new Vector3(1.3f, 1.3f, 1.3f), 0.5f).OnComplete(delegate {
+            iconBoom.transform.DOScale(new Vector3(1, 1, 1), 0.5f);
         });
 
+      
        
     }
 
