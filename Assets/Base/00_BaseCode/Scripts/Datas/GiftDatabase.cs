@@ -81,7 +81,15 @@ public class GiftDatabase : SerializedScriptableObject
                 UseProfile.TimeBoom_Item += amount;
                 EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.TIMEBOOM_ITEM);
                 break;
+            case GiftType.Fire_Start:
+             
+                break;
+            case GiftType.Boom_Start:
 
+                break;
+            case GiftType.Heart_Unlimit:
+
+                break;
         }
     }
 

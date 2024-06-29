@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 41c4c66248a263b488d2dd82734b1703, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -100,7 +100,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5059258, y: 0.3957906}
     oldSize: {x: 0.7111111, y: 0.82222223}
     newSize: {x: 0.62, y: 0.68}
     adaptiveTilingThreshold: 0.5
@@ -128,3 +128,5 @@ MonoBehaviour:
   gridBase: {fileID: 0}
   wasTakeDame: 0
   Hp: 3
+  spriteHit_1: {fileID: 21300000, guid: 0e73b5b8026046c4aa276c16674f9511, type: 3}
+  spriteHit_2: {fileID: 21300000, guid: 192932e327168444191b17c65922e2ad, type: 3}

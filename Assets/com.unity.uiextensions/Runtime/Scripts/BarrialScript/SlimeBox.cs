@@ -82,6 +82,7 @@ public class SlimeBox : BarrierBase
 
             GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_1);
             GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_2);
+            GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_3);
         }
         if (temp.Count == 2)
         {

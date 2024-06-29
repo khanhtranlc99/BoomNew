@@ -56,14 +56,37 @@ public class BlackHold : BarrierBase
                 {
                     return;
                 }
+                if(blackHold.gridBlackHold.barrierBase != null)
+                {
+                    return;
+                }    
+
                 lsSlimeBases.Add(collision.gameObject.GetComponent<SlimeBase>());
                 blackHold.lsSlimeBases.Add(collision.gameObject.GetComponent<SlimeBase>());
                 collision.gameObject.GetComponent<SlimeBase>().fSMController.Stop();
                 gridBlackHold.barrierBase = null;
-                collision.gameObject.GetComponent<MoveState>().nextGrid = null;
-                collision.gameObject.GetComponent<MoveState>().tempGrid = null;
-                collision.gameObject.GetComponent<MoveState>().idOld.Clear();
-                collision.gameObject.GetComponent<MoveState>().idOld.Add(blackHold.gridBlackHold.id);
+                if (collision.gameObject.GetComponent<SlimeBase>().slimeType == SlimeType.ICE)
+                {
+                    collision.gameObject.GetComponent<MoveStateIceSlime>().nextGrid = null;
+                    collision.gameObject.GetComponent<MoveStateIceSlime>().tempGrid = null;
+                    collision.gameObject.GetComponent<MoveStateIceSlime>().idOld.Clear();
+                    collision.gameObject.GetComponent<MoveStateIceSlime>().idOld.Add(blackHold.gridBlackHold.id);
+                }
+                else if(collision.gameObject.GetComponent<SlimeBase>().slimeType == SlimeType.GHOST)
+                {
+                    collision.gameObject.GetComponent<MoveStateGhostSlime>().nextGrid = null;
+                    collision.gameObject.GetComponent<MoveStateGhostSlime>().tempGrid = null;
+                    collision.gameObject.GetComponent<MoveStateGhostSlime>().idOld.Clear();
+                    collision.gameObject.GetComponent<MoveStateGhostSlime>().idOld.Add(blackHold.gridBlackHold.id);
+                }
+                else
+                {
+                    collision.gameObject.GetComponent<MoveState>().nextGrid = null;
+                    collision.gameObject.GetComponent<MoveState>().tempGrid = null;
+                    collision.gameObject.GetComponent<MoveState>().idOld.Clear();
+                    collision.gameObject.GetComponent<MoveState>().idOld.Add(blackHold.gridBlackHold.id);
+                }
+             
                 blackHold.gridBlackHold.barrierBase = collision.gameObject.GetComponent<BarrierBase>();
                 collision.gameObject.GetComponent<SlimeBase>().gridBase = blackHold.gridBlackHold;
 

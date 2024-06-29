@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2229320125982539874, guid: 347101d8c734cea4ebc82016f7c03c5a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -174,8 +174,8 @@ MonoBehaviour:
   questTargetType: 12
   gridBase: {fileID: 0}
   wasTakeDame: 0
-  Hp: 10
-  Speed: 0.5
+  Hp: 1
+  Speed: 0.4
   slimeType: 6
   fSMController: {fileID: 7959362785347561316}
   animator: {fileID: 917455012883334826}

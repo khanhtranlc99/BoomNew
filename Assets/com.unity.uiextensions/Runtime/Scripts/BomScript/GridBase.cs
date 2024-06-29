@@ -16,7 +16,7 @@ public class GridBase : MonoBehaviour
     public bool isFree;
     public GameObject ice;
 
-   
+
     //private void OnTriggerEnter2D(Collider2D collision)
     //{
     //    if (collision.gameObject.tag == "Grid")
@@ -185,13 +185,14 @@ public class GridBase : MonoBehaviour
     }
 
 
-
+    [Button]
     public void HandleFreeGrid()
     {
         isFree = true;
         ice.gameObject.SetActive(true);
  
     }
+    [Button]
     public void HandleUnFreeze()
     {
         isFree = false;
@@ -210,4 +211,5 @@ public class GridBase : MonoBehaviour
             }
         }
     }
+ 
 }

@@ -32,14 +32,14 @@ public class FastBoom_Item : MonoBehaviour
         {
           
             icon.SetActive(true);
-            icon.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.5f).OnComplete(delegate {
-                icon.transform.DOScale(new Vector3(1, 1, 1), 0.5f);
+            icon.transform.DOScale(new Vector3(0.4f, 0.4f, 0.4f), 0.5f).OnComplete(delegate {
+                icon.transform.DOScale(new Vector3(0.35f, 0.35f, 0.35f), 0.5f);
             });
             tvNum.text = "" + UseProfile.FastBoom_Item;
         }
         else
         {
-            icon.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.5f).OnComplete(delegate {
+            icon.transform.DOScale(new Vector3(0.4f, 0.4f, 0.4f), 0.5f).OnComplete(delegate {
                 icon.transform.DOScale(new Vector3(0, 0, 0), 0.5f).OnComplete(delegate {
                     icon.gameObject.SetActive(false);
                 });
@@ -54,9 +54,9 @@ public class FastBoom_Item : MonoBehaviour
         {
             icon.transform.localScale = Vector3.zero;
             icon.SetActive(true);
-            icon.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.5f).OnComplete(delegate {
+            icon.transform.DOScale(new Vector3(0.4f, 0.4f, 0.4f), 0.5f).OnComplete(delegate {
 
-                icon.transform.DOScale(new Vector3(1, 1, 1), 0.5f).OnComplete(delegate {
+                icon.transform.DOScale(new Vector3(0.35f, 0.35f, 0.35f), 0.5f).OnComplete(delegate {
                     if (callBack != null)
                     {
                         callBack?.Invoke();

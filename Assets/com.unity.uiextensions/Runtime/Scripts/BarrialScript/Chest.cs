@@ -9,6 +9,8 @@ public class Chest : BarrierBase
     public ItemInGame itemInGame;
     public float randomGift;
     public GiftInGame currentGift;
+    public Sprite spriteHit_1;
+    public Sprite spriteHit_2;
     public override void Init()
     {
 
@@ -19,6 +21,14 @@ public class Chest : BarrierBase
         {
             wasTakeDame = true;
             Hp -= 1;
+            if (Hp == 2)
+            {
+                spriteRenderer.sprite = spriteHit_1;
+            }
+            if (Hp == 1)
+            {
+                spriteRenderer.sprite = spriteHit_2;
+            }
             transform.DOShakePosition(0.3f, 0.1f, 1, 1).OnComplete(delegate { wasTakeDame = false; });
             if (Hp <= 0)
             {

@@ -434,6 +434,7 @@ MonoBehaviour:
   rewardButton: {fileID: 3640964734524192139}
   coinHeartBar: {fileID: 3810867163921444720}
   tvCoin: {fileID: 4987682948310829082}
+  tvCoin_2: {fileID: 4523175134388434563}
 --- !u!1 &1661093928475272473
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,11 +466,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4987682949322892410}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28.7, y: -8}
+  m_AnchoredPosition: {x: 28.7, y: -14.699951}
   m_SizeDelta: {x: 175.19, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8429151799257420813
@@ -507,7 +508,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 68
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -947,7 +948,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4987682949322892410}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1027,7 +1028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28.7, y: 4.6}
+  m_AnchoredPosition: {x: 28.7, y: -2.1}
   m_SizeDelta: {x: 175.19, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4987682948310829083
@@ -1065,7 +1066,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 68
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1229,8 +1230,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7540948835077068199}
   - {fileID: 4987682947913434694}
+  - {fileID: 7540948835077068199}
   - {fileID: 4987682948310829085}
   m_Father: {fileID: 4987682949227772169}
   m_RootOrder: 0

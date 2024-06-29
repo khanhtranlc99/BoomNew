@@ -38,15 +38,19 @@ public class DieState : SlimeStateBase
         tempGift.Init(currentGift, this.transform);
 
         slimeTarget = GamePlayController.Instance.gameScene.targetController.GetSlimeTarget(data.slimeType);
-        var temp = SimplePool2.Spawn(vfxDie);
-        temp.transform.parent = GamePlayController.Instance.gameScene.canvas;
-        temp.transform.position = this.transform.position;
-        temp.transform.localScale = new Vector3(1, 1, 1);   
-        temp.transform.DOMove(slimeTarget.icon.position, 1).SetDelay(0.1f).SetEase(Ease.OutBack).OnComplete(delegate {
+        if(slimeTarget != null )
+        {
+            var temp = SimplePool2.Spawn(vfxDie);
+            temp.transform.parent = GamePlayController.Instance.gameScene.canvas;
+            temp.transform.position = this.transform.position;
+            temp.transform.localScale = new Vector3(1, 1, 1);
+            temp.transform.DOMove(slimeTarget.icon.position, 1).SetDelay(0.1f).SetEase(Ease.OutBack).OnComplete(delegate {
 
-            slimeTarget.HandleSubtraction();
-            SimplePool2.Despawn(temp.gameObject);
-        });
+                slimeTarget.HandleSubtraction();
+                SimplePool2.Despawn(temp.gameObject);
+            });
+        }
+
 
         data.gridBase.barrierBase = null;
         GameController.Instance.questController.HandleCheckCompleteQuest(data.questTargetType);

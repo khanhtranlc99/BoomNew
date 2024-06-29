@@ -23,6 +23,7 @@ public class Winbox : BaseBox
     public Button rewardButton;
     public CoinHeartBar coinHeartBar;
     public Text tvCoin;
+    public Text tvCoin_2;
 
     public void Init()
     {
@@ -30,6 +31,7 @@ public class Winbox : BaseBox
         rewardButton.onClick.AddListener(delegate { HandleReward(); });
 
         tvCoin.text = "" + GamePlayController.Instance.playerContain.totalCoin;
+        tvCoin_2.text = "" + GamePlayController.Instance.playerContain.totalCoin;
         coinHeartBar.Init();
         UseProfile.WinStreak += 1;
     }   

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Sirenix.OdinInspector;
 public class Spike : BarrierBase
 {
 
@@ -18,10 +19,10 @@ public class Spike : BarrierBase
             transform.DOShakePosition(0.3f, 0.1f, 1, 1).OnComplete(delegate { wasTakeDame = false; });
             if (Hp <= 0)
             {
-                gridBase.barrierBase = null;
+             
                 transform.DOShakePosition(0.3f, 0.1f, 1, 1).OnComplete(delegate {
                     spriteRenderer.DOFade(0, 0.3f).OnComplete(delegate {
-                        GameController.Instance.questController.HandleCheckCompleteQuest(questTargetType);
+                        //GameController.Instance.questController.HandleCheckCompleteQuest(questTargetType);
                         Destroy(this.gameObject);
                     });
                 });
@@ -37,6 +38,11 @@ public class Spike : BarrierBase
         }
          
     }
+    [Button]
+    public void HandleTools()
+    {
+        gridBase.barrierBase = null;
+    }    
 
 
 }

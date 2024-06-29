@@ -5,10 +5,14 @@ using UnityEngine;
 public class Step_1_TNT : TutorialBase
 {
     GameObject currentHand;
-     
+
     public override bool IsCanEndTut()
     {
-        Destroy(currentHand.gameObject);
+        if (currentHand != null)
+        {
+            Destroy(currentHand.gameObject);
+        }
+
         return base.IsCanShowTut();
 
     }

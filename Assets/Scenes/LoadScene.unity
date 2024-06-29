@@ -1051,6 +1051,7 @@ MonoBehaviour:
   wasShowOpenAppAdsInGame: 0
   lockShowOpenAppAds: 0
   coutOpenAdsLoad: 0
+  showingMREC: 0
 --- !u!1 &1627799332
 GameObject:
   m_ObjectHideFlags: 0

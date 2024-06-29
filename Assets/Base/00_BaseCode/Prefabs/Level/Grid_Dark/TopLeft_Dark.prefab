@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2406200975005922754}
   - component: {fileID: 2406200975005922755}
   m_Layer: 0
-  m_Name: TopLeft_Light
+  m_Name: TopLeft_Dark
   m_TagString: Grid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

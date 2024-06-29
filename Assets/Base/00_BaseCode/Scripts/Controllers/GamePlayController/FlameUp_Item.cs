@@ -34,6 +34,14 @@ public class FlameUp_Item : MonoBehaviour
 
             tvNum.text = "" + UseProfile.FlameUp_Item;
         }
+        else
+        {
+            icon.transform.DOScale(new Vector3(0.4f, 0.4f, 0.4f), 0.5f).OnComplete(delegate {
+                icon.transform.DOScale(new Vector3(0, 0, 0), 0.5f).OnComplete(delegate {
+                    icon.gameObject.SetActive(false);
+                });
+            });
+        }
     }
     public void ShowIcon(Action callBack)
     {

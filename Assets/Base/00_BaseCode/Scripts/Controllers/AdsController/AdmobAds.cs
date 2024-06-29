@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using static MaxSdkBase;
-using Facebook.Unity;
 using com.adjust.sdk;
 
 public class AdmobAds : MonoBehaviour
@@ -22,6 +21,7 @@ public class AdmobAds : MonoBehaviour
     public bool lockShowOpenAppAds;
     public int coutOpenAdsLoad;
 
+    public bool showingMREC;
 #if UNITY_ANDROID
     private const string MaxSdkKey = "oL9CCQ2BlEl-78avNTt7qkDU1Tl_Pkb2pgv9g9m5cLUiiJcxwGv_2T1_T9OsBIhSM4UPhnkDXyMO8HNGmFnEKu";
     private const string InterstitialAdUnitId = "1382d286409432c4";
@@ -41,7 +41,7 @@ public class AdmobAds : MonoBehaviour
     public void Init()
     {
         coutOpenAdsLoad = 0;
-        lockShowOpenAppAds = true;
+        lockShowOpenAppAds = false;
         canShowOpenAppAds = false;
         wasShowOpenAppAdsInGame = false;
         IsMRecReady = false;
@@ -151,21 +151,21 @@ public class AdmobAds : MonoBehaviour
 
         if (isShowImmediatly)
         {
-            GameController.Instance.AnalyticsController.LoadInterEligible();
+          
             ShowInterstitialHandle(isShowImmediatly, actionWatchLog, actionIniterClose, level);
         }
         else
         {
 
 
-            if (UseProfile.CurrentLevel > RemoteConfigController.GetFloatConfig(FirebaseConfig.LEVEL_START_SHOW_INITSTIALL, 3))
+            if (UseProfile.CurrentLevel >= RemoteConfigController.GetFloatConfig(FirebaseConfig.LEVEL_START_SHOW_INITSTIALL, 2))
             {
-                GameController.Instance.AnalyticsController.LoadInterEligible();
+           
 
                 if (countdownAds > RemoteConfigController.GetFloatConfig(FirebaseConfig.DELAY_SHOW_INITSTIALL, 90))
                 {
                     ShowInterstitialHandle(isShowImmediatly, actionWatchLog, actionIniterClose, level);
-                 
+
                     Debug.LogError("ShowInterstitialHandle");
                 }
                 else
@@ -185,12 +185,12 @@ public class AdmobAds : MonoBehaviour
 
     private void ShowInterstitialHandle(bool isShowImmediatly = false, string actionWatchLog = "other", UnityAction actionIniterClose = null, string level = null)
     {
-
+        lockShowOpenAppAds = true;
         if (IsLoadedInterstitial())
         {
             this.actionInterstitialClose = actionIniterClose;
             MaxSdk.ShowInterstitial(InterstitialAdUnitId, actionWatchLog);
-            lockShowOpenAppAds = false;
+
             if (!isShowImmediatly)
                 countdownAds = 0;
 
@@ -265,6 +265,7 @@ public class AdmobAds : MonoBehaviour
 
     public bool ShowVideoReward(UnityAction actionReward, UnityAction actionNotLoadedVideo, UnityAction actionClose, ActionWatchVideo actionType, string level)
     {
+        lockShowOpenAppAds = true;
         if (Application.internetReachability == NetworkReachability.NotReachable)
         {
             actionNotLoadedVideo?.Invoke();
@@ -311,7 +312,7 @@ public class AdmobAds : MonoBehaviour
                 return false;
             }
         }
-        lockShowOpenAppAds = false;
+
         return true;
     }
 
@@ -384,6 +385,7 @@ public class AdmobAds : MonoBehaviour
     private void OnRewardedAdDismissedEvent(string adUnitId)
     {
         // Rewarded ad is hidden. Pre-load the next ad
+        lockShowOpenAppAds = false;
         Debug.Log("Rewarded ad dismissed");
         _actionClose?.Invoke();
         _actionClose = null;
@@ -442,7 +444,7 @@ public class AdmobAds : MonoBehaviour
 
         actionInterstitialClose?.Invoke();
         actionInterstitialClose = null;
-
+        lockShowOpenAppAds = false;
         RequestInterstitial();
     }
     private void MaxSdkCallbacks_OnInterstitialDisplayedEvent(string adUnitId)
@@ -629,7 +631,6 @@ public class AdmobAds : MonoBehaviour
         adRevenue.setAdRevenueNetwork(impressionData.NetworkName);
         adRevenue.setAdRevenueUnit(impressionData.AdUnitIdentifier);
         adRevenue.setAdRevenuePlacement(impressionData.Placement);
-
         Adjust.trackAdRevenue(adRevenue);
 
 
@@ -676,8 +677,8 @@ public class AdmobAds : MonoBehaviour
     }
     public void InitializeOpenAppAds()
     {
-        MaxSdkCallbacks.AppOpen.OnAdLoadedEvent += delegate {   };
-        MaxSdkCallbacks.AppOpen.OnAdLoadFailedEvent += delegate {  };
+        MaxSdkCallbacks.AppOpen.OnAdLoadedEvent += delegate { };
+        MaxSdkCallbacks.AppOpen.OnAdLoadFailedEvent += delegate { };
         MaxSdkCallbacks.AppOpen.OnAdHiddenEvent += delegate { MaxSdk.LoadAppOpenAd(AppOpenId); };
         MaxSdkCallbacks.AppOpen.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
         MaxSdk.LoadAppOpenAd(AppOpenId);
@@ -699,30 +700,30 @@ public class AdmobAds : MonoBehaviour
         {
             return;
         }
-      
-            if (!UseProfile.FirstShowOpenAds)
+
+        if (!UseProfile.FirstShowOpenAds)
+        {
+
+            UseProfile.FirstShowOpenAds = true;
+        }
+        else
+        {
+            if (RemoteConfigController.GetBoolConfig(FirebaseConfig.SHOW_OPEN_ADS, true))
             {
-                
-                UseProfile.FirstShowOpenAds = true;
-            }
-            else
-            {
-                if (RemoteConfigController.GetBoolConfig(FirebaseConfig.SHOW_OPEN_ADS, false))
+                if (MaxSdk.IsAppOpenAdReady(AppOpenId))
                 {
-                    if (MaxSdk.IsAppOpenAdReady(AppOpenId))
-                    {
-                        MaxSdk.ShowAppOpenAd(AppOpenId);
-                        countdownAdsOpenAppAds = 0;
-                        Debug.LogError("SHOW_OPEN_ADS");
-                    }
-                    else
-                    {
-                    MaxSdk.LoadAppOpenAd(AppOpenId);
-                  }    
+                    MaxSdk.ShowAppOpenAd(AppOpenId);
+                    countdownAdsOpenAppAds = 0;
+                    Debug.LogError("SHOW_OPEN_ADS");
                 }
-                Debug.LogError("FirstShowOpenAds_2");
+                else
+                {
+                    MaxSdk.LoadAppOpenAd(AppOpenId);
+                }
             }
-       
+            Debug.LogError("FirstShowOpenAds_2");
+        }
+
 
 
     }
@@ -745,16 +746,12 @@ public class AdmobAds : MonoBehaviour
             if (canShowOpenAppAds)
             {
 
-                if (lockShowOpenAppAds)
+                if (lockShowOpenAppAds == false)
                 {
                     ShowOpenAppAdsReady();
 
                 }
-                else
-                {
 
-                    lockShowOpenAppAds = true;
-                }
             }
         }
 
@@ -762,7 +759,7 @@ public class AdmobAds : MonoBehaviour
     public void InitializeMRecAds()
     {
         // MRECs are sized to 300x250 on phones and tablets
-        MaxSdk.CreateMRec(MREC_Id, MaxSdkBase.AdViewPosition.Centered);
+        MaxSdk.CreateMRec(MREC_Id, MaxSdkBase.AdViewPosition.BottomCenter);
 
         MaxSdkCallbacks.MRec.OnAdLoadedEvent += OnMRecAdLoadedEvent;
         MaxSdkCallbacks.MRec.OnAdLoadFailedEvent += OnMRecAdLoadFailedEvent;
@@ -799,15 +796,24 @@ public class AdmobAds : MonoBehaviour
 
     public void HandleShowMerec()
     {
+        if (GameController.Instance.useProfile.IsRemoveAds)
+        {
+            return;
+        }
 
         DestroyBanner();
         MaxSdk.ShowMRec(MREC_Id);
-
+        showingMREC = true;
     }
     public void HandleHideMerec()
     {
-        MaxSdk.HideMRec(MREC_Id);
-        ShowBanner();
+        if (showingMREC)
+        {
+            MaxSdk.HideMRec(MREC_Id);
+            ShowBanner();
+            showingMREC = false;
+        }
+
     }
 
 }

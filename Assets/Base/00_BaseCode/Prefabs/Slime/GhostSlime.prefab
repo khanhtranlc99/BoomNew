@@ -55,7 +55,7 @@ MonoBehaviour:
   gridBase: {fileID: 0}
   wasTakeDame: 0
   Hp: 2
-  Speed: 0.5
+  Speed: 1
   slimeType: 4
   fSMController: {fileID: 2674932449317002011}
   animator: {fileID: 2674932449634462976}
@@ -211,7 +211,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: -1618217808731252360, guid: 5c57b3f390618784b99052ccbdc90744, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

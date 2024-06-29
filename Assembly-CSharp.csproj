@@ -430,6 +430,7 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\IDSA.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\ElGamalKeyGenerationParameters.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\DHKeyGenerationParameters.cs" />
+    <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\BomScript\LevelData_2.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\ASN1Generator.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Drawers\Canvas\MaskDrawer.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecT131R1Point.cs" />
@@ -1034,6 +1035,7 @@
     <Compile Include="Assets\D.A. Assets\Shared\IDAError.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP192K1Point.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\DerStringBase.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\PackInShopAds.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Extensions\ImageExtensions.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\engines\SkipjackEngine.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Decompression\ZTree.cs" />
@@ -1282,6 +1284,7 @@
     <Compile Include="Assets\Base\00_BaseCode\Scripts\UI\RewardIAPBox.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\modes\GCMBlockCipher.cs" />
     <Compile Include="Assets\Base\FacebookSDK\Examples\CloudAndroid\Scripts\LogScroller.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\PackInShopAdsCoin.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\SecurityParameters.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP384R1Field.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsSignerCredentials.cs" />
@@ -1340,6 +1343,7 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\ISignatureFactory.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\DerUTCTime.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\Examples\Websocket\WebSocketSample.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\PackInShopCoin.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\Examples\LitJson\IJsonWrapper.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsFatalAlert.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Primitives\UIGridRenderer.cs" />
@@ -1386,6 +1390,7 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\digests\RipeMD256Digest.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP160R2Field.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x9\X9FieldElement.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\CameraScale.cs" />
     <Compile Include="Assets\D.A. Assets\Shared\SVGMeshUnity\Internals\Cdt2d\DelaunayRefine.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\IBufferedCipher.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\digests\RipeMD320Digest.cs" />
@@ -1521,9 +1526,6 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\digests\WhirlpoolDigest.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP192R1FieldElement.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Sprite\SpriteColorizer.cs" />
-    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\PackInShopAds.cs" />
-    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\PackInShopCoin.cs" />
-    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\PackInShopAdsCoin.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UIAdditive.shader" />

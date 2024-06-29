@@ -4,8 +4,17 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEditor;
 
+public enum Difficult
+{
+    Normal,
+    Hard,
+    VeryHard
+
+}
+
 public class LevelData : SerializedMonoBehaviour
 {
+    public Difficult difficult;
     public bool isSlimeLevel;
     public bool isTimeLevel;
 
@@ -14,6 +23,8 @@ public class LevelData : SerializedMonoBehaviour
 
     public int boomLimit;
     public static LevelData Instance ;
+    public int row  ;
+    public int cow ;
     public GameObject[,] gridArray = new GameObject[6, 9];
     public GameObject[,] gridArrayCurrent = new GameObject[6, 9];
     public GameObject[,] barrialArray = new GameObject[6, 9];
@@ -23,7 +34,9 @@ public class LevelData : SerializedMonoBehaviour
     public List<BarrierBase> lsSmiles;
     public List<BarrierBase> lsBloomSoms;
     public List<GridBase> gridBasesId;
-
+    public Transform postLeft;
+    public Transform postRight;
+    
     private void OnDrawGizmos()
     {
         Instance = this;
@@ -139,7 +152,7 @@ public class LevelData : SerializedMonoBehaviour
         }
 
     }
-
+#if UNITY_EDITOR
     [Button]
     public void SpawnBarrial()
     {
@@ -170,7 +183,8 @@ public class LevelData : SerializedMonoBehaviour
             }
         }
     }
-      
+#endif
+
     public void HandleFreezeBooster()
     {
         //foreach (var item in lsSmiles)
@@ -245,22 +259,13 @@ public class LevelData : SerializedMonoBehaviour
             gridBasesId[i].lsGridBase.Shuffle();
         }
     }
-    public GridBase newGrid;
+ 
     [Button]
     private void Test()
     {
-        
-               for (int i = 0; i < gridArray.GetLength(0); i++)
-        {
-            for (int j = 0; j < gridArray.GetLength(1); j++)
-            {
-                if(gridArray[i,j] != null)
-                {
-                    gridArray[i, j] = newGrid.gameObject;
-                }    
-
-            }
-        }
+        gridArray = new GameObject[row, cow];
+        gridArrayCurrent = new GameObject[row, cow];
+        barrialArray = new GameObject[row, cow];
     }    
 
 }

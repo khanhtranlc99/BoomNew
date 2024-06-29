@@ -51,36 +51,89 @@ public class MoveRock : BarrierBase
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+       
         if (collision.gameObject.tag == "Barrial")
         {
-            if (collision.gameObject.GetComponent<SlimeBase>() != null)
+            if (moveGrid.barrierBase != null)
             {
-                if(collision.gameObject.GetComponent<SlimeBase>().slimeType == SlimeType.ICE  )
+                if (collision.gameObject.GetComponent<SlimeBase>().slimeType == SlimeType.ICE)
+                {
+                    collision.gameObject.GetComponent<MoveStateIceSlime>().idOld.Add(gridBase.id);
+                }
+                else if (collision.gameObject.GetComponent<SlimeBase>().slimeType == SlimeType.GHOST)
+                {
+                    collision.gameObject.GetComponent<MoveStateGhostSlime>().idOld.Add(gridBase.id);
+                }
+                else
+                {
+                    collision.gameObject.GetComponent<MoveState>().idOld.Add(gridBase.id);
+                }
+               return;
+            }
+           
+                if (collision.gameObject.GetComponent<SlimeBase>() != null)
+            {
+             
+                if (collision.gameObject.GetComponent<SlimeBase>().slimeType == SlimeType.ICE  )
                 {
                     collision.gameObject.GetComponent<SlimeBase>().fSMController.Stop();
                     moveGrid.barrierBase = null;
+                    collision.gameObject.GetComponent<SlimeBase>().gridBase = null;
+                    if (collision.gameObject.GetComponent<MoveStateIceSlime>().oldGrid != null)
+                    {
+                        collision.gameObject.GetComponent<MoveStateIceSlime>().oldGrid.barrierBase = null;
+                    }
+                    if (collision.gameObject.GetComponent<MoveStateIceSlime>().nextGrid != null)
+                    {
+                        collision.gameObject.GetComponent<MoveStateIceSlime>().nextGrid.barrierBase = null;
+                    }
+                    if (collision.gameObject.GetComponent<MoveStateIceSlime>().tempGrid != null)
+                    {
+                        collision.gameObject.GetComponent<MoveStateIceSlime>().tempGrid.barrierBase = null;
+                    }
+                    collision.gameObject.GetComponent<MoveStateIceSlime>().oldGrid = null;
                     collision.gameObject.GetComponent<MoveStateIceSlime>().nextGrid = null;
                     collision.gameObject.GetComponent<MoveStateIceSlime>().tempGrid = null;
-                    collision.gameObject.GetComponent<MoveStateIceSlime>().idOld.Clear();
+                    //collision.gameObject.GetComponent<MoveStateIceSlime>().idOld.Clear();
                     collision.gameObject.GetComponent<MoveStateIceSlime>().idOld.Add(moveGrid.id);
+                    collision.gameObject.GetComponent<MoveStateIceSlime>().idOld.Add(gridBase.id);
                     moveGrid.barrierBase = collision.gameObject.GetComponent<BarrierBase>();
                     collision.gameObject.GetComponent<SlimeBase>().gridBase = moveGrid;
-                    collision.gameObject.transform.DOMove(moveGrid.transform.position, 0.5f).OnComplete(delegate {
+                    gridBase.barrierBase = null;
+                    collision.gameObject.transform.DOMove(moveGrid.transform.position, 0.5f).OnComplete(delegate
+                    {
                         collision.gameObject.GetComponent<SlimeBase>().fSMController.ChangeState(StateType.Move);
                     });
-
                 }
                 else if (collision.gameObject.GetComponent<SlimeBase>().slimeType == SlimeType.GHOST)
                 {
                     collision.gameObject.GetComponent<SlimeBase>().fSMController.Stop();
                     moveGrid.barrierBase = null;
+                    collision.gameObject.GetComponent<SlimeBase>().gridBase = null;
+                    if (collision.gameObject.GetComponent<MoveStateGhostSlime>().oldGrid != null)
+                    {
+                        collision.gameObject.GetComponent<MoveStateGhostSlime>().oldGrid.barrierBase = null;
+                    }
+                    if (collision.gameObject.GetComponent<MoveStateGhostSlime>().nextGrid != null)
+                    {
+                        collision.gameObject.GetComponent<MoveStateGhostSlime>().nextGrid.barrierBase = null;
+                    }
+                    if (collision.gameObject.GetComponent<MoveStateGhostSlime>().tempGrid != null)
+                    {
+                        collision.gameObject.GetComponent<MoveStateGhostSlime>().tempGrid.barrierBase = null;
+                    }
+                    collision.gameObject.GetComponent<MoveStateGhostSlime>().oldGrid = null;
                     collision.gameObject.GetComponent<MoveStateGhostSlime>().nextGrid = null;
                     collision.gameObject.GetComponent<MoveStateGhostSlime>().tempGrid = null;
-                    collision.gameObject.GetComponent<MoveStateGhostSlime>().idOld.Clear();
+                    //collision.gameObject.GetComponent<MoveStateGhostSlime>().idOld.Clear();
                     collision.gameObject.GetComponent<MoveStateGhostSlime>().idOld.Add(moveGrid.id);
+                    collision.gameObject.GetComponent<MoveStateGhostSlime>().idOld.Add(gridBase.id);
                     moveGrid.barrierBase = collision.gameObject.GetComponent<BarrierBase>();
                     collision.gameObject.GetComponent<SlimeBase>().gridBase = moveGrid;
-                    collision.gameObject.transform.DOMove(moveGrid.transform.position, 0.5f).OnComplete(delegate {
+                    
+                    gridBase.barrierBase = null;
+                    collision.gameObject.transform.DOMove(moveGrid.transform.position, 0.5f).OnComplete(delegate
+                    {
                         collision.gameObject.GetComponent<SlimeBase>().fSMController.ChangeState(StateType.Move);
                     });
                 }
@@ -88,13 +141,30 @@ public class MoveRock : BarrierBase
                 {
                     collision.gameObject.GetComponent<SlimeBase>().fSMController.Stop();
                     moveGrid.barrierBase = null;
+                    collision.gameObject.GetComponent<SlimeBase>().gridBase = null;
+                    if (collision.gameObject.GetComponent<MoveState>().oldGrid != null)
+                    {
+                        collision.gameObject.GetComponent<MoveState>().oldGrid.barrierBase = null;
+                    }
+                    if (collision.gameObject.GetComponent<MoveState>().nextGrid != null)
+                    {
+                        collision.gameObject.GetComponent<MoveState>().nextGrid.barrierBase = null;
+                    }
+                    if (collision.gameObject.GetComponent<MoveState>().tempGrid != null)
+                    {
+                        collision.gameObject.GetComponent<MoveState>().tempGrid.barrierBase = null;
+                    }           
+                    collision.gameObject.GetComponent<MoveState>().oldGrid = null;
                     collision.gameObject.GetComponent<MoveState>().nextGrid = null;
                     collision.gameObject.GetComponent<MoveState>().tempGrid = null;
-                    collision.gameObject.GetComponent<MoveState>().idOld.Clear();
+                    //collision.gameObject.GetComponent<MoveState>().idOld.Clear();
                     collision.gameObject.GetComponent<MoveState>().idOld.Add(moveGrid.id);
+                    collision.gameObject.GetComponent<MoveState>().idOld.Add(gridBase.id);
                     moveGrid.barrierBase = collision.gameObject.GetComponent<BarrierBase>();
                     collision.gameObject.GetComponent<SlimeBase>().gridBase = moveGrid;
-                    collision.gameObject.transform.DOMove(moveGrid.transform.position, 0.5f).OnComplete(delegate {
+                    gridBase.barrierBase = null;
+                    collision.gameObject.transform.DOMove(moveGrid.transform.position, 0.5f).OnComplete(delegate
+                    {
                         collision.gameObject.GetComponent<SlimeBase>().fSMController.ChangeState(StateType.Move);
                     });
                 }
@@ -107,6 +177,39 @@ public class MoveRock : BarrierBase
 
            
 
+            if (moveGrid.barrierBase != null)
+            {
+                StartCoroutine(Helper.StartAction(delegate
+                {
+                    if (collision.gameObject.GetComponent<BarrierBase>() != null && collision.gameObject.activeSelf)
+                    {
+                        collision.gameObject.GetComponent<BarrierBase>().gridBase.barrierBase = null;
+                        moveGrid.barrierBase = null;
+                        moveGrid.barrierBase = collision.gameObject.GetComponent<BarrierBase>();
+                        collision.gameObject.GetComponent<BarrierBase>().gridBase = moveGrid;
+                        collision.gameObject.transform.DOMove(moveGrid.transform.position, 0.5f).OnComplete(delegate
+                        {
+
+                        });
+                    }
+
+
+                }, () => moveGrid.barrierBase == null));
+                Debug.LogError("moveGrid.barrierBase != null");
+            }
+            else
+            {
+                collision.gameObject.GetComponent<BarrierBase>().gridBase.barrierBase = null;
+                moveGrid.barrierBase = null;
+                moveGrid.barrierBase = collision.gameObject.GetComponent<BarrierBase>();
+                collision.gameObject.GetComponent<BarrierBase>().gridBase = moveGrid;
+                collision.gameObject.transform.DOMove(moveGrid.transform.position, 0.5f).OnComplete(delegate
+                {
+
+                });
+                Debug.LogError("moveGrid.barrierBase != null");
+            }
+
         }
     }
 
@@ -115,7 +218,20 @@ public class MoveRock : BarrierBase
     {
         moveGrid = gridBase.GetGrid(moveBlockType);
         gridBase.barrierBase = null;
-        gridBase = null;
+        if(gridBase != null)
+        {
+            Debug.LogError("!=null");
+        }
+        else
+        {
+            Debug.LogError("===null");
+        }
+        if (moveGrid.lsGridBase.Contains(gridBase))
+        {
+            moveGrid.lsGridBase.Remove(gridBase);
+        }
+
+        //gridB;ase = null
 
 
 

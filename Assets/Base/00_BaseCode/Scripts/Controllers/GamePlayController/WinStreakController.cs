@@ -56,7 +56,7 @@ public class WinStreakController : MonoBehaviour
                                 temp.transform.position = canvasGroup.transform.position;
                                 temp.transform.localScale = new Vector3(1, 1, 1);
 
-                                temp.Init(lsGiftInGames[index], new Vector3(1-i  , 15, 0), delegate {
+                                temp.Init(lsGiftInGames[index], new Vector3(1-i  , 3, 0), delegate {
 
                                     Debug.LogError("123");
                                     if (index >= lsGiftInGames.Count - 1)
