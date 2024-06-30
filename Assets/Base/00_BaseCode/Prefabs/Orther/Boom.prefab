@@ -123,7 +123,7 @@ MonoBehaviour:
   wasTakeDame: 0
   Hp: 0
   flame: {fileID: 6872330641066631044, guid: 0cb53581e7204974c8bd9ed5c4e6fba3, type: 3}
-  spacing: 0.7
+  spacing: 1
 --- !u!58 &6949791025293811616
 CircleCollider2D:
   m_ObjectHideFlags: 0

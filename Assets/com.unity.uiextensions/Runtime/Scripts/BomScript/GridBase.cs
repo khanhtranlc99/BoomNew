@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,8 +15,10 @@ public class GridBase : MonoBehaviour
     public Sprite normalGrid;
     public bool isFree;
     public GameObject ice;
-
-
+    public List<GridBase> leftGridBase;
+    public List<GridBase> rightGridBase;
+    public List<GridBase> upGridBase;
+    public List<GridBase> downGridBase;
     //private void OnTriggerEnter2D(Collider2D collision)
     //{
     //    if (collision.gameObject.tag == "Grid")
@@ -183,6 +185,83 @@ public class GridBase : MonoBehaviour
 
 
     }
+    [Button]
+    public void Test( )
+    {
+        ShootRaycastsFromBoom(this.transform.position);
+    }
+
+    void ShootRaycastsFromBoom(Vector2 boomPosition)
+    {
+        Vector2 RightDirection = Vector2.right;
+
+        // Lấy tất cả các collider mà raycast đi qua
+        RaycastHit2D[] hits = Physics2D.RaycastAll(boomPosition, RightDirection, 10); // Độ dài của raycast là 10
+
+        // Vẽ raycast bằng màu đỏ
+        Debug.DrawRay(boomPosition, RightDirection * 10, Color.red, 10); // Vẽ raycast với độ dài 10 và hiển thị trong 10 giây
+
+        foreach (var hit in hits)
+        {
+            // Xử lý khi raycast chạm vào đối tượng
+            if (hit.collider.gameObject.GetComponent<GridBase>() != null && hit.collider.gameObject.GetComponent<GridBase>() != this)
+            {
+                rightGridBase.Add(hit.collider.gameObject.GetComponent<GridBase>());
+            }
+        }
+
+        Vector2 UpDirection = Vector2.up;
+
+        // Lấy tất cả các collider mà raycast đi qua
+        RaycastHit2D[] hits2 = Physics2D.RaycastAll(boomPosition, UpDirection, 10); // Độ dài của raycast là 10
+
+        // Vẽ raycast bằng màu đỏ
+        Debug.DrawRay(boomPosition, UpDirection * 10, Color.red, 10); // Vẽ raycast với độ dài 10 và hiển thị trong 10 giây
+
+        foreach (var hit in hits2)
+        {
+            // Xử lý khi raycast chạm vào đối tượng
+            if (hit.collider.gameObject.GetComponent<GridBase>() != null && hit.collider.gameObject.GetComponent<GridBase>() != this)
+            {
+                upGridBase.Add(hit.collider.gameObject.GetComponent<GridBase>());
+            }
+        }
+
+        Vector2 LeftDirection = Vector2.left;
+
+        // Lấy tất cả các collider mà raycast đi qua
+        RaycastHit2D[] hits3 = Physics2D.RaycastAll(boomPosition, LeftDirection, 10); // Độ dài của raycast là 10
+
+        // Vẽ raycast bằng màu đỏ
+        Debug.DrawRay(boomPosition, LeftDirection * 10, Color.red, 10); // Vẽ raycast với độ dài 10 và hiển thị trong 10 giây
+
+        foreach (var hit in hits3)
+        {
+            // Xử lý khi raycast chạm vào đối tượng
+            if (hit.collider.gameObject.GetComponent<GridBase>() != null && hit.collider.gameObject.GetComponent<GridBase>() != this)
+            {
+                leftGridBase.Add(hit.collider.gameObject.GetComponent<GridBase>());
+            }
+        }
+
+        Vector2 DownDirection = Vector2.down;
+
+        // Lấy tất cả các collider mà raycast đi qua
+        RaycastHit2D[] hits4 = Physics2D.RaycastAll(boomPosition, DownDirection, 10); // Độ dài của raycast là 10
+
+        // Vẽ raycast bằng màu đỏ
+        Debug.DrawRay(boomPosition, DownDirection * 10, Color.red, 10); // Vẽ raycast với độ dài 10 và hiển thị trong 10 giây
+
+        foreach (var hit in hits4)
+        {
+            // Xử lý khi raycast chạm vào đối tượng
+            if (hit.collider.gameObject.GetComponent<GridBase>() != null && hit.collider.gameObject.GetComponent<GridBase>() != this)
+            {
+                downGridBase.Add(hit.collider.gameObject.GetComponent<GridBase>());
+            }
+        }
+    }
+
 
 
     [Button]

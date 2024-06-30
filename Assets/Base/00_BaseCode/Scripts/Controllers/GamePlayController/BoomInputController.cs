@@ -92,6 +92,7 @@ public class BoomInputController : MonoBehaviour
                                 var boom = SimplePool2.Spawn(prefabBoomBase, selectedObject.transform.position, Quaternion.identity);
                                 selectedObject.barrierBase = boom;
                                 boom.gridBase = selectedObject;
+                                boom.Init();
                                 HandleSubtraction();
                                 GamePlayController.Instance.playerContain.tutorial_BoomInput.NextTut();
                                 GamePlayController.Instance.playerContain.tutorial_TNT.StartTut();
@@ -116,5 +117,5 @@ public class BoomInputController : MonoBehaviour
         }
     }
 
-   
+  
 }
