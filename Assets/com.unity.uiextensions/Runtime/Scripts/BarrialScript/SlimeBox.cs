@@ -14,7 +14,7 @@ public class SlimeBox : BarrierBase
             return lsSlimeBases[Random.RandomRange(0, lsSlimeBases.Count)];
         }
     }
- 
+    public ParticleSystem particleSystem;
     public override void Init()
     {
 
@@ -25,7 +25,8 @@ public class SlimeBox : BarrierBase
         {
             wasTakeDame = true;
             Hp -= 1;
-            if(Hp == 2)
+            particleSystem.Play();
+            if (Hp == 2)
             {
                 spriteRenderer.sprite = spriteHit_1;
             }

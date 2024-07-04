@@ -29,7 +29,7 @@ public class SuggetBox : BaseBox
     public Text tvNum;
     public void Init()
     {
-        btnClose.onClick.AddListener(delegate {  GamePlayController.Instance.playerContain.boomInputController.enabled = true;Close(); });
+        btnClose.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); GamePlayController.Instance.playerContain.boomInputController.enabled = true;Close(); });
         payByAdsBtn.onClick.AddListener(delegate { HandlePayByAds(); });
         payByCoinBtn.onClick.AddListener(delegate { HandlePayByCoin(); });
     }
@@ -89,7 +89,7 @@ public class SuggetBox : BaseBox
     public void HandlePayByAds()
     {
 
-
+        GameController.Instance.musicManager.PlayClickSound();
         GameController.Instance.admobAds.ShowVideoReward(
                      actionReward: () =>
                      {
@@ -117,14 +117,15 @@ public class SuggetBox : BaseBox
     
     public void HandlePayByCoin()
     {
-        if(UseProfile.Coin >= price)
+        GameController.Instance.musicManager.PlayClickSound();
+        if (UseProfile.Coin >= price)
         {
             UseProfile.Coin -= price;      
             HandleClaimGift();
         }
         else
         {
-            ShopCoinBox.Setup().Show();
+            ShopBox.Setup(ButtonShopType.Gold).Show();
         }    
 
 

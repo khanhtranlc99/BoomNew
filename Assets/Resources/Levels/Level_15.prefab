@@ -1518,10 +1518,7 @@ MonoBehaviour:
   rightGridBase:
   - {fileID: 3212472540716733281}
   - {fileID: 3212472539808710166}
-  upGridBase:
-  - {fileID: 3212472540010159969}
-  - {fileID: 3212472540547807786}
-  - {fileID: 3212472540861266000}
+  upGridBase: []
   downGridBase:
   - {fileID: 3212472540262622615}
   - {fileID: 3212472539999931274}
@@ -2767,10 +2764,7 @@ MonoBehaviour:
   upGridBase:
   - {fileID: 3212472540547807786}
   - {fileID: 3212472540861266000}
-  downGridBase:
-  - {fileID: 3212472539707440475}
-  - {fileID: 3212472540262622615}
-  - {fileID: 3212472539999931274}
+  downGridBase: []
 --- !u!61 &3212472540010159973
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8694,7 +8688,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  difficult: 0
+  difficult: 1
   isSlimeLevel: 1
   isTimeLevel: 0
   conditionSlimes:

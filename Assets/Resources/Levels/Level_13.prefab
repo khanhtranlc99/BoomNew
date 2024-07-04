@@ -1171,9 +1171,6 @@ MonoBehaviour:
   rightGridBase: []
   upGridBase:
   - {fileID: 3582613313509720448}
-  - {fileID: 3582613313918781055}
-  - {fileID: 3582613313549306105}
-  - {fileID: 3582613313600803542}
   downGridBase:
   - {fileID: 3582613314272290276}
 --- !u!61 &3582613312849337873
@@ -3586,10 +3583,7 @@ MonoBehaviour:
   - {fileID: 3582613313512943704}
   - {fileID: 3582613312598515483}
   rightGridBase: []
-  upGridBase:
-  - {fileID: 3582613313918781055}
-  - {fileID: 3582613313549306105}
-  - {fileID: 3582613313600803542}
+  upGridBase: []
   downGridBase:
   - {fileID: 3582613312849337877}
   - {fileID: 3582613314272290276}
@@ -3928,9 +3922,6 @@ MonoBehaviour:
   - {fileID: 3582613313600803542}
   downGridBase:
   - {fileID: 3582613313918781055}
-  - {fileID: 3582613313509720448}
-  - {fileID: 3582613312849337877}
-  - {fileID: 3582613314272290276}
 --- !u!61 &3582613313549306101
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4096,9 +4087,6 @@ MonoBehaviour:
   downGridBase:
   - {fileID: 3582613313549306105}
   - {fileID: 3582613313918781055}
-  - {fileID: 3582613313509720448}
-  - {fileID: 3582613312849337877}
-  - {fileID: 3582613314272290276}
 --- !u!61 &3582613313600803538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4927,10 +4915,7 @@ MonoBehaviour:
   upGridBase:
   - {fileID: 3582613313549306105}
   - {fileID: 3582613313600803542}
-  downGridBase:
-  - {fileID: 3582613313509720448}
-  - {fileID: 3582613312849337877}
-  - {fileID: 3582613314272290276}
+  downGridBase: []
 --- !u!61 &3582613313918781051
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6336,9 +6321,6 @@ MonoBehaviour:
   upGridBase:
   - {fileID: 3582613312849337877}
   - {fileID: 3582613313509720448}
-  - {fileID: 3582613313918781055}
-  - {fileID: 3582613313549306105}
-  - {fileID: 3582613313600803542}
   downGridBase: []
 --- !u!61 &3582613314272290272
 BoxCollider2D:

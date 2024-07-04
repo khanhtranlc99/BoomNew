@@ -72,6 +72,7 @@ public class TimeBoom_Item : MonoBehaviour
     }
     private void HandleTimeBoom()
     {
+        GameController.Instance.musicManager.PlayClickSound();
         GamePlayController.Instance.playerContain.boomInputController.enabled = false;
         GamePlayController.Instance.playerContain.tutorial_TimeBoom.NextTut();
         wasUseTimeBoom = true;

@@ -7,6 +7,7 @@ public class Rock : BarrierBase
 {
     public Sprite spriteHit_1;
     public Sprite spriteHit_2;
+    public ParticleSystem particleSystem;
     public override void Init()
     {
 
@@ -17,6 +18,7 @@ public class Rock : BarrierBase
         {
             wasTakeDame = true;
             Hp -= 1;
+            particleSystem.Play();
             if (Hp == 2)
             {
                 spriteRenderer.sprite = spriteHit_1;
@@ -31,7 +33,7 @@ public class Rock : BarrierBase
                 gridBase.barrierBase = null;
                 transform.DOShakePosition(0.3f, 0.1f, 1, 1).OnComplete(delegate {
                     spriteRenderer.DOFade(0, 0.3f).OnComplete(delegate {
-                        //GameController.Instance.questController.HandleCheckCompleteQuest(questTargetType);
+                        GameController.Instance.questController.HandleCheckCompleteQuest(questTargetType);
                         Destroy(this.gameObject); 
                     });
                 });

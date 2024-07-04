@@ -25,7 +25,7 @@ public class AtomBoom_Booster : MonoBehaviour
     {
         selectedObject = null;
         wasUseTNT_Booster = false;
-        if (UseProfile.CurrentLevel >= 9)
+        if (UseProfile.CurrentLevel >= 9)//9
         {
 
             //unLockIcon.gameObject.SetActive(true);
@@ -87,7 +87,8 @@ public class AtomBoom_Booster : MonoBehaviour
 
     public void HandleAtom_Booster()
     {
-        if(UseProfile.Atom_Booster >= 1)
+        GameController.Instance.musicManager.PlayClickSound();
+        if (UseProfile.Atom_Booster >= 1)
         {
         
             GamePlayController.Instance.playerContain.tutorial_Atom.NextTut();
@@ -163,6 +164,7 @@ public class AtomBoom_Booster : MonoBehaviour
 
                         });
                     });
+
                     if (currentFlameVfx != null)
                     {
                         SimplePool2.Despawn(currentFlameVfx.gameObject);

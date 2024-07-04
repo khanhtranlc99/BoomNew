@@ -10033,7 +10033,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  difficult: 0
+  difficult: 2
   isSlimeLevel: 1
   isTimeLevel: 0
   conditionSlimes:

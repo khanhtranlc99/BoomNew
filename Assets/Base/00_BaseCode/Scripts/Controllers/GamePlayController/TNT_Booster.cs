@@ -25,7 +25,7 @@ public class TNT_Booster : MonoBehaviour
         selectedObject = null;
              wasUseTNT_Booster = false;
         SimplePool2.Preload(flameVfx.gameObject,1, post);
-        if (UseProfile.CurrentLevel >= 3)
+        if (UseProfile.CurrentLevel >= 3)//3
         {
 
             //unLockIcon.gameObject.SetActive(true);
@@ -87,6 +87,7 @@ public class TNT_Booster : MonoBehaviour
 
     public void HandleTNT_Booster()
     {
+        GameController.Instance.musicManager.PlayClickSound();
         if (UseProfile.TNT_Booster >= 1)
         {
             GamePlayController.Instance.playerContain.tutorial_TNT.NextTut();

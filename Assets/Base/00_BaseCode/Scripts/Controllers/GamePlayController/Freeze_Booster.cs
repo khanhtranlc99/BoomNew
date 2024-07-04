@@ -11,16 +11,17 @@ public class Freeze_Booster : MonoBehaviour
     public GameObject parentTvCoin;
     public GameObject lockIcon;
     public GameObject unLockIcon;
-    public RocketVfx rocketVfx;
+ 
     public Transform post;
-
-
-
+    public GameObject vfxFreeze;
+    public CanvasGroup canvasGroup;
+    public GameObject vfxUI;
+    public GameObject parent;
     public void Init()
     {
 
  
-        if (UseProfile.CurrentLevel >= 7)
+        if (UseProfile.CurrentLevel >= 7)//7
         {
 
             //unLockIcon.gameObject.SetActive(true);
@@ -80,11 +81,12 @@ public class Freeze_Booster : MonoBehaviour
 
     public void HandleFreezeBooster()
     {
-        if(UseProfile.Freeze_Booster >= 1)
+        GameController.Instance.musicManager.PlayClickSound();
+        if (UseProfile.Freeze_Booster >= 1)
         {
             GamePlayController.Instance.playerContain.tutorial_Freeze.NextTut();
             UseProfile.Freeze_Booster -= 1;
-            GamePlayController.Instance.playerContain.levelData.HandleFreezeBooster();
+            OnVfx();
         }
         else
         {
@@ -93,7 +95,36 @@ public class Freeze_Booster : MonoBehaviour
 
     }
 
+    public void OnVfx()
+    {
+        var freeze = SimplePool2.Spawn(vfxFreeze );
+        freeze.transform.position = freezeBooster.transform.position;
+        freeze.transform.parent =  GamePlayController.Instance.gameScene.canvas.transform;
+        freeze.transform.localScale = new Vector3(0, 0, 0);
+        freeze.transform.DOScale(new Vector3(2, 2, 2), 0.3f).OnComplete(delegate {
+           
+            freeze.transform.DOMove(parent.transform.position, 0.5f).SetEase(Ease.InBack).OnComplete(delegate
+            {
+              
+                canvasGroup.DOFade(1, 0.3f).OnComplete(delegate
+                {
+                    GamePlayController.Instance.playerContain.levelData.HandleFreezeBooster();
+                    vfxUI.SetActive(true);
+                 
+                    Debug.LogError("freezelocalScale");
+                });
+                SimplePool2.Despawn(freeze.gameObject);
+            });
+        });
 
+
+     
+    }
+    public void OffVfx()
+    {
+        vfxUI.gameObject.SetActive(false);
+        canvasGroup.DOFade(0, 0.3f);
+    }
 
 
     public void ChangeText(object param)

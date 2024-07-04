@@ -27,6 +27,7 @@ public class ShopBox : BaseBox
     public Text tvCountTimePackCoin;
     public Text tvCountTimePackCoin_2;
     public CoinHeartBar coinHeartBar;
+    public Button btnClose;
     private void Init(ButtonShopType buttonShopType)
     {
         shopController.Init(buttonShopType);
@@ -35,6 +36,7 @@ public class ShopBox : BaseBox
             item.Init();
         }
         coinHeartBar.Init();
+        btnClose.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); Close(); });
     }
     private void InitState()
     {
@@ -43,6 +45,8 @@ public class ShopBox : BaseBox
 
     private void ResetDay()
     {
+        Debug.LogError(TimeManager.ParseTimeStartDay(DateTime.Now));
+        Debug.LogError(TimeManager.ParseTimeStartDay(UseProfile.LastTimeOnline));
         wasCountTime = false;
         countTime = TimeManager.CaculateTime(TimeManager.ParseTimeStartDay(UseProfile.LastTimeOnline),
           TimeManager.ParseTimeStartDay(DateTime.Now));

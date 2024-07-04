@@ -7,7 +7,11 @@ public class Step_1_Atom : TutorialBase
     GameObject currentHand;
     public override bool IsCanEndTut()
     {
-        Destroy(currentHand.gameObject);
+        if(currentHand != null)
+        {
+            Destroy(currentHand.gameObject);
+        }    
+        
         return base.IsCanShowTut();
 
     }

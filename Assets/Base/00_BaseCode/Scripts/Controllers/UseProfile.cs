@@ -210,7 +210,7 @@ public class UseProfile : MonoBehaviour
     {
         get
         {
-            return PlayerPrefs.GetInt(StringHelper.TNT_BOOSTER, 5);
+            return PlayerPrefs.GetInt(StringHelper.TNT_BOOSTER, 3);
         }
         set
         {
@@ -223,7 +223,7 @@ public class UseProfile : MonoBehaviour
     {
         get
         {
-            return PlayerPrefs.GetInt(StringHelper.ROCKET_BOOSTER, 10);
+            return PlayerPrefs.GetInt(StringHelper.ROCKET_BOOSTER, 3);
         }
         set
         {
@@ -236,7 +236,7 @@ public class UseProfile : MonoBehaviour
     {
         get
         {
-            return PlayerPrefs.GetInt(StringHelper.FREE_BOOSTER, 10);
+            return PlayerPrefs.GetInt(StringHelper.FREE_BOOSTER, 3);
         }
         set
         {
@@ -250,7 +250,7 @@ public class UseProfile : MonoBehaviour
     {
         get
         {
-            return PlayerPrefs.GetInt(StringHelper.ATOM_BOOSTER, 10);
+            return PlayerPrefs.GetInt(StringHelper.ATOM_BOOSTER, 3);
         }
         set
         {

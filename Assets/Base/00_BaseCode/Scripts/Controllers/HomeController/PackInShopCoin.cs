@@ -15,7 +15,8 @@ public class PackInShopCoin : PackInShop
     }
     private void HandleBuy()
     {
-        if(UseProfile.Coin >= coinGift)
+        GameController.Instance.musicManager.PlayClickSound();
+        if (UseProfile.Coin >= coinGift)
         {
             UseProfile.Coin -= coinGift;
             List<GiftRewardShow> giftRewardShows = new List<GiftRewardShow>();
@@ -29,6 +30,15 @@ public class PackInShopCoin : PackInShop
         else
         {
             buttonShopController.HandleOnClick(ButtonShopType.Gold);
+            GameController.Instance.moneyEffectController.SpawnEffectText_FlyUp_UI
+                       (
+                          btnBuy.transform
+                          ,
+                       btnBuy.transform.position,
+                       "Buy More Coin",
+                       Color.white,
+                       isSpawnItemPlayer: true
+                       );
         }    
     }    
 

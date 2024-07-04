@@ -20,11 +20,15 @@ public class SlimeBase : BarrierBase
     public SlimeFSMController fSMController;
     public Animator animator;
     public CircleCollider2D collider2D;
+    public AudioSource takeDame;
+    public AudioClip takeDameSFX;
 
     public override void Init()
     {
         fSMController.Init(this);
         EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.FREEZE , HandlePause);
+        EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.PAUSE, HandlePauseGame);
+        EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.STOPPAUSE, HandleStopPauseGame);
     }
 
     public override void TakeDame()
@@ -33,23 +37,41 @@ public class SlimeBase : BarrierBase
         {
             wasTakeDame = true;
             Hp -= 1;
-            StartCoroutine(HandleCountDown());
-            if (fSMController.currentState.state != StateType.Hide)
+            if (GameController.Instance.useProfile.OnSound)
             {
-           
-                spriteRenderer.DOFade(0.5f, 0.5f).OnComplete(delegate {
-                    spriteRenderer.DOFade(1, 0.5f).OnComplete(delegate {
-                        spriteRenderer.DOFade(0.5f, 0.3f).OnComplete(delegate {
-                            spriteRenderer.DOFade(1, 0.3f).OnComplete(delegate {
+                takeDame.PlayOneShot(takeDameSFX);
+            }
+            
+            StartCoroutine(HandleCountDown());
+            if(Hp > 0)
+            {
+                GamePlayController.Instance.HandleCheckLose();
+            }    
+            try
+            {
+                if (fSMController.currentState.state != StateType.Hide)
+                {
 
+                    spriteRenderer.DOFade(0.5f, 0.5f).OnComplete(delegate {
+                        spriteRenderer.DOFade(1, 0.5f).OnComplete(delegate {
+                            spriteRenderer.DOFade(0.5f, 0.3f).OnComplete(delegate {
+                                spriteRenderer.DOFade(1, 0.3f).OnComplete(delegate {
+
+                                    GamePlayController.Instance.HandleCheckLose();
+                                });
                             });
                         });
                     });
-                });
+                }
+
             }
-         
-           
-           
+            catch
+            {
+
+            }
+
+
+
         }
    
     }
@@ -79,9 +101,21 @@ public class SlimeBase : BarrierBase
         yield return new WaitForSeconds(5);
         this.transform.DOPlay();
     }
+    public void HandlePauseGame(object param)
+    {
+        this.transform.DOPause();
+       
+    }
+    public void HandleStopPauseGame(object param)
+    {
+        this.transform.DOPlay();
+
+    }
     public void OnDestroy()
     {
         EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.FREEZE, HandlePause);
+        EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.PAUSE, HandlePauseGame);
+        EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.STOPPAUSE, HandleStopPauseGame);
     }
 
 

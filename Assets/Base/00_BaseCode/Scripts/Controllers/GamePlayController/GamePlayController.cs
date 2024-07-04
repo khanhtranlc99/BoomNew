@@ -34,9 +34,9 @@ public class GamePlayController : Singleton<GamePlayController>
 
     public void Init()
     {
-     
 
-            playerContain.Init();
+        UseProfile.FirstLoading = true;
+        playerContain.Init();
         SimplePool2.ClearPool();
         SimplePool2.Preload(itemInGame.gameObject, 10, this.transform);
         SimplePool2.Preload(flame.gameObject, 50, this.transform);
@@ -52,16 +52,26 @@ public class GamePlayController : Singleton<GamePlayController>
     {
         if (stateGame == StateGame.Playing)
         {
-            if (playerContain.boomInputController.countBoom <= 0 && gameScene.targetController.isLose)
-            {
-                GamePlayController.Instance.playerContain.boomInputController.enabled = true;
-                if(stateGame == StateGame.Playing)
+            Debug.LogError("isSlimeTakeDame_"  + playerContain.levelData.isSlimeTakeDame);
+
+            //if (playerContain.levelData.isSlimeTakeDame)
+            //{
+            //    return;
+            //}
+            //else
+            //{
+                if (playerContain.boomInputController.countBoom <= 0 && gameScene.targetController.isLose)
                 {
-                    stateGame = StateGame.Lose;
-                    LoseBox.Setup().Show();
-                }    
+                 
+                    if (stateGame == StateGame.Playing)
+                    {
+                        GamePlayController.Instance.playerContain.boomInputController.enabled = true;
+                        stateGame = StateGame.Lose;
+                        LoseBox.Setup().Show();
+                    }
+                }
+            //}
           
-            }
         }
     }
   

@@ -133,7 +133,7 @@ public class ItemInGame : MonoBehaviour
                     playerContain.flameUp_Item.ShowIcon(delegate {
                         this.transform.parent = playerContain.flameUp_Item.icon.transform;
                         this.transform.DOLocalMove(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(delegate {
-                            Debug.LogError("currentGift.count_" + currentGift.count);
+                       
                             UseProfile.FlameUp_Item += currentGift.count;
                             callBack?.Invoke();
                             SimplePool2.Despawn(this.gameObject);

@@ -46,6 +46,7 @@ public class MusicManagerGameBase : SerializedMonoBehaviour
     public const float MAX_VALUE = 0f;
 
     [SerializeField] private AudioClip winMusic;
+    [SerializeField] private AudioClip loseMusic;
     [SerializeField] private AudioClip BGMusic;
     [SerializeField] private AudioClip clickSound;
     [SerializeField] private AudioClip startLevel;
@@ -80,7 +81,7 @@ public class MusicManagerGameBase : SerializedMonoBehaviour
 
     public void Init()
     {
-        musicSource.volume = GameController.Instance.useProfile.OnMusic ? 0.7f : 0;
+        musicSource.volume = GameController.Instance.useProfile.OnMusic ? 0.15f : 0;
         effectSource.volume = GameController.Instance.useProfile.OnSound ? 1 : 0;
         PlayBGMusic();
     }
@@ -240,6 +241,14 @@ public class MusicManagerGameBase : SerializedMonoBehaviour
         // musicSource.clip = winMusic;
         //musicSource.Play();
         PlaySingle(winMusic, SourceAudio.Effect);
+    }
+    public void PlayLoseSound()
+    {
+        if (!GameController.Instance.useProfile.OnMusic)
+            return;
+        // musicSource.clip = winMusic;
+        //musicSource.Play();
+        PlaySingle(loseMusic, SourceAudio.Effect);
     }
 
     public void PlayBGMusic()

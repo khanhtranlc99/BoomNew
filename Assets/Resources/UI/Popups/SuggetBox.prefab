@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7058824}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1443,6 +1443,7 @@ MonoBehaviour:
   isNotStack: 0
   isPopup: 1
   isAnim: 1
+  popupCanvas: {fileID: 0}
   isBoxSave: 0
   btnClose: {fileID: 7474226048089781264}
   payByCoinBtn: {fileID: 5816006702668435569}

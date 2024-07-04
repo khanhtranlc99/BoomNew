@@ -35,7 +35,9 @@ public class QuestBar : MonoBehaviour
             tvContent_2.text = QuestController.ProgessQuest + "/" + currentQuest.numTarget;
             if (QuestController.ProgessQuest < currentQuest.numTarget)
             {
-                barAmount.DOFillAmount(QuestController.ProgessQuest / currentQuest.numTarget, 0.7f);
+                float temp = (float)QuestController.ProgessQuest / currentQuest.numTarget;
+     
+                barAmount.DOFillAmount(temp, 0.7f);
             }
             else
             {

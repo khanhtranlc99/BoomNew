@@ -29,7 +29,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.67, y: 2.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 3492761445242259593}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -134,3 +135,75 @@ MonoBehaviour:
   - {fileID: 7070618898779168026, guid: da903997e05db4147a153fcb5af1eb16, type: 3}
   - {fileID: 2343997275207472829, guid: 7fd97e77370cde04d8840a81402737a2, type: 3}
   - {fileID: 4214117352448932022, guid: ebbc916f352d2d34d80d226247cd8d2b, type: 3}
+  particleSystem: {fileID: 3492761445260611017}
+--- !u!1001 &7052475924061565781
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6310504951055521505}
+    m_Modifications:
+    - target: {fileID: 5883853388775483384, guid: 2acc487d73d1f6a4f8f202abe5548e77, type: 3}
+      propertyPath: m_Name
+      value: COL Small Rocks 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883853388775914460, guid: 2acc487d73d1f6a4f8f202abe5548e77, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883853388775914460, guid: 2acc487d73d1f6a4f8f202abe5548e77, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883853388775914460, guid: 2acc487d73d1f6a4f8f202abe5548e77, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883853388775914460, guid: 2acc487d73d1f6a4f8f202abe5548e77, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883853388775914460, guid: 2acc487d73d1f6a4f8f202abe5548e77, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883853388775914460, guid: 2acc487d73d1f6a4f8f202abe5548e77, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883853388775914460, guid: 2acc487d73d1f6a4f8f202abe5548e77, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883853388775914460, guid: 2acc487d73d1f6a4f8f202abe5548e77, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883853388775914460, guid: 2acc487d73d1f6a4f8f202abe5548e77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883853388775914460, guid: 2acc487d73d1f6a4f8f202abe5548e77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883853388775914460, guid: 2acc487d73d1f6a4f8f202abe5548e77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883853388791119516, guid: 2acc487d73d1f6a4f8f202abe5548e77, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2acc487d73d1f6a4f8f202abe5548e77, type: 3}
+--- !u!4 &3492761445242259593 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5883853388775914460, guid: 2acc487d73d1f6a4f8f202abe5548e77, type: 3}
+  m_PrefabInstance: {fileID: 7052475924061565781}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3492761445260611017 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5883853388791119516, guid: 2acc487d73d1f6a4f8f202abe5548e77, type: 3}
+  m_PrefabInstance: {fileID: 7052475924061565781}
+  m_PrefabAsset: {fileID: 0}

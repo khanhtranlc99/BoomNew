@@ -121,7 +121,7 @@ public class ButtonShopController : MonoBehaviour
                     btnShopTemp.transform.SetAsLastSibling();
                 }
             }
-            Debug.LogError("position_" + position);
+            
         }    
  
     }    

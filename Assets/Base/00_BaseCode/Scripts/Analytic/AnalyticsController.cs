@@ -467,6 +467,7 @@ public class AnalyticsController : MonoBehaviour
     private void OnApplicationQuit()
     {
         SetUserProperties();
+        UseProfile.WinStreak = 0;
     }
 
     public void HandleFireEvent_Total_Inter_Count()

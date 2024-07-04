@@ -33,7 +33,13 @@ public class Winbox : BaseBox
         tvCoin.text = "" + GamePlayController.Instance.playerContain.totalCoin;
         tvCoin_2.text = "" + GamePlayController.Instance.playerContain.totalCoin;
         coinHeartBar.Init();
+        UseProfile.CurrentLevel += 1;
         UseProfile.WinStreak += 1;
+        nextButton.transform.localScale = Vector3.zero;
+        nextButton.transform.DOScale(new Vector3(1,1,1),0.3f).SetDelay(3);
+        GamePlayController.Instance.playerContain.levelData.Pause();
+        GamePlayController.Instance.playerContain.boomInputController.enabled = false;
+        GameController.Instance.musicManager.PlayWinSound();
     }   
     public void InitState()
     {
@@ -44,13 +50,13 @@ public class Winbox : BaseBox
     }    
     private void HandleNext()
     {
-        UseProfile.CurrentLevel += 1;
+        GameController.Instance.musicManager.PlayClickSound();
         UseProfile.Coin += GamePlayController.Instance.playerContain.totalCoin;
         Initiate.Fade("HomeScene", Color.black, 2f);
     }    
     private void HandleReward()
     {
-    
+        GameController.Instance.musicManager.PlayClickSound();
         GameController.Instance.admobAds.ShowVideoReward(
                    actionReward: () =>
                    {

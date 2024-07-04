@@ -124,6 +124,15 @@ MonoBehaviour:
   Hp: 0
   flame: {fileID: 6872330641066631044, guid: 0cb53581e7204974c8bd9ed5c4e6fba3, type: 3}
   spacing: 1
+  leftGridbase: []
+  rightGridbase: []
+  upGridbase: []
+  downGridbase: []
+  countUp: 0
+  countDown: 0
+  countRight: 0
+  countLeft: 0
+  boom: {fileID: 8300000, guid: 8eab0202acaa867489538f74eef4d5af, type: 3}
 --- !u!58 &6949791025293811616
 CircleCollider2D:
   m_ObjectHideFlags: 0

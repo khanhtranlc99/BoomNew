@@ -12,9 +12,12 @@ public class Flame : MonoBehaviour
     public IEnumerator Stop()
     {
         yield return new WaitForSeconds(0.4f);
-      
+        if (!GamePlayController.Instance.playerContain.levelData.isSlimeTakeDame)
+        {
             GamePlayController.Instance.HandleCheckLose();
-    
+        }
+     
+   
         SimplePool2.Despawn(this.gameObject);
     }
 

@@ -29,6 +29,9 @@ public class LoseBox : BaseBox
         btnAdsRevive.onClick.AddListener(delegate { HandleAdsRevive(); });
         btnReviveByCoin.onClick.AddListener(delegate { HandleReviveByCoin(); });
         coinHeartBar.Init();
+        GamePlayController.Instance.playerContain.levelData.Pause();
+        GamePlayController.Instance.playerContain.boomInputController.enabled = false;
+        GameController.Instance.musicManager.PlayLoseSound();
     }   
     public void InitState()
     {
@@ -36,6 +39,7 @@ public class LoseBox : BaseBox
     }
     public void HandleReviveByCoin()
     {
+        GameController.Instance.musicManager.PlayClickSound();
         if (UseProfile.Coin >= 100)
         {
             UseProfile.Coin -= 100;
@@ -45,23 +49,26 @@ public class LoseBox : BaseBox
          
  
             Close();
+            GamePlayController.Instance.playerContain.levelData.StopPause();
         }
         else
         {
-            ShopCoinBox.Setup().Show();
+            ShopBox.Setup(ButtonShopType.Gold).Show();
+     
         }
 
 
     }
     public void HandleAdsRevive()
     {
+        GameController.Instance.musicManager.PlayClickSound();
         GameController.Instance.admobAds.ShowVideoReward(
                     actionReward: () =>
                     {
                         GamePlayController.Instance.stateGame = StateGame.Playing;
                         GamePlayController.Instance.playerContain.boomInputController.HandlePlus(5);
                         GamePlayController.Instance.playerContain.boomInputController.enabled = true;
-                 
+                        GamePlayController.Instance.playerContain.levelData.StopPause();
                         Close();
                     },
                     actionNotLoadedVideo: () =>
@@ -84,7 +91,7 @@ public class LoseBox : BaseBox
     }
     public void HandleClose()
     {
-
+        GameController.Instance.musicManager.PlayClickSound();
         //Close();
         BackHomeBox.Setup(TypeBackHOme.BackHome).Show();
 

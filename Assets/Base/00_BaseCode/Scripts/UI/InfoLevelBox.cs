@@ -18,7 +18,7 @@ public class InfoLevelBox : BaseBox
     }
     [SerializeField] Button btnPlay;
     [SerializeField] Button btnClose;
- 
+    [SerializeField] Text tvLevel;
     public InfoData currentInfoData;
     public List<InfoSlimePopup> lsInfoSlimePopups;
     public List<InfoTranformPopup> infoTranformPopup;
@@ -49,8 +49,8 @@ public class InfoLevelBox : BaseBox
     public void Init(InfoData infoData)
     {
         currentInfoData = infoData;
-        btnPlay.onClick.AddListener(delegate { Initiate.Fade("GamePlay", Color.black, 2f); });
-        btnClose.onClick.AddListener(delegate { Close(); });
+        btnPlay.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); Initiate.Fade("GamePlay", Color.black, 2f); });
+        btnClose.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); Close(); });
         if(currentInfoData.isSlimeLevel)
         {
             var templsTranform = GetLsTranformSlime(currentInfoData.conditionSlimes.lsDataSlime.Count);
@@ -69,7 +69,7 @@ public class InfoLevelBox : BaseBox
                 lsWinStreak[i].color = Color.yellow;
             }
         }
-   
+        tvLevel.text = "Level " +  UseProfile.CurrentLevel.ToString();
 
     }
     public void InitState()

@@ -16,12 +16,12 @@ public class Boom : BarrierBase
     public int countRight;
     public int countLeft;
 
-
+    public AudioClip boom;
     public void HandleExplosion()
     {
 
 
-
+        GameController.Instance.musicManager.PlayOneShot(boom);
         SpawnCross(1 + UseProfile.FlameUp_Item);
 
         gridBase.barrierBase = null;
@@ -112,7 +112,10 @@ public class Boom : BarrierBase
     public override void Init()
     {
 
-
+        leftGridbase.Clear();
+        rightGridbase.Clear();
+        upGridbase.Clear();
+        downGridbase.Clear();
         countUp = 0;
         countDown = 0;
         countRight = 0;
@@ -124,6 +127,16 @@ public class Boom : BarrierBase
                 if (item.barrierBase == null)
                 {
                     leftGridbase.Add(item);
+                }      
+                if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.ComeThrough)
+                {
+                    leftGridbase.Add(item);
+                    break;
+                }
+                if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Slime)
+                {
+                    leftGridbase.Add(item);
+       
                 }
                 if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Block)
                 {
@@ -140,6 +153,16 @@ public class Boom : BarrierBase
                 {
                     rightGridbase.Add(item);
                 }
+                if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.ComeThrough)
+                {
+                    rightGridbase.Add(item);
+                    break;
+                }
+                if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Slime)
+                {
+                    rightGridbase.Add(item);
+               
+                }
                 if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Block)
                 {
                     rightGridbase.Add(item);
@@ -155,6 +178,16 @@ public class Boom : BarrierBase
                 {
                     downGridbase.Add(item);
                 }
+                if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.ComeThrough)
+                {
+                    downGridbase.Add(item);
+                    break;
+                }
+                if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Slime)
+                {
+                    downGridbase.Add(item);
+                 
+                }
                 if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Block)
                 {
                     downGridbase.Add(item);
@@ -169,6 +202,16 @@ public class Boom : BarrierBase
                 if (item.barrierBase == null)
                 {
                     upGridbase.Add(item);
+                }
+                if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.ComeThrough)
+                {
+                    upGridbase.Add(item);
+                    break;
+                }
+                if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Slime)
+                {
+                    upGridbase.Add(item);
+   
                 }
                 if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Block)
                 {

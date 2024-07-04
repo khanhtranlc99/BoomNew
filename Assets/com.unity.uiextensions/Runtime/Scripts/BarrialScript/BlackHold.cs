@@ -106,11 +106,26 @@ public class BlackHold : BarrierBase
             gridBlackHold.barrierBase = null;
             blackHold.gridBlackHold.barrierBase = collision.gameObject.GetComponent<BarrierBase>();
             collision.gameObject.GetComponent<BarrierBase>().gridBase = blackHold.gridBlackHold;
+
             collision.gameObject.transform.DOScale(Vector3.zero, 0.5f).OnComplete(delegate {
                 collision.gameObject.transform.position = blackHold.transform.position;
                 collision.gameObject.transform.DOScale(new Vector3(1, 1, 1), 0.5f).OnComplete(delegate {      
                 });
             });
+
+            if (collision.gameObject.GetComponent<Boom>() != null)
+            {
+                collision.gameObject.GetComponent<Boom>().Init();
+            }
+            if (collision.gameObject.GetComponent<FastBoom>() != null)
+            {
+                collision.gameObject.GetComponent<FastBoom>().Init();
+            }
+            if (collision.gameObject.GetComponent<TimeBoom>() != null)
+            {
+                collision.gameObject.GetComponent<TimeBoom>().Init();
+            }
+
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

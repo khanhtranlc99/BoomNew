@@ -23,7 +23,8 @@
     FASTBOOM_ITEM = 108,
     TIMEBOOM_ITEM = 109,
     CHANGE_HEART = 110,
-
+    PAUSE = 111,
+    STOPPAUSE = 112,
 
 
 }

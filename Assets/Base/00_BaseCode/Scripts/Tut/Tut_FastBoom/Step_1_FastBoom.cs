@@ -22,10 +22,10 @@ public class Step_1_FastBoom : TutorialBase
             }
             currentHand = SimplePool2.Spawn(handTut);
             currentHand.transform.parent = GamePlayController.Instance.playerContain.fastBoom_Item.btnFastBoom.transform;
-            currentHand.transform.localScale = new Vector3(1, 1, 1);
+            currentHand.transform.localScale = new Vector3(3, 3, 3);
             currentHand.transform.position = GamePlayController.Instance.playerContain.fastBoom_Item.btnFastBoom.transform.position;
-   
-            currentHand.transform.position = new Vector3(post.x +0.5f, post.y - 0.7f, post.z);
+
+            currentHand.transform.position = new Vector3(post.x + 0.5f, post.y - 1, post.z);
         }
     }
     Vector3 post

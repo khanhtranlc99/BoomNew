@@ -81,10 +81,12 @@ public class QuestController : MonoBehaviour
     }
     public void HandleCheckCompleteQuest(QuestTargetType targetType)
     {
-        if(currentQuest.targetType == targetType)
+     
+        if (currentQuest.targetType == targetType)
         {
             if(ProgessQuest < currentQuest.numTarget)
             {
+                Debug.LogError("targetType_" + ProgessQuest);
                 ProgessQuest += 1;
             }
         } 

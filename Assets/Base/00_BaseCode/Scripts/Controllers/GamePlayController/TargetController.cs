@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class TargetController : MonoBehaviour
 {
     public List<SlimeTarget> lsSlimeTargets;
@@ -10,6 +10,8 @@ public class TargetController : MonoBehaviour
     public List<SlimeTarget> lsCurrentSlimeTargets;
 
     public Transform tranformSlimePrepage;
+    public List<GameObject> lsVfxDie;
+    public Image imgPanel;
     public SlimeTarget GetSlimeTargetPrefab(SlimeType param)
     {
         foreach(var item in lsSlimeTargets)
@@ -64,7 +66,18 @@ public class TargetController : MonoBehaviour
          
             }
         }
-
+        switch(levelData.difficult)
+        {
+            case Difficult.Normal:
+                imgPanel.color = new Color32(88, 168, 96,255);
+                break;
+            case Difficult.Hard:
+                imgPanel.color = new Color32(197, 194, 73, 255);
+                break;
+            case Difficult.VeryHard:
+                imgPanel.color = new Color32(204, 80, 35, 255);
+                break;
+        }
 
      
     }
@@ -85,10 +98,15 @@ public class TargetController : MonoBehaviour
 
     public void HanldCheckWin()
     {
+         
         foreach (var item in lsCurrentSlimeTargets)
         {
             if (!item.isComplete)
             {
+                if(lsVfxDie.Count <= 0)
+                {
+                    GamePlayController.Instance.HandleCheckLose();
+                }  
                 return;
             }
         }

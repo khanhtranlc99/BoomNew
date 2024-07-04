@@ -28,7 +28,7 @@ public class HeartBox : BaseBox
     {
         checkHeart();
         txtCoinBuy.text = 15.ToString();
-        closeBtn.onClick.AddListener(Close);
+        closeBtn.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound();  Close(); });
         btnADS.onClick.AddListener(ClickByAdsHeart);
         if (UseProfile.Heart < 5)
         {
@@ -65,6 +65,7 @@ public class HeartBox : BaseBox
     }
     public void ClickByAdsHeart()
     {
+        GameController.Instance.musicManager.PlayClickSound();
         GameController.Instance.admobAds.ShowVideoReward(
                      actionReward: () =>
                      {
@@ -92,9 +93,10 @@ public class HeartBox : BaseBox
     }
     private void OnclickBtnBuy()
     {
-        if(UseProfile.Coin<15)
+        GameController.Instance.musicManager.PlayClickSound();
+        if (UseProfile.Coin<15)
         {
-            ShopCoinBox.Setup().Show();
+            ShopBox.Setup(ButtonShopType.Gold).Show();
             return;
         }
         UseProfile.Coin -= 15;

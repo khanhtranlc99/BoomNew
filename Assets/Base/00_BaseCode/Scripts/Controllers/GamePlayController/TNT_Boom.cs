@@ -6,11 +6,11 @@ public class TNT_Boom : MonoBehaviour
 {
     public Flame flame;
     public float spacing = 0;
-
+    public AudioClip boom;
     public void HandleExplosion()
     {
         SpawnCross(1);
-      
+        GameController.Instance.musicManager.PlayOneShot(boom);
         SimplePool2.Despawn(this.gameObject);
 
     }

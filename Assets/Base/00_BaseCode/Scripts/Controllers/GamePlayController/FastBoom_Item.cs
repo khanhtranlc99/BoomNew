@@ -78,6 +78,7 @@ public class FastBoom_Item : MonoBehaviour
 
     public void HandleBtnFastBoom()
     {
+        GameController.Instance.musicManager.PlayClickSound();
         GamePlayController.Instance.playerContain.boomInputController.enabled = false;
         GamePlayController.Instance.playerContain.tutorial_FastBoom.NextTut();
         wasUseFastBoom = true;

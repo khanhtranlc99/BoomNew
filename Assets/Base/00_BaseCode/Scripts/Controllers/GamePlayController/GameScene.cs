@@ -16,7 +16,12 @@ public class GameScene : BaseScene
     public Transform canvas;
     public CanvasGroup canvasGroupBot;
     public GameObject botObj;
-  
+
+    public Text tvDifficut;
+    public Image imgLevelType;
+    public Sprite easySprite;
+    public Sprite hardSprite;
+    public Sprite veryHardSprite;
 
 
     public void Init(LevelData levelData)
@@ -24,7 +29,22 @@ public class GameScene : BaseScene
         targetController.Init(levelData);
         settinBtn.onClick.AddListener(delegate { SettingBox.Setup(true).Show(); });
         tvLevel.text = "Level "   + UseProfile.CurrentLevel;
+        switch (levelData.difficult)
+        {
+            case Difficult.Normal:
+                tvDifficut.text = "Esasy";
+                imgLevelType.sprite = easySprite;
+                break;
+            case Difficult.Hard:
+                tvDifficut.text = "Hard";
+                imgLevelType.sprite = hardSprite;
+                break;
+            case Difficult.VeryHard:
+                tvDifficut.text = "VeryHard";
+                imgLevelType.sprite = veryHardSprite;
+                break;
 
+        }
     }
 
     public void HideBotUI( Action callBack)

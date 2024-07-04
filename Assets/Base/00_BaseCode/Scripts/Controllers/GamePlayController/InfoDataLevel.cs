@@ -13,6 +13,7 @@ public class InfoDataLevel : MonoBehaviour
         foreach(var item in levelDatas)
         {
             var temp = new InfoData();
+            temp.difficult = temp.difficult;
             if (item.isSlimeLevel)
             {
                 temp.isSlimeLevel = true;
@@ -35,6 +36,7 @@ public class InfoDataLevel : MonoBehaviour
 [System.Serializable]
  public class InfoData
 {
+    public Difficult difficult;
     public bool isSlimeLevel;
     public bool isTimeLevel;
 

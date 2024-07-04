@@ -9,12 +9,13 @@ public class CoinHeartBar : MonoBehaviour
     public Button btnHeart;
     public Button btnCoin;
     public Text tvCoolDownHeart;
+    public GameObject panelTime;
 
     public void Init ()
     {
         tvCoin.text = UseProfile.Coin.ToString();
         tvHeart.text = UseProfile.Heart.ToString();
-        btnCoin.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); ShopCoinBox.Setup().Show(); });
+        btnCoin.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); ShopBox.Setup(ButtonShopType.Gold).Show(); });
         btnHeart.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound();
             Debug.LogError("HeartBox");
 
@@ -49,12 +50,20 @@ public class CoinHeartBar : MonoBehaviour
     {
        if(UseProfile.Heart < 5)
         {
-            tvCoolDownHeart.text = TimeManager.ShowTime2((long)GameController.Instance.heartGame.currentCoolDown); 
+            tvCoolDownHeart.text = TimeManager.ShowTime2((long)GameController.Instance.heartGame.currentCoolDown);
+            if (panelTime != null)
+            {
+                panelTime.gameObject.SetActive(true);
+            }
         }    
        else
         {
             tvCoolDownHeart.text = "";
             tvHeart.text = "FULL";
+            if(panelTime != null)
+            {
+                panelTime.gameObject.SetActive(false);
+            }
         }
         //Debug.LogError("UseProfile.Heart " + UseProfile.Heart);
     }

@@ -11,6 +11,8 @@ public class Bloomsom : BarrierBase
     public override void Init()
     {
         EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.FREEZE, HandlePause);
+        EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.PAUSE, HandlePauseGame);
+        EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.STOPPAUSE, HandleStopPauseGame);
     }
     private void Update()
     {
@@ -29,16 +31,15 @@ public class Bloomsom : BarrierBase
             if (Hp <= 0)
             {
               
+                GameController.Instance.questController.HandleCheckCompleteQuest(questTargetType);
                 gridBase.barrierBase = null;
                 transform.DOKill();
                 transform.DOShakePosition(0.3f, 0.1f, 1, 1).OnComplete(delegate {
                     spriteRenderer.DOFade(0, 0.3f).OnComplete(delegate {
 
-                        //if(slimeBase != null)
-                        //{
-                        //    HandleSlimeOut();
-                        //}
-                        GameController.Instance.questController.HandleCheckCompleteQuest( questTargetType);
+
+            
+                    
                         Destroy(this.gameObject); 
                     
                     
@@ -108,10 +109,22 @@ public class Bloomsom : BarrierBase
         yield return new WaitForSeconds(5);
         this.transform.DOPlay();
     }
+    public void HandlePauseGame(object param)
+    {
+        this.transform.DOPause();
+
+    }
+    public void HandleStopPauseGame(object param)
+    {
+        this.transform.DOPlay();
+
+    }
     public void OnDestroy()
     {
         this.transform.DOKill();
       EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.FREEZE, HandlePause);
+        EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.PAUSE, HandlePauseGame);
+        EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.STOPPAUSE, HandleStopPauseGame);
     }
 }
 

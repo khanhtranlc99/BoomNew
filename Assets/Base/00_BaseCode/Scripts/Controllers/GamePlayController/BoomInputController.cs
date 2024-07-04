@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using MoreMountains.NiceVibrations;
+
 public class BoomInputController : MonoBehaviour
 {
     public Boom prefabBoomBase;
@@ -11,6 +13,7 @@ public class BoomInputController : MonoBehaviour
     LevelData levelData;
     public int countBoom = 0;
     bool tweenText;
+    public AudioClip click;
 
     public void Init (LevelData level)
     {
@@ -35,7 +38,7 @@ public class BoomInputController : MonoBehaviour
             tweenText = true;
             TweenText();
         }
-        
+
     }
     public void HandlePlus(int param)
     {
@@ -99,8 +102,10 @@ public class BoomInputController : MonoBehaviour
                                 GamePlayController.Instance.playerContain.tutorial_Rocket.StartTut();
                                 GamePlayController.Instance.playerContain.tutorial_Freeze.StartTut();
                                 GamePlayController.Instance.playerContain.tutorial_Atom.StartTut();
+                                GameController.Instance.musicManager.PlayOneShot(click);
+                                MMVibrationManager.Haptic(HapticTypes.MediumImpact);
                             }
-                        
+                            
                         }
                     }
                     if (selectedObject.barrierBase != null)

@@ -82,7 +82,23 @@ public class LevelData : SerializedMonoBehaviour
         }   
     }
 
-
+    public bool isSlimeTakeDame
+    {
+        get
+        {
+            foreach(var item in lsSmiles)
+            {
+                if(item != null)
+                {
+                    if(item.GetComponent<SlimeBase>().wasTakeDame)
+                    {
+                        return true;
+                    }    
+                }    
+            }
+            return false;
+        }
+    }    
 
     public void Init()
     {
@@ -195,9 +211,24 @@ public class LevelData : SerializedMonoBehaviour
         //    }
 
         //}
+        StartCoroutine(StopFreeze());
         EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.FREEZE);
     }
 
+    private IEnumerator StopFreeze()
+    {
+        yield return new WaitForSeconds(5);
+        GamePlayController.Instance.playerContain.freeze_Booster.OffVfx();
+    }
+
+    public void Pause ()
+    {
+        EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.PAUSE);
+    }
+    public void StopPause()
+    {
+        EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.STOPPAUSE);
+    }
     //[Button]
     //private void HandleFillIdGrid()
     //{

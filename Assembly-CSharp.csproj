@@ -141,6 +141,7 @@
     <Compile Include="Assets\D.A. Assets\Shared\CssParser.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\IXof.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\cryptopro\GOST3410PublicKeyAlgParameters.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\SimpleAiMove.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\PackInShop.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\Examples\SignalR\DemoHubSample.cs" />
     <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Model\SelectableItem.cs" />
@@ -466,7 +467,6 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\MqvPublicParameters.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Effects\BestFitOutline.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\DsaPublicKeyParameters.cs" />
-    <Compile Include="Assets\Base\00_BaseCode\Scripts\Popups\ShopCoinBox.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\macs\VMPCMac.cs" />
     <Compile Include="Assets\Demigiant\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\TlsRsaKeyExchange.cs" />
@@ -1055,8 +1055,9 @@
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Datas\LevelChestData.cs" />
     <Compile Include="Assets\MyTools\Unity-Logs-Viewer\Reporter\ReporterMessageReceiver.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP128R1Point.cs" />
-    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\util\zlib\InfTree.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\ScaleInOut.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Extensions\HeartbeatManager.cs" />
+    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\util\zlib\InfTree.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\ECKeyParameters.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\Certificate.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Logger\ILogger.cs" />

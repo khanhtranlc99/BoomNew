@@ -11,6 +11,7 @@ public class Chest : BarrierBase
     public GiftInGame currentGift;
     public Sprite spriteHit_1;
     public Sprite spriteHit_2;
+    public ParticleSystem particleSystem;
     public override void Init()
     {
 
@@ -21,6 +22,7 @@ public class Chest : BarrierBase
         {
             wasTakeDame = true;
             Hp -= 1;
+            particleSystem.Play();
             if (Hp == 2)
             {
                 spriteRenderer.sprite = spriteHit_1;

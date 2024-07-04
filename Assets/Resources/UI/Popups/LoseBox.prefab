@@ -773,7 +773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.56078434}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -995,6 +995,7 @@ GameObject:
   - component: {fileID: 8955613309610038421}
   - component: {fileID: 8955613309610038420}
   - component: {fileID: 8955613309610038423}
+  - component: {fileID: 198838442961589638}
   m_Layer: 5
   m_Name: btnAdsRevive
   m_TagString: Untagged
@@ -1104,6 +1105,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &198838442961589638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8955613309610038425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1889b4db68d3ad7499a2a0a948f2e9a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleIn: {x: 1.1, y: 1.1, z: 1.1}
+  scaleOut: {x: 1, y: 1, z: 1}
+  speed: 0.7
 --- !u!1 &8955613309638237824
 GameObject:
   m_ObjectHideFlags: 0

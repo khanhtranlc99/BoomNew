@@ -26,8 +26,16 @@ public class StartLoading : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         progressBar.fillAmount = 0f;
-        
-        var _asyncOperation = SceneManager.LoadSceneAsync("GamePlay", LoadSceneMode.Single);
+        string name = "";
+        if (!UseProfile.FirstLoading)
+        {
+            name = SceneName.GAME_PLAY;
+        }
+        else
+        {
+            name = SceneName.HOME_SCENE;
+        }
+        var _asyncOperation = SceneManager.LoadSceneAsync(name, LoadSceneMode.Single);
        
         while (!_asyncOperation.isDone)
         {

@@ -21,7 +21,7 @@ public class PackInShop : MonoBehaviour
 
     public void ButtonOnClick()
     {
-        Debug.LogError("123132132132132_" + typePackIAP.ToString()) ;
+        GameController.Instance.musicManager.PlayClickSound();
         GameController.Instance.iapController.BuyProduct(typePackIAP);
     }
       

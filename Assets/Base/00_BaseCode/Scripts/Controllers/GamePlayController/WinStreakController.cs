@@ -58,10 +58,10 @@ public class WinStreakController : MonoBehaviour
 
                                 temp.Init(lsGiftInGames[index], new Vector3(1-i  , 3, 0), delegate {
 
-                                    Debug.LogError("123");
+                                    
                                     if (index >= lsGiftInGames.Count - 1)
                                     {
-                                        Debug.LogError("456");
+                                     
                                         canvasGroup.DOFade(0, 0.7f).OnComplete(delegate
                                         {
 

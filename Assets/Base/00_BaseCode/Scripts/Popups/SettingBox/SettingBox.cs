@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
-
+using DG.Tweening;
+using Sirenix.OdinInspector;
 public class SettingBox : BaseBox
 {
     #region instance
@@ -29,27 +30,26 @@ public class SettingBox : BaseBox
     [SerializeField] private Button btnVibration;
     [SerializeField] private Button btnMusic;
     [SerializeField] private Button btnSound;
-  
 
-    [SerializeField] private Image imageVibration;
-    [SerializeField] private Image imageMusic;
-    [SerializeField] private Image imageSound;
+    public RectTransform objMusic;
+    public RectTransform objVibra;
+    public RectTransform objSound;
+    public Image imgMusic;
+    public Image imgVibration;
+    public Image imgSound;
 
-    [SerializeField] private Sprite spriteVibrationOn;
-    [SerializeField] private Sprite spriteVMusicOn;
-    [SerializeField] private Sprite spriteVSoundOn;
-
-
-    [SerializeField] private Sprite spriteVibrationOff;
-    [SerializeField] private Sprite spriteVMusicOff;
-    [SerializeField] private Sprite spriteVSoundOff;
+    public Sprite spriteOn;
+    public Sprite spriteOff;
 
  
     public Button btnHome;
     public Button btnRestart;
 
     public bool isGameplay;
- 
+
+    public Vector3 postOn = new Vector3(90, -36, 0);
+    public Vector3 postOff = new Vector3(35, -36, 0);
+
     #endregion
     private void Init()
     {
@@ -57,11 +57,14 @@ public class SettingBox : BaseBox
         btnVibration.onClick.AddListener(delegate { OnClickBtnVibration(); });
         btnMusic.onClick.AddListener(delegate { OnClickBtnMusic(); });
         btnSound.onClick.AddListener(delegate { OnClickBtnSound(); });
-      
+        
   
         btnHome.onClick.AddListener(delegate { HandleBtnHome(); });
         btnRestart.onClick.AddListener(delegate { HandleBtnRestart(); });
+       
+  
     }
+  
     private void InitState(bool param)
     {
         isGameplay = param;
@@ -71,6 +74,7 @@ public class SettingBox : BaseBox
             btnHome.gameObject.SetActive(true);
             btnRestart.gameObject.SetActive(true);
             GamePlayController.Instance.playerContain.boomInputController.enabled = false;
+            GamePlayController.Instance.playerContain.levelData.Pause();
         }    
         else
         {
@@ -92,39 +96,37 @@ public class SettingBox : BaseBox
     {
         if (GameController.Instance.useProfile.OnVibration)
         {
-            imageVibration.sprite = spriteVibrationOn;
-          //  btnVibration.GetComponent<Image>().sprite = spriteBtnOn;
+            imgVibration.sprite = spriteOn;
+            objVibra.anchoredPosition = postOn;
         }
         else
         {
-            imageVibration.sprite = spriteVibrationOff;
-           // btnVibration.GetComponent<Image>().sprite = spriteBtnOff;
+            imgVibration.sprite = spriteOff;
+            objVibra.anchoredPosition = postOff;
         }
 
         if (GameController.Instance.useProfile.OnMusic)
         {
-            imageMusic.sprite = spriteVMusicOn;
-        //    btnMusic.GetComponent<Image>().sprite = spriteBtnOn;
+            imgMusic.sprite = spriteOn;
+            objMusic.anchoredPosition = postOn;
         }
         else
         {
-            imageMusic.sprite = spriteVMusicOff;
-          //  btnMusic.GetComponent<Image>().sprite = spriteBtnOff;
+            imgMusic.sprite = spriteOff;
+            objMusic.anchoredPosition = postOff;
         }
 
         if (GameController.Instance.useProfile.OnSound)
         {
-            imageSound.sprite = spriteVSoundOn;
-           // btnSound.GetComponent<Image>().sprite = spriteBtnOn;
+            objSound.anchoredPosition = postOn;
+            imgSound.sprite = spriteOn;
         }
         else
         {
-            imageSound.sprite = spriteVSoundOff;
-          //  btnSound.GetComponent<Image>().sprite = spriteBtnOff;
+            objSound.anchoredPosition = postOff;
+            imgSound.sprite = spriteOff;
         }
-        imageVibration.SetNativeSize();
-        imageMusic.SetNativeSize();
-        imageSound.SetNativeSize();
+      
     }
 
   
@@ -172,14 +174,16 @@ public class SettingBox : BaseBox
 
     private void OnClickButtonClose()
     {
-       
+        GameController.Instance.musicManager.PlayClickSound();
         GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () => { Next(); }, actionWatchLog: "BtnCloseSettingBox");
 
         void Next()
         {
             if(isGameplay)
             {
+      
                 GamePlayController.Instance.playerContain.boomInputController.enabled = true;
+                GamePlayController.Instance.playerContain.levelData.StopPause();
 
             }    
         
@@ -197,12 +201,12 @@ public class SettingBox : BaseBox
 
         //void Next()
         //{
- 
+
         //    Close();
         //    Initiate.Fade("HomeScene", Color.black, 1.5f);
 
         //}
-
+        GameController.Instance.musicManager.PlayClickSound();
         BackHomeBox.Setup(TypeBackHOme.BackHome).Show();
 
 
@@ -217,6 +221,7 @@ public class SettingBox : BaseBox
         //    Initiate.Fade("GamePlay", Color.black, 1.5f);
         //}
         //Close();
+        GameController.Instance.musicManager.PlayClickSound();
         BackHomeBox.Setup(TypeBackHOme.ResetLevel).Show();
 
 

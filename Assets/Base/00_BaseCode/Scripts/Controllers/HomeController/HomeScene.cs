@@ -21,6 +21,12 @@ public class HomeScene : BaseScene
     public QuestBar questBar;
 
     public InfoDataLevel infoDataLevel;
+    public Text tvLevel;
+    public Text tvDifficut;
+    public Image imgLevelType;
+    public Sprite easySprite;
+    public Sprite hardSprite;
+    public Sprite veryHardSprite;
     public void ShowGift()
     {
         
@@ -55,10 +61,27 @@ public class HomeScene : BaseScene
     
         btnSetting.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); OnSettingClick(); });
 
-        btnPlay.onClick.AddListener(delegate { InfoLevelBox.Setup(infoDataLevel.lsInfoDatas[UseProfile.CurrentLevel - 1]).Show(); });
+        btnPlay.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); InfoLevelBox.Setup(infoDataLevel.lsInfoDatas[UseProfile.CurrentLevel - 1]).Show(); });
 
-        btnShop.onClick.AddListener(delegate { ShopBox.Setup().Show(); });
+        btnShop.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); ShopBox.Setup().Show(); });
 
+        tvLevel.text = "LEVEL " + UseProfile.CurrentLevel.ToString();
+        switch (infoDataLevel.lsInfoDatas[UseProfile.CurrentLevel - 1].difficult)
+        {
+            case Difficult.Normal:
+                tvDifficut.text = "Esasy";
+                imgLevelType.sprite = easySprite;
+                break;
+            case Difficult.Hard:
+                tvDifficut.text = "Hard";
+                imgLevelType.sprite = hardSprite;
+                break;
+            case Difficult.VeryHard:
+                tvDifficut.text = "VeryHard";
+                imgLevelType.sprite = veryHardSprite;
+                break;
+
+        }
 
     }
     //private void Update()
@@ -68,10 +91,10 @@ public class HomeScene : BaseScene
 
 
     //}
-    
-    
 
-   
+
+
+
 
     public override void OnEscapeWhenStackBoxEmpty()
     {
@@ -80,7 +103,7 @@ public class HomeScene : BaseScene
     private void OnSettingClick()
     {
         SettingBox.Setup(false).Show();
-        MMVibrationManager.Haptic(HapticTypes.MediumImpact);
+        //MMVibrationManager.Haptic(HapticTypes.MediumImpact);
     }
 
     

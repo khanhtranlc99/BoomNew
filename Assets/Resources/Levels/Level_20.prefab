@@ -4742,14 +4742,10 @@ MonoBehaviour:
   ice: {fileID: 5561773750087433119}
   leftGridBase:
   - {fileID: 5561773749766534041}
-  rightGridBase:
-  - {fileID: 5561773751650980114}
-  - {fileID: 5561773751006875397}
+  rightGridBase: []
   upGridBase:
   - {fileID: 5561773751399251646}
-  downGridBase:
-  - {fileID: 5561773751749164753}
-  - {fileID: 5561773751472116823}
+  downGridBase: []
 --- !u!61 &5561773751240136358
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5157,14 +5153,10 @@ MonoBehaviour:
   normalGrid: {fileID: 21300000, guid: 166f2f8548592f34aac2310ccf4360ee, type: 3}
   isFree: 0
   ice: {fileID: 5561773750719784584}
-  leftGridBase:
-  - {fileID: 5561773751749164753}
-  - {fileID: 5561773750184383500}
+  leftGridBase: []
   rightGridBase:
   - {fileID: 5561773750489345569}
-  upGridBase:
-  - {fileID: 5561773751650980114}
-  - {fileID: 5561773750422949440}
+  upGridBase: []
   downGridBase:
   - {fileID: 5561773751251363881}
 --- !u!61 &5561773751287853382
@@ -6401,16 +6393,12 @@ MonoBehaviour:
   normalGrid: {fileID: 21300000, guid: 166f2f8548592f34aac2310ccf4360ee, type: 3}
   isFree: 0
   ice: {fileID: 5561773750452040739}
-  leftGridBase:
-  - {fileID: 5561773751240136354}
-  - {fileID: 5561773749766534041}
+  leftGridBase: []
   rightGridBase:
   - {fileID: 5561773751006875397}
   upGridBase:
   - {fileID: 5561773750422949440}
-  downGridBase:
-  - {fileID: 5561773751287853378}
-  - {fileID: 5561773751251363881}
+  downGridBase: []
 --- !u!61 &5561773751650980118
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6652,12 +6640,8 @@ MonoBehaviour:
   ice: {fileID: 5561773750251352672}
   leftGridBase:
   - {fileID: 5561773750184383500}
-  rightGridBase:
-  - {fileID: 5561773751287853378}
-  - {fileID: 5561773750489345569}
-  upGridBase:
-  - {fileID: 5561773751240136354}
-  - {fileID: 5561773751399251646}
+  rightGridBase: []
+  upGridBase: []
   downGridBase:
   - {fileID: 5561773751472116823}
 --- !u!61 &5561773751749164757

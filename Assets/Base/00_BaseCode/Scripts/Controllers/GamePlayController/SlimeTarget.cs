@@ -24,22 +24,32 @@ public class SlimeTarget : MonoBehaviour
 
     public void HandleSubtraction()
     {
+        if (count > 1)
+        {
+            count -= 1;
+        }
+        else
+        {
+            isComplete = true;
+        }
+        GamePlayController.Instance.gameScene.targetController.HanldCheckWin();
+
         icon.transform.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 0.35f).OnComplete(delegate {
             icon.transform.DOScale(new Vector3(1, 1, 1), 0.35f).OnComplete(delegate {
 
                 if (count > 1)
                 {
-                    count -= 1;
+                 
                     tvCount.text = "" + count;
                 }
                 else
                 {
                     tvCount.gameObject.SetActive(false);
                     objComplete.SetActive(true);
-                    isComplete = true;
+              
                 }
-                GamePlayController.Instance.gameScene.targetController.HanldCheckWin();
-
+         
+              
             });
         });
       

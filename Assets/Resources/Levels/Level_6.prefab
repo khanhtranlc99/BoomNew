@@ -722,7 +722,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  difficult: 0
+  difficult: 1
   isSlimeLevel: 1
   isTimeLevel: 0
   conditionSlimes:
@@ -731,7 +731,7 @@ MonoBehaviour:
       countSlime: 4
   conditionTime:
     time: 0
-  boomLimit: 5
+  boomLimit: 11
   row: 0
   cow: 0
   parentGrid: {fileID: 799031700634479863}

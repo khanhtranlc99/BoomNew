@@ -4,7 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 public class Tree : BarrierBase
 {
-
+    public ParticleSystem particleSystem;
     public override void Init()
     {
 
@@ -14,6 +14,7 @@ public class Tree : BarrierBase
         if (!wasTakeDame)
         {
             wasTakeDame = true;
+            particleSystem.Play();
             Hp -= 1;
             transform.DOShakePosition(0.3f, 0.1f, 1, 1).OnComplete(delegate { wasTakeDame = false; });
             if (Hp <= 0)

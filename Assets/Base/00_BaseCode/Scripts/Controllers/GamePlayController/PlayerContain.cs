@@ -33,6 +33,7 @@ public class PlayerContain : MonoBehaviour
         UseProfile.FastBoom_Item = 0;
         string pathLevel = StringHelper.PATH_CONFIG_LEVEL_TEST;
         levelData = Instantiate(Resources.Load<LevelData>(string.Format(pathLevel, UseProfile.CurrentLevel)));
+        cameraScale.Init();
         GamePlayController.Instance.gameScene.Init(levelData);
         prepageGame.Init(delegate
         {
@@ -41,14 +42,14 @@ public class PlayerContain : MonoBehaviour
                 winStreakController.Init(delegate
                 {
                     levelData.Init(true);
-                    cameraScale.Init();
+            
                     SetUp();
                 });
             }
             else
             {
                 levelData.Init();
-                cameraScale.Init();
+              
                 SetUp();
             }
 

@@ -21,6 +21,7 @@ public class BackHomeBox : BaseBox
     public Text tvBtnReset;
     TypeBackHOme typeBackHOme;
     public CoinHeartBar coinHeartBar;
+    public List<GameObject> lsProgesst;
 
     public static BackHomeBox Setup(TypeBackHOme typeParam ,bool isSaveBox = false, Action actionOpenBoxSave = null)
     {
@@ -34,13 +35,14 @@ public class BackHomeBox : BaseBox
     }
     public void Init()
     {
-        btnClose.onClick.AddListener(delegate {  Close();  });
+        btnClose.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); Close();  });
 
         btnStay.onClick.AddListener(delegate {
-
+            GameController.Instance.musicManager.PlayClickSound();
             HandleClose();
         });
         coinHeartBar.Init();
+       
         //gameObject.GetComponent<Canvas>().sortingOrder = 21;
     }
     public void HandleClose()
@@ -78,11 +80,18 @@ public class BackHomeBox : BaseBox
         }
         typeBackHOme = typeParam;
         tvCoin.text = "" + GamePlayController.Instance.playerContain.totalCoin;
+        for (int i = 0; i < lsProgesst.Count;i ++)
+        {
+            if(i <= UseProfile.WinStreak)
+            {
+                lsProgesst[i].gameObject.SetActive(true);
+            }
+        }
     }
     private void ResetScene()
     {
-      
-        if(UseProfile.Heart > 0)
+        GameController.Instance.musicManager.PlayClickSound();
+        if (UseProfile.Heart > 0)
         {
             GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () => { Next(); }, actionWatchLog: "ResetSceneAtLoseBox");
             void Next()
@@ -104,7 +113,7 @@ public class BackHomeBox : BaseBox
     }
     private void BackHome()
     {
-         
+        GameController.Instance.musicManager.PlayClickSound();
         GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () => { Next(); }, actionWatchLog: "BackHomeLoseBox");
         void Next()
         {

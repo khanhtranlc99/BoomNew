@@ -21,7 +21,7 @@ public class Rocket_Booster : MonoBehaviour
     {
        
         wasUseTNT_Booster = false;
-        if (UseProfile.CurrentLevel >= 5)
+        if (UseProfile.CurrentLevel >= 5)//5
         {
 
             //unLockIcon.gameObject.SetActive(true);
@@ -42,6 +42,7 @@ public class Rocket_Booster : MonoBehaviour
 
         void HandleUnlock()
         {
+
             rocket_Btn.onClick.AddListener(HandleTNT_Booster);
             if (UseProfile.Roket_Booster > 0)
             {
@@ -82,7 +83,8 @@ public class Rocket_Booster : MonoBehaviour
 
 
     public void HandleTNT_Booster()
-    { 
+    {
+        GameController.Instance.musicManager.PlayClickSound();
         if (UseProfile.Roket_Booster >= 1)
         {
             GamePlayController.Instance.playerContain.tutorial_Rocket.NextTut();
@@ -93,7 +95,7 @@ public class Rocket_Booster : MonoBehaviour
                 rocket_Btn.interactable = false;
                 var rocket = SimplePool2.Spawn(rocketVfx, post.position, Quaternion.identity);
                 rocket.transform.parent = target.transform;
-                rocket.transform.localEulerAngles = new Vector3(0, 0, -137);
+                rocket.transform.position -= new Vector3(0, 0, 1);
                 rocket.transform.DOLocalMove(Vector3.zero, 0.7f).OnComplete(delegate {
 
 

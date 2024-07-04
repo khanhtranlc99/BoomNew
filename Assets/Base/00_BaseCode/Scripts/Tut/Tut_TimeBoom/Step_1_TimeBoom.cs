@@ -7,7 +7,10 @@ public class Step_1_TimeBoom : TutorialBase
     GameObject currentHand;
     public override bool IsCanEndTut()
     {
-        Destroy(currentHand.gameObject);
+        if (currentHand != null)
+        {
+            Destroy(currentHand.gameObject);
+        }
         return base.IsCanShowTut();
 
     }
@@ -22,10 +25,10 @@ public class Step_1_TimeBoom : TutorialBase
             }
             currentHand = SimplePool2.Spawn(handTut);
             currentHand.transform.parent = GamePlayController.Instance.playerContain.timeBoom_Item.btnTimeBoom.transform;
-            currentHand.transform.localScale = new Vector3(1, 1, 1);
+            currentHand.transform.localScale = new Vector3(3, 3, 3);
             currentHand.transform.position = GamePlayController.Instance.playerContain.timeBoom_Item.btnTimeBoom.transform.position;
 
-            currentHand.transform.position = new Vector3(post.x + 0.5f, post.y - 0.7f, post.z);
+            currentHand.transform.position = new Vector3(post.x +0.5f, post.y - 1, post.z);
         }
     }
     Vector3 post

@@ -5,7 +5,7 @@ using UnityEngine;
 public class FlameVfx : MonoBehaviour
 {
     public List<FlameVfxChild> lsSpriteRender;
-
+    public List<ParticleSystem> lsParticleSystems;
 
     public void Init()
     {
@@ -14,4 +14,12 @@ public class FlameVfx : MonoBehaviour
             item.HandleVfx();
         }
     }
+
+    public void OnThunder()
+    {
+        foreach (var item in lsParticleSystems)
+        {
+            item.Play() ;
+        }
+    }    
 }

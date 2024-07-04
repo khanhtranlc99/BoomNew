@@ -48,7 +48,8 @@ public class PackInShopAds : PackInShop
 
     private void HandleOnClick()
     {
-      if(!WasWatch )
+        GameController.Instance.musicManager.PlayClickSound();
+        if (!WasWatch )
         {
             GameController.Instance.admobAds.ShowVideoReward(
                     actionReward: () =>

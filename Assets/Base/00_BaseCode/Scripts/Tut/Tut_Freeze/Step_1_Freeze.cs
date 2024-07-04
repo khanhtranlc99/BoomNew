@@ -7,7 +7,10 @@ public class Step_1_Freeze : TutorialBase
     GameObject currentHand;
     public override bool IsCanEndTut()
     {
-        Destroy(currentHand.gameObject);
+        if (currentHand != null)
+        {
+            Destroy(currentHand.gameObject);
+        }
         return base.IsCanShowTut();
 
     }
