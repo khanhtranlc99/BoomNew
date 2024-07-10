@@ -136,7 +136,7 @@ public class Boom : BarrierBase
                 if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Slime)
                 {
                     leftGridbase.Add(item);
-       
+                    break;
                 }
                 if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Block)
                 {
@@ -161,7 +161,7 @@ public class Boom : BarrierBase
                 if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Slime)
                 {
                     rightGridbase.Add(item);
-               
+                    break;
                 }
                 if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Block)
                 {
@@ -186,7 +186,7 @@ public class Boom : BarrierBase
                 if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Slime)
                 {
                     downGridbase.Add(item);
-                 
+                    break;
                 }
                 if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Block)
                 {
@@ -211,7 +211,7 @@ public class Boom : BarrierBase
                 if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Slime)
                 {
                     upGridbase.Add(item);
-   
+                    break;
                 }
                 if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Block)
                 {

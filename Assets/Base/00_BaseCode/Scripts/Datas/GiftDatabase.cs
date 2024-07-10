@@ -88,7 +88,11 @@ public class GiftDatabase : SerializedScriptableObject
 
                 break;
             case GiftType.Heart_Unlimit:
-
+            
+                UseProfile.TimeUnlimitHeart = DateTime.Now.AddHours(1);
+                UseProfile.Heart = 5;
+                UseProfile.isUnlimitHeart = true;
+                Debug.LogError("Heart_UnlimitHeart_" + UseProfile.isUnlimitHeart);
                 break;
         }
     }

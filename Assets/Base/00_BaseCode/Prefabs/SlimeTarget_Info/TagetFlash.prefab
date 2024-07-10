@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 3195057856365317352}
   - component: {fileID: 3195057856365317367}
   - component: {fileID: 3195057856365317366}
+  - component: {fileID: 6549813282405603583}
   m_Layer: 5
   m_Name: TagetFlash
   m_TagString: Untagged
@@ -133,7 +134,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 73.333336, y: 71.666664}
+  m_SizeDelta: {x: 136, y: 144}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3195057856365317352
 CanvasRenderer:
@@ -163,7 +164,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2229320125982539874, guid: 347101d8c734cea4ebc82016f7c03c5a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b05588e78d45de41ab1007544af2115, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -191,6 +192,25 @@ MonoBehaviour:
   objComplete: {fileID: 3195057857369850013}
   isComplete: 0
   count: 0
+--- !u!95 &6549813282405603583
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3195057856365317364}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ab9ef404bad155e40a700973fe5c4d99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3195057857369850013
 GameObject:
   m_ObjectHideFlags: 0

@@ -75,7 +75,7 @@ public class AtomBoom_Booster : MonoBehaviour
         GameController.Instance.moneyEffectController.SpawnEffectText_FlyUp
                               (
                               btnAtom_Booster.transform.position,
-                              "Unlock at level 2",
+                              "Unlock at level 9",
                               Color.white,
                               isSpawnItemPlayer: true
                               );

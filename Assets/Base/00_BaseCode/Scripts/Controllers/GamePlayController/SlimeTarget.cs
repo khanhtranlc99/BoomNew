@@ -27,10 +27,13 @@ public class SlimeTarget : MonoBehaviour
         if (count > 1)
         {
             count -= 1;
+            tvCount.text = "" + count;
         }
         else
         {
             isComplete = true;
+            tvCount.gameObject.SetActive(false);
+            objComplete.SetActive(true);
         }
         GamePlayController.Instance.gameScene.targetController.HanldCheckWin();
 
@@ -40,12 +43,11 @@ public class SlimeTarget : MonoBehaviour
                 if (count > 1)
                 {
                  
-                    tvCount.text = "" + count;
+             
                 }
                 else
                 {
-                    tvCount.gameObject.SetActive(false);
-                    objComplete.SetActive(true);
+                 
               
                 }
          

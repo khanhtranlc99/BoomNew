@@ -69,7 +69,7 @@ public class Freeze_Booster : MonoBehaviour
         GameController.Instance.moneyEffectController.SpawnEffectText_FlyUp
                               (
                               freezeBooster.transform.position,
-                              "Unlock at level 2",
+                              "Unlock at level 7",
                               Color.white,
                               isSpawnItemPlayer: true
                               );

@@ -49,7 +49,7 @@ public class InfoLevelBox : BaseBox
     public void Init(InfoData infoData)
     {
         currentInfoData = infoData;
-        btnPlay.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); Initiate.Fade("GamePlay", Color.black, 2f); });
+        btnPlay.onClick.AddListener(delegate { HandlePlay(); });
         btnClose.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); Close(); });
         if(currentInfoData.isSlimeLevel)
         {
@@ -66,7 +66,7 @@ public class InfoLevelBox : BaseBox
         {
             for (int i = 0; i < UseProfile.WinStreak; i++)
             {
-                lsWinStreak[i].color = Color.yellow;
+                lsWinStreak[i].gameObject.SetActive(true);
             }
         }
         tvLevel.text = "Level " +  UseProfile.CurrentLevel.ToString();
@@ -75,6 +75,27 @@ public class InfoLevelBox : BaseBox
     public void InitState()
     {
 
+    }
+    private void HandlePlay()
+    {
+        GameController.Instance.musicManager.PlayClickSound();
+  
+
+        if (UseProfile.Heart > 0)
+        {
+            GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () => { Next(); }, actionWatchLog: "ResetSceneAtLoseBox");
+            void Next()
+            {
+              
+                Initiate.Fade("GamePlay", Color.black, 2f);
+            }
+        }
+        else
+        {
+
+            HeartBox.Setup().Show();
+
+        }
     }
 }
 

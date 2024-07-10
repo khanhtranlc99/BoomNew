@@ -4,9 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = System.Random;
+using Gks;
 
 public static class Helper
 {
+    public static IEnumerator HandleActionPlayAndWait(GameObject animator, string param, Action callBack)
+    {
+        yield return animator.GetComponent<Animator>().PlayAndWait(param);
+        callBack?.Invoke();
+    }
+    public static IEnumerator HandleActionPlayAndWait(Animator animator, string param, Action callBack)
+    {
+        yield return animator.PlayAndWait(param);
+        callBack?.Invoke();
+    }
     public static Vector3 GetPointDistanceFromObject_new(float distance, Vector3 direction, Vector3 fromPoint)
     {
         //distance -= 1;

@@ -112,6 +112,7 @@ MonoBehaviour:
   nextGrid: {fileID: 0}
   tempGrid: {fileID: 0}
   idOld: 
+  ran: 0
 --- !u!114 &4214117352448932018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,8 +266,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4214117353387545337}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_Children: []
   m_Father: {fileID: 4214117352448932023}
   m_RootOrder: 0
@@ -311,7 +312,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 2392822017810781621, guid: e4ec92929bda96d45b7d498ce1682627, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 500afb6f3f2517546844c6578462f8db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

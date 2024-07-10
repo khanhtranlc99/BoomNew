@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Gks;
 public class MoveState : SlimeStateBase
 {
     public GridBase oldGrid;
     public GridBase nextGrid;
     public GridBase tempGrid;
     public List<int> idOld;
+    public bool isIdle;
     public override void Init(SlimeBase slimeBase)
     {
         idOld = new List<int>();
         data = slimeBase;
+        isIdle = false;
     }
 
     public override void StartState()
@@ -34,14 +37,40 @@ public class MoveState : SlimeStateBase
     public override void EndState()
     {
         this.transform.DOKill();
+        StopAllCoroutines();
     }
     int coutLoop = 0;
-    private void HandleMove()
+    public int ran;
+    public void HandleMove()
     {
         //if (idOld.Count > 4)
         //{
         //    idOld.Remove(idOld[0]);
         //}
+        ran = Random.Range(0, 2);
+        if (ran == 0)
+        {
+            if (!data.wasTakeDame)
+            {
+                isIdle = true;
+                StartCoroutine(Helper.HandleActionPlayAndWait(data.animator, "Idle", delegate { HandleMove(); }));
+                return;
+            }  
+             
+              
+         
+        }    
+        else
+        {
+            if(!data.wasTakeDame)
+            {
+                isIdle = false;
+                data.animator.Play("Move");
+            }    
+       
+          
+        }
+
         if (nextGrid == null) 
         {
            

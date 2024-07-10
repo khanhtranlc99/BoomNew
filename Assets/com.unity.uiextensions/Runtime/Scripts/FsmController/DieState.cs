@@ -46,9 +46,9 @@ public class DieState : SlimeStateBase
             temp.transform.localScale = new Vector3(1, 1, 1);
             GamePlayController.Instance.gameScene.targetController.lsVfxDie.Add(temp);
             temp.transform.DOMove(slimeTarget.icon.position, 1).SetDelay(0.1f).SetEase(Ease.OutBack).OnComplete(delegate {
-
-                slimeTarget.HandleSubtraction();
                 GamePlayController.Instance.gameScene.targetController.lsVfxDie.Remove(temp);
+                slimeTarget.HandleSubtraction();
+             
                 SimplePool2.Despawn(temp.gameObject);
             });
         }

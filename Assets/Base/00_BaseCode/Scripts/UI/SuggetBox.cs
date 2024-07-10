@@ -42,7 +42,7 @@ public class SuggetBox : BaseBox
             case GiftType.TNT_Booster:
                 tvTitler.text = "TNT BOOM";
                 tvContent.text = "TAP ANY TILE STACK TO CLEAR IT";
-                price = 25;
+                price = 50;
                 tvPrive.text = price.ToString();
                 actionWatchVideo = ActionWatchVideo.TNT_Booster;
                 break;
@@ -56,14 +56,14 @@ public class SuggetBox : BaseBox
             case GiftType.Freeze_Booster:
                 tvTitler.text = "Freeze";
                 tvContent.text = "REFRESH TRAY TO GET NEW STACK OPPTIONS";
-                price = 10;
+                price = 120;
                 tvPrive.text = price.ToString();
                 actionWatchVideo = ActionWatchVideo.Freeze_Booster;
                 break;
             case GiftType.Atom_Booster:
                 tvTitler.text = "Atom";
                 tvContent.text = "REFRESH TRAY TO GET NEW STACK OPPTIONS";
-                price = 10;
+                price = 200;
                 tvPrive.text = price.ToString();
                 actionWatchVideo = ActionWatchVideo.Atom_Booste;
                 break;

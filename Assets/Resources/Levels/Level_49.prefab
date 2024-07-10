@@ -1047,8 +1047,10 @@ MonoBehaviour:
   isTimeLevel: 0
   conditionSlimes:
     lsDataSlime:
-    - slimeType: 4
-      countSlime: 6
+    - slimeType: 5
+      countSlime: 2
+    - slimeType: 6
+      countSlime: 1
   conditionTime:
     time: 0
   boomLimit: 20

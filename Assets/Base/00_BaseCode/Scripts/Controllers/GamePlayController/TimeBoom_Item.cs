@@ -108,6 +108,7 @@ public class TimeBoom_Item : MonoBehaviour
                                 var boom = SimplePool2.Spawn(timeBoom, selectedObject.transform.position, Quaternion.identity);
                                 selectedObject.barrierBase = boom;
                                 boom.gridBase = selectedObject;
+                                boom.Init();
                                 GamePlayController.Instance.playerContain.boomInputController.enabled = true;
                                 btnTimeBoom.interactable = true;
                                 wasUseTimeBoom = false;

@@ -75,7 +75,7 @@ public class TNT_Booster : MonoBehaviour
         GameController.Instance.moneyEffectController.SpawnEffectText_FlyUp
                               (
                               btnTNT_Booster.transform.position,
-                              "Unlock at level 2",
+                              "Unlock at level 3",
                               Color.white,
                               isSpawnItemPlayer: true
                               );

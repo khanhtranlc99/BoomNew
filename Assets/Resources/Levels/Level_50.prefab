@@ -10069,12 +10069,12 @@ MonoBehaviour:
   conditionSlimes:
     lsDataSlime:
     - slimeType: 4
-      countSlime: 1
+      countSlime: 2
     - slimeType: 6
       countSlime: 2
   conditionTime:
     time: 0
-  boomLimit: 18
+  boomLimit: 30
   row: 0
   cow: 0
   parentGrid: {fileID: 3863827062761160234}

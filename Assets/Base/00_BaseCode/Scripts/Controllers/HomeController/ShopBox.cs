@@ -20,7 +20,7 @@ public class ShopBox : BaseBox
     public ButtonShopController shopController;
     public List<PackInShop> lsPackInShops;
     public List<PackInShopAds> lsPackInShopAds;
-    public long countTime;
+    public float countTime;
     public bool wasCountTime;
     public Text tvCountTime;
     public Text tvCountTime_2;
@@ -45,12 +45,12 @@ public class ShopBox : BaseBox
 
     private void ResetDay()
     {
-        Debug.LogError(TimeManager.ParseTimeStartDay(DateTime.Now));
-        Debug.LogError(TimeManager.ParseTimeStartDay(UseProfile.LastTimeOnline));
+    
         wasCountTime = false;
-        countTime = TimeManager.CaculateTime(TimeManager.ParseTimeStartDay(UseProfile.LastTimeOnline),
-          TimeManager.ParseTimeStartDay(DateTime.Now));
-        if (countTime >= 86400)
+        countTime  = TimeManager.TimeLeftPassTheDay(DateTime.Now);
+
+        var temp = TimeManager.CaculateTime(TimeManager.ParseTimeStartDay(UseProfile.LastTimeOnline), TimeManager.ParseTimeStartDay(DateTime.Now) );
+        if (temp >= 86400)
         {
             UseProfile.LastTimeOnline = DateTime.Now;
             foreach(var item in lsPackInShopAds)
@@ -67,10 +67,12 @@ public class ShopBox : BaseBox
         {
            if(countTime > 0)
             {
-                tvCountTime.text = "REFRESH IN :" + TimeManager.ShowTime2(countTime);
-                tvCountTime_2.text = "REFRESH IN :" + TimeManager.ShowTime2(countTime);
-                tvCountTimePackCoin.text =   TimeManager.ShowTime2(countTime);
-                tvCountTimePackCoin_2.text =    TimeManager.ShowTime2(countTime);
+                countTime -=  1*Time.deltaTime;
+                tvCountTime.text = "REFRESH IN :" + TimeManager.ShowTime2((long)countTime);
+                tvCountTime_2.text = "REFRESH IN :" + TimeManager.ShowTime2((long)countTime);
+                tvCountTimePackCoin.text =   TimeManager.ShowTime2((long)countTime);
+                tvCountTimePackCoin_2.text =    TimeManager.ShowTime2((long)countTime);
+                
             }
         }
     }

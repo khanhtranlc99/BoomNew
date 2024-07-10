@@ -26,6 +26,8 @@ MonoBehaviour:
     - {fileID: 21300000, guid: f75be91e38bbbf341938930b7d4e78fd, type: 3}
     - {fileID: 21300000, guid: 283dad05836c380409f5ac6ef7b1b890, type: 3}
     - {fileID: 21300000, guid: 3ea55bf4b54619d4b9fa31a480ee8fb7, type: 3}
+    - {fileID: 21300000, guid: 09ef08ce00312d74298f92e0365e7042, type: 3}
+    - {fileID: 21300000, guid: 2f89ef50cbd9b1a4091c8fe026e51b95, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -50,7 +52,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 13
+      Data: 14
     - Name: 
       Entry: 7
       Data: 
@@ -314,7 +316,28 @@ MonoBehaviour:
       Data: 14|Gift, Assembly-CSharp
     - Name: giftSprite
       Entry: 10
-      Data: 9
+      Data: 10
+    - Name: giftAnim
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: 15|Gift, Assembly-CSharp
+    - Name: giftSprite
+      Entry: 10
+      Data: 11
     - Name: giftAnim
       Entry: 6
       Data: 

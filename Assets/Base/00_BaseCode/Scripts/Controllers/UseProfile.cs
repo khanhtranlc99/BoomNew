@@ -437,7 +437,7 @@ public class UseProfile : MonoBehaviour
         set
         {
             PlayerPrefs.SetInt(StringHelper.ONOFF_MUSIC, value ? 1 : 0);
-            GameController.Instance.musicManager.SetMusicVolume(value ? 0.7f : 0);
+            GameController.Instance.musicManager.SetMusicVolume(value ? 0.15f : 0);
             PlayerPrefs.Save();
         }
     }
@@ -606,6 +606,42 @@ public class UseProfile : MonoBehaviour
         set
         {
             PlayerPrefs.SetString(StringHelper.LAST_TIME_ONLINE, value.ToBinary().ToString());
+            PlayerPrefs.Save();
+        }
+    }
+    public static DateTime TimeUnlimitHeart
+    {
+        get
+        {
+            if (PlayerPrefs.HasKey(StringHelper.TIME_UNLIMIT_HEART))
+            {
+                var temp = Convert.ToInt64(PlayerPrefs.GetString(StringHelper.TIME_UNLIMIT_HEART));
+                return DateTime.FromBinary(temp);
+            }
+            else
+            {
+                var newDateTime = DateTime.Now.AddDays(-1);
+                PlayerPrefs.SetString(StringHelper.TIME_UNLIMIT_HEART, newDateTime.ToBinary().ToString());
+                PlayerPrefs.Save();
+                return newDateTime;
+            }
+        }
+        set
+        {
+            PlayerPrefs.SetString(StringHelper.TIME_UNLIMIT_HEART, value.ToBinary().ToString());
+            PlayerPrefs.Save();
+        }
+    }
+
+    public static bool isUnlimitHeart
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(StringHelper.IS_UNLIMIT_HEART, 0) == 1;
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.IS_UNLIMIT_HEART, value ? 1 : 0);
             PlayerPrefs.Save();
         }
     }

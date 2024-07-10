@@ -42,17 +42,14 @@ public class GamePlayController : Singleton<GamePlayController>
         SimplePool2.Preload(flame.gameObject, 50, this.transform);
         stateGame = StateGame.Playing;
         //GameController.Instance.AnalyticsController.LoadingComplete();
-        //GameController.Instance.admobAds.canShowOpenAppAds = true;
-        //if (Application.internetReachability != NetworkReachability.NotReachable)
-        //{
-        //    GameController.Instance.admobAds.ShowOpenAppAdsInGame();
-        //}
+      
     }
     public void HandleCheckLose()
     {
+        Debug.LogError("isSlimeTakeDame_" + playerContain.levelData.isSlimeTakeDame);
         if (stateGame == StateGame.Playing)
         {
-            Debug.LogError("isSlimeTakeDame_"  + playerContain.levelData.isSlimeTakeDame);
+         
 
             //if (playerContain.levelData.isSlimeTakeDame)
             //{

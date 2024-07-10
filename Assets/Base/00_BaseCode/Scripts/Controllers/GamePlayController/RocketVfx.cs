@@ -5,11 +5,11 @@ using UnityEngine;
 public class RocketVfx : MonoBehaviour
 {
     public ParticleSystem flame;
-    public SpriteRenderer spriteRenderer;
+ 
     public void HandleDisable()
     {
         flame.Play();
-        spriteRenderer.color = new Color32(0, 0, 0,0);
+ 
         Invoke(nameof(OffRocket), 0.3f);
     }
     private void OffRocket()
@@ -19,7 +19,7 @@ public class RocketVfx : MonoBehaviour
 
     private void OnDisable()
     {
-        spriteRenderer.color = new Color32(255, 255, 255, 255);
+      
     }
 
 }

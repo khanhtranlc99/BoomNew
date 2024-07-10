@@ -65,11 +65,19 @@ public class LoseBox : BaseBox
         GameController.Instance.admobAds.ShowVideoReward(
                     actionReward: () =>
                     {
-                        GamePlayController.Instance.stateGame = StateGame.Playing;
-                        GamePlayController.Instance.playerContain.boomInputController.HandlePlus(5);
-                        GamePlayController.Instance.playerContain.boomInputController.enabled = true;
-                        GamePlayController.Instance.playerContain.levelData.StopPause();
-                        Close();
+                         if (GamePlayController.Instance.playerContain.levelData.isAllSlimeDie)
+                        {
+                            Initiate.Fade("GamePlay", Color.black, 1.5f);
+                        }
+                         else
+                        {
+                            GamePlayController.Instance.stateGame = StateGame.Playing;
+                            GamePlayController.Instance.playerContain.boomInputController.HandlePlus(5);
+                            GamePlayController.Instance.playerContain.boomInputController.enabled = true;
+                            GamePlayController.Instance.playerContain.levelData.StopPause();
+                            Close();
+                        }    
+                  
                     },
                     actionNotLoadedVideo: () =>
                     {

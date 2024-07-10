@@ -12,10 +12,23 @@ public class HeartGame : MonoBehaviour
     {
         wasCoolDown = false;
         CheckHeart();
-
+        CheckUnlimitHeart();
+      
 
     }
- 
+    public void CheckUnlimitHeart()
+    {
+        if(UseProfile.isUnlimitHeart)
+        {
+            var temp = TimeManager.CaculateTime(DateTime.Now, UseProfile.TimeUnlimitHeart);
+            if (temp <= 0)
+            {
+                UseProfile.isUnlimitHeart = false;
+            }
+        }
+      
+
+    }
 
     public void CheckHeart()
     {
@@ -68,47 +81,79 @@ public class HeartGame : MonoBehaviour
     }
     public void HandleCoolDown()
     {
-        if(UseProfile.Heart > 0)
+        Debug.LogError("HandleCoolDown");
+        if ( UseProfile.isUnlimitHeart)
+        {
+            return;
+        }    
+            if (UseProfile.Heart > 0)
         {
             UseProfile.Heart -= 1;
   
           
-            var secondsSinceLastUpdate = TimeManager.CaculateTime(UseProfile.TimeLastOverHealth, DateTime.Now);
+            //var secondsSinceLastUpdate = TimeManager.CaculateTime(UseProfile.TimeLastOverHealth, DateTime.Now);
           
-            if (secondsSinceLastUpdate > 0)
-            {
-                Debug.LogError("NoSave");
-                return;
-            }
+            //if (secondsSinceLastUpdate > 0)
+            //{
+            //    Debug.LogError("NoSave");
+            //    return;
+            //}
             wasCoolDown = true;
             currentCoolDown = timeUpHeartGame;
             UseProfile.TimeLastOverHealth = DateTime.Now;
-            Debug.LogError("Save");
+       
 
         }    
     }    
 
     private void Update()
     {
- 
-        if (wasCoolDown)
+   
+        if (!UseProfile.isUnlimitHeart)
         {
-            if (UseProfile.Heart < 6)
+            if (wasCoolDown)
             {
-                currentCoolDown -=  Time.unscaledDeltaTime;
-                if (currentCoolDown <= 0  )
+                if (UseProfile.Heart < 6)
                 {
-                    currentCoolDown = timeUpHeartGame;
-                    UseProfile.Heart += 1;
-                    UseProfile.TimeLastOverHealth = DateTime.Now;
+                    currentCoolDown -= Time.unscaledDeltaTime;
+                    if (currentCoolDown <= 0)
+                    {
+                        currentCoolDown = timeUpHeartGame;
+                        UseProfile.Heart += 1;
+                        UseProfile.TimeLastOverHealth = DateTime.Now;
+                    }
+
                 }
-             
+                else
+                {
+                    wasCoolDown = false;
+
+                }
+
+            }
+        }
+        else
+        {
+            HandleUnlimitHeart();
+            if(timeLimit > 0)
+            {
+                timeLimit -= Time.unscaledDeltaTime;
             }
             else
             {
-                wasCoolDown = false;
-           
+                UseProfile.isUnlimitHeart = false;
             }
+        }
+      
+    }
+    private bool wasCanculate = false;
+    public float timeLimit;
+    private void HandleUnlimitHeart()
+    {
+      if(!wasCanculate)
+        {
+            wasCanculate = true;
+            timeLimit = TimeManager.CaculateTime(DateTime.Now, UseProfile.TimeUnlimitHeart);
 
         }
     }

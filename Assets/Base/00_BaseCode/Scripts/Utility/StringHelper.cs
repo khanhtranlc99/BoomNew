@@ -72,6 +72,9 @@ public static class StringHelper
     public const string TIMEBOOM_ITEM = "timeboom_item";
     public const string WINSTREAK = "winstreak";
     public const string TIME_LAST_OVER_HEALTH = "TIME_LAST_OVER_HEALTH";
+
+    public const string TIME_UNLIMIT_HEART = "time_unlimit_heart";
+    public const string IS_UNLIMIT_HEART = "is_unlimit_heart";
 }
 
 public class PathPrefabs

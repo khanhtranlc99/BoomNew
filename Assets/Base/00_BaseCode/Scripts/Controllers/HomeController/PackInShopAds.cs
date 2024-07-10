@@ -129,7 +129,11 @@ public class PackInShopAds : PackInShop
 
     public void HandleOn()
     {
-        WasWatch = false;
-        decorBtn.gameObject.SetActive(true);
+        if(WasWatch == true)
+        {
+            WasWatch = false;
+            decorBtn.gameObject.SetActive(true);
+        }
+      
     }    
 }

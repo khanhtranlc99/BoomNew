@@ -96,6 +96,7 @@ public class BackHomeBox : BaseBox
             GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () => { Next(); }, actionWatchLog: "ResetSceneAtLoseBox");
             void Next()
             {
+           
                 UseProfile.WinStreak = 0;
                 GameController.Instance.heartGame.HandleCoolDown();
                 Close();

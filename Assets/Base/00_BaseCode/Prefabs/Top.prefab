@@ -613,6 +613,10 @@ MonoBehaviour:
   btnHeart: {fileID: 7989205171873683831}
   btnCoin: {fileID: 7989205171591432217}
   tvCoolDownHeart: {fileID: 7989205170297028562}
+  panelTime: {fileID: 0}
+  iconHeart: {fileID: 7989205171508866922}
+  normalHeart: {fileID: 21300000, guid: 3ea55bf4b54619d4b9fa31a480ee8fb7, type: 3}
+  unlimitHeart: {fileID: 21300000, guid: 09ef08ce00312d74298f92e0365e7042, type: 3}
 --- !u!1 &7989205171873683835
 GameObject:
   m_ObjectHideFlags: 0

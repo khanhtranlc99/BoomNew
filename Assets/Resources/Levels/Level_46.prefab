@@ -6821,16 +6821,18 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  difficult: 0
+  difficult: 1
   isSlimeLevel: 1
   isTimeLevel: 0
   conditionSlimes:
     lsDataSlime:
     - slimeType: 3
-      countSlime: 4
+      countSlime: 2
+    - slimeType: 6
+      countSlime: 2
   conditionTime:
     time: 0
-  boomLimit: 9
+  boomLimit: 15
   row: 10
   cow: 10
   parentGrid: {fileID: 5010388709317588840}

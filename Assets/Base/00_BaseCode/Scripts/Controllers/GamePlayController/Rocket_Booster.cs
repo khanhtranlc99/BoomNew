@@ -72,7 +72,7 @@ public class Rocket_Booster : MonoBehaviour
         GameController.Instance.moneyEffectController.SpawnEffectText_FlyUp
                               (
                               rocket_Btn.transform.position,
-                              "Unlock at level 2",
+                              "Unlock at level 5",
                               Color.white,
                               isSpawnItemPlayer: true
                               );
@@ -96,7 +96,7 @@ public class Rocket_Booster : MonoBehaviour
                 var rocket = SimplePool2.Spawn(rocketVfx, post.position, Quaternion.identity);
                 rocket.transform.parent = target.transform;
                 rocket.transform.position -= new Vector3(0, 0, 1);
-                rocket.transform.DOLocalMove(Vector3.zero, 0.7f).OnComplete(delegate {
+                rocket.transform.DOLocalMove(Vector3.zero, 0.5f).OnComplete(delegate {
 
 
                     rocket.HandleDisable();

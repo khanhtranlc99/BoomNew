@@ -10,6 +10,9 @@ public class CoinHeartBar : MonoBehaviour
     public Button btnCoin;
     public Text tvCoolDownHeart;
     public GameObject panelTime;
+    public Image iconHeart;
+    public Sprite normalHeart;
+    public Sprite unlimitHeart;
 
     public void Init ()
     {
@@ -48,24 +51,41 @@ public class CoinHeartBar : MonoBehaviour
     }
     private void Update()
     {
-       if(UseProfile.Heart < 5)
+        if(!UseProfile.isUnlimitHeart)
         {
-            tvCoolDownHeart.text = TimeManager.ShowTime2((long)GameController.Instance.heartGame.currentCoolDown);
+            if (UseProfile.Heart < 5)
+            {
+                tvCoolDownHeart.text = TimeManager.ShowTime2((long)GameController.Instance.heartGame.currentCoolDown);
+                if (panelTime != null)
+                {
+                    panelTime.gameObject.SetActive(true);
+                }
+            }
+            else
+            {
+                tvCoolDownHeart.text = "";
+                tvHeart.text = "FULL";
+                if (panelTime != null)
+                {
+                    panelTime.gameObject.SetActive(false);
+                }
+            }
+            iconHeart.sprite = normalHeart;
+        }
+        else
+        {
+
+            tvHeart.text = "FULL";
+            iconHeart.sprite = unlimitHeart;
+            tvCoolDownHeart.text = TimeManager.ShowTime2((long)GameController.Instance.heartGame.timeLimit);
             if (panelTime != null)
             {
                 panelTime.gameObject.SetActive(true);
             }
-        }    
-       else
-        {
-            tvCoolDownHeart.text = "";
-            tvHeart.text = "FULL";
-            if(panelTime != null)
-            {
-                panelTime.gameObject.SetActive(false);
-            }
+           
         }
-        //Debug.LogError("UseProfile.Heart " + UseProfile.Heart);
+    
+      
     }
 
 }

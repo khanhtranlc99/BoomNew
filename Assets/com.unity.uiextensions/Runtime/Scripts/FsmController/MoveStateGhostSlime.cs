@@ -48,13 +48,13 @@ public class MoveStateGhostSlime : SlimeStateBase
             nextGrid = tempGrid;
             if (nextGrid.transform.position.x < this.transform.position.x)
             {
-                this.transform.localScale = new Vector3(-1, 1, 1);
+                this.transform.localScale = new Vector3(1, 1, 1);
             }
             if (nextGrid.transform.position.x > this.transform.position.x)
             {
-                this.transform.localScale = new Vector3(1, 1, 1);
+                this.transform.localScale = new Vector3(-1, 1, 1);
             }
-           
+
             oldGrid = nextGrid;
 
             
@@ -83,13 +83,13 @@ public class MoveStateGhostSlime : SlimeStateBase
                 nextGrid = tempGrid;
                 if (nextGrid.transform.position.x < this.transform.position.x)
                 {
-                    this.transform.localScale = new Vector3(-1, 1, 1);
+                    this.transform.localScale = new Vector3(1, 1, 1);
                 }
                 if (nextGrid.transform.position.x > this.transform.position.x)
                 {
-                    this.transform.localScale = new Vector3(1, 1, 1);
+                    this.transform.localScale = new Vector3(-1, 1, 1);
                 }
-              
+
                 oldGrid = nextGrid;
                 idOld.Add(oldGrid.id);
                 this.transform.DOMove(nextGrid.transform.position, data.Speed).OnComplete(delegate {

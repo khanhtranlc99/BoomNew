@@ -6940,7 +6940,7 @@ MonoBehaviour:
   isTimeLevel: 0
   conditionSlimes:
     lsDataSlime:
-    - slimeType: 3
+    - slimeType: 4
       countSlime: 4
   conditionTime:
     time: 0

@@ -103,8 +103,10 @@ public class TargetController : MonoBehaviour
         {
             if (!item.isComplete)
             {
+              
                 if(lsVfxDie.Count <= 0)
                 {
+              
                     GamePlayController.Instance.HandleCheckLose();
                 }  
                 return;

@@ -6138,9 +6138,7 @@ MonoBehaviour:
   isTimeLevel: 0
   conditionSlimes:
     lsDataSlime:
-    - slimeType: 0
-      countSlime: 4
-    - slimeType: 1
+    - slimeType: 5
       countSlime: 2
   conditionTime:
     time: 0

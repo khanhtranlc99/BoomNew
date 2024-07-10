@@ -22,7 +22,7 @@ public class SlimeBase : BarrierBase
     public CircleCollider2D collider2D;
     public AudioSource takeDame;
     public AudioClip takeDameSFX;
-
+   
     public override void Init()
     {
         fSMController.Init(this);
@@ -36,6 +36,8 @@ public class SlimeBase : BarrierBase
         if (!wasTakeDame)
         {
             wasTakeDame = true;
+            StartCoroutine(Helper.HandleActionPlayAndWait( animator, "Hit", delegate { animator.Play("Move"); }));
+          
             Hp -= 1;
             if (GameController.Instance.useProfile.OnSound)
             {
@@ -51,13 +53,14 @@ public class SlimeBase : BarrierBase
             {
                 if (fSMController.currentState.state != StateType.Hide)
                 {
-
+                    
+                  
                     spriteRenderer.DOFade(0.5f, 0.5f).OnComplete(delegate {
                         spriteRenderer.DOFade(1, 0.5f).OnComplete(delegate {
                             spriteRenderer.DOFade(0.5f, 0.3f).OnComplete(delegate {
                                 spriteRenderer.DOFade(1, 0.3f).OnComplete(delegate {
 
-                                    GamePlayController.Instance.HandleCheckLose();
+                                    //GamePlayController.Instance.HandleCheckLose();
                                 });
                             });
                         });
@@ -94,12 +97,27 @@ public class SlimeBase : BarrierBase
     public void HandlePause(object param)
     {
         this.transform.DOPause();
+        if(fSMController.currentState.GetComponent<MoveState>() != null)
+        {
+            if (fSMController.currentState.GetComponent<MoveState>().isIdle)
+            {
+                fSMController.currentState.GetComponent<MoveState>().StopAllCoroutines();
+            }
+        }    
         StartCoroutine(HandleFree());
     }
     public IEnumerator HandleFree()
     {
         yield return new WaitForSeconds(5);
         this.transform.DOPlay();
+        if (fSMController.currentState.GetComponent<MoveState>() != null)
+        {
+            if (fSMController.currentState.GetComponent<MoveState>().isIdle)
+            {
+                fSMController.currentState.GetComponent<MoveState>().HandleMove();
+            }    
+  
+        }
     }
     public void HandlePauseGame(object param)
     {

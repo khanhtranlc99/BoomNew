@@ -43,15 +43,16 @@ public class Winbox : BaseBox
     }   
     public void InitState()
     {
-       
-     
 
 
+
+        GameController.Instance.admobAds.HandleShowMerec();
     }    
     private void HandleNext()
     {
         GameController.Instance.musicManager.PlayClickSound();
         UseProfile.Coin += GamePlayController.Instance.playerContain.totalCoin;
+        GameController.Instance.admobAds.HandleHideMerec();
         Initiate.Fade("HomeScene", Color.black, 2f);
     }    
     private void HandleReward()
@@ -60,6 +61,7 @@ public class Winbox : BaseBox
         GameController.Instance.admobAds.ShowVideoReward(
                    actionReward: () =>
                    {
+                       GameController.Instance.admobAds.HandleHideMerec();
                        GamePlayController.Instance.playerContain.totalCoin *= 5;
                        UseProfile.Coin += GamePlayController.Instance.playerContain.totalCoin;
                        UseProfile.CurrentLevel += 1;
