@@ -66,6 +66,7 @@
     <Compile Include="Assets\MaxSdk\Scripts\MaxEvents.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\MaxSdkAndroid.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\MaxUserServiceAndroid.cs" />
+    <Compile Include="Assets\MaxSdk\Scripts\MaxEventExecutor.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\MaxSdkiOS.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\MaxSdk.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\ThirdParty\MiniJSON.cs" />

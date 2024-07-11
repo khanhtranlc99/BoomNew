@@ -68,12 +68,14 @@
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinIntegrationManagerWindow.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinPreProcess.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinProcessGradleBuildFile.cs" />
+    <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinInitialize.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinEditorCoroutine.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinIntegrationManager.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinDownloadHandler.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinInternalSettings.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinCommandLine.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinPreProcessAndroid.cs" />
+    <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinPostProcessAndroid.cs" />
     <Compile Include="Assets\MaxSdk\Scripts\IntegrationManager\Editor\AppLovinAutoUpdater.cs" />
   </ItemGroup>
   <ItemGroup>

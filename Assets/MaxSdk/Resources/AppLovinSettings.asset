@@ -16,6 +16,8 @@ MonoBehaviour:
   sdkKey: oL9CCQ2BlEl-78avNTt7qkDU1Tl_Pkb2pgv9g9m5cLUiiJcxwGv_2T1_T9OsBIhSM4UPhnkDXyMO8HNGmFnEKu
   setAttributionReportEndpoint: 0
   addApsSkAdNetworkIds: 0
+  customGradleVersionUrl: 
+  customGradleToolsVersion: 
   consentFlowEnabled: 0
   consentFlowPlatform: 0
   consentFlowPrivacyPolicyUrl: 

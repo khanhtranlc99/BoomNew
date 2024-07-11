@@ -157,7 +157,6 @@
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\images.zh-Hans.txt" />
     <None Include="Assets\Base\FacebookSDK\Plugins\Editor\Facebook.Unity.Editor.dll" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\cm.zh-Hant.txt" />
-    <None Include="Assets\MaxSdk\Mediation\AdColony\Editor\Dependencies.xml" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\mergetool.ko.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\mergetool.ja.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\cm-help.ja.txt" />
@@ -193,7 +192,6 @@
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\xdiff.zh-Hant.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\commontypes.en.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\plastic-gui.zh-Hans.txt" />
-    <None Include="Assets\MaxSdk\Mediation\Yandex\Editor\Dependencies.xml" />
     <None Include="Assets\MaxSdk\Mediation\ByteDance\Editor\Dependencies.xml" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\guihelp.zh-Hans.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\cm.ja.txt" />
@@ -206,7 +204,6 @@
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\images.en.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\binmergetool.ko.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\xdiff.ja.txt" />
-    <None Include="Assets\MaxSdk\Mediation\IronSource\Editor\Dependencies.xml" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\configurehelper.en.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\i3.zh-Hans.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\cm.es.txt" />
@@ -233,8 +230,6 @@
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\cm-help.zh-Hant.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\commontypes.zh-Hant.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\plastic-gui.ja.txt" />
-    <None Include="Assets\MaxSdk\Mediation\Verve\Editor\Dependencies.xml" />
-    <None Include="Assets\MaxSdk\Mediation\InMobi\Editor\Dependencies.xml" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\guihelp.en.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\clientcommon.zh-Hant.txt" />
     <None Include="Assets\MaxSdk\Mediation\Vungle\Editor\Dependencies.xml" />
@@ -242,16 +237,13 @@
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\cm-help.ko.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\basecommands.zh-Hans.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\images.es.txt" />
-    <None Include="Assets\MaxSdk\Mediation\Fyber\Editor\Dependencies.xml" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\i3.ko.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\cm-help.es.txt" />
-    <None Include="Assets\MaxSdk\Mediation\Facebook\Editor\Dependencies.xml" />
     <None Include="Assets\MaxSdk\Mediation\GoogleAdManager\Editor\Dependencies.xml" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\semantic.ja.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\configurehelper.ko.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\binmergetool.en.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\clientcommon.en.txt" />
-    <None Include="Assets\MaxSdk\Mediation\MyTarget\Editor\Dependencies.xml" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\zlib64Plastic.dll" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\workspaceserver.es.txt" />
     <None Include="Assets\Base\Plugins\Sirenix\Odin Inspector\Assets\Editor\Bootstrap License.txt" />
@@ -1467,10 +1459,6 @@
     <ProjectReference Include="spine-unity-editor.csproj">
       <Project>{E2C18EE4-6F9A-F893-6220-C0E94CC7EB11}</Project>
       <Name>spine-unity-editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="MaxSdk.Scripts.Editor.csproj">
-      <Project>{F929C3A9-9BFA-35B1-0BD9-1F03DDD68FA7}</Project>
-      <Name>MaxSdk.Scripts.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{463B48DB-0285-240E-45B0-70B49523B8CC}</Project>

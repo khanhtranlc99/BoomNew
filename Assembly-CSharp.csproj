@@ -2773,10 +2773,6 @@
       <Project>{E2C18EE4-6F9A-F893-6220-C0E94CC7EB11}</Project>
       <Name>spine-unity-editor</Name>
     </ProjectReference>
-    <ProjectReference Include="MaxSdk.Scripts.Editor.csproj">
-      <Project>{F929C3A9-9BFA-35B1-0BD9-1F03DDD68FA7}</Project>
-      <Name>MaxSdk.Scripts.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{463B48DB-0285-240E-45B0-70B49523B8CC}</Project>
       <Name>Unity.TextMeshPro</Name>
