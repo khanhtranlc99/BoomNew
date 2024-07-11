@@ -60,11 +60,11 @@
     <Analyzer Include="D:\Unity2020.3.15f2\2022.3.20f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.12.2\Runtime\Analytics\AnalyticsOptionsExtensions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.12.2\Runtime\Analytics\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.12.5\Runtime\Analytics\AnalyticsOptionsExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.12.5\Runtime\Analytics\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.services.core@1.12.2\Runtime\Analytics\Unity.Services.Core.Analytics.asmdef" />
+    <None Include="Library\PackageCache\com.unity.services.core@1.12.5\Runtime\Analytics\Unity.Services.Core.Analytics.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

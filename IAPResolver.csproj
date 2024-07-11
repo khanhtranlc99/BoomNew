@@ -10,10 +10,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B2EA06A3-FB75-2F18-196E-A10E1439B2F3}</ProjectGuid>
+    <ProjectGuid>{C4B0755B-D6C7-4389-EEF2-74F383DEB24B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Unity.Services.Core.Configuration.Editor</AssemblyName>
+    <AssemblyName>IAPResolver</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -50,7 +50,7 @@
     <UnityProjectGenerator>Package</UnityProjectGenerator>
     <UnityProjectGeneratorVersion>2.0.22</UnityProjectGeneratorVersion>
     <UnityProjectGeneratorStyle>Legacy</UnityProjectGeneratorStyle>
-    <UnityProjectType>Editor:5</UnityProjectType>
+    <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2022.3.20f1</UnityVersion>
   </PropertyGroup>
@@ -60,18 +60,11 @@
     <Analyzer Include="D:\Unity2020.3.15f2\2022.3.20f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.12.5\Editor\Core\Configuration\ConfigurationBuilder.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.12.5\Editor\Core\Configuration\ProjectConfigurationBuildInjectorWithPlayerProcessor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.12.5\Editor\Core\Configuration\Utils\AssetUtils.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.12.5\Editor\Core\Configuration\ProjectConfigurationBuildInjectorWithReport.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.12.5\Editor\Core\Configuration\ProjectConfigurationBuilderHelper.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.12.5\Editor\Core\Configuration\Utils\IoUtils.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.12.5\Editor\Core\Configuration\ProjectConfigurationBuilder.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.12.5\Editor\Core\Configuration\IConfigurationProvider.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.12.5\Editor\Core\Configuration\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.0\Plugins\UnityPurchasing\Android\IAPResolver\AndroidDependencies.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.0\Plugins\UnityPurchasing\Android\IAPResolver\IAPAndroidDependencies.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.services.core@1.12.5\Editor\Core\Configuration\Unity.Services.Core.Configuration.Editor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.purchasing@4.12.0\Plugins\UnityPurchasing\Android\IAPResolver\IAPResolver.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1128,18 +1121,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.Services.Core.csproj">
-      <Project>{F2A98A77-0DC5-0D33-803B-25E22A5B39D3}</Project>
-      <Name>Unity.Services.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Services.Core.Configuration.csproj">
-      <Project>{83952AA9-1AB6-241B-A074-7588AD681A56}</Project>
-      <Name>Unity.Services.Core.Configuration</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Services.Core.Internal.csproj">
-      <Project>{4D787EFF-D66C-CC73-449E-DCF6DCA13A3D}</Project>
-      <Name>Unity.Services.Core.Internal</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{65089AAE-A169-1732-B4EF-68F680DFAE0B}</Project>
       <Name>UnityEditor.UI</Name>
