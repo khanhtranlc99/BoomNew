@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Purchasing;
 using UnityEngine.Events;
 using Newtonsoft.Json;
-using com.adjust.sdk;
+//using com.adjust.sdk;
 
 public enum TypePackIAP
 {
@@ -141,17 +141,17 @@ public class IAPPack
 
 
         }
-        try
-        {
-            AdjustEvent adjustEvent = new AdjustEvent(namePack);
-            adjustEvent.setRevenue(price, "$");
-            adjustEvent.setTransactionId("transactionId");
-            Adjust.trackEvent(adjustEvent);
-        }
-        catch
-        {
+        //try
+        //{
+        //    AdjustEvent adjustEvent = new AdjustEvent(namePack);
+        //    adjustEvent.setRevenue(price, "$");
+        //    adjustEvent.setTransactionId("transactionId");
+        //    Adjust.trackEvent(adjustEvent);
+        //}
+        //catch
+        //{
 
-        }
+        //}
 
         if (typeBuy == TypeBuy.Coin)
         {

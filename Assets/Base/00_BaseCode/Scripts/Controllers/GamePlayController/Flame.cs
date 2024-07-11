@@ -1,9 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DG.Tweening;
+public enum FlameType
+{
+    Up,
+    Down,
+    Left,
+    Right,
+        Mid,
+}
 public class Flame : MonoBehaviour
 {
+    
+    public SpriteRenderer spriteRenderer;
     private void OnEnable()
     {
         StartCoroutine(Stop());
@@ -34,5 +44,39 @@ public class Flame : MonoBehaviour
                 collision.gameObject.GetComponent<GridBase>().HandleUnFreeze();
             }
         }
+    }
+    public void Init (Sprite param, FlameType flameType )
+    {
+        //spriteRenderer.sprite = param;
+        //spriteRenderer.color = new Color32(0, 0, 0, 0);
+        //spriteRenderer.DOColor(new Color32(255, 255, 255, 255), 0.2f).SetEase(Ease.Flash);
+        //switch (flameType)
+        //{
+        //    case FlameType.Up:
+        //        this.transform.localEulerAngles = new Vector3(0, 0, 90);
+        //        break;
+        //    case FlameType.Down:
+        //        this.transform.localEulerAngles = new Vector3(0, 0, 90);
+
+        //        this.transform.localScale = new Vector3(-1, 1, 1);
+        //        break;
+
+        //    case FlameType.Left:
+        //        this.transform.localScale = new Vector3(-1, 1, 1);
+        //        break;
+
+        //    case FlameType.Right:
+
+        //        break;
+
+        //    case FlameType.Mid:
+
+        //        break;
+        //}
+    }
+    private void OnDisable()
+    {
+        //this.transform.localEulerAngles = new Vector3(0, 0, 0);
+        //this.transform.localScale = new Vector3(1, 1, 1);
     }
 }

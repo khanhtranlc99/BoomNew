@@ -17,6 +17,10 @@ public class Boom : BarrierBase
     public int countLeft;
 
     public AudioClip boom;
+
+    public Sprite flame_1;
+    public Sprite flame_2;
+    public Sprite flame_3;
     public void HandleExplosion()
     {
 
@@ -35,8 +39,8 @@ public class Boom : BarrierBase
         Vector3 centerPosition = transform.position;
 
         // Tạo phần tử ở trung tâm
-        SimplePool2.Spawn(flame, centerPosition, Quaternion.identity);
-
+      var tempMid =  SimplePool2.Spawn(flame, centerPosition, Quaternion.identity);
+        tempMid.Init(flame_2, FlameType.Mid);
         countUp = units;
         countDown = units;
         countRight = units;
@@ -64,7 +68,16 @@ public class Boom : BarrierBase
             {
                 // Tạo phần tử phía trên
                 Vector3 upPosition = centerPosition + new Vector3(0, spacing, 0) * i;
-                SimplePool2.Spawn(flame, upPosition, Quaternion.identity);
+             var tempUp =   SimplePool2.Spawn(flame, upPosition, Quaternion.identity);
+                if(i == countUp)
+                {
+                    tempUp.Init(flame_3, FlameType.Up);
+                }
+                else
+                {
+                    tempUp.Init(flame_1, FlameType.Up);
+                }
+      
             }
         }
 
@@ -74,7 +87,16 @@ public class Boom : BarrierBase
             {
                 // Tạo phần tử phía dưới
                 Vector3 downPosition = centerPosition + new Vector3(0, -spacing, 0) * i;
-                SimplePool2.Spawn(flame, downPosition, Quaternion.identity);
+                var tempDown = SimplePool2.Spawn(flame, downPosition, Quaternion.identity);
+                if(i == countDown)
+                {
+                    tempDown.Init(flame_3, FlameType.Down);
+                }
+                else
+                {
+                    tempDown.Init(flame_1, FlameType.Down);
+                }
+           
             }
         }
         if (countLeft > 0)
@@ -83,7 +105,16 @@ public class Boom : BarrierBase
             {
                 // Tạo phần tử phía trái
                 Vector3 leftPosition = centerPosition + new Vector3(-spacing, 0, 0) * i;
-                SimplePool2.Spawn(flame, leftPosition, Quaternion.identity);
+                var tempLeft = SimplePool2.Spawn(flame, leftPosition, Quaternion.identity);
+                if(i == countLeft)
+                {
+                    tempLeft.Init(flame_3, FlameType.Left);
+                }
+                else
+                {
+                    tempLeft.Init(flame_1, FlameType.Left);
+                }
+        
             }
         }
         if (countRight > 0)
@@ -92,7 +123,16 @@ public class Boom : BarrierBase
             {
                 // Tạo phần tử phía phải
                 Vector3 rightPosition = centerPosition + new Vector3(spacing, 0, 0) * i;
-                SimplePool2.Spawn(flame, rightPosition, Quaternion.identity);
+                var tempRight = SimplePool2.Spawn(flame, rightPosition, Quaternion.identity);
+          
+                if (i == countRight)
+                {
+                    tempRight.Init(flame_3, FlameType.Right);
+                }
+                else
+                {
+                    tempRight.Init(flame_1, FlameType.Right);
+                }
             }
         }
 

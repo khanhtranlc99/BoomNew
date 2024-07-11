@@ -14,7 +14,7 @@ using Firebase.Crashlytics;
 using Firebase.Analytics;
 using Facebook.Unity;
 using System.Text;
-using com.adjust.sdk;
+//using com.adjust.sdk;
 #if UNITY_IOS
 using UnityEngine.iOS;
 #endif
@@ -143,8 +143,8 @@ public class GameServices : SingletonClass<GameServices>, IService
 
     private void RequestIDFAiOS()
     {
-        Adjust.requestTrackingAuthorizationWithCompletionHandler(status => {
-        });
+        //Adjust.requestTrackingAuthorizationWithCompletionHandler(status => {
+        //});
     }
 
     private bool isInitReady = false;
@@ -200,7 +200,7 @@ public class GameServices : SingletonClass<GameServices>, IService
             SendToken = true;
         }
 
-        Adjust.setDeviceToken(token.Token);
+        //Adjust.setDeviceToken(token.Token);
     }
 
 
@@ -257,16 +257,16 @@ public class GameServices : SingletonClass<GameServices>, IService
 
     private void InitializeAdjust()
     {
-        AdjustEnvironment environment = AdjustEnvironment.Production;
+//        AdjustEnvironment environment = AdjustEnvironment.Production;
 
 
-        AdjustConfig config = new AdjustConfig(ConfigGameBase.ADJUST_APP_TOKEN, environment, true);
-#if ENV_PROD
-        config.setLogLevel(AdjustLogLevel.Suppress);
-#else
-        config.setLogLevel(AdjustLogLevel.Info);
-#endif
-        Adjust.start(config);
+//        AdjustConfig config = new AdjustConfig(ConfigGameBase.ADJUST_APP_TOKEN, environment, true);
+//#if ENV_PROD
+//        config.setLogLevel(AdjustLogLevel.Suppress);
+//#else
+//        config.setLogLevel(AdjustLogLevel.Info);
+//#endif
+//        Adjust.start(config);
     }
 
 }

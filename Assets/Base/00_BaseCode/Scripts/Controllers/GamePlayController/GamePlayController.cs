@@ -46,7 +46,7 @@ public class GamePlayController : Singleton<GamePlayController>
     }
     public void HandleCheckLose()
     {
-        Debug.LogError("isSlimeTakeDame_" + playerContain.levelData.isSlimeTakeDame);
+        //Debug.LogError("isSlimeTakeDame_" + playerContain.levelData.isSlimeTakeDame);
         if (stateGame == StateGame.Playing)
         {
          

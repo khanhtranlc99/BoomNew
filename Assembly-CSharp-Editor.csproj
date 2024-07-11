@@ -61,76 +61,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\com.unity.uiextensions\Editor\ReadOnlyDrawer.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Settings\DefaultTextSettings.cs" />
-    <Compile Include="Assets\D.A. Assets\Shared\Editor\DAInspector\DAIExtensions.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\TextPicRenameEditor.cs" />
-    <Compile Include="Assets\D.A. Assets\Shared\Editor\DAInspector\DAIResources.cs" />
-    <Compile Include="Assets\Base\3Party\Adjust\Editor\AdjustEditorPreprocessor.cs" />
     <Compile Include="Assets\Base\3Party\Joker2X\Localize\Scripts\Editor\LocalizeSettings.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\CUIImageEditor.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\RangeSliderEditor.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Tabs\DependenciesTab.cs" />
-    <Compile Include="Assets\D.A. Assets\Shared\Editor\DAInspector\Group.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\BoxSliderEditor.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Settings\MPImageSettings.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\TextPicIconEditor.cs" />
-    <Compile Include="Assets\D.A. Assets\Shared\Editor\DAInspector\GuiExtensions.cs" />
-    <Compile Include="Assets\D.A. Assets\Shared\Editor\DAInspector\DAInspectorWindow.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Settings\TextMeshProSettings.cs" />
     <Compile Include="Assets\Base\3Party\Joker2X\Editor\CustomPostprocessScript.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Windows\RateMeWindow.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\DAGradientEditor.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\BezierLineRendererEditor.cs" />
     <Compile Include="Assets\Base\3Party\Joker2X\Localize\Scripts\Editor\UILocalizeEditor.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Inspector\SyncHelperEditor.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\AccordionElementEditor.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\CUIBezierCurveEditor.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Tabs\ImportEventsTab.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\TextPicEditor.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Tabs\DebugToolsTab.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Windows\SpriteRemoverWindow.cs" />
-    <Compile Include="Assets\D.A. Assets\Shared\Editor\DAWebConfig.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Inspector\FcuConfigEditor.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\ColorPickerPresetsEditor.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Sections\HeaderSection.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\ScrollPositionControllerEditor.cs" />
-    <Compile Include="Assets\Base\3Party\Adjust\Editor\AdjustCustomEditor.cs" />
-    <Compile Include="Assets\D.A. Assets\Shared\Editor\GUI\Footer.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Inspector\FcuEditor.cs" />
-    <Compile Include="Assets\D.A. Assets\Shared\Editor\DAInspector\DAInspector.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Windows\FcuSettingsWindow.cs" />
     <Compile Include="Assets\MyTools\Unity-Logs-Viewer\Reporter\Editor\ReporterEditor.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\ContextMenuItems.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\FancyScrollView\ScrollerEditor.cs" />
-    <Compile Include="Assets\D.A. Assets\Shared\Editor\GUI\Enums.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\UIExtensionsMenuOptions.cs" />
-    <Compile Include="Assets\D.A. Assets\Shared\Editor\UpdateChecker.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Tabs\FigmaComponentsTab.cs" />
-    <Compile Include="Assets\D.A. Assets\Shared\Editor\DAInspector\DAInspectorEditor.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Settings\PuiSettings.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\NonDrawingGraphicEditor.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Settings\Shapes2DSettings.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Tabs\UnityComponentsTab.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Tabs\FontsTab.cs" />
-    <Compile Include="Assets\D.A. Assets\Shared\Editor\DAInspector\DAIEditor.cs" />
     <Compile Include="Assets\Base\3Party\Joker2X\Localize\Scripts\Editor\LocalizeParse.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Utility\Editor\ArabicSupportTool.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Windows\ComparerWindow.cs" />
     <Compile Include="Assets\Base\3Party\Joker2X\Editor\ConfigBuild.cs" />
     <Compile Include="Assets\Base\3Party\Joker2X\Localize\Scripts\Editor\LocalizeEditorTools.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\TextPicIconListCopier.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Tabs\AssetTab.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Tabs\PrefabSettingsTab.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\CUITextEditor.cs" />
-    <Compile Include="Assets\Base\3Party\Adjust\Editor\AdjustSettingsEditor.cs" />
-    <Compile Include="Assets\Base\3Party\Adjust\Editor\AdjustSettings.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\CUIGraphicEditor.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Settings\UnityImageSettings.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\CanvasGroupActivator.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Editor\uGUITools.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Tabs\MainSettingsTab.cs" />
-    <Compile Include="Assets\Base\3Party\Adjust\Editor\AdjustEditor.cs" />
-    <Compile Include="Assets\D.A. Assets\Figma Converter for Unity\Scripts\Editor\Sections\FramesSection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Localization\commontypes.ko.txt" />
@@ -614,10 +571,6 @@
       <HintPath>Library\PackageCache\com.google.firebase.analytics@be65f0d504f2\Firebase\Plugins\Firebase.Analytics.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Win81Interface">
-      <HintPath>Assets\Base\3Party\Adjust\Windows\Stubs\Win81Interface.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Google.PackageManagerResolver">
       <HintPath>Library\PackageCache\com.google.external-dependency-manager@a366070c64a8\ExternalDependencyManager\Editor\1.2.179\Google.PackageManagerResolver.dll</HintPath>
       <Private>False</Private>
@@ -628,10 +581,6 @@
     </Reference>
     <Reference Include="Facebook.Unity.Editor">
       <HintPath>Assets\Base\FacebookSDK\Plugins\Editor\Facebook.Unity.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Win10Interface">
-      <HintPath>Assets\Base\3Party\Adjust\Windows\Stubs\Win10Interface.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="LibFBGManaged">
@@ -672,10 +621,6 @@
     </Reference>
     <Reference Include="Google.IOSResolver">
       <HintPath>Library\PackageCache\com.google.external-dependency-manager@a366070c64a8\ExternalDependencyManager\Editor\1.2.179\Google.IOSResolver.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="WinWsInterface">
-      <HintPath>Assets\Base\3Party\Adjust\Windows\Stubs\WinWsInterface.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Firebase.Messaging.Editor">

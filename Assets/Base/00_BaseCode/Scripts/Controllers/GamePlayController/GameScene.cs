@@ -23,6 +23,9 @@ public class GameScene : BaseScene
     public Sprite hardSprite;
     public Sprite veryHardSprite;
 
+    [Header("Test")]
+    public GameObject testObj;
+    public InputField levelTestTxt;
 
     public void Init(LevelData levelData)
     {
@@ -46,7 +49,24 @@ public class GameScene : BaseScene
 
         }
     }
-
+    public void HandleOnCheatLevel()
+    {
+        if(testObj.activeInHierarchy)
+        {
+            testObj.SetActive(false);
+        }   
+        else
+        {
+            testObj.SetActive(true);
+        }
+       
+    }    
+    public void OnClickTest()
+    {
+        int level = System.Int32.Parse(levelTestTxt.text);      
+        UseProfile.CurrentLevel = level;
+        GameController.Instance.LoadScene(SceneName.GAME_PLAY);
+    }
     public void HideBotUI( Action callBack)
     {
         canvasGroupBot.DOFade(0, 0.5f).OnComplete(delegate {

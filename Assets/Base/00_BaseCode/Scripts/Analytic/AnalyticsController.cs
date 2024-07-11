@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Threading.Tasks;
-using com.adjust.sdk;
+//using com.adjust.sdk;
 
 public class AnalyticsController : MonoBehaviour
 {

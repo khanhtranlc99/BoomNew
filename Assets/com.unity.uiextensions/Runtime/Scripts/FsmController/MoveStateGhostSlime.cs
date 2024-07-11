@@ -74,12 +74,12 @@ public class MoveStateGhostSlime : SlimeStateBase
             if (idOld.Count <= 0)
             {
                 tempGrid = oldGrid.GetNextGridForGhostSlime();
-                Debug.LogError("GetNextGrid(111)");
+            
 
             }
             if (tempGrid != null)
             {
-                Debug.LogError("tempGrid.barrierBase == null");
+   
                 nextGrid = tempGrid;
                 if (nextGrid.transform.position.x < this.transform.position.x)
                 {
@@ -98,7 +98,7 @@ public class MoveStateGhostSlime : SlimeStateBase
             }
             else
             {
-                Debug.LogError("tempGrid == null");
+      
                 try
                 {
                     idOld.Remove(idOld[idOld.Count - 2]);
@@ -110,7 +110,7 @@ public class MoveStateGhostSlime : SlimeStateBase
                 coutLoop += 1;
                 if (coutLoop > 3)
                 {
-                    Debug.LogError("Clear");
+  
                     idOld.Clear();
                     coutLoop = 0;
                 }

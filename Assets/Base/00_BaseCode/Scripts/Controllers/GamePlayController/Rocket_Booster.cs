@@ -27,7 +27,7 @@ public class Rocket_Booster : MonoBehaviour
             //unLockIcon.gameObject.SetActive(true);
             lockIcon.gameObject.SetActive(false);
             HandleUnlock();
-            Debug.LogError("HandleUnlock");
+            //Debug.LogError("HandleUnlock");
 
         }
         else
@@ -36,7 +36,7 @@ public class Rocket_Booster : MonoBehaviour
             lockIcon.gameObject.SetActive(true);
             objNum.SetActive(false);
             HandleLock();
-            Debug.LogError("HandleLock");
+            //Debug.LogError("HandleLock");
         }
 
 

@@ -424,10 +424,6 @@
       <HintPath>Library\PackageCache\com.google.firebase.analytics@be65f0d504f2\Firebase\Plugins\Firebase.Analytics.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Win81Interface">
-      <HintPath>Assets\Base\3Party\Adjust\Windows\Stubs\Win81Interface.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Google.PackageManagerResolver">
       <HintPath>Library\PackageCache\com.google.external-dependency-manager@a366070c64a8\ExternalDependencyManager\Editor\1.2.179\Google.PackageManagerResolver.dll</HintPath>
       <Private>False</Private>
@@ -438,10 +434,6 @@
     </Reference>
     <Reference Include="Facebook.Unity.Editor">
       <HintPath>Assets\Base\FacebookSDK\Plugins\Editor\Facebook.Unity.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Win10Interface">
-      <HintPath>Assets\Base\3Party\Adjust\Windows\Stubs\Win10Interface.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="LibFBGManaged">
@@ -482,10 +474,6 @@
     </Reference>
     <Reference Include="Google.IOSResolver">
       <HintPath>Library\PackageCache\com.google.external-dependency-manager@a366070c64a8\ExternalDependencyManager\Editor\1.2.179\Google.IOSResolver.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="WinWsInterface">
-      <HintPath>Assets\Base\3Party\Adjust\Windows\Stubs\WinWsInterface.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Firebase.Messaging.Editor">
