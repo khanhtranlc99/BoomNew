@@ -114,6 +114,7 @@ public class LevelData : SerializedMonoBehaviour
     {
         ShuffleBase();
         InitBase();
+        GameController.Instance.AnalyticsController.StartLevel(UseProfile.CurrentLevel);
     }    
     void InitBase()
     {

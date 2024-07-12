@@ -129,8 +129,8 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.0\Editor\Analytics\Helpers\GameServices\GameServicesEventSenderHelpers.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.0\Editor\ServiceProjectSettings\Service\Networking\NetworkingUtils.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.0\Editor\Analytics\Events\GenericEditorEditFieldEvent.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.0\Editor\ServiceProjectSettings\PurchasingServiceEnabler.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.0\Editor\MenuItems\IapButtonMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.0\Editor\ServiceProjectSettings\PurchasingServiceEnabler.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.0\Editor\ServiceProjectSettings\UI\Views\IapCatalogServiceSettingsBlock.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.0\Editor\BuildPreprocessor.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.12.0\Editor\ServiceProjectSettings\UI\Views\Obfuscator\BaseObfuscatorSection.cs" />

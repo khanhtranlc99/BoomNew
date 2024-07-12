@@ -499,14 +499,6 @@
       <HintPath>Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Facebook.Unity.Editor">
-      <HintPath>Assets\Base\FacebookSDK\Plugins\Editor\Facebook.Unity.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="LibFBGManaged">
-      <HintPath>Assets\Base\FacebookSDK\Plugins\Windows\LibFBGManaged.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Firebase.App">
       <HintPath>Library\PackageCache\com.google.firebase.app@8979614a75c6\Firebase\Plugins\Firebase.App.dll</HintPath>
       <Private>False</Private>
@@ -531,10 +523,6 @@
       <HintPath>Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Facebook.Unity.Settings">
-      <HintPath>Assets\Base\FacebookSDK\Plugins\Settings\Facebook.Unity.Settings.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Firebase.RemoteConfig">
       <HintPath>Library\PackageCache\com.google.firebase.remote-config@295b55d382a6\Firebase\Plugins\Firebase.RemoteConfig.dll</HintPath>
       <Private>False</Private>
@@ -545,10 +533,6 @@
     </Reference>
     <Reference Include="Firebase.Messaging.Editor">
       <HintPath>Library\PackageCache\com.google.firebase.messaging@ccc90086471d\Firebase\Editor\Firebase.Messaging.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Facebook.Unity.Canvas">
-      <HintPath>Assets\Base\FacebookSDK\Plugins\Canvas\Facebook.Unity.Canvas.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
@@ -579,10 +563,6 @@
       <HintPath>Assets\Plugins\LitJson.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Facebook.Unity">
-      <HintPath>Assets\Base\FacebookSDK\Plugins\Facebook.Unity.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Sirenix.Utilities">
       <HintPath>Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
       <Private>False</Private>
@@ -603,14 +583,6 @@
       <HintPath>Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\SharpZip\ACTkSharpZipLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="XInputDotNetPure">
-      <HintPath>Assets\Base\FacebookSDK\Plugins\Windows\XInputDotNetPure.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Facebook.Unity.Android">
-      <HintPath>Assets\Base\FacebookSDK\Plugins\Android\Facebook.Unity.Android.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Sirenix.Utilities.Editor">
       <HintPath>Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
       <Private>False</Private>
@@ -629,10 +601,6 @@
     </Reference>
     <Reference Include="Google.MiniJson">
       <HintPath>Library\PackageCache\com.google.firebase.app@8979614a75c6\Firebase\Plugins\Google.MiniJson.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Facebook.Unity.Windows">
-      <HintPath>Assets\Base\FacebookSDK\Plugins\Windows\Facebook.Unity.Windows.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Firebase.Editor">

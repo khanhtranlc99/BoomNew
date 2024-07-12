@@ -46,9 +46,9 @@ public class ConfigGameBase
     public static string inappAndroidKeyHash
         = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxH15vU9+fsUnRq1d9d/ETWrY+DXxhWX3hE310JTGVRo7CLrY8auzrzvummp2MB7ryC5MbYdWrOcKgRPYvpy0qRSOB0HxEDLgHkH2rpia7n5yLoX6gSQ0KwlgC0pLDuK+2XsuayAjTg7xnbQfspzPbY+bP6vkqZAADLAue7Iq94g9QXd7ISOFjN/v7L3dppr5TtwHfZAbD+yZyreFbowGhxdMWKkMKBuskBJYD3KpO3KxSSyo/MUz0zpw2hCizOHqUIh08FG3TA7qd0y0gsWFqcPgSKkgV0JZ/WvvCd5vO4BAFuE8bpdQYKCspdUFeJ9iLqiu2agGz//Q498Iu++ogwIDAQAB";
 #if UNITY_ANDROID
-    public const string package_name = "com.gplay.art.puzzle.free.game";
+    public const string package_name = "com.newmoon.boomvsslime";
 #else
-    public const string package_name = "com.gplay.art.puzzle.free.game";
+    public const string package_name = "com.newmoon.boomvsslime";
 #endif
 
 

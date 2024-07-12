@@ -363,10 +363,6 @@
       <HintPath>Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Facebook.Unity.Settings">
-      <HintPath>Assets\Base\FacebookSDK\Plugins\Settings\Facebook.Unity.Settings.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Firebase.RemoteConfig">
       <HintPath>Library\PackageCache\com.google.firebase.remote-config@295b55d382a6\Firebase\Plugins\Firebase.RemoteConfig.dll</HintPath>
       <Private>False</Private>
@@ -383,20 +379,12 @@
       <HintPath>Assets\Plugins\LitJson.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Facebook.Unity">
-      <HintPath>Assets\Base\FacebookSDK\Plugins\Facebook.Unity.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Sirenix.Utilities">
       <HintPath>Assets\Base\Plugins\Sirenix\Assemblies\NoEmitAndNoEditor\Sirenix.Utilities.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Firebase.Crashlytics">
       <HintPath>Library\PackageCache\com.google.firebase.crashlytics@bce38837bbb8\Firebase\Plugins\Firebase.Crashlytics.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Facebook.Unity.Android">
-      <HintPath>Assets\Base\FacebookSDK\Plugins\Android\Facebook.Unity.Android.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">

@@ -44,7 +44,7 @@ public class Winbox : BaseBox
     public void InitState()
     {
 
-
+        GameController.Instance.AnalyticsController.WinLevel(UseProfile.CurrentLevel);
 
         //GameController.Instance.admobAds.HandleShowMerec();
     }    
@@ -53,8 +53,14 @@ public class Winbox : BaseBox
         GameController.Instance.musicManager.PlayClickSound();
         UseProfile.Coin += GamePlayController.Instance.playerContain.totalCoin;
         //GameController.Instance.admobAds.HandleHideMerec();
-        Initiate.Fade("HomeScene", Color.black, 2f);
-    }    
+       
+        GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () => { Next(); }, actionWatchLog: "InterWinBox");
+        void Next()
+        {
+
+            Initiate.Fade("HomeScene", Color.black, 2f);
+        }
+    }
     private void HandleReward()
     {
         GameController.Instance.musicManager.PlayClickSound();
@@ -84,7 +90,7 @@ public class Winbox : BaseBox
                         );
                    },
                    actionClose: null,
-                   ActionWatchVideo.HeartInHearPopup,
+                   ActionWatchVideo.WinBox_Claim_Coin,
                    UseProfile.CurrentLevel.ToString());
     }    
 

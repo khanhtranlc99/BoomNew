@@ -17,6 +17,10 @@ public class TimeBoom : BarrierBase
     public int countRight;
     public int countLeft;
     public AudioClip boom;
+    private void OnMouseDown()
+    {
+        HandleExplosion();
+    }
     public void HandleExplosion()
     {
         GameController.Instance.musicManager.PlayOneShot(boom);

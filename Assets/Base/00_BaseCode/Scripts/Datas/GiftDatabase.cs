@@ -82,10 +82,12 @@ public class GiftDatabase : SerializedScriptableObject
                 EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.TIMEBOOM_ITEM);
                 break;
             case GiftType.Fire_Start:
-             
+                UseProfile.Fire_Start += amount;
+                Debug.LogError("Fire_Start" + UseProfile.Fire_Start);
                 break;
             case GiftType.Boom_Start:
-
+                UseProfile.Boom_Start += amount;
+                Debug.LogError("Boom_Start" + UseProfile.Boom_Start);
                 break;
             case GiftType.Heart_Unlimit:
             

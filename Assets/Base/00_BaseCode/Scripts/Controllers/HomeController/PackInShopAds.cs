@@ -48,6 +48,25 @@ public class PackInShopAds : PackInShop
 
     private void HandleOnClick()
     {
+        switch (currentGift)
+        {
+            case GiftType.TNT_Booster:
+
+                actionWatchVideo = ActionWatchVideo.TNT_Booster;
+                break;
+            case GiftType.Rocket_Booster:
+
+                actionWatchVideo = ActionWatchVideo.Rocket_Booster;
+                break;
+            case GiftType.Freeze_Booster:
+
+                actionWatchVideo = ActionWatchVideo.Freeze_Booster;
+                break;
+            case GiftType.Atom_Booster:
+
+                actionWatchVideo = ActionWatchVideo.Atom_Booste;
+                break;
+        }
         GameController.Instance.musicManager.PlayClickSound();
         if (!WasWatch )
         {
@@ -92,25 +111,7 @@ public class PackInShopAds : PackInShop
 
         void Claim()
         {
-            switch (currentGift)
-            {
-                case GiftType.TNT_Booster:
-
-                    actionWatchVideo = ActionWatchVideo.TNT_Booster;
-                    break;
-                case GiftType.Rocket_Booster:
-
-                    actionWatchVideo = ActionWatchVideo.Rocket_Booster;
-                    break;
-                case GiftType.Freeze_Booster:
-
-                    actionWatchVideo = ActionWatchVideo.Freeze_Booster;
-                    break;
-                case GiftType.Atom_Booster:
-
-                    actionWatchVideo = ActionWatchVideo.Atom_Booste;
-                    break;
-            }
+        
             List<GiftRewardShow> giftRewardShows = new List<GiftRewardShow>();
             giftRewardShows.Add(new GiftRewardShow() { amount = numGift, type = currentGift });
             foreach(var item in giftRewardShows)

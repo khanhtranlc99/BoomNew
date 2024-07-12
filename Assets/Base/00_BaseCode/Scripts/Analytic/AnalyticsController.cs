@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using Firebase.Analytics;
 using Firebase;
-using Facebook.Unity;
+
 using Firebase.Analytics;
 using System;
 using System.Collections.Generic;
@@ -67,13 +67,7 @@ public class AnalyticsController : MonoBehaviour
 
     public static void LogEventFacebook(string eventName, Dictionary<string, object> parameters)
     {
-        if (FB.IsInitialized)
-        {
-#if !ENV_PROD
-            parameters["test"] = true;
-#endif
-            FB.LogAppEvent(eventName, null, parameters);
-        }
+       
     }
 
     public static void SetUserProperties()
@@ -107,6 +101,19 @@ public class AnalyticsController : MonoBehaviour
 
 
     }
+    public void LoseLevel(int param)
+    {
+        if (!firebaseInitialized) return;
+        if (param < 10)
+        {
+            FirebaseAnalytics.LogEvent("Lose_Level_" + "0" + param);
+        }
+        else
+        {
+            FirebaseAnalytics.LogEvent("Lose_Level_" + param);
+        }
+
+    }
     public void WinLevel(int param)
     {
         if (!firebaseInitialized) return;
@@ -126,38 +133,17 @@ public class AnalyticsController : MonoBehaviour
         if (!firebaseInitialized) return;
         if (param < 10)
         {
-            FirebaseAnalytics.LogEvent("start_level_" + "0" + param);
+            FirebaseAnalytics.LogEvent("Start_level_" + "0" + param);
         }
         else
         {
-            FirebaseAnalytics.LogEvent("start_level_" + param);
+            FirebaseAnalytics.LogEvent("Start_level_" + param);
         }
-
-        Debug.LogError("firebaseInitialized");
+ 
     }
 
 
-    public void LogLevelStart(int level)
-    {
-        if (!firebaseInitialized) return;
-        Parameter[] parameters = new Parameter[1]
-        {
-            new Parameter("level", level.ToString()) ,
-        };
-
-        FirebaseAnalytics.LogEvent("level_start", parameters);
-    }
-    public void LogLevelEnd(int level)
-    {
-        if (!firebaseInitialized) return;
-        Parameter[] parameters = new Parameter[1]
-        {
-            new Parameter("level", level.ToString()) ,
-        };
-
-        FirebaseAnalytics.LogEvent("level_end", parameters);
-    }
-
+ 
     public void LogWatchVideo(ActionWatchVideo action, bool isHasVideo, bool isHasInternet, string level)
     {
         if (!firebaseInitialized) return;
@@ -469,17 +455,23 @@ public class AnalyticsController : MonoBehaviour
         SetUserProperties();
         UseProfile.WinStreak = 0;
     }
+    private void OnApplicationPause(bool pause)
+    {
+        SetUserProperties();
+    }
 
     public void HandleFireEvent_Total_Inter_Count()
     {
         int count = GetCount("new_total_inter_count");
-        FirebaseAnalytics.SetUserProperty("total_inter_count", count.ToString());
+        FirebaseAnalytics.SetUserProperty("Intershow_", count.ToString());
+        FirebaseAnalytics.LogEvent("Intershow_" +  count.ToString());
     }
 
     public void HandleFireEvent_Total_Reward_Count()
     {
         int count = GetCount("new_total_reward_count");
-        FirebaseAnalytics.SetUserProperty("total_reward_count", count.ToString());
+        FirebaseAnalytics.SetUserProperty("Rewardshow_", count.ToString());
+        FirebaseAnalytics.LogEvent("Rewardshow_" +  count.ToString());
     }
 
     public int GetCount(string s)
@@ -528,7 +520,8 @@ public enum ActionWatchVideo
     Freeze_Booster = 13,
     Atom_Booste = 14,
     ReviveFreeLoseBox = 15,
-    HeartInHearPopup = 16
+    HeartInHearPopup = 16,
+    WinBox_Claim_Coin = 17
 }
 
 public enum ActionShowInter

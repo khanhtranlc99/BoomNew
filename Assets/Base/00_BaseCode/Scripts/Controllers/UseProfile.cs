@@ -320,7 +320,32 @@ public class UseProfile : MonoBehaviour
         }
     }
 
+    public static int Fire_Start
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(StringHelper.FIRE_START, 0);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.FIRE_START, value);
+            PlayerPrefs.Save();
+          
+        }
+    }
+    public static int Boom_Start
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(StringHelper.BOOM_START, 0);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.BOOM_START, value);
+            PlayerPrefs.Save();
 
+        }
+    }
 
 
     public static int NumberOfDisplayedInterstitialD0_D1

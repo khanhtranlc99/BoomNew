@@ -35,7 +35,7 @@ public class LoseBox : BaseBox
     }   
     public void InitState()
     {
-        
+        GameController.Instance.AnalyticsController.LoseLevel(UseProfile.CurrentLevel);
     }
     public void HandleReviveByCoin()
     {

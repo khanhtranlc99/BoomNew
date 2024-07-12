@@ -67,6 +67,21 @@ public class GameScene : BaseScene
         UseProfile.CurrentLevel = level;
         GameController.Instance.LoadScene(SceneName.GAME_PLAY);
     }
+
+    public void CheatBooster()
+    {
+        UseProfile.TNT_Booster += 5;
+        UseProfile.Roket_Booster += 5;
+        UseProfile.Freeze_Booster += 5;
+        UseProfile.Atom_Booster += 5;
+        UseProfile.Coin += 3000;
+    }
+    public void CheatWinStreat()
+    {
+        UseProfile.TimeBoom_Item += 5;
+        UseProfile.FastBoom_Item += 5;
+
+    }
     public void HideBotUI( Action callBack)
     {
         canvasGroupBot.DOFade(0, 0.5f).OnComplete(delegate {

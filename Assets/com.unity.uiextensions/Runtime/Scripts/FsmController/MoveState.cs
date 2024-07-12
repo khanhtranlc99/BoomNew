@@ -167,9 +167,11 @@ public class MoveState : SlimeStateBase
                         }, () => FindNextMove));
                       
                     }
-                    if (tempGrid.barrierBase.barrierType == BarrierType.Slime)
+                    try
                     {
-                         
+                        if (tempGrid.barrierBase.barrierType == BarrierType.Slime)
+                        {
+
                             StartCoroutine(Helper.StartAction(delegate
                             {
 
@@ -197,8 +199,15 @@ public class MoveState : SlimeStateBase
 
 
                             }, () => FindNextMove));
-                       
+
+                        }
+
+                    }    
+                    catch
+                    {
+                        HandleMove();
                     }
+                  
 
                 }
             }

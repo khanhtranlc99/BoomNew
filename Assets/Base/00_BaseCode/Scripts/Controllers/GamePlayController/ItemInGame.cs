@@ -167,7 +167,37 @@ public class ItemInGame : MonoBehaviour
                     });
                 });
                 break;
-            
+
+            case GiftType.Boom_Start:
+
+                HandleJump(post, delegate
+                {
+
+ 
+                    this.transform.DOMove(playerContain.boomInputController.iconBoom.transform.position, 1.5f).SetEase(Ease.InBack).OnComplete(delegate
+                    {
+                        playerContain.levelData.boomLimit += 10;
+                        callBack?.Invoke();
+                        SimplePool2.Despawn(this.gameObject);
+                    });
+
+                });
+                break;
+            case GiftType.Fire_Start:
+
+                HandleJump(post, delegate {
+                    playerContain.flameUp_Item.ShowIcon(delegate {
+                        this.transform.parent = playerContain.flameUp_Item.icon.transform;
+                        this.transform.DOLocalMove(Vector3.zero, 0.5f).SetEase(Ease.InBack).OnComplete(delegate {
+
+                            UseProfile.FlameUp_Item += currentGift.count;
+                            callBack?.Invoke();
+                            SimplePool2.Despawn(this.gameObject);
+                        });
+                    });
+                });
+                break;
+
         }
     }
     public void HandleJump(Vector3 paramPost, Action callBack)

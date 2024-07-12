@@ -86,7 +86,7 @@ public class QuestController : MonoBehaviour
         {
             if(ProgessQuest < currentQuest.numTarget)
             {
-                Debug.LogError("targetType_" + ProgessQuest);
+                //Debug.LogError("targetType_" + ProgessQuest);
                 ProgessQuest += 1;
             }
         } 

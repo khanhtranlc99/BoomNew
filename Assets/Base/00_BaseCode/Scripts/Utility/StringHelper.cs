@@ -75,6 +75,8 @@ public static class StringHelper
 
     public const string TIME_UNLIMIT_HEART = "time_unlimit_heart";
     public const string IS_UNLIMIT_HEART = "is_unlimit_heart";
+    public const string FIRE_START = "fire_start";
+    public const string BOOM_START = "boom_start";
 }
 
 public class PathPrefabs
@@ -186,7 +188,7 @@ public class FirebaseConfig
     public const string SHOW_OPEN_ADS_FIRST_OPEN = "show_open_ads_first_open";
     public const string DELAY_SHOW_OPEN_APP_ADS = "delay_show_open_app_ads";
     public const string DELAY_SHOW_INITSTIALL = "delay_show_initi_ads";//Thời gian giữa 2 lần show inital 30
-    public const string LEVEL_START_SHOW_INITSTIALL = "level_start_show_initstiall";//Level bắt đầu show initial//3
+    public const string LEVEL_START_SHOW_INITSTIALL = "level_start_show_initstial";//Level bắt đầu show initial//3
 
 
 

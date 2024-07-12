@@ -158,10 +158,10 @@ public class AdmobAds : MonoBehaviour
         {
 
 
-            if (UseProfile.CurrentLevel >= RemoteConfigController.GetFloatConfig(FirebaseConfig.LEVEL_START_SHOW_INITSTIALL, 2))
+            if (UseProfile.CurrentLevel >= RemoteConfigController.GetFloatConfig(FirebaseConfig.LEVEL_START_SHOW_INITSTIALL, 1))
             {
-           
 
+                Debug.LogError("ShowInterstitialHandle_" + RemoteConfigController.GetFloatConfig(FirebaseConfig.DELAY_SHOW_INITSTIALL, 90));
                 if (countdownAds > RemoteConfigController.GetFloatConfig(FirebaseConfig.DELAY_SHOW_INITSTIALL, 90))
                 {
                     ShowInterstitialHandle(isShowImmediatly, actionWatchLog, actionIniterClose, level);
@@ -626,32 +626,21 @@ public class AdmobAds : MonoBehaviour
 
     private void OnAdRevenuePaidEvent(string adUnitId, MaxSdkBase.AdInfo impressionData)
     {
-        //var adRevenue = new AdjustAdRevenue(AdjustConfig.AdjustAdRevenueSourceAppLovinMAX);
-        //adRevenue.setRevenue(impressionData.Revenue, "USD");
-        //adRevenue.setAdRevenueNetwork(impressionData.NetworkName);
-        //adRevenue.setAdRevenueUnit(impressionData.AdUnitIdentifier);
-        //adRevenue.setAdRevenuePlacement(impressionData.Placement);
-        //Adjust.trackAdRevenue(adRevenue);
-
-
-
-
+    
 
         double revenue = impressionData.Revenue;
         var impressionParameters = new[] {
     new Firebase.Analytics.Parameter("ad_platform", "AppLovin"),
     new Firebase.Analytics.Parameter("ad_source", impressionData.NetworkName),
     new Firebase.Analytics.Parameter("ad_unit_name", impressionData.AdUnitIdentifier),
-   // new Firebase.Analytics.Parameter("ad_format", impressionData.),
     new Firebase.Analytics.Parameter("value", revenue),
     new Firebase.Analytics.Parameter("currency", "USD"), // All AppLovin revenue is sent in USD
 };
 
         Firebase.Analytics.FirebaseAnalytics.LogEvent("ad_impression", impressionParameters);
-        //  GameController.Instance.AnalyticsController.LogRevenueDay01((float)revenue);
+    
 
-        Dictionary<string, object> paramas = new Dictionary<string, object>();
-        //    FB.LogPurchase((decimal)revenue, "USD", paramas);
+ 
     }
 
     private void OnLevelWasLoaded(int level)

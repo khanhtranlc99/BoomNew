@@ -83,12 +83,13 @@ public class InfoLevelBox : BaseBox
 
         if (UseProfile.Heart > 0)
         {
-            GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () => { Next(); }, actionWatchLog: "ResetSceneAtLoseBox");
-            void Next()
-            {
-              
-                Initiate.Fade("GamePlay", Color.black, 2f);
-            }
+            //GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () => { Next(); }, actionWatchLog: "ResetSceneAtLoseBox");
+            //void Next()
+            //{
+
+            //    Initiate.Fade("GamePlay", Color.black, 2f);
+            //}
+            Initiate.Fade("GamePlay", Color.black, 2f);
         }
         else
         {

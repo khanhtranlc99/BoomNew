@@ -44,7 +44,6 @@ public class BoomInputController : MonoBehaviour
     {
         countBoom += param;
         tvBoom.text = "" + countBoom;
-
         iconBoom.transform.DOKill();
         iconBoom.transform.DOScale(new Vector3(1.3f, 1.3f, 1.3f), 0.5f).OnComplete(delegate {
             iconBoom.transform.DOScale(new Vector3(1, 1, 1), 0.5f);
@@ -108,13 +107,13 @@ public class BoomInputController : MonoBehaviour
                             
                         }
                     }
-                    if (selectedObject.barrierBase != null)
-                    {
-                        if (selectedObject.barrierBase.GetComponent<TimeBoom>() != null )
-                        {
-                            selectedObject.barrierBase.GetComponent<TimeBoom>().HandleExplosion();
-                        }
-                    }
+                    //if (selectedObject.barrierBase != null)
+                    //{
+                    //    if (selectedObject.barrierBase.GetComponent<TimeBoom>() != null )
+                    //    {
+                    //        selectedObject.barrierBase.GetComponent<TimeBoom>().HandleExplosion();
+                    //    }
+                    //}
                 }
                 // Kiểm tra xem đối tượng đã chọn có phải là A, B, C hoặc D không
              

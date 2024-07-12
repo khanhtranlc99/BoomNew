@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 using System.Threading.Tasks;
 using Firebase.Crashlytics;
 using Firebase.Analytics;
-using Facebook.Unity;
+
 using System.Text;
 //using com.adjust.sdk;
 #if UNITY_IOS
@@ -220,33 +220,14 @@ public class GameServices : SingletonClass<GameServices>, IService
     public void InitFacebook()
     {
         // Include Facebook namespace
-        if (!FB.IsInitialized)
-        {
-            // Initialize the Facebook SDK
-            FB.Init(InitCallback, OnHideUnity);
-        }
-        else
-        {
-            // Already initialized, signal an app activation App Event
-            FB.ActivateApp();
-        }
+       
         // Awake function from Unity's MonoBehavior
 
     }
 
     private void InitCallback()
     {
-        if (FB.IsInitialized)
-        {
-            // Signal an app activation App Event
-            FB.ActivateApp();
-            // Continue with Facebook SDK
-            // ...
-        }
-        else
-        {
-            Debug.Log("Failed to Initialize the Facebook SDK");
-        }
+       
     }
 
     private void OnHideUnity(bool isGameShown)

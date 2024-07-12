@@ -54,9 +54,9 @@ public class HeartGame : MonoBehaviour
             }
 
         
-            Debug.LogError("Min " + minutesSinceLastUpdate);
-            Debug.LogError("currentCoolDown " + currentCoolDown);
-            Debug.LogError("UseProfile.Heart " + UseProfile.Heart);
+            //Debug.LogError("Min " + minutesSinceLastUpdate);
+            //Debug.LogError("currentCoolDown " + currentCoolDown);
+            //Debug.LogError("UseProfile.Heart " + UseProfile.Heart);
 
             wasCoolDown = true;
         }
@@ -81,7 +81,7 @@ public class HeartGame : MonoBehaviour
     }
     public void HandleCoolDown()
     {
-        Debug.LogError("HandleCoolDown");
+        //Debug.LogError("HandleCoolDown");
         if ( UseProfile.isUnlimitHeart)
         {
             return;

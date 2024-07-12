@@ -102,12 +102,21 @@ public class Bloomsom : BarrierBase
     public void HandlePause(object param)
     {
         this.transform.DOPause();
+        for (int i = 0; i < lsLear.Count; i++)
+        {
+            int index = i;
+            lsLear[index].transform.DOPause();
+        }
         StartCoroutine(HandleFree());
     }
     public IEnumerator HandleFree()
     {
         yield return new WaitForSeconds(5);
-        this.transform.DOPlay();
+        for (int i = 0; i < lsLear.Count; i++)
+        {
+            int index = i;
+            lsLear[index].transform.DOPlay();
+        }
     }
     public void HandlePauseGame(object param)
     {

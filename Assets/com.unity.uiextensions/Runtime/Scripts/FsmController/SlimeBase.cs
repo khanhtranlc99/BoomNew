@@ -33,7 +33,7 @@ public class SlimeBase : BarrierBase
 
     public override void TakeDame()
     {
-        if (!wasTakeDame)
+        if (!wasTakeDame && GamePlayController.Instance.stateGame == StateGame.Playing)
         {
             wasTakeDame = true;
             StartCoroutine(Helper.HandleActionPlayAndWait( animator, "Hit", delegate { animator.Play("Move"); }));

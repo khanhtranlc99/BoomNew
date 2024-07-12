@@ -37,7 +37,7 @@ public class PlayerContain : MonoBehaviour
         GamePlayController.Instance.gameScene.Init(levelData);
         prepageGame.Init(delegate
         {
-            if (UseProfile.WinStreak > 0)
+            if (UseProfile.WinStreak > 0 || UseProfile.Boom_Start > 0 || UseProfile.Fire_Start >0)
             {
                 winStreakController.Init(delegate
                 {
