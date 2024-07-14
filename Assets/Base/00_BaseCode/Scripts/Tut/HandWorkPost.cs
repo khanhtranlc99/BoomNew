@@ -21,4 +21,8 @@ public class HandWorkPost : MonoBehaviour
             });
         });
     }
+    private void OnDestroy()
+    {
+        this.transform.DOKill();
+    }
 }

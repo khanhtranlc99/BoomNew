@@ -167,47 +167,60 @@ public class MoveState : SlimeStateBase
                         }, () => FindNextMove));
                       
                     }
-                    try
+                    if(tempGrid != null)
                     {
-                        if (tempGrid.barrierBase.barrierType == BarrierType.Slime)
+                      if(tempGrid.barrierBase != null)
                         {
-
-                            StartCoroutine(Helper.StartAction(delegate
+                            if (tempGrid.barrierBase.barrierType == BarrierType.Slime)
                             {
+                                try
+                                {
+                                    if (tempGrid.barrierBase.barrierType == BarrierType.Slime)
+                                    {
 
-                                //Debug.LogError("tempGrid.barrierBase == null");
-                                nextGrid = tempGrid;
-                                if (nextGrid.transform.position.x < this.transform.position.x)
-                                {
-                                    this.transform.localScale = new Vector3(1, 1, 1);
+                                        StartCoroutine(Helper.StartAction(delegate
+                                        {
+
+                                            //Debug.LogError("tempGrid.barrierBase == null");
+                                            nextGrid = tempGrid;
+                                            if (nextGrid.transform.position.x < this.transform.position.x)
+                                            {
+                                                this.transform.localScale = new Vector3(1, 1, 1);
+                                            }
+                                            if (nextGrid.transform.position.x > this.transform.position.x)
+                                            {
+                                                this.transform.localScale = new Vector3(-1, 1, 1);
+                                            }
+                                            if (oldGrid.barrierBase == data)
+                                            {
+                                                oldGrid.barrierBase = null;
+                                            }
+                                            oldGrid = nextGrid;
+                                            oldGrid.barrierBase = data;
+                                            idOld.Add(oldGrid.id);
+                                            this.transform.DOMove(nextGrid.transform.position, Random.RandomRange(data.Speed, data.Speed + 0.2f)).OnComplete(delegate
+                                            {
+                                                HandleMove();
+                                            });
+
+
+                                        }, () => FindNextMove));
+
+                                    }
+
                                 }
-                                if (nextGrid.transform.position.x > this.transform.position.x)
+                                catch
                                 {
-                                    this.transform.localScale = new Vector3(-1, 1, 1);
-                                }
-                                if (oldGrid.barrierBase == data)
-                                {
-                                    oldGrid.barrierBase = null;
-                                }
-                                oldGrid = nextGrid;
-                                oldGrid.barrierBase = data;
-                                idOld.Add(oldGrid.id);
-                                this.transform.DOMove(nextGrid.transform.position, Random.RandomRange(data.Speed, data.Speed + 0.2f)).OnComplete(delegate
-                                {
+                                    this.transform.DOKill();
                                     HandleMove();
-                                });
+                                }
 
-
-                            }, () => FindNextMove));
-
-                        }
-
-                    }    
-                    catch
-                    {
-                        HandleMove();
+                            }
+                        }    
+                  
                     }
                   
+                 
 
                 }
             }
@@ -325,44 +338,59 @@ public class MoveState : SlimeStateBase
 
                         }, () => FindNextMove));
                     }
-                    try
+             
+                    if(tempGrid != null)
                     {
-                        if (tempGrid.barrierBase.barrierType == BarrierType.Slime)
+                        if (tempGrid.barrierBase != null)
                         {
-                            StartCoroutine(Helper.StartAction(delegate
+                            if (tempGrid.barrierBase.barrierType == BarrierType.Slime)
                             {
 
-                                //Debug.LogError("tempGrid.barrierBase == null");
-                                nextGrid = tempGrid;
-                                if (nextGrid.transform.position.x < this.transform.position.x)
+                                try
                                 {
-                                    this.transform.localScale = new Vector3(1, 1, 1);
-                                }
-                                if (nextGrid.transform.position.x > this.transform.position.x)
-                                {
-                                    this.transform.localScale = new Vector3(-1, 1, 1);
-                                }
+                                    if (tempGrid.barrierBase.barrierType == BarrierType.Slime)
+                                    {
+                                        StartCoroutine(Helper.StartAction(delegate
+                                        {
 
-                                if (oldGrid.barrierBase == data)
-                                {
-                                    oldGrid.barrierBase = null;
+                                            //Debug.LogError("tempGrid.barrierBase == null");
+                                            nextGrid = tempGrid;
+                                            if (nextGrid.transform.position.x < this.transform.position.x)
+                                            {
+                                                this.transform.localScale = new Vector3(1, 1, 1);
+                                            }
+                                            if (nextGrid.transform.position.x > this.transform.position.x)
+                                            {
+                                                this.transform.localScale = new Vector3(-1, 1, 1);
+                                            }
+
+                                            if (oldGrid.barrierBase == data)
+                                            {
+                                                oldGrid.barrierBase = null;
+                                            }
+                                            oldGrid = nextGrid;
+                                            oldGrid.barrierBase = data;
+                                            idOld.Add(oldGrid.id);
+                                            this.transform.DOMove(nextGrid.transform.position, Random.RandomRange(data.Speed, data.Speed + 0.2f)).OnComplete(delegate
+                                            {
+                                                HandleMove();
+                                            });
+
+
+                                        }, () => FindNextMove));
+                                    }
                                 }
-                                oldGrid = nextGrid;
-                                oldGrid.barrierBase = data;
-                                idOld.Add(oldGrid.id);
-                                this.transform.DOMove(nextGrid.transform.position, Random.RandomRange(data.Speed, data.Speed + 0.2f)).OnComplete(delegate
+                                catch
                                 {
+                                    this.transform.DOKill();
                                     HandleMove();
-                                });
-
-
-                            }, () => FindNextMove));
+                                }
+                            }
                         }
+                           
                     }
-                    catch
-                    {
-                        HandleMove();
-                    }
+                  
+           
 
 
                 }
@@ -406,6 +434,7 @@ public class MoveState : SlimeStateBase
     {
         get
         {
+          
           tempGrid = oldGrid.GetNextGrid(true);
             if (tempGrid != null)
             {

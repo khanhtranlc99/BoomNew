@@ -89,6 +89,9 @@ public class InfoLevelBox : BaseBox
 
             //    Initiate.Fade("GamePlay", Color.black, 2f);
             //}
+        
+            
+            
             Initiate.Fade("GamePlay", Color.black, 2f);
         }
         else

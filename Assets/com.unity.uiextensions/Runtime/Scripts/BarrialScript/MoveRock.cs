@@ -195,7 +195,7 @@ public class MoveRock : BarrierBase
 
 
                 }, () => moveGrid.barrierBase == null));
-                Debug.LogError("moveGrid.barrierBase != null");
+                //Debug.LogError("moveGrid.barrierBase != null");
             }
             else
             {
@@ -207,7 +207,7 @@ public class MoveRock : BarrierBase
                 {
 
                 });
-                Debug.LogError("moveGrid.barrierBase != null");
+                //Debug.LogError("moveGrid.barrierBase != null");
             }
 
         }

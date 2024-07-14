@@ -22,4 +22,13 @@ public class SimpleAiMove : MonoBehaviour
         }
         this.transform.DOMove(temp.position, Random.RandomRange(4,6)).OnComplete(delegate { Move(); });
     }
+    private void OnDestroy()
+    {
+        this.transform.DOKill();
+    }
+    private void OnDisable()
+    {
+        this.transform.DOKill();
+    }
+
 }

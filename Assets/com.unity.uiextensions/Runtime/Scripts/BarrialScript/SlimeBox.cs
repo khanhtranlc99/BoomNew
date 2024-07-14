@@ -41,7 +41,9 @@ public class SlimeBox : BarrierBase
             
                 transform.DOShakePosition(0.3f, 0.1f, 1, 1).OnComplete(delegate {
                     spriteRenderer.DOFade(0, 0.7f).OnComplete(delegate {
-
+                        wasTakeDame = true;
+                        transform.DOKill();
+                        spriteRenderer.DOKill();
                         HandleSpawnSlime();
                         gridBase.barrierBase = null;
                         Destroy(this.gameObject);
@@ -123,9 +125,13 @@ public class SlimeBox : BarrierBase
             GamePlayController.Instance.playerContain.levelData.lsSmiles.Add(red_1);
 
         }
-    }    
-
- 
+    }
 
 
+    private void OnDestroy()
+    {
+        transform.DOKill();
+        spriteRenderer.DOKill();
+    }
 }
+

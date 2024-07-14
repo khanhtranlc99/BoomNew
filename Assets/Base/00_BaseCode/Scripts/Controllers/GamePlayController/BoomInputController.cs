@@ -121,5 +121,9 @@ public class BoomInputController : MonoBehaviour
         }
     }
 
-  
+    private void OnDestroy()
+    {
+        tvBoom.DOKill();
+        iconBoom.DOKill();
+    }
 }

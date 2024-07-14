@@ -24,12 +24,18 @@ AnimationClip:
       value: {fileID: 21300000, guid: b1564795615c0b64599fbb97649690ef, type: 3}
     - time: 0.16666667
       value: {fileID: 21300000, guid: d4e4cfcc757cfac47ab7cce982a90a7b, type: 3}
-    - time: 0.36666667
-      value: {fileID: 21300000, guid: d4e4cfcc757cfac47ab7cce982a90a7b, type: 3}
-    - time: 0.6166667
+    - time: 0.33333334
       value: {fileID: 21300000, guid: 44bdf9b56cbfcb0488f51e313bdc9389, type: 3}
-    - time: 0.8333333
-      value: {fileID: 21300000, guid: 44bdf9b56cbfcb0488f51e313bdc9389, type: 3}
+    - time: 0.46666667
+      value: {fileID: 21300000, guid: e0a83e7ec4e729543a155d105f0cea8d, type: 3}
+    - time: 0.6
+      value: {fileID: 21300000, guid: 9ec1623b118270d4aa28eabeeaf4762a, type: 3}
+    - time: 0.71666664
+      value: {fileID: 21300000, guid: 22ad04b3e83eb7541ad584621f88bb48, type: 3}
+    - time: 0.85
+      value: {fileID: 21300000, guid: bd854118811cdf04d8396564f6b54a5f, type: 3}
+    - time: 1
+      value: {fileID: 21300000, guid: 0a75dcabc0e44d84a82d750eaf355e85, type: 3}
     - time: 1.1
       value: {fileID: 21300000, guid: e0a83e7ec4e729543a155d105f0cea8d, type: 3}
     attribute: m_Sprite
@@ -56,9 +62,12 @@ AnimationClip:
     pptrCurveMapping:
     - {fileID: 21300000, guid: b1564795615c0b64599fbb97649690ef, type: 3}
     - {fileID: 21300000, guid: d4e4cfcc757cfac47ab7cce982a90a7b, type: 3}
-    - {fileID: 21300000, guid: d4e4cfcc757cfac47ab7cce982a90a7b, type: 3}
     - {fileID: 21300000, guid: 44bdf9b56cbfcb0488f51e313bdc9389, type: 3}
-    - {fileID: 21300000, guid: 44bdf9b56cbfcb0488f51e313bdc9389, type: 3}
+    - {fileID: 21300000, guid: e0a83e7ec4e729543a155d105f0cea8d, type: 3}
+    - {fileID: 21300000, guid: 9ec1623b118270d4aa28eabeeaf4762a, type: 3}
+    - {fileID: 21300000, guid: 22ad04b3e83eb7541ad584621f88bb48, type: 3}
+    - {fileID: 21300000, guid: bd854118811cdf04d8396564f6b54a5f, type: 3}
+    - {fileID: 21300000, guid: 0a75dcabc0e44d84a82d750eaf355e85, type: 3}
     - {fileID: 21300000, guid: e0a83e7ec4e729543a155d105f0cea8d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2

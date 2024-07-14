@@ -61,7 +61,7 @@ public class HomeScene : BaseScene
     
         btnSetting.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); OnSettingClick(); });
 
-        btnPlay.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); InfoLevelBox.Setup(infoDataLevel.lsInfoDatas[UseProfile.CurrentLevel - 1]).Show(); });
+        btnPlay.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound();  InfoLevelBox.Setup(infoDataLevel.lsInfoDatas[UseProfile.CurrentLevel - 1]).Show(); });
 
         btnShop.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); ShopBox.Setup().Show(); });
 

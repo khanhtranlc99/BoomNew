@@ -280,9 +280,9 @@ public class UseProfile : MonoBehaviour
     {
         get
         {
-            if(PlayerPrefs.GetInt(StringHelper.FLAMEUP_ITEM, 0) >= 3)
+            if(PlayerPrefs.GetInt(StringHelper.FLAMEUP_ITEM, 0) >= 2)
             {
-                return 3;
+                return 2;
             }
             return PlayerPrefs.GetInt(StringHelper.FLAMEUP_ITEM, 0);
         }

@@ -26,7 +26,9 @@ public class WoodenBox : BarrierBase
                 gridBase.barrierBase = null;
                 transform.DOShakePosition(0.3f, 0.1f, 1, 1).OnComplete(delegate {
                     spriteRenderer.DOFade(0, 0.3f).OnComplete(delegate {
-
+                        wasTakeDame = true;
+                        transform.DOKill();
+                        spriteRenderer.DOKill();
 
 
                         HandleDestroy();
@@ -61,6 +63,11 @@ public class WoodenBox : BarrierBase
         GameController.Instance.questController.HandleCheckCompleteQuest(questTargetType);
 
         Destroy(this.gameObject);
+    }
+    private void OnDestroy()
+    {
+        transform.DOKill();
+        spriteRenderer.DOKill();
     }
 }
 [System.Serializable]

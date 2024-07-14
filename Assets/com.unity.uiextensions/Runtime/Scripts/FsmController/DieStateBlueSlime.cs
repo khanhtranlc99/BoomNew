@@ -57,6 +57,7 @@ public class DieStateBlueSlime : SlimeStateBase
             });
         }
         GameController.Instance.questController.HandleCheckCompleteQuest(data.questTargetType);
+        data.spriteRenderer.DOKill();
         Destroy(data.gameObject);
     }
 

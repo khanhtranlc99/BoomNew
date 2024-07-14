@@ -23,5 +23,8 @@ public class HandTutUI : MonoBehaviour
         });
     }
 
-
+    private void OnDestroy()
+    {
+        this.transform.DOKill();
+    }
 }

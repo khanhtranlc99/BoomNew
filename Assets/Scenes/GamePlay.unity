@@ -9866,16 +9866,20 @@ MonoBehaviour:
     - num: 2
       giftType: 8
   - lsStreakGifts:
-    - num: 3
-      giftType: 8
+    - num: 5
+      giftType: 11
   - lsStreakGifts:
-    - num: 3
+    - num: 2
       giftType: 8
+    - num: 5
+      giftType: 11
     - num: 1
       giftType: 9
   - lsStreakGifts:
     - num: 3
       giftType: 8
+    - num: 5
+      giftType: 11
     - num: 1
       giftType: 9
     - num: 1

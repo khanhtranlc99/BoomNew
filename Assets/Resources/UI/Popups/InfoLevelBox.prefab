@@ -5264,7 +5264,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3
+  m_Text: 5
 --- !u!114 &8357418315161184013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6329,7 +6329,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9ec81e9e4e25bf3489209362b187888b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 283dad05836c380409f5ac6ef7b1b890, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

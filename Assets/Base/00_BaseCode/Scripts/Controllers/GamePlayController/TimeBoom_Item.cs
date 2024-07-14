@@ -34,7 +34,7 @@ public class TimeBoom_Item : MonoBehaviour
             icon.transform.DOScale(new Vector3(0.4f, 0.4f, 0.4f), 0.5f).OnComplete(delegate {
                 icon.transform.DOScale(new Vector3(0.35f, 0.35f, 0.35f), 0.5f);
             });
-            tvNum.text = "" + UseProfile.FastBoom_Item;
+            tvNum.text = "" + UseProfile.TimeBoom_Item;
         }
         else
         {

@@ -44,21 +44,31 @@ public class SlimeBase : BarrierBase
                 takeDame.PlayOneShot(takeDameSFX);
             }
             
-            StartCoroutine(HandleCountDown());
+          
             if(Hp > 0)
             {
+                StartCoroutine(HandleCountDown());
                 GamePlayController.Instance.HandleCheckLose();
-            }    
-            try
+            } 
+            else
+            {
+                collider2D.enabled = false;
+            }
+            
+              if(fSMController.currentState != null)
             {
                 if (fSMController.currentState.state != StateType.Hide)
                 {
-                    
-                  
-                    spriteRenderer.DOFade(0.5f, 0.5f).OnComplete(delegate {
-                        spriteRenderer.DOFade(1, 0.5f).OnComplete(delegate {
-                            spriteRenderer.DOFade(0.5f, 0.3f).OnComplete(delegate {
-                                spriteRenderer.DOFade(1, 0.3f).OnComplete(delegate {
+
+
+                    spriteRenderer.DOFade(0.5f, 0.5f).OnComplete(delegate
+                    {
+                        spriteRenderer.DOFade(1, 0.5f).OnComplete(delegate
+                        {
+                            spriteRenderer.DOFade(0.5f, 0.3f).OnComplete(delegate
+                            {
+                                spriteRenderer.DOFade(1, 0.3f).OnComplete(delegate
+                                {
 
                                     //GamePlayController.Instance.HandleCheckLose();
                                 });
@@ -67,11 +77,9 @@ public class SlimeBase : BarrierBase
                     });
                 }
 
-            }
-            catch
-            {
-
-            }
+            }    
+        
+ 
 
 
 
@@ -131,6 +139,12 @@ public class SlimeBase : BarrierBase
     }
     public void OnDestroy()
     {
+         fSMController.idleState.StopAllCoroutines();
+        fSMController.moveState.StopAllCoroutines();
+        fSMController.hideState.StopAllCoroutines(); ;
+        fSMController.dieState.StopAllCoroutines();
+        fSMController.moveState.DOKill();
+        this.transform.DOKill();
         EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.FREEZE, HandlePause);
         EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.PAUSE, HandlePauseGame);
         EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.STOPPAUSE, HandleStopPauseGame);

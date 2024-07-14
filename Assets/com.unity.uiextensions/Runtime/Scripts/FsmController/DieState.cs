@@ -38,17 +38,18 @@ public class DieState : SlimeStateBase
         tempGift.Init(currentGift, this.transform);
 
         slimeTarget = GamePlayController.Instance.gameScene.targetController.GetSlimeTarget(data.slimeType);
-        if(slimeTarget != null )
+        if (slimeTarget != null)
         {
             var temp = SimplePool2.Spawn(vfxDie);
             temp.transform.parent = GamePlayController.Instance.gameScene.canvas;
             temp.transform.position = this.transform.position;
             temp.transform.localScale = new Vector3(1, 1, 1);
             GamePlayController.Instance.gameScene.targetController.lsVfxDie.Add(temp);
-            temp.transform.DOMove(slimeTarget.icon.position, 1).SetDelay(0.1f).SetEase(Ease.OutBack).OnComplete(delegate {
+            temp.transform.DOMove(slimeTarget.icon.position, 1).SetDelay(0.1f).SetEase(Ease.OutBack).OnComplete(delegate
+            {
                 GamePlayController.Instance.gameScene.targetController.lsVfxDie.Remove(temp);
                 slimeTarget.HandleSubtraction();
-             
+
                 SimplePool2.Despawn(temp.gameObject);
             });
         }
@@ -56,6 +57,7 @@ public class DieState : SlimeStateBase
 
         data.gridBase.barrierBase = null;
         GameController.Instance.questController.HandleCheckCompleteQuest(data.questTargetType);
+        data.spriteRenderer.DOKill();
         Destroy(data.gameObject);
     }
 
