@@ -17,10 +17,11 @@ public class Freeze_Booster : MonoBehaviour
     public CanvasGroup canvasGroup;
     public GameObject vfxUI;
     public GameObject parent;
+    public bool wasUseFreezeBooster;
     public void Init()
     {
 
- 
+        wasUseFreezeBooster = false;
         if (UseProfile.CurrentLevel >= 7)//7
         {
 
@@ -87,6 +88,7 @@ public class Freeze_Booster : MonoBehaviour
             GamePlayController.Instance.playerContain.tutorial_Freeze.NextTut();
             UseProfile.Freeze_Booster -= 1;
             OnVfx();
+            wasUseFreezeBooster = true;
         }
         else
         {
@@ -124,6 +126,7 @@ public class Freeze_Booster : MonoBehaviour
     {
         vfxUI.gameObject.SetActive(false);
         canvasGroup.DOFade(0, 0.3f);
+        wasUseFreezeBooster = false;
     }
 
 

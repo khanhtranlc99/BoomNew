@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using MoreMountains.NiceVibrations;
+using System;
 
 public class BoomInputController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class BoomInputController : MonoBehaviour
     public int countBoom = 0;
     bool tweenText;
     public AudioClip click;
+    public GameObject iconTut;
 
     public void Init (LevelData level)
     {
@@ -69,7 +71,7 @@ public class BoomInputController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && GamePlayController.Instance.stateGame == StateGame.Playing)
         {
             // Lấy vị trí của con trỏ chuột trong không gian 2D
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -121,6 +123,31 @@ public class BoomInputController : MonoBehaviour
         }
     }
 
+    public void ShowIcon(Action callBack)
+    {
+        if (!iconTut.gameObject.activeSelf)
+        {
+            iconTut.transform.localScale = Vector3.zero;
+            iconTut.SetActive(true);
+            iconTut.transform.DOScale(new Vector3(1.3f, 1.3f, 1.3f), 0.5f).OnComplete(delegate {
+
+                iconTut.transform.DOScale(new Vector3(1, 1, 1), 0.5f).OnComplete(delegate {
+                    if (callBack != null)
+                    {
+                        callBack?.Invoke();
+                    }
+
+                });
+            });
+        }
+        else
+        {
+            if (callBack != null)
+            {
+                callBack?.Invoke();
+            }
+        }
+    }
     private void OnDestroy()
     {
         tvBoom.DOKill();

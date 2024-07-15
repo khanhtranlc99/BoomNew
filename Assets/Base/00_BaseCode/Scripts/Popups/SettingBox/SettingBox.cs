@@ -74,7 +74,10 @@ public class SettingBox : BaseBox
             btnHome.gameObject.SetActive(true);
             btnRestart.gameObject.SetActive(true);
             GamePlayController.Instance.playerContain.boomInputController.enabled = false;
-            GamePlayController.Instance.playerContain.levelData.Pause();
+            if (!GamePlayController.Instance.playerContain.freeze_Booster.wasUseFreezeBooster)
+            {
+                GamePlayController.Instance.playerContain.levelData.Pause();
+            }        
         }    
         else
         {
@@ -183,8 +186,11 @@ public class SettingBox : BaseBox
             {
       
                 GamePlayController.Instance.playerContain.boomInputController.enabled = true;
-                GamePlayController.Instance.playerContain.levelData.StopPause();
-
+            
+                if (!GamePlayController.Instance.playerContain.freeze_Booster.wasUseFreezeBooster)
+                {
+                    GamePlayController.Instance.playerContain.levelData.StopPause();
+                }
             }    
         
             Close();

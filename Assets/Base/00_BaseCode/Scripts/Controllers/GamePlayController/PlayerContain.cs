@@ -45,6 +45,7 @@ public class PlayerContain : MonoBehaviour
             
                     SetUp();
                 });
+         
             }
             else
             {
@@ -75,6 +76,7 @@ public class PlayerContain : MonoBehaviour
             tutorial_BoomInput.StartTut();
             tutorial_FastBoom.Init();
             tutorial_TimeBoom.Init();
+            GamePlayController.Instance.stateGame = StateGame.Playing;
         }
     }
 

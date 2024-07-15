@@ -55,10 +55,10 @@ public class WinStreakController : MonoBehaviour
                                 int index = i;
                                 var temp = SimplePool2.Spawn(itemInGame);
                                 temp.transform.parent = canvasGroup.transform;
-                                temp.transform.position = canvasGroup.transform.position;
+                                temp.transform.position = giftAnim.transform.position;
                                 temp.transform.localScale = new Vector3(1, 1, 1);
 
-                                temp.Init(lsGiftInGames[index], new Vector3(1-i  , 3, 0), delegate {                                    
+                                temp.Init(lsGiftInGames[index], new Vector3(-i  , 3, 0), delegate {                                    
                                     if (index >= lsGiftInGames.Count - 1)
                                     {                                   
                                         canvasGroup.DOFade(0, 0.7f).OnComplete(delegate
@@ -95,7 +95,7 @@ public class WinStreakController : MonoBehaviour
                                 int index = i;
                                 var temp = SimplePool2.Spawn(itemInGame);
                                 temp.transform.parent = canvasGroup.transform;
-                                temp.transform.position = canvasGroup.transform.position;
+                                temp.transform.position = giftPackShop.transform.position;
                                 temp.transform.localScale = new Vector3(1, 1, 1);
 
                                 temp.Init(lsGiftPackInGames[index], new Vector3(2 - i, 3, 0), delegate {

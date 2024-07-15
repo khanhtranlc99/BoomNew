@@ -99,7 +99,7 @@ public class TNT_Booster : MonoBehaviour
             UseProfile.TNT_Booster -= 1;
             GamePlayController.Instance.playerContain.boomInputController.enabled = false;
             wasUseTNT_Booster = true;
-
+            btnTNT_Booster.interactable = false;
         }
         else
         {
@@ -162,6 +162,7 @@ public class TNT_Booster : MonoBehaviour
                     canvasGroup.DOFade(0, 0.3f).OnComplete(delegate {
                         GamePlayController.Instance.gameScene.ShowBotUI(delegate {
 
+                            btnTNT_Booster.interactable = true;
                             panelTut.SetActive(false);
 
                         });

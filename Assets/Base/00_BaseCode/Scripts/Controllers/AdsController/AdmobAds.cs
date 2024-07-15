@@ -636,7 +636,7 @@ public class AdmobAds : MonoBehaviour
     new Firebase.Analytics.Parameter("value", revenue),
     new Firebase.Analytics.Parameter("currency", "USD"), // All AppLovin revenue is sent in USD
 };
-
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("ad_max", impressionParameters);
         Firebase.Analytics.FirebaseAnalytics.LogEvent("ad_impression", impressionParameters);
     
 

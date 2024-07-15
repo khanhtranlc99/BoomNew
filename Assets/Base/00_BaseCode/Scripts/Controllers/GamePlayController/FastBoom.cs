@@ -21,7 +21,9 @@ public class FastBoom : BarrierBase
         GameController.Instance.musicManager.PlayOneShot(boom);
         SpawnCross(1 + UseProfile.FlameUp_Item);
         gridBase.barrierBase = null;
+        EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.BOOM_EXPlOSION, this);
         SimplePool2.Despawn(this.gameObject);
+      
 
     }
     void SpawnCross(int units)

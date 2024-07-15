@@ -3,12 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using Sirenix.OdinInspector;
+using System;
 public class BlackHold : BarrierBase
 {
     public BlackHold blackHold;
     public GridBase gridBlackHold;
     public List<SlimeBase> lsSlimeBases;
- 
+    public List<BarrierBase> lsBoom;
+    private Action<object> tempAction;
+    private void Start()
+    {
+        tempAction = (param) => HandleCheckBoom((BarrierBase)param);
+        EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.BOOM_EXPlOSION, tempAction);
+    }
+
+    public void HandleCheckBoom(BarrierBase obj)
+    {
+        if(lsBoom.Contains(obj))
+        {
+            lsBoom.Remove(obj);
+        }    
+    }    
     public override void Init()
     {
 
@@ -102,14 +117,21 @@ public class BlackHold : BarrierBase
         }
         if (collision.gameObject.tag == "Boom")
         {
-            collision.gameObject.GetComponent<CircleCollider2D>().enabled = false;  
+            if (lsBoom.Contains(collision.gameObject.GetComponent<BarrierBase>()))
+            {
+                return;
+            }
+       
+            lsBoom.Add(collision.gameObject.GetComponent<BarrierBase>());
+            blackHold.lsBoom.Add(collision.gameObject.GetComponent<BarrierBase>());
+            //collision.gameObject.GetComponent<CircleCollider2D>().enabled = false;  
             gridBlackHold.barrierBase = null;
             blackHold.gridBlackHold.barrierBase = collision.gameObject.GetComponent<BarrierBase>();
             collision.gameObject.GetComponent<BarrierBase>().gridBase = blackHold.gridBlackHold;
 
             collision.gameObject.transform.DOScale(Vector3.zero, 0.5f).OnComplete(delegate {
                 collision.gameObject.transform.position = blackHold.transform.position;
-                collision.gameObject.transform.DOScale(new Vector3(1, 1, 1), 0.5f).OnComplete(delegate {      
+                collision.gameObject.transform.DOScale(new Vector3(0.8f, 0.8f, 0.8f), 0.5f).OnComplete(delegate {      
                 });
             });
 
@@ -134,6 +156,10 @@ public class BlackHold : BarrierBase
         {
             lsSlimeBases.Remove(collision.gameObject.GetComponent<SlimeBase>());
         }
+    }
+    private void OnDestroy()
+    {
+        EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.BOOM_EXPlOSION, tempAction);
     }
 
     [Button]

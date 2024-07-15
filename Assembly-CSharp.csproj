@@ -1399,6 +1399,7 @@
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.xml" />
     <None Include="Assets\Base\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll" />
     <None Include="Assets\Base\00_BaseCode\Anim\BOX\skeleton.atlas.txt" />
+    <None Include="Assets\Base\00_BaseCode\VFX\Eplosion\alphaBlend_glow.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UIImageCrop.shader" />
     <None Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\License.txt" />

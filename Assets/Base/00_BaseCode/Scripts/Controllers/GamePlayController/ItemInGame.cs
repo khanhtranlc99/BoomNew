@@ -17,7 +17,7 @@ public class ItemInGame : MonoBehaviour
   
     public void Init(GiftInGame giftInGame, Transform post)
     {
-        Debug.LogError("Boom_Start");
+      
 
         currentGift = giftInGame;
         spriteRenderer.sprite = GameController.Instance.dataContain.giftDatabase.GetIconItem(currentGift.giftType) ;
@@ -203,14 +203,16 @@ public class ItemInGame : MonoBehaviour
                 HandleJump(post, delegate
                 {
 
-
-                    this.transform.DOMove(playerContain.boomInputController.iconBoom.transform.position, 1.5f).SetEase(Ease.InBack).OnComplete(delegate
+                playerContain.boomInputController.ShowIcon(delegate {
+                    this.transform.DOMove(playerContain.boomInputController.iconTut.transform.position, 0.5f).SetEase(Ease.InBack).OnComplete(delegate
                     {
-                        playerContain.levelData.boomLimit += 5;
+                        playerContain.boomInputController.iconTut.SetActive(false);
+                        playerContain.levelData.boomLimit += 2;
                         callBack?.Invoke();
                         SimplePool2.Despawn(this.gameObject);
                     });
 
+                });
                 });
                 break;
             case GiftType.Boom_Start:
@@ -219,14 +221,15 @@ public class ItemInGame : MonoBehaviour
                 HandleJump(post, delegate
                 {
 
- 
-                    this.transform.DOMove(playerContain.boomInputController.iconBoom.transform.position, 1.5f).SetEase(Ease.InBack).OnComplete(delegate
+                playerContain.boomInputController.ShowIcon(delegate {
+                    this.transform.DOMove(playerContain.boomInputController.iconTut.transform.position, 0.5f).SetEase(Ease.InBack).OnComplete(delegate
                     {
+                        playerContain.boomInputController.iconTut.SetActive(false);
                         playerContain.levelData.boomLimit += 10;
                         callBack?.Invoke();
                         SimplePool2.Despawn(this.gameObject);
                     });
-
+                });
                 });
                 break;
             case GiftType.Fire_Start:

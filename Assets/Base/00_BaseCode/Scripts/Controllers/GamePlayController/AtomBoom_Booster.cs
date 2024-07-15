@@ -99,6 +99,7 @@ public class AtomBoom_Booster : MonoBehaviour
             UseProfile.Atom_Booster -= 1;
             GamePlayController.Instance.playerContain.boomInputController.enabled = false;
             wasUseTNT_Booster = true;
+            btnAtom_Booster.interactable = false;
         }
         else
         {
@@ -161,7 +162,7 @@ public class AtomBoom_Booster : MonoBehaviour
                         GamePlayController.Instance.gameScene.ShowBotUI(delegate {
 
                             panelTut.SetActive(false);
-
+                            btnAtom_Booster.interactable = true;
                         });
                     });
 

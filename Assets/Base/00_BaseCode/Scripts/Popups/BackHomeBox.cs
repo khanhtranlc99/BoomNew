@@ -51,12 +51,16 @@ public class BackHomeBox : BaseBox
         {
             case TypeBackHOme.BackHome:
                 Close();
-                LoseBox.Setup().Show();
+                if(GamePlayController.Instance.stateGame == StateGame.Lose)
+                {
+                    LoseBox.Setup().Show();
+                }    
+   
                 break;
             case TypeBackHOme.ResetLevel:
-                GamePlayController.Instance.playerContain.boomInputController.enabled = true;
 
-             //
+                Debug.LogError("ResetLevel");
+                //    GamePlayController.Instance.playerContain.boomInputController.enabled = true;
 
                 Close();
                 break;
