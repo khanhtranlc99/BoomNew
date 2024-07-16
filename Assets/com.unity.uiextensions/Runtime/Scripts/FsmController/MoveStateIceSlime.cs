@@ -55,10 +55,12 @@ public class MoveStateIceSlime : SlimeStateBase
                     if (nextGrid.transform.position.x < this.transform.position.x)
                     {
                         this.transform.localScale = new Vector3(1, 1, 1);
+                        data.heartBarSlime.transform.localScale = new Vector3(1, 1, 1);
                     }
                     if (nextGrid.transform.position.x > this.transform.position.x)
                     {
                         this.transform.localScale = new Vector3(-1, 1, 1);
+                        data.heartBarSlime.transform.localScale = new Vector3(-1, 1, 1);
                     }
                     if (oldGrid.barrierBase == data)
                     {
@@ -84,10 +86,12 @@ public class MoveStateIceSlime : SlimeStateBase
                         if (nextGrid.transform.position.x < this.transform.position.x)
                         {
                             this.transform.localScale = new Vector3(1, 1, 1);
+                            data.heartBarSlime.transform.localScale = new Vector3(1, 1, 1);
                         }
                         if (nextGrid.transform.position.x > this.transform.position.x)
                         {
                             this.transform.localScale = new Vector3(-1, 1, 1);
+                            data.heartBarSlime.transform.localScale = new Vector3(-1, 1, 1);
                         }
                         data.spriteRenderer.DOKill();
                         data.spriteRenderer.DOFade(0, data.Speed);
@@ -118,10 +122,12 @@ public class MoveStateIceSlime : SlimeStateBase
                             if (nextGrid.transform.position.x < this.transform.position.x)
                             {
                                 this.transform.localScale = new Vector3(1, 1, 1);
+                                data.heartBarSlime.transform.localScale = new Vector3(1, 1, 1);
                             }
                             if (nextGrid.transform.position.x > this.transform.position.x)
                             {
                                 this.transform.localScale = new Vector3(-1, 1, 1);
+                                data.heartBarSlime.transform.localScale = new Vector3(-1, 1, 1);
                             }
 
                             if (oldGrid.barrierBase == data)
@@ -157,10 +163,12 @@ public class MoveStateIceSlime : SlimeStateBase
                                         if (nextGrid.transform.position.x < this.transform.position.x)
                                         {
                                             this.transform.localScale = new Vector3(1, 1, 1);
+                                            data.heartBarSlime.transform.localScale = new Vector3(1, 1, 1);
                                         }
                                         if (nextGrid.transform.position.x > this.transform.position.x)
                                         {
                                             this.transform.localScale = new Vector3(-1, 1, 1);
+                                            data.heartBarSlime.transform.localScale = new Vector3(-1, 1, 1);
                                         }
 
                                         if (oldGrid.barrierBase == data)
@@ -218,10 +226,12 @@ public class MoveStateIceSlime : SlimeStateBase
                     if (nextGrid.transform.position.x < this.transform.position.x)
                     {
                         this.transform.localScale = new Vector3(1, 1, 1);
+                        data.heartBarSlime.transform.localScale = new Vector3(1, 1, 1);
                     }
                     if (nextGrid.transform.position.x > this.transform.position.x)
                     {
                         this.transform.localScale = new Vector3(-1, 1, 1);
+                        data.heartBarSlime.transform.localScale = new Vector3(-1, 1, 1);
                     }
 
                     if (oldGrid.barrierBase == data)
@@ -247,10 +257,12 @@ public class MoveStateIceSlime : SlimeStateBase
                         if (nextGrid.transform.position.x < this.transform.position.x)
                         {
                             this.transform.localScale = new Vector3(1, 1, 1);
+                            data.heartBarSlime.transform.localScale = new Vector3(1, 1, 1);
                         }
                         if (nextGrid.transform.position.x > this.transform.position.x)
                         {
                             this.transform.localScale = new Vector3(-1, 1, 1);
+                            data.heartBarSlime.transform.localScale = new Vector3(-1, 1, 1);
                         }
                         data.spriteRenderer.DOKill();
                         data.spriteRenderer.DOFade(0, data.Speed);
@@ -282,10 +294,12 @@ public class MoveStateIceSlime : SlimeStateBase
                             if (nextGrid.transform.position.x < this.transform.position.x)
                             {
                                 this.transform.localScale = new Vector3(1, 1, 1);
+                                data.heartBarSlime.transform.localScale = new Vector3(1, 1, 1);
                             }
                             if (nextGrid.transform.position.x > this.transform.position.x)
                             {
                                 this.transform.localScale = new Vector3(-1, 1, 1);
+                                data.heartBarSlime.transform.localScale = new Vector3(-1, 1, 1);
                             }
 
                             if (oldGrid.barrierBase == data)
@@ -324,10 +338,12 @@ public class MoveStateIceSlime : SlimeStateBase
                                         if (nextGrid.transform.position.x < this.transform.position.x)
                                         {
                                             this.transform.localScale = new Vector3(1, 1, 1);
+                                            data.heartBarSlime.transform.localScale = new Vector3(1, 1, 1);
                                         }
                                         if (nextGrid.transform.position.x > this.transform.position.x)
                                         {
                                             this.transform.localScale = new Vector3(-1, 1, 1);
+                                            data.heartBarSlime.transform.localScale = new Vector3(-1, 1, 1);
                                         }
 
                                         if (oldGrid.barrierBase == data)

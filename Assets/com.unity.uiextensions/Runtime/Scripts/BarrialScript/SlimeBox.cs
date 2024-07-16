@@ -15,6 +15,14 @@ public class SlimeBox : BarrierBase
         }
     }
     public ParticleSystem particleSystem;
+    private void Start()
+    {
+        foreach(var item in lsSlimeBases)
+        {
+            SimplePool2.PoolPreLoad(item.gameObject, 1, GamePlayController.Instance.playerContain.levelData.transform);
+        }    
+     
+    }
     public override void Init()
     {
 

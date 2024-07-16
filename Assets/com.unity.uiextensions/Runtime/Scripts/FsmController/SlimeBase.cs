@@ -22,6 +22,7 @@ public class SlimeBase : BarrierBase
     public CircleCollider2D collider2D;
     public AudioSource takeDame;
     public AudioClip takeDameSFX;
+    public HeartBarSlime heartBarSlime;
    
     public override void Init()
     {
@@ -29,6 +30,7 @@ public class SlimeBase : BarrierBase
         EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.FREEZE , HandlePause);
         EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.PAUSE, HandlePauseGame);
         EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.STOPPAUSE, HandleStopPauseGame);
+        heartBarSlime.Init();
     }
 
     public override void TakeDame()
@@ -39,6 +41,8 @@ public class SlimeBase : BarrierBase
             StartCoroutine(Helper.HandleActionPlayAndWait( animator, "Hit", delegate { animator.Play("Move"); }));
           
             Hp -= 1;
+            GamePlayController.Instance.playerContain.tutorial_BoomInput.NextTut();
+            heartBarSlime.HandleSupTrackHeart();
             if (GameController.Instance.useProfile.OnSound)
             {
                 takeDame.PlayOneShot(takeDameSFX);
@@ -141,10 +145,11 @@ public class SlimeBase : BarrierBase
     {
          fSMController.idleState.StopAllCoroutines();
         fSMController.moveState.StopAllCoroutines();
-        fSMController.hideState.StopAllCoroutines(); ;
+        fSMController.hideState.StopAllCoroutines(); 
         fSMController.dieState.StopAllCoroutines();
         fSMController.moveState.DOKill();
         this.transform.DOKill();
+        spriteRenderer.DOKill();
         EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.FREEZE, HandlePause);
         EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.PAUSE, HandlePauseGame);
         EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.STOPPAUSE, HandleStopPauseGame);

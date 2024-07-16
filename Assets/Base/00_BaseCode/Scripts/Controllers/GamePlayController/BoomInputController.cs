@@ -85,10 +85,20 @@ public class BoomInputController : MonoBehaviour
                 GridBase selectedObject = hit.collider.gameObject.GetComponent<GridBase>();
                 if (selectedObject != null)
                 {
+
+                    if (selectedObject.barrierBase != null || selectedObject.gameObject.tag == "Boom")
+                    {
+                        if (selectedObject.barrierBase.GetComponent<TimeBoom>() != null)
+                        {
+                            selectedObject.barrierBase.GetComponent<TimeBoom>().HandleExplosion();
+                            return;
+                        }
+                    }
                     if (selectedObject.gameObject.tag == "Grid")
                     {
                         // Kiểm tra xem đối tượng đã chọn có bị che bởi đối tượng E không
 
+                        
                         if (selectedObject.barrierBase == null && selectedObject.isFree == false)
                         {
                             if(countBoom > 0)
@@ -98,7 +108,7 @@ public class BoomInputController : MonoBehaviour
                                 boom.gridBase = selectedObject;
                                 boom.Init();
                                 HandleSubtraction();
-                                GamePlayController.Instance.playerContain.tutorial_BoomInput.NextTut();
+          
                                 GamePlayController.Instance.playerContain.tutorial_TNT.StartTut();
                                 GamePlayController.Instance.playerContain.tutorial_Rocket.StartTut();
                                 GamePlayController.Instance.playerContain.tutorial_Freeze.StartTut();
@@ -108,14 +118,9 @@ public class BoomInputController : MonoBehaviour
                             }
                             
                         }
+                        
                     }
-                    //if (selectedObject.barrierBase != null)
-                    //{
-                    //    if (selectedObject.barrierBase.GetComponent<TimeBoom>() != null )
-                    //    {
-                    //        selectedObject.barrierBase.GetComponent<TimeBoom>().HandleExplosion();
-                    //    }
-                    //}
+              
                 }
                 // Kiểm tra xem đối tượng đã chọn có phải là A, B, C hoặc D không
              

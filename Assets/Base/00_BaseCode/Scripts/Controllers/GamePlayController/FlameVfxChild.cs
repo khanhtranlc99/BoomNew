@@ -14,4 +14,8 @@ public class FlameVfxChild : MonoBehaviour
             });
         });
     }
+    private void OnDestroy()
+    {
+        spriteRenderer.DOKill();
+    }
 }

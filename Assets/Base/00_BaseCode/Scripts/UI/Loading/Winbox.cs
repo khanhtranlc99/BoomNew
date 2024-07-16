@@ -34,6 +34,10 @@ public class Winbox : BaseBox
         tvCoin_2.text = "" + GamePlayController.Instance.playerContain.totalCoin;
         coinHeartBar.Init();
         UseProfile.CurrentLevel += 1;
+        if(UseProfile.CurrentLevel >= 70)
+        {
+            UseProfile.CurrentLevel = 70;
+        }    
         UseProfile.WinStreak += 1;
         nextButton.transform.localScale = Vector3.zero;
         nextButton.transform.DOScale(new Vector3(1,1,1),0.3f).SetDelay(3);

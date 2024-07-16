@@ -3133,7 +3133,7 @@ MonoBehaviour:
     conditionSlimes:
       lsDataSlime:
       - slimeType: 2
-        countSlime: 4
+        countSlime: 3
     conditionTime:
       time: 0
   - difficult: 0
@@ -3142,7 +3142,7 @@ MonoBehaviour:
     conditionSlimes:
       lsDataSlime:
       - slimeType: 0
-        countSlime: 8
+        countSlime: 6
     conditionTime:
       time: 0
   - difficult: 0
@@ -3151,7 +3151,7 @@ MonoBehaviour:
     conditionSlimes:
       lsDataSlime:
       - slimeType: 2
-        countSlime: 3
+        countSlime: 4
     conditionTime:
       time: 0
   - difficult: 0
@@ -3493,6 +3493,248 @@ MonoBehaviour:
         countSlime: 2
       - slimeType: 6
         countSlime: 2
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 3
+        countSlime: 4
+      - slimeType: 6
+        countSlime: 4
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 3
+        countSlime: 2
+      - slimeType: 2
+        countSlime: 2
+      - slimeType: 5
+        countSlime: 2
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 3
+        countSlime: 4
+      - slimeType: 5
+        countSlime: 3
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 2
+        countSlime: 2
+      - slimeType: 5
+        countSlime: 4
+      - slimeType: 6
+        countSlime: 2
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 6
+        countSlime: 2
+      - slimeType: 4
+        countSlime: 2
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 1
+        countSlime: 2
+      - slimeType: 5
+        countSlime: 4
+      - slimeType: 0
+        countSlime: 8
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 3
+        countSlime: 2
+      - slimeType: 6
+        countSlime: 1
+      - slimeType: 5
+        countSlime: 2
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 0
+        countSlime: 4
+      - slimeType: 4
+        countSlime: 5
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 6
+        countSlime: 2
+      - slimeType: 4
+        countSlime: 1
+      - slimeType: 3
+        countSlime: 2
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 5
+        countSlime: 2
+      - slimeType: 2
+        countSlime: 2
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 2
+        countSlime: 2
+      - slimeType: 4
+        countSlime: 4
+      - slimeType: 0
+        countSlime: 4
+      - slimeType: 1
+        countSlime: 2
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 6
+        countSlime: 3
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 3
+        countSlime: 2
+      - slimeType: 0
+        countSlime: 6
+      - slimeType: 2
+        countSlime: 3
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 6
+        countSlime: 3
+      - slimeType: 3
+        countSlime: 3
+      - slimeType: 2
+        countSlime: 3
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 3
+        countSlime: 2
+      - slimeType: 4
+        countSlime: 1
+      - slimeType: 6
+        countSlime: 1
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 5
+        countSlime: 5
+      - slimeType: 2
+        countSlime: 3
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 6
+        countSlime: 4
+      - slimeType: 1
+        countSlime: 2
+      - slimeType: 0
+        countSlime: 4
+      - slimeType: 2
+        countSlime: 1
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 2
+        countSlime: 2
+      - slimeType: 3
+        countSlime: 4
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 3
+        countSlime: 2
+      - slimeType: 5
+        countSlime: 2
+      - slimeType: 6
+        countSlime: 2
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 2
+        countSlime: 6
     conditionTime:
       time: 0
 --- !u!1 &1220068126

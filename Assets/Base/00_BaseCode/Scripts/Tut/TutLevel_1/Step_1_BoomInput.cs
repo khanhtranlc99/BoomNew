@@ -5,11 +5,13 @@ using UnityEngine;
 public class Step_1_BoomInput : TutorialBase
 {
     GameObject currentHand;
+    public GameObject panelTut;
     public override bool IsCanEndTut()
     {
         if(currentHand != null)
         {
             Destroy(currentHand.gameObject);
+            panelTut.SetActive(false);
         }
 
      return base.IsCanShowTut(); ;
@@ -25,7 +27,8 @@ public class Step_1_BoomInput : TutorialBase
                 return;
             }
             currentHand = SimplePool2.Spawn(handTut);
-            currentHand.transform.position = GamePlayController.Instance.playerContain.levelData.gridBasesId[19].transform.position;
+            currentHand.transform.position = GamePlayController.Instance.playerContain.levelData.gridBasesId[18].transform.position;
+            panelTut.SetActive(true);
 
         }
     }

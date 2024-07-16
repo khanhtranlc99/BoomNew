@@ -17,17 +17,23 @@ public class TimeBoom : BarrierBase
     public int countRight;
     public int countLeft;
     public AudioClip boom;
+    bool wasTimeBoom;
     private void OnMouseDown()
     {
         HandleExplosion();
     }
     public void HandleExplosion()
     {
-        GameController.Instance.musicManager.PlayOneShot(boom);
-        SpawnCross(1 + UseProfile.FlameUp_Item);
-        gridBase.barrierBase = null;
-        EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.BOOM_EXPlOSION,this);
-        SimplePool2.Despawn(this.gameObject);
+        if(!wasTakeDame)
+        {
+            wasTimeBoom = true;
+            GameController.Instance.musicManager.PlayOneShot(boom);
+            SpawnCross(1 + UseProfile.FlameUp_Item);
+            gridBase.barrierBase = null;
+            EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.BOOM_EXPlOSION, this);
+            SimplePool2.Despawn(this.gameObject);
+        }    
+
 
     }
     void SpawnCross(int units)
@@ -112,7 +118,7 @@ public class TimeBoom : BarrierBase
 
     public override void Init()
     {
-
+        wasTimeBoom = false;
         leftGridbase.Clear();
         rightGridbase.Clear();
         upGridbase.Clear();
