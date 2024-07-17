@@ -35,6 +35,7 @@ public class Flame : MonoBehaviour
     {
         if(collision.gameObject.tag == "Barrial")
         {
+            spriteRenderer.sortingOrder = 1;
             collision.gameObject.GetComponent<BarrierBase>().TakeDame();
         }
         if (collision.gameObject.tag == "Grid")
@@ -47,36 +48,41 @@ public class Flame : MonoBehaviour
     }
     public void Init (Sprite param, FlameType flameType )
     {
-        //spriteRenderer.sprite = param;
-        //spriteRenderer.color = new Color32(0, 0, 0, 0);
-        //spriteRenderer.DOColor(new Color32(255, 255, 255, 255), 0.2f).SetEase(Ease.Flash);
-        //switch (flameType)
-        //{
-        //    case FlameType.Up:
-        //        this.transform.localEulerAngles = new Vector3(0, 0, 90);
-        //        break;
-        //    case FlameType.Down:
-        //        this.transform.localEulerAngles = new Vector3(0, 0, 90);
+        spriteRenderer.sprite = param;
+        spriteRenderer.color = new Color32(0, 0, 0, 0);
+        spriteRenderer.DOColor(new Color32(255, 255, 255, 255), 0.2f).SetEase(Ease.Flash);
+        switch (flameType)
+        {
+            case FlameType.Up:
+                this.transform.localEulerAngles = new Vector3(0, 0, 90);
+                break;
+            case FlameType.Down:
+                this.transform.localEulerAngles = new Vector3(0, 0, 90);
 
-        //        this.transform.localScale = new Vector3(-1, 1, 1);
-        //        break;
+                this.transform.localScale = new Vector3(-1, 1, 1);
+                break;
 
-        //    case FlameType.Left:
-        //        this.transform.localScale = new Vector3(-1, 1, 1);
-        //        break;
+            case FlameType.Left:
+                this.transform.localScale = new Vector3(-1, 1, 1);
+                break;
 
-        //    case FlameType.Right:
+            case FlameType.Right:
 
-        //        break;
+                break;
 
-        //    case FlameType.Mid:
+            case FlameType.Mid:
 
-        //        break;
-        //}
+                break;
+        }
     }
     private void OnDisable()
     {
-        //this.transform.localEulerAngles = new Vector3(0, 0, 0);
-        //this.transform.localScale = new Vector3(1, 1, 1);
+        spriteRenderer.sortingOrder = 3;
+        this.transform.localEulerAngles = new Vector3(0, 0, 0);
+        this.transform.localScale = new Vector3(1, 1, 1);
+    }
+    private void OnDestroy()
+    {
+        spriteRenderer.DOKill();
     }
 }

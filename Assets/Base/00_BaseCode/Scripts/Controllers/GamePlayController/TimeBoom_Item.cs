@@ -13,6 +13,20 @@ public class TimeBoom_Item : MonoBehaviour
     public Button btnTimeBoom;
     public bool wasUseTimeBoom;
     public TimeBoom timeBoom;
+    public GameObject panelTut;
+ 
+    public bool TimeBoom_First
+    {
+        get
+        {
+            return PlayerPrefs.GetInt("TimeBoom_First", 0) == 1;
+        }
+        set
+        {
+            PlayerPrefs.SetInt("TimeBoom_First", value ? 1 : 0);
+            PlayerPrefs.Save();
+        }
+    }
     public void Init()
     {
         if (UseProfile.TimeBoom_Item >= 1)
@@ -113,6 +127,11 @@ public class TimeBoom_Item : MonoBehaviour
                                 btnTimeBoom.interactable = true;
                                 wasUseTimeBoom = false;
                                 UseProfile.TimeBoom_Item -= 1;
+                                if(!TimeBoom_First)
+                                {
+                                    OnTut();
+                                }    
+
                             }
                         }
                     }
@@ -122,6 +141,27 @@ public class TimeBoom_Item : MonoBehaviour
             }
         }
     }
+    public void OnTut()
+    {
+        
+        GamePlayController.Instance.gameScene.HideBotUI(delegate {
+            panelTut.SetActive(true);
+        });
+    }    
+
+
+    public void OffTut()
+    {
+        panelTut.SetActive(false);
+        GamePlayController.Instance.gameScene.ShowBotUI(delegate {
+
+          
+       
+
+        });
+    }    
+
+
     private void OnDestroy()
     {
         EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.TIMEBOOM_ITEM, HandleShowTimeBoom_Itemp);

@@ -69,7 +69,7 @@ public class HomeScene : BaseScene
         switch (infoDataLevel.lsInfoDatas[UseProfile.CurrentLevel - 1].difficult)
         {
             case Difficult.Normal:
-                tvDifficut.text = "Esasy";
+                tvDifficut.text = "Easy";
                 imgLevelType.sprite = easySprite;
                 break;
             case Difficult.Hard:

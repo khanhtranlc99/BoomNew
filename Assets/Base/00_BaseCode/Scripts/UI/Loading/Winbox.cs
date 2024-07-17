@@ -72,14 +72,14 @@ public class Winbox : BaseBox
                    actionReward: () =>
                    {
                        //GameController.Instance.admobAds.HandleHideMerec();
-                       GamePlayController.Instance.playerContain.totalCoin *= 5;
+                       GamePlayController.Instance.playerContain.totalCoin *= 3;
                        UseProfile.Coin += GamePlayController.Instance.playerContain.totalCoin;
-                       UseProfile.CurrentLevel += 1;
+                   
                        List<GiftRewardShow> giftRewardShows = new List<GiftRewardShow>();
                        giftRewardShows.Add(new GiftRewardShow() { amount = GamePlayController.Instance.playerContain.totalCoin, type = GiftType.Coin });
                        PopupRewardBase.Setup(false).Show(giftRewardShows, delegate {
 
-                           Initiate.Fade("GamePlay", Color.black, 2f);
+                           Initiate.Fade("HomeScene", Color.black, 2f);
                        });
 
                    },

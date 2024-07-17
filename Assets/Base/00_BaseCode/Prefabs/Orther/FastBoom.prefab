@@ -137,6 +137,9 @@ MonoBehaviour:
   countRight: 0
   countLeft: 0
   boom: {fileID: 8300000, guid: 8eab0202acaa867489538f74eef4d5af, type: 3}
+  flame_1: {fileID: 21300000, guid: f9265c388f6439740b24e0e5fb6be319, type: 3}
+  flame_2: {fileID: 21300000, guid: 9219525e7d23e6f4e88238185fb2b6ac, type: 3}
+  flame_3: {fileID: 21300000, guid: aa1f682526407434ea0606f1bbf9ed15, type: 3}
 --- !u!58 &5156808034854031456
 CircleCollider2D:
   m_ObjectHideFlags: 0
