@@ -30,7 +30,8 @@ public class SlimeBase : BarrierBase
         EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.FREEZE , HandlePause);
         EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.PAUSE, HandlePauseGame);
         EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.STOPPAUSE, HandleStopPauseGame);
-        heartBarSlime.Init();
+       
+            heartBarSlime.Init();
     }
 
     public override void TakeDame()
@@ -41,7 +42,7 @@ public class SlimeBase : BarrierBase
             StartCoroutine(Helper.HandleActionPlayAndWait( animator, "Hit", delegate { animator.Play("Move"); }));
           
             Hp -= 1;
-            GamePlayController.Instance.playerContain.tutorial_BoomInput.NextTut();
+          
             heartBarSlime.HandleSupTrackHeart();
             if (GameController.Instance.useProfile.OnSound)
             {
@@ -57,6 +58,10 @@ public class SlimeBase : BarrierBase
             else
             {
                 collider2D.enabled = false;
+                if(!fSMController.wasUse)
+                {
+                    fSMController.ChangeState(StateType.Die);
+                }    
             }
             
               if(fSMController.currentState != null)

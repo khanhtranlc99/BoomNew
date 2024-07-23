@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System;
 public class ShopBox : BaseBox
 {
-    private static ShopBox instance;
+    public static ShopBox instance;
     public static ShopBox Setup(ButtonShopType param = ButtonShopType.Gift, bool isSaveBox = false, Action actionOpenBoxSave = null)
     {
         if (instance == null)
@@ -19,15 +19,27 @@ public class ShopBox : BaseBox
     }
     public ButtonShopController shopController;
     public List<PackInShop> lsPackInShops;
-    public List<PackInShopAds> lsPackInShopAds;
+    public PackInShop GetPackShop(TypePackIAP paramtypePackIAP)
+    {
+        foreach(var item in lsPackInShops)
+        {
+            if(item.typePackIAP == paramtypePackIAP)
+            {
+                return item;
+            }
+        }
+        return null;
+    }    
+    public List<PackFreeInShop> lsPackInShopFree;
+    
     public float countTime;
     public bool wasCountTime;
     public Text tvCountTime;
     public Text tvCountTime_2;
-    public Text tvCountTimePackCoin;
-    public Text tvCountTimePackCoin_2;
+ 
     public CoinHeartBar coinHeartBar;
     public Button btnClose;
+    public  GameObject paramPost;
     private void Init(ButtonShopType buttonShopType)
     {
         shopController.Init(buttonShopType);
@@ -35,12 +47,19 @@ public class ShopBox : BaseBox
         {
             item.Init();
         }
+        foreach (var item in lsPackInShopFree)
+        {
+            item.Init();
+        }
+        
         coinHeartBar.Init();
         btnClose.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); Close(); });
+        EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.SHOP_CHECK, CheckOffPack);
     }
     private void InitState()
     {
         ResetDay();
+        CheckOffPack();
     }
 
     private void ResetDay()
@@ -49,11 +68,11 @@ public class ShopBox : BaseBox
         wasCountTime = false;
         countTime  = TimeManager.TimeLeftPassTheDay(DateTime.Now);
 
-        var temp = TimeManager.CaculateTime(TimeManager.ParseTimeStartDay(UseProfile.LastTimeOnline), TimeManager.ParseTimeStartDay(DateTime.Now) );
-        if (temp >= 86400)
+         
+        if (UseProfile.NeedCheckShop )
         {
-            UseProfile.LastTimeOnline = DateTime.Now;
-            foreach(var item in lsPackInShopAds)
+            UseProfile.NeedCheckShop = false;
+            foreach (var item in lsPackInShopFree)
             {
                 item.HandleOn();
             }    
@@ -68,12 +87,60 @@ public class ShopBox : BaseBox
            if(countTime > 0)
             {
                 countTime -=  1*Time.deltaTime;
-                tvCountTime.text = "REFRESH IN :" + TimeManager.ShowTime2((long)countTime);
-                tvCountTime_2.text = "REFRESH IN :" + TimeManager.ShowTime2((long)countTime);
-                tvCountTimePackCoin.text =   TimeManager.ShowTime2((long)countTime);
-                tvCountTimePackCoin_2.text =    TimeManager.ShowTime2((long)countTime);
-                
+                tvCountTime.text = "REFRESH IN : " + TimeManager.ShowTime2((long)countTime);
+                tvCountTime_2.text = "REFRESH IN : " + TimeManager.ShowTime2((long)countTime);
+           
+
             }
+           else
+            {
+                tvCountTime.text = " "  ;
+                tvCountTime_2.text = " "  ;
+            }    
         }
+    }
+
+    public void CheckOffPack()
+    {
+        if(UseProfile.Boom_Start)
+        {
+            GetPackShop(TypePackIAP.BoomPacks).btnBuy.interactable = false;
+
+        }
+        if (UseProfile.Fire_Start)
+        {
+            GetPackShop(TypePackIAP.FirePacks).btnBuy.interactable = false;
+        }
+        if (UseProfile.Fire_Start && UseProfile.Fire_Start)
+        {
+            GetPackShop(TypePackIAP.PremiumPacks).btnBuy.interactable = false;
+        }
+        if (UseProfile.WasBoughtUnlimitTime)
+        {
+            GetPackShop(TypePackIAP.ImmortalPacks).btnBuy.interactable = false;
+        }
+    }
+    public void CheckOffPack(object param)
+    {
+        if (UseProfile.Boom_Start)
+        {
+            GetPackShop(TypePackIAP.BoomPacks).btnBuy.interactable = false;
+        }
+        if (UseProfile.Fire_Start)
+        {
+            GetPackShop(TypePackIAP.FirePacks).btnBuy.interactable = false;
+        }
+        if (UseProfile.Fire_Start && UseProfile.Fire_Start)
+        {
+            GetPackShop(TypePackIAP.PremiumPacks).btnBuy.interactable = false;
+        }
+        if (UseProfile.WasBoughtUnlimitTime)
+        {
+            GetPackShop(TypePackIAP.ImmortalPacks).btnBuy.interactable = false;
+        }    
+    }
+    private void OnDestroy()
+    {
+        EventDispatcher.EventDispatcher.Instance.RemoveListener(EventID.SHOP_CHECK, CheckOffPack);
     }
 }

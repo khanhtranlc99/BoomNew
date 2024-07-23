@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Spine.Unity;
+using DG.Tweening;
 public class TargetController : MonoBehaviour
 {
     public List<SlimeTarget> lsSlimeTargets;
@@ -37,6 +39,12 @@ public class TargetController : MonoBehaviour
         }
         return null;
     }
+
+    public ParticleSystem vfxConfesti_1;
+    public ParticleSystem vfxConfesti_2;
+    public SkeletonGraphic vfxWin;
+    public AudioClip confetiSfx;
+    public AudioClip sfxVFXWin;
     public void Init(LevelData levelData )
     {
         lsCurrentSlimeTargets = new List<SlimeTarget>();
@@ -44,25 +52,36 @@ public class TargetController : MonoBehaviour
         {
             foreach (var item in levelData.conditionSlimes.lsDataSlime)
             {
-                var temp = Instantiate(GetSlimeTargetPrefab(item.slimeType), tranformSlimeTarget).GetComponent<SlimeTarget>();
-                if(levelData.conditionSlimes.lsDataSlime.Count > 4)
+                var temp_1 = GetSlimeTargetPrefab(item.slimeType);
+                 if(temp_1 != null)
                 {
-                    temp.transform.parent = tranformSlimeTargetLarge.transform;
-                }
-                else
-                {
-                    temp.transform.parent = tranformSlimeTarget.transform;
-                }
-          
+                    var temp = Instantiate(temp_1, tranformSlimeTarget).GetComponent<SlimeTarget>();
+                    if (levelData.conditionSlimes.lsDataSlime.Count > 4)
+                    {
+                        temp.transform.parent = tranformSlimeTargetLarge.transform;
+                    }
+                    else
+                    {
+                        temp.transform.parent = tranformSlimeTarget.transform;
+                    }
 
-                temp.Init(item.countSlime);
-                lsCurrentSlimeTargets.Add(temp);
+
+                    temp.Init(item.countSlime);
+                    lsCurrentSlimeTargets.Add(temp);
+                }    
+           
             }
             foreach (var item in levelData.conditionSlimes.lsDataSlime)
             {
-                var temp = Instantiate(GetSlimeTargetPrefab(item.slimeType), tranformSlimeTarget).GetComponent<SlimeTarget>();
-                temp.transform.parent = tranformSlimePrepage.transform;
-                temp.Init(item.countSlime);
+                var temp_2 = GetSlimeTargetPrefab(item.slimeType);
+                if(temp_2 != null)
+                {
+                    var temp = Instantiate(temp_2, tranformSlimeTarget).GetComponent<SlimeTarget>();
+                    temp.transform.parent = tranformSlimePrepage.transform;
+                    temp.transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
+                    temp.Init(item.countSlime);
+                }    
+           
          
             }
         }
@@ -115,9 +134,38 @@ public class TargetController : MonoBehaviour
         if(GamePlayController.Instance.stateGame == StateGame.Playing)
         {
             GamePlayController.Instance.stateGame = StateGame.Win;
-            Winbox.Setup().Show();
+
+
+            Invoke(nameof(ShowConfesti), 0.75f);
         }    
   
     }
+    private void ShowConfesti()
+    {
+        GameController.Instance.musicManager.PlayOneShot(confetiSfx);
+       vfxConfesti_1.Play();
+        vfxConfesti_2.Play();
+        Invoke(nameof(ShowVfxWin), 1);
+    }    
 
+    private void ShowVfxWin()
+    {
+        GameController.Instance.musicManager.PlayOneShot(sfxVFXWin);
+        vfxWin.gameObject.SetActive(true);
+        Invoke(nameof(ShowPopupWin), 2);
+        
+    }
+
+    private void ShowPopupWin()
+    {
+        Winbox.Setup().Show();
+    }
+    //private void Update()
+    //{
+    //    if(Input.GetKeyDown(KeyCode.W))
+    //    {
+    //        GamePlayController.Instance.stateGame = StateGame.Win;
+    //        Invoke(nameof(ShowConfesti), 0.75f);
+    //    }    
+    //}
 }

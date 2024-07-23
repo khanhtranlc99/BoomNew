@@ -1,0 +1,139 @@
+
+Combos.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Texxt/A 2
+  rotate: false
+  xy: 72, 33
+  size: 64, 66
+  orig: 64, 66
+  offset: 0, 0
+  index: -1
+Texxt/C
+  rotate: false
+  xy: 138, 29
+  size: 59, 70
+  orig: 59, 70
+  offset: 0, 0
+  index: -1
+Texxt/D
+  rotate: false
+  xy: 322, 33
+  size: 60, 66
+  orig: 60, 66
+  offset: 0, 0
+  index: -1
+Texxt/E
+  rotate: false
+  xy: 690, 106
+  size: 48, 66
+  orig: 48, 66
+  offset: 0, 0
+  index: -1
+Texxt/F
+  rotate: false
+  xy: 738, 38
+  size: 48, 66
+  orig: 48, 66
+  offset: 0, 0
+  index: -1
+Texxt/G
+  rotate: false
+  xy: 199, 31
+  size: 60, 68
+  orig: 60, 68
+  offset: 0, 0
+  index: -1
+Texxt/I 2
+  rotate: true
+  xy: 2, 5
+  size: 24, 66
+  orig: 24, 66
+  offset: 0, 0
+  index: -1
+Texxt/L
+  rotate: false
+  xy: 690, 174
+  size: 49, 66
+  orig: 49, 66
+  offset: 0, 0
+  index: -1
+Texxt/M 2
+  rotate: true
+  xy: 622, 70
+  size: 78, 66
+  orig: 78, 66
+  offset: 0, 0
+  index: -1
+Texxt/N
+  rotate: false
+  xy: 384, 33
+  size: 59, 66
+  orig: 59, 66
+  offset: 0, 0
+  index: -1
+Texxt/O
+  rotate: false
+  xy: 2, 31
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+Texxt/R 2
+  rotate: false
+  xy: 505, 33
+  size: 58, 66
+  orig: 58, 66
+  offset: 0, 0
+  index: -1
+Texxt/S
+  rotate: false
+  xy: 565, 31
+  size: 52, 68
+  orig: 52, 68
+  offset: 0, 0
+  index: -1
+Texxt/T
+  rotate: false
+  xy: 679, 2
+  size: 57, 66
+  orig: 57, 66
+  offset: 0, 0
+  index: -1
+Texxt/U
+  rotate: false
+  xy: 445, 32
+  size: 58, 67
+  orig: 58, 67
+  offset: 0, 0
+  index: -1
+Texxt/W
+  rotate: true
+  xy: 622, 150
+  size: 90, 66
+  orig: 90, 66
+  offset: 0, 0
+  index: -1
+Texxt/X
+  rotate: false
+  xy: 261, 31
+  size: 59, 68
+  orig: 59, 68
+  offset: 0, 0
+  index: -1
+Texxt/Z 2
+  rotate: false
+  xy: 619, 2
+  size: 58, 66
+  orig: 58, 66
+  offset: 0, 0
+  index: -1
+banner
+  rotate: false
+  xy: 2, 101
+  size: 618, 139
+  orig: 618, 139
+  offset: 0, 0
+  index: -1

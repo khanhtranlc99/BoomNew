@@ -22,7 +22,7 @@ public class GamePlayController : Singleton<GamePlayController>
     public ItemInGame itemInGame;
     public Flame flame;
 
-
+    
     protected override void OnAwake()
     {
         //  GameController.Instance.currentScene = SceneType.GamePlay;
@@ -35,13 +35,13 @@ public class GamePlayController : Singleton<GamePlayController>
     public void Init()
     {
 
-        UseProfile.FirstLoading = true;
+   
         playerContain.Init();
         SimplePool2.ClearPool();
         SimplePool2.Preload(itemInGame.gameObject, 10, this.transform);
         SimplePool2.Preload(flame.gameObject, 50, this.transform);
      
-        //GameController.Instance.AnalyticsController.LoadingComplete();
+     
       
     }
     public void HandleCheckLose()
@@ -64,7 +64,8 @@ public class GamePlayController : Singleton<GamePlayController>
                     {
                         GamePlayController.Instance.playerContain.boomInputController.enabled = true;
                         stateGame = StateGame.Lose;
-                        LoseBox.Setup().Show();
+                        GameController.Instance.musicManager.PlayLoseSound();
+                        Invoke(nameof(ShowLoseBox),2.5f);
                     }
                 }
             //}
@@ -72,5 +73,8 @@ public class GamePlayController : Singleton<GamePlayController>
         }
     }
   
-
+    private void ShowLoseBox()
+    {
+        LoseBox.Setup().Show();
+    }    
 }

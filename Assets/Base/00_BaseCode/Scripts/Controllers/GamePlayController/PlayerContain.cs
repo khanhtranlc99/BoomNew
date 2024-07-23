@@ -35,9 +35,18 @@ public class PlayerContain : MonoBehaviour
         levelData = Instantiate(Resources.Load<LevelData>(string.Format(pathLevel, UseProfile.CurrentLevel)));
         cameraScale.Init();
         GamePlayController.Instance.gameScene.Init(levelData);
-        prepageGame.Init(delegate
+        if (UseProfile.WinStreak > 0 || UseProfile.Boom_Start == true || UseProfile.Fire_Start == true)
         {
-            if (UseProfile.WinStreak > 0 || UseProfile.Boom_Start > 0 || UseProfile.Fire_Start >0)
+
+
+        }
+        else
+        {
+            winStreakController.canvasGroup.gameObject.SetActive(false);
+        }
+            prepageGame.Init(delegate
+        {
+            if (UseProfile.WinStreak > 0 || UseProfile.Boom_Start == true|| UseProfile.Fire_Start == true)
             {
                 winStreakController.Init(delegate
                 {
@@ -49,11 +58,13 @@ public class PlayerContain : MonoBehaviour
             }
             else
             {
-                levelData.Init();
-              
+               
+                levelData.Init();     
                 SetUp();
             }
-
+            GameController.Instance.AnalyticsController.LoadingComplete();
+            GameController.Instance.AnalyticsController.StartLevel(UseProfile.CurrentLevel);
+     
         });
         //levelData.Init(true);
         //cameraScale.Init();

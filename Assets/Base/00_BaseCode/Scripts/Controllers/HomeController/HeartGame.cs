@@ -20,13 +20,28 @@ public class HeartGame : MonoBehaviour
     {
         if(UseProfile.isUnlimitHeart)
         {
-            var temp = TimeManager.CaculateTime(DateTime.Now, UseProfile.TimeUnlimitHeart);
+            var temp = TimeManager.CaculateTime( DateTime.Now, UseProfile.TimeUnlimitHeart);
             if (temp <= 0)
             {
                 UseProfile.isUnlimitHeart = false;
             }
         }
-      
+
+        var tempTime = TimeManager.CaculateTime(TimeManager.ParseTimeStartDay(UseProfile.LastTimeOnline), TimeManager.ParseTimeStartDay(DateTime.Now));
+        if (tempTime >= 86400)
+        {
+            UseProfile.LastTimeOnline = DateTime.Now;
+            UseProfile.NeedCheckShop = true;
+            if (UseProfile.WasBoughtUnlimitTime)
+            {
+              
+                UseProfile.TimeUnlimitHeart = DateTime.Now.AddHours(1);
+                UseProfile.Heart = 5;
+                UseProfile.isUnlimitHeart = true;
+            }    
+
+        }
+
 
     }
 

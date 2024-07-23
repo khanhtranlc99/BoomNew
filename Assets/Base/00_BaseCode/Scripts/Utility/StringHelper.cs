@@ -77,6 +77,13 @@ public static class StringHelper
     public const string IS_UNLIMIT_HEART = "is_unlimit_heart";
     public const string FIRE_START = "fire_start";
     public const string BOOM_START = "boom_start";
+
+    public const string NUMB_WATCH_ADS_TNT = "numb_watch_ads_tnt";
+    public const string NUMB_WATCH_ADS_HEART = "numb_watch_ads_heart";
+    public const string NUMB_WATCH_ADS_ROCKET = "numb_watch_ads_rocket";
+    public const string NUMB_WATCH_ADS_COIN = "numb_watch_ads_coin";
+    public const string WAS_BOUGHT_UNLIMIT_TIME = "was_bought_unlimit_time";
+    public const string NEED_CHECK_SHOP = "need_check_shop";
 }
 
 public class PathPrefabs

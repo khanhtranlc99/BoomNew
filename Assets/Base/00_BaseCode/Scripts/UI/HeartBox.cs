@@ -24,6 +24,7 @@ public class HeartBox : BaseBox
     [SerializeField] Text txtCoinBuy;
     [SerializeField] Button btnBuy;
     [SerializeField] Button btnADS;
+    [SerializeField] Text tvCountHeart;
     public void Init()
     {
         checkHeart();
@@ -49,6 +50,7 @@ public class HeartBox : BaseBox
             btnBuy.interactable = false;
             btnADS.interactable = false;
         }
+        tvCountHeart.text =  UseProfile.NumbWatchAdsHeart.ToString() + "/3";
     }
     private void checkHeart()
     {
@@ -69,13 +71,21 @@ public class HeartBox : BaseBox
         GameController.Instance.admobAds.ShowVideoReward(
                      actionReward: () =>
                      {
-                         UseProfile.Heart++;
-                         checkHeart();
-                         InitState();
-                         List<GiftRewardShow> giftRewardShows = new List<GiftRewardShow>();
-                         giftRewardShows.Add(new GiftRewardShow() { amount = 1, type = GiftType.Heart });
-                         PopupRewardBase.Setup(false).Show(giftRewardShows, delegate { });
-                      
+                         
+
+                         UseProfile.NumbWatchAdsHeart -= 1;
+                         tvCountHeart.text = UseProfile.NumbWatchAdsHeart.ToString() + "/3";
+                         if (UseProfile.NumbWatchAdsHeart <= 0)
+                         {
+                             UseProfile.NumbWatchAdsHeart = 3;
+                             UseProfile.Heart++;
+                             checkHeart();
+                             InitState();
+                             List<GiftRewardShow> giftRewardShows = new List<GiftRewardShow>();
+                             giftRewardShows.Add(new GiftRewardShow() { amount = 1, type = GiftType.Heart });
+                             PopupRewardBase.Setup(false).Show(giftRewardShows, delegate { });
+                         }
+
                      },
                      actionNotLoadedVideo: () =>
                      {
@@ -94,7 +104,7 @@ public class HeartBox : BaseBox
     private void OnclickBtnBuy()
     {
         GameController.Instance.musicManager.PlayClickSound();
-        if (UseProfile.Coin<15)
+        if (UseProfile.Coin < 215)
         {
             ShopBox.Setup(ButtonShopType.Gold).Show();
             return;

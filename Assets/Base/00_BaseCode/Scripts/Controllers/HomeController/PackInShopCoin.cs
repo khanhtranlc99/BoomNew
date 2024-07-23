@@ -30,12 +30,13 @@ public class PackInShopCoin : PackInShop
         else
         {
             buttonShopController.HandleOnClick(ButtonShopType.Gold);
+            btnBuy.transform.SetAsLastSibling();
             GameController.Instance.moneyEffectController.SpawnEffectText_FlyUp_UI
                        (
                           btnBuy.transform
                           ,
                        btnBuy.transform.position,
-                       "Buy More Coin",
+                       "More Coin",
                        Color.white,
                        isSpawnItemPlayer: true
                        );

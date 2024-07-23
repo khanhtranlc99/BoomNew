@@ -21,7 +21,7 @@ public class BackHomeBox : BaseBox
     public Text tvBtnReset;
     TypeBackHOme typeBackHOme;
     public CoinHeartBar coinHeartBar;
-    public List<GameObject> lsProgesst;
+    public List<WinStreakBar> lsProgesst;
 
     public static BackHomeBox Setup(TypeBackHOme typeParam ,bool isSaveBox = false, Action actionOpenBoxSave = null)
     {
@@ -89,6 +89,7 @@ public class BackHomeBox : BaseBox
             if(i <= UseProfile.WinStreak)
             {
                 lsProgesst[i].gameObject.SetActive(true);
+                lsProgesst[i].Init();
             }
         }
     }

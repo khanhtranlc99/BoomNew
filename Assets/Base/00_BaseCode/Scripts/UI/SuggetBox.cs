@@ -27,10 +27,12 @@ public class SuggetBox : BaseBox
     ActionWatchVideo actionWatchVideo;
     public Image iconDecor;
     public Text tvNum;
+    public Text tvCountNumbAds;
+    public GameObject iconAds;
     public void Init()
     {
         btnClose.onClick.AddListener(delegate { GameController.Instance.musicManager.PlayClickSound(); GamePlayController.Instance.playerContain.boomInputController.enabled = true;Close(); });
-        payByAdsBtn.onClick.AddListener(delegate { HandlePayByAds(); });
+   
         payByCoinBtn.onClick.AddListener(delegate { HandlePayByCoin(); });
     }
 
@@ -41,31 +43,47 @@ public class SuggetBox : BaseBox
         {
             case GiftType.TNT_Booster:
                 tvTitler.text = "TNT BOOM";
-                tvContent.text = "TAP ANY TILE STACK TO CLEAR IT";
-                price = 50;
+                tvContent.text = "Create a 3x3 wide explosion";
+                price = 150;
                 tvPrive.text = price.ToString();
                 actionWatchVideo = ActionWatchVideo.TNT_Booster;
+                payByAdsBtn.onClick.RemoveAllListeners();
+                payByAdsBtn.onClick.AddListener(delegate { HandlePayByAds(); });
+                iconAds.SetActive(true);
+                tvCountNumbAds.text = UseProfile.NumbWatchAdsTNT.ToString() + "/3";
                 break;
             case GiftType.Rocket_Booster:
                 tvTitler.text = "Rocket";
-                tvContent.text = "MOVE AND REPLACE A TILE STACK ON THE BROAD";
-                price = 50;
+                tvContent.text = "Shoots 1 random slime";
+                price = 200;
                 tvPrive.text = price.ToString();
                 actionWatchVideo = ActionWatchVideo.Rocket_Booster;
+                payByAdsBtn.onClick.RemoveAllListeners();
+                payByAdsBtn.onClick.AddListener(delegate { HandlePayByAds(); });
+                iconAds.SetActive(true);
+                tvCountNumbAds.text = UseProfile.NumbWatchAdsRocket.ToString() + "/3";
                 break;
             case GiftType.Freeze_Booster:
                 tvTitler.text = "Freeze";
-                tvContent.text = "REFRESH TRAY TO GET NEW STACK OPPTIONS";
-                price = 120;
+                tvContent.text = "Freeze all slimes";
+                price = 300;
                 tvPrive.text = price.ToString();
                 actionWatchVideo = ActionWatchVideo.Freeze_Booster;
+                payByAdsBtn.onClick.RemoveAllListeners();
+                payByAdsBtn.onClick.AddListener(delegate { ShopBox.Setup(ButtonShopType.Gold).Show(); });
+                iconAds.SetActive(false);
+                tvCountNumbAds.text =  "Shop";
                 break;
             case GiftType.Atom_Booster:
                 tvTitler.text = "Atom";
-                tvContent.text = "REFRESH TRAY TO GET NEW STACK OPPTIONS";
-                price = 200;
+                tvContent.text = "Create a Big explosion";
+                price = 700;
                 tvPrive.text = price.ToString();
                 actionWatchVideo = ActionWatchVideo.Atom_Booste;
+                payByAdsBtn.onClick.RemoveAllListeners();
+                payByAdsBtn.onClick.AddListener(delegate { ShopBox.Setup(ButtonShopType.Gold).Show(); });
+                iconAds.SetActive(false);
+                tvCountNumbAds.text = "Shop";
                 break;
         }
         iconDecor.sprite = GameController.Instance.dataContain.giftDatabase.GetIconItem(giftType);
@@ -86,6 +104,7 @@ public class SuggetBox : BaseBox
         GamePlayController.Instance.playerContain.boomInputController.enabled = false;
     }
 
+
     public void HandlePayByAds()
     {
 
@@ -93,8 +112,31 @@ public class SuggetBox : BaseBox
         GameController.Instance.admobAds.ShowVideoReward(
                      actionReward: () =>
                      {
+                         switch (currentGift)
+                         {
+                             case GiftType.TNT_Booster:
+                                 UseProfile.NumbWatchAdsTNT -= 1;
+                                 if (UseProfile.NumbWatchAdsTNT <= 0)
+                                 {
+                                     UseProfile.NumbWatchAdsTNT = 3;
+                                     HandleClaimGiftX1();
+                                   
+                                 }
+                                 tvCountNumbAds.text = UseProfile.NumbWatchAdsTNT.ToString() + "/3";
+                                 break;
+                             case GiftType.Rocket_Booster:
 
-                         HandleClaimGiftX1();
+                                 UseProfile.NumbWatchAdsRocket -= 1;
+                                 if (UseProfile.NumbWatchAdsRocket <= 0)
+                                 {
+                                     UseProfile.NumbWatchAdsRocket = 3;
+                                     HandleClaimGiftX1();
+
+                                 }
+                                 tvCountNumbAds.text = UseProfile.NumbWatchAdsRocket.ToString() + "/3";
+                                 break;
+                         }
+                            
 
 
                      },

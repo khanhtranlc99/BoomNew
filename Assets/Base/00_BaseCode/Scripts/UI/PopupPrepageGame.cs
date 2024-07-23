@@ -18,19 +18,19 @@ public class PopupPrepageGame : MonoBehaviour
         parent.transform.DOScale(new Vector3(1, 1, 1), 0.5f).SetEase(Ease.OutBack).OnComplete(delegate {
 
           
-            HandleOff();
-            callBack?.Invoke();
+            HandleOff(callBack);
+      
         });
 
   
    
     }
-    public void HandleOff()
+    public void HandleOff(Action callBack )
     {
        
       
         canvasGroup.DOFade(0, 0.5f).SetDelay(1.5f).OnComplete(delegate {
-         
+            callBack?.Invoke();
             this.gameObject.SetActive(false);
 
             GameController.Instance.musicManager.PlayOneShot(tingTing);

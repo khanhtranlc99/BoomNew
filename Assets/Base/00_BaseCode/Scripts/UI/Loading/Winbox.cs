@@ -41,7 +41,7 @@ public class Winbox : BaseBox
         UseProfile.WinStreak += 1;
         nextButton.transform.localScale = Vector3.zero;
         nextButton.transform.DOScale(new Vector3(1,1,1),0.3f).SetDelay(3);
-        GamePlayController.Instance.playerContain.levelData.Pause();
+        //GamePlayController.Instance.playerContain.levelData.Pause();
         GamePlayController.Instance.playerContain.boomInputController.enabled = false;
         GameController.Instance.musicManager.PlayWinSound();
     }   
@@ -62,7 +62,7 @@ public class Winbox : BaseBox
         void Next()
         {
 
-            Initiate.Fade("HomeScene", Color.black, 2f);
+            Initiate.Fade("GamePlay", Color.black, 2f);
         }
     }
     private void HandleReward()
@@ -79,7 +79,7 @@ public class Winbox : BaseBox
                        giftRewardShows.Add(new GiftRewardShow() { amount = GamePlayController.Instance.playerContain.totalCoin, type = GiftType.Coin });
                        PopupRewardBase.Setup(false).Show(giftRewardShows, delegate {
 
-                           Initiate.Fade("HomeScene", Color.black, 2f);
+                           Initiate.Fade("GamePlay", Color.black, 2f);
                        });
 
                    },

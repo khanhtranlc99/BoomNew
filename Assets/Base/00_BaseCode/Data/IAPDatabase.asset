@@ -26,7 +26,7 @@ MonoBehaviour:
       Data: 0|System.Collections.Generic.List`1[[IAPPack, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 8
+      Data: 7
     - Name: 
       Entry: 7
       Data: 1|IAPPack, Assembly-CSharp
@@ -341,7 +341,7 @@ MonoBehaviour:
       Data: 4
     - Name: $v
       Entry: 3
-      Data: 10
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -353,7 +353,7 @@ MonoBehaviour:
       Data: 5
     - Name: $v
       Entry: 3
-      Data: 10
+      Data: 4
     - Name: 
       Entry: 8
       Data: 
@@ -365,7 +365,7 @@ MonoBehaviour:
       Data: 6
     - Name: $v
       Entry: 3
-      Data: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -377,7 +377,7 @@ MonoBehaviour:
       Data: 7
     - Name: $v
       Entry: 3
-      Data: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -517,7 +517,7 @@ MonoBehaviour:
       Data: 2
     - Name: $v
       Entry: 3
-      Data: 100
+      Data: 1000
     - Name: 
       Entry: 8
       Data: 
@@ -587,77 +587,7 @@ MonoBehaviour:
       Data: 2
     - Name: $v
       Entry: 3
-      Data: 500
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: defaultPrice
-      Entry: 6
-      Data: 
-    - Name: price
-      Entry: 4
-      Data: 0
-    - Name: tittle
-      Entry: 6
-      Data: 
-    - Name: icon
-      Entry: 6
-      Data: 
-    - Name: isSale
-      Entry: 5
-      Data: false
-    - Name: idSale
-      Entry: 6
-      Data: 
-    - Name: percentSale
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 17|IAPPack, Assembly-CSharp
-    - Name: namePack
-      Entry: 1
-      Data: com.newmoon.boomvsslime.coinpacks_3
-    - Name: type
-      Entry: 3
-      Data: 7
-    - Name: productType
-      Entry: 3
-      Data: 0
-    - Name: typeBuy
-      Entry: 3
-      Data: 0
-    - Name: shortID
-      Entry: 1
-      Data: com.newmoon.boomvsslime.coinpacks_3
-    - Name: itemsResult
-      Entry: 7
-      Data: 18|System.Collections.Generic.Dictionary`2[[GiftType, Assembly-CSharp],[System.Int32,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 9
-      Data: 6
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2
-    - Name: $v
-      Entry: 3
-      Data: 1000
+      Data: 2000
     - Name: 
       Entry: 8
       Data: 
@@ -699,7 +629,7 @@ MonoBehaviour:
       Data: 
     - Name: lstPacksNotInapp
       Entry: 7
-      Data: 19|System.Collections.Generic.List`1[[IAPPack, Assembly-CSharp]], mscorlib
+      Data: 17|System.Collections.Generic.List`1[[IAPPack, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 0

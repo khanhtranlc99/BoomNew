@@ -14,6 +14,7 @@ public class Flame : MonoBehaviour
 {
     
     public SpriteRenderer spriteRenderer;
+    public Animator animator;
     private void OnEnable()
     {
         StartCoroutine(Stop());
@@ -46,11 +47,11 @@ public class Flame : MonoBehaviour
             }
         }
     }
-    public void Init (Sprite param, FlameType flameType )
+    public void Init (RuntimeAnimatorController param, FlameType flameType )
     {
-        spriteRenderer.sprite = param;
-        spriteRenderer.color = new Color32(0, 0, 0, 0);
-        spriteRenderer.DOColor(new Color32(255, 255, 255, 255), 0.2f).SetEase(Ease.Flash);
+        animator.runtimeAnimatorController = param;
+        //spriteRenderer.color = new Color32(0, 0, 0, 0);
+        //spriteRenderer.DOColor(new Color32(255, 255, 255, 255), 0.2f).SetEase(Ease.Flash);
         switch (flameType)
         {
             case FlameType.Up:

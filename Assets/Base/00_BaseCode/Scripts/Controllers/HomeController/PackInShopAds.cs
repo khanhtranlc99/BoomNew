@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 public class PackInShopAds : PackInShop
 {
@@ -9,42 +10,93 @@ public class PackInShopAds : PackInShop
     ActionWatchVideo actionWatchVideo;
     public GameObject decorBtn;
     public int numGift = 1;
-    public GameObject panelTime;
-    
-    public  bool WasWatch
-    {
-        get
-        {
-     
-            return PlayerPrefs.GetInt("WasWatchPackInShopAds"   + currentGift.ToString(), 0) == 1;
-        }
-        set
-        {
-            PlayerPrefs.SetInt("WasWatchPackInShopAds" + currentGift.ToString(), value ? 1 : 0);
-            PlayerPrefs.Save();
-        }
-    }
+ 
+   
+    //public  bool WasWatch
+    //{
+    //    get
+    //    {
+
+    //        return PlayerPrefs.GetInt("WasWatchPackInShopAds"   + currentGift.ToString(), 0) == 1;
+    //    }
+    //    set
+    //    {
+    //        PlayerPrefs.SetInt("WasWatchPackInShopAds" + currentGift.ToString(), value ? 1 : 0);
+    //        PlayerPrefs.Save();
+    //    }
+    //}
     public override void Init()
     {
         btnBuy.onClick.AddListener(HandleOnClick);
-        if(!WasWatch)
-        {
-            decorBtn.gameObject.SetActive(true);
-            if(panelTime != null)
-            {
-                decorBtn.gameObject.SetActive(false);
-            }
-        }
-        else
-        {
-            decorBtn.gameObject.SetActive(false);
-            if (panelTime != null)
-            {
-                decorBtn.gameObject.SetActive(true);
-            }
-        }
-
+        ShowCount();
     }
+    private void ShowCount()
+    {
+        switch (currentGift)
+        {
+            case GiftType.TNT_Booster:
+
+                tvBuy.text = UseProfile.NumbWatchAdsTNT.ToString() + "/3";
+                tvBuy_2.text = UseProfile.NumbWatchAdsTNT.ToString() + "/3";
+                break;
+            case GiftType.Rocket_Booster:
+                tvBuy.text = UseProfile.NumbWatchAdsRocket.ToString() + "/3";
+                tvBuy_2.text = UseProfile.NumbWatchAdsRocket.ToString() + "/3";
+
+                break;
+            case GiftType.Heart:
+                tvBuy.text = UseProfile.NumbWatchAdsHeart.ToString() + "/3";
+                tvBuy_2.text = UseProfile.NumbWatchAdsHeart.ToString() + "/3";
+
+                break;
+            case GiftType.Coin:
+
+                tvBuy.text = UseProfile.NumbWatchAdsCoin.ToString() + "/3";
+                tvBuy_2.text = UseProfile.NumbWatchAdsCoin.ToString() + "/3";
+                break;
+        }
+    }    
+    private void HandleAfterWatchVideo()
+    {
+        switch (currentGift)
+        {
+            case GiftType.TNT_Booster:
+                UseProfile.NumbWatchAdsTNT -= 1;
+                if (UseProfile.NumbWatchAdsTNT <= 0)
+                {
+                    Claim(delegate { UseProfile.NumbWatchAdsTNT = 3; ShowCount();   });
+                }    
+
+
+                break;
+            case GiftType.Rocket_Booster:
+                UseProfile.NumbWatchAdsRocket -= 1;
+                if (UseProfile.NumbWatchAdsRocket <= 0)
+                {
+                    Claim(delegate { UseProfile.NumbWatchAdsRocket = 3; ShowCount(); });
+                }
+
+                break;
+            case GiftType.Heart:
+                UseProfile.NumbWatchAdsHeart -= 1;
+                if (UseProfile.NumbWatchAdsHeart <= 0)
+                {
+                    Claim(delegate { UseProfile.NumbWatchAdsHeart = 3; ShowCount(); });
+                }
+
+                break;
+            case GiftType.Coin:
+
+                UseProfile.NumbWatchAdsCoin -= 1;
+                if (UseProfile.NumbWatchAdsCoin <= 0)
+                {
+                    Claim(delegate { UseProfile.NumbWatchAdsCoin = 3; ShowCount(); });
+                }
+
+                break;
+        }
+        ShowCount();
+    }    
 
     private void HandleOnClick()
     {
@@ -68,48 +120,36 @@ public class PackInShopAds : PackInShop
                 break;
         }
         GameController.Instance.musicManager.PlayClickSound();
-        if (!WasWatch )
-        {
-            GameController.Instance.admobAds.ShowVideoReward(
-                    actionReward: () =>
-                    {
+
+        GameController.Instance.admobAds.ShowVideoReward(
+                actionReward: () =>
+                {
 
 
-                        Claim();
+                    HandleAfterWatchVideo();
 
-                    },
-                    actionNotLoadedVideo: () =>
-                    {
-                        GameController.Instance.moneyEffectController.SpawnEffectText_FlyUp_UI
-                         (
-                            btnBuy.transform
-                            ,
-                         btnBuy.transform.position,
-                         "No video at the moment!",
-                         Color.white,
-                         isSpawnItemPlayer: true
-                         );
-                    },
-                    actionClose: null,
-                    actionWatchVideo,
-                    UseProfile.CurrentLevel.ToString());
-        }    
-      else
-        {
-            GameController.Instance.moneyEffectController.SpawnEffectText_FlyUp_UI
-                                   (
-                                      btnBuy.transform
-                                      ,
-                                   btnBuy.transform.position,
-                                   "Wait more time!",
-                                   Color.white,
-                                   isSpawnItemPlayer: true
-                                   );
-        }    
+                },
+                actionNotLoadedVideo: () =>
+                {
+                    btnBuy.transform.SetAsLastSibling();
+                    GameController.Instance.moneyEffectController.SpawnEffectText_FlyUp_UI
+                     (
+                        btnBuy.transform
+                        ,
+                     btnBuy.transform.position,
+                     "No video",
+                     Color.white,
+                     isSpawnItemPlayer: true
+                     );
+                },
+                actionClose: null,
+                actionWatchVideo,
+                UseProfile.CurrentLevel.ToString());
+    }
       
 
 
-        void Claim()
+        void Claim(Action callBack)
         {
         
             List<GiftRewardShow> giftRewardShows = new List<GiftRewardShow>();
@@ -118,9 +158,9 @@ public class PackInShopAds : PackInShop
             {
                 GameController.Instance.dataContain.giftDatabase.Claim(item.type, item.amount);
             }    
-            PopupRewardBase.Setup(false).Show(giftRewardShows, delegate { });
-            decorBtn.gameObject.SetActive(false);
-            WasWatch = true;
+            PopupRewardBase.Setup(false).Show(giftRewardShows, delegate { callBack?.Invoke(); });
+      
+          
         }
 
 
@@ -128,13 +168,4 @@ public class PackInShopAds : PackInShop
      
     }    
 
-    public void HandleOn()
-    {
-        if(WasWatch == true)
-        {
-            WasWatch = false;
-            decorBtn.gameObject.SetActive(true);
-        }
-      
-    }    
-}
+ 

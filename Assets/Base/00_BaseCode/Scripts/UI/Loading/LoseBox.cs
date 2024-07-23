@@ -20,7 +20,7 @@ public class LoseBox : BaseBox
     public Button btnClose;
     public Button btnAdsRevive;
     public Button btnReviveByCoin;
-    public AudioClip loseClip;
+
     public CoinHeartBar coinHeartBar;
 
     public void Init()
@@ -31,7 +31,7 @@ public class LoseBox : BaseBox
         coinHeartBar.Init();
         GamePlayController.Instance.playerContain.levelData.Pause();
         GamePlayController.Instance.playerContain.boomInputController.enabled = false;
-        GameController.Instance.musicManager.PlayLoseSound();
+       
     }   
     public void InitState()
     {

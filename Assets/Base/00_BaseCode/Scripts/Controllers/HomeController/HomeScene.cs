@@ -82,7 +82,7 @@ public class HomeScene : BaseScene
                 break;
 
         }
-
+        infoDataLevel.Init();
     }
     //private void Update()
     //{

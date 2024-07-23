@@ -140,6 +140,9 @@ MonoBehaviour:
   flame_1: {fileID: 21300000, guid: f9265c388f6439740b24e0e5fb6be319, type: 3}
   flame_2: {fileID: 21300000, guid: 9219525e7d23e6f4e88238185fb2b6ac, type: 3}
   flame_3: {fileID: 21300000, guid: aa1f682526407434ea0606f1bbf9ed15, type: 3}
+  animatorControllerParameter_1: {fileID: 9100000, guid: 65335fd11eb60224e800a6a07184726b, type: 2}
+  animatorControllerParameter_2: {fileID: 9100000, guid: 038a4934b0ede83428bc805e5102aa7f, type: 2}
+  animatorControllerParameter_3: {fileID: 9100000, guid: 7853815d1350c5944bd1027afc56be0f, type: 2}
 --- !u!58 &5156808034854031456
 CircleCollider2D:
   m_ObjectHideFlags: 0

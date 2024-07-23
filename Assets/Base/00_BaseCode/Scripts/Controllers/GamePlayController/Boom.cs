@@ -21,10 +21,15 @@ public class Boom : BarrierBase
     public Sprite flame_1;
     public Sprite flame_2;
     public Sprite flame_3;
+
+    public RuntimeAnimatorController animatorControllerParameter_1;
+    public RuntimeAnimatorController animatorControllerParameter_2;
+    public RuntimeAnimatorController animatorControllerParameter_3; 
+
     public void HandleExplosion()
     {
 
-
+        GamePlayController.Instance.playerContain.tutorial_BoomInput.NextTut();
         GameController.Instance.musicManager.PlayOneShot(boom);
         SpawnCross(1 + UseProfile.FlameUp_Item);
 
@@ -41,7 +46,7 @@ public class Boom : BarrierBase
 
         // Tạo phần tử ở trung tâm
       var tempMid =  SimplePool2.Spawn(flame, centerPosition, Quaternion.identity);
-        tempMid.Init(flame_2, FlameType.Mid);
+        tempMid.Init(animatorControllerParameter_2, FlameType.Mid);
         countUp = units;
         countDown = units;
         countRight = units;
@@ -72,11 +77,11 @@ public class Boom : BarrierBase
              var tempUp =   SimplePool2.Spawn(flame, upPosition, Quaternion.identity);
                 if(i == countUp)
                 {
-                    tempUp.Init(flame_3, FlameType.Up);
+                    tempUp.Init(animatorControllerParameter_3, FlameType.Up);
                 }
                 else
                 {
-                    tempUp.Init(flame_1, FlameType.Up);
+                    tempUp.Init(animatorControllerParameter_1, FlameType.Up);
                 }
       
             }
@@ -91,11 +96,11 @@ public class Boom : BarrierBase
                 var tempDown = SimplePool2.Spawn(flame, downPosition, Quaternion.identity);
                 if(i == countDown)
                 {
-                    tempDown.Init(flame_3, FlameType.Down);
+                    tempDown.Init(animatorControllerParameter_3, FlameType.Down);
                 }
                 else
                 {
-                    tempDown.Init(flame_1, FlameType.Down);
+                    tempDown.Init(animatorControllerParameter_1, FlameType.Down);
                 }
            
             }
@@ -109,11 +114,11 @@ public class Boom : BarrierBase
                 var tempLeft = SimplePool2.Spawn(flame, leftPosition, Quaternion.identity);
                 if(i == countLeft)
                 {
-                    tempLeft.Init(flame_3, FlameType.Left);
+                    tempLeft.Init(animatorControllerParameter_3, FlameType.Left);
                 }
                 else
                 {
-                    tempLeft.Init(flame_1, FlameType.Left);
+                    tempLeft.Init(animatorControllerParameter_1, FlameType.Left);
                 }
         
             }
@@ -128,11 +133,11 @@ public class Boom : BarrierBase
           
                 if (i == countRight)
                 {
-                    tempRight.Init(flame_3, FlameType.Right);
+                    tempRight.Init(animatorControllerParameter_3, FlameType.Right);
                 }
                 else
                 {
-                    tempRight.Init(flame_1, FlameType.Right);
+                    tempRight.Init(animatorControllerParameter_1, FlameType.Right);
                 }
             }
         }

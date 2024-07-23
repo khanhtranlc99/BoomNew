@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 using static MaxSdkBase;
 //using com.adjust.sdk;
@@ -20,7 +21,7 @@ public class AdmobAds : MonoBehaviour
     public bool wasShowOpenAppAdsInGame;
     public bool lockShowOpenAppAds;
     public int coutOpenAdsLoad;
-
+ 
     public bool showingMREC;
 #if UNITY_ANDROID
     private const string MaxSdkKey = "izbW4oEiJA_cdTh6wc0r6Cqyel80b8VaLe1pL0pAKx7TvV9BoLk4F29V4R3OUqiynDPwowsUIsszEb66mbssOZ";
@@ -195,7 +196,7 @@ public class AdmobAds : MonoBehaviour
                 countdownAds = 0;
 
             //GameController.Instance.AnalyticsController.LogInterShow(actionWatchLog);
-
+            GameController.Instance.AnalyticsController.LogInterShow();
             UseProfile.NumberOfAdsInDay = UseProfile.NumberOfAdsInDay + 1;
             UseProfile.NumberOfAdsInPlay = UseProfile.NumberOfAdsInPlay + 1;
 
@@ -274,7 +275,7 @@ public class AdmobAds : MonoBehaviour
         }
         actionWatchVideo = actionType;
         GameController.Instance.AnalyticsController.LogRequestVideoReward(actionType.ToString());
-        GameController.Instance.AnalyticsController.LogVideoRewardEligible();
+     
         if (IsLoadedVideoReward())
         {
 
@@ -286,7 +287,7 @@ public class AdmobAds : MonoBehaviour
             MaxSdk.ShowRewardedAd(RewardedAdUnitId, actionType.ToString());
             GameController.Instance.AnalyticsController.LogWatchVideo(actionType, true, true, level);
             GameController.Instance.AnalyticsController.LogVideoRewardShow(actionWatchVideo.ToString());
-
+            GameController.Instance.AnalyticsController.LogVideoRewardShow();
 
         }
         else
@@ -524,17 +525,13 @@ public class AdmobAds : MonoBehaviour
         MaxSdkCallbacks.Banner.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
 
         MaxSdk.CreateBanner(BanerAdUnitId, MaxSdkBase.BannerPosition.BottomCenter);
-        MaxSdk.SetBannerBackgroundColor(BanerAdUnitId, Color.clear);
-
-        if (MaxSdkUtils.IsTablet())
-            MaxSdk.SetBannerWidth(BanerAdUnitId, 520);
-        else
-            MaxSdk.SetBannerWidth(BanerAdUnitId, 320);
+        MaxSdk.SetBannerExtraParameter(BanerAdUnitId, "adaptive_banner", "true");
+        MaxSdk.SetBannerBackgroundColor(BanerAdUnitId, Color.black);
+        MaxSdk.SetBannerWidth(BanerAdUnitId, 520);
 
         GameController.Instance.admobAds.ShowBanner();
     }
-
-
+   
     private void OnBannerAdClickedEvent(string obj)
     {
         //inter click
@@ -562,6 +559,7 @@ public class AdmobAds : MonoBehaviour
             StopCoroutine(reloadBannerCoru);
             reloadBannerCoru = null;
         }
+       
     }
 
     public void DestroyBanner()

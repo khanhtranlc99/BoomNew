@@ -5,33 +5,38 @@ using UnityEngine;
 public class Step_1_BoomInput : TutorialBase
 {
     GameObject currentHand;
-    public GameObject panelTut;
+ 
     public override bool IsCanEndTut()
     {
         if(currentHand != null)
         {
             Destroy(currentHand.gameObject);
-            panelTut.SetActive(false);
+ 
         }
 
-     return base.IsCanShowTut(); ;
+     return true; 
     }
 
     public override void StartTut()
     {
-        Debug.LogError("Step_1_BoomInput");
+     
         if (UseProfile.CurrentLevel == 1)
         {
             if (currentHand != null)
             {
                 return;
             }
-            currentHand = SimplePool2.Spawn(handTut);
-            currentHand.transform.position = GamePlayController.Instance.playerContain.levelData.gridBasesId[18].transform.position;
-            panelTut.SetActive(true);
-
+            GamePlayController.Instance.playerContain.boomInputController.enabled = false;
+            Invoke(nameof(HandleSetup),3.8f);
         }
     }
+    private void HandleSetup()
+    {
+        GamePlayController.Instance.playerContain.boomInputController.enabled = true;
+        currentHand = SimplePool2.Spawn(handTut);
+        currentHand.transform.position = GamePlayController.Instance.playerContain.levelData.gridBasesId[19].transform.position;
+        currentHand.transform.position += new Vector3(-0.5f, 0.5f, 0);
+    }    
 
     protected override void SetNameTut()
     {

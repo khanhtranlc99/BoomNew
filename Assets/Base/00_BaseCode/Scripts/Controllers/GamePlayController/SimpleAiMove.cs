@@ -5,8 +5,13 @@ using DG.Tweening;
 public class SimpleAiMove : MonoBehaviour
 {
     public List<Transform> lsTranform;
-    private void Start()
+    public void Init(List<Transform> param)
     {
+        lsTranform = new List<Transform>();
+        foreach (var item in param)
+        {
+            lsTranform.Add(item);
+        }    
         Move();
     }
     public void Move()

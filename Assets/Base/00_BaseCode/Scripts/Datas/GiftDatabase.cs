@@ -82,19 +82,20 @@ public class GiftDatabase : SerializedScriptableObject
                 EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.TIMEBOOM_ITEM);
                 break;
             case GiftType.Fire_Start:
-                UseProfile.Fire_Start += amount;
-                Debug.LogError("Fire_Start" + UseProfile.Fire_Start);
+                UseProfile.Fire_Start = true;
+                EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.SHOP_CHECK);
                 break;
             case GiftType.Boom_Start:
-                UseProfile.Boom_Start += amount;
-                Debug.LogError("Boom_Start" + UseProfile.Boom_Start);
+                UseProfile.Boom_Start = true;
+                EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.SHOP_CHECK);
                 break;
             case GiftType.Heart_Unlimit:
             
                 UseProfile.TimeUnlimitHeart = DateTime.Now.AddHours(1);
                 UseProfile.Heart = 5;
                 UseProfile.isUnlimitHeart = true;
-                Debug.LogError("Heart_UnlimitHeart_" + UseProfile.isUnlimitHeart);
+                UseProfile.WasBoughtUnlimitTime = true;
+                EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.SHOP_CHECK);
                 break;
         }
     }

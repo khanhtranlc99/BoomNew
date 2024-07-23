@@ -6,6 +6,30 @@ using MoreMountains.NiceVibrations;
 
 public class UseProfile : MonoBehaviour
 {
+    public static bool NeedCheckShop
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(StringHelper.NEED_CHECK_SHOP, 0) == 1;
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.NEED_CHECK_SHOP, value ? 1 : 0);
+            PlayerPrefs.Save();
+        }
+    }
+    public static bool WasBoughtUnlimitTime
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(StringHelper.WAS_BOUGHT_UNLIMIT_TIME, 0) == 1;
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.WAS_BOUGHT_UNLIMIT_TIME, value ? 1 : 0);
+            PlayerPrefs.Save();
+        }
+    }
     public static bool FirstShowOpenAds
     {
         get
@@ -40,6 +64,70 @@ public class UseProfile : MonoBehaviour
         set
         {
             PlayerPrefs.SetInt(StringHelper.CURRENT_LEVEL, value);
+            PlayerPrefs.Save();
+        }
+    }
+    public static int NumbWatchAdsTNT
+    {
+        get
+        {
+            if (PlayerPrefs.GetInt(StringHelper.NUMB_WATCH_ADS_TNT, 3) <= 0)
+            {
+                return 0;
+            }
+            return PlayerPrefs.GetInt(StringHelper.NUMB_WATCH_ADS_TNT, 3);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.NUMB_WATCH_ADS_TNT, value);
+            PlayerPrefs.Save();
+        }
+    }
+    public static int NumbWatchAdsRocket
+    {
+        get
+        {
+            if (PlayerPrefs.GetInt(StringHelper.NUMB_WATCH_ADS_ROCKET, 3) <= 0)
+            {
+                return 0;
+            }
+            return PlayerPrefs.GetInt(StringHelper.NUMB_WATCH_ADS_ROCKET, 3);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.NUMB_WATCH_ADS_ROCKET, value);
+            PlayerPrefs.Save();
+        }
+    }
+    public static int NumbWatchAdsHeart
+    {
+        get
+        {
+            if (PlayerPrefs.GetInt(StringHelper.NUMB_WATCH_ADS_HEART, 3) <= 0)
+            {
+                return 0;
+            }
+            return PlayerPrefs.GetInt(StringHelper.NUMB_WATCH_ADS_HEART, 3);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.NUMB_WATCH_ADS_HEART, value);
+            PlayerPrefs.Save();
+        }
+    }
+    public static int NumbWatchAdsCoin
+    {
+        get
+        {
+            if (PlayerPrefs.GetInt(StringHelper.NUMB_WATCH_ADS_COIN, 3) <= 0)
+            {
+                return 0;
+            }
+            return PlayerPrefs.GetInt(StringHelper.NUMB_WATCH_ADS_COIN, 3);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(StringHelper.NUMB_WATCH_ADS_COIN, value);
             PlayerPrefs.Save();
         }
     }
@@ -320,30 +408,28 @@ public class UseProfile : MonoBehaviour
         }
     }
 
-    public static int Fire_Start
+    public static bool Fire_Start
     {
         get
         {
-            return PlayerPrefs.GetInt(StringHelper.FIRE_START, 0);
+            return PlayerPrefs.GetInt(StringHelper.FIRE_START, 0) == 1;
         }
         set
         {
-            PlayerPrefs.SetInt(StringHelper.FIRE_START, value);
+            PlayerPrefs.SetInt(StringHelper.FIRE_START, value ? 1 : 0);
             PlayerPrefs.Save();
-          
         }
     }
-    public static int Boom_Start
+    public static bool Boom_Start
     {
         get
         {
-            return PlayerPrefs.GetInt(StringHelper.BOOM_START, 0);
+            return PlayerPrefs.GetInt(StringHelper.BOOM_START, 0) == 1;
         }
         set
         {
-            PlayerPrefs.SetInt(StringHelper.BOOM_START, value);
+            PlayerPrefs.SetInt(StringHelper.BOOM_START, value ? 1 : 0);
             PlayerPrefs.Save();
-
         }
     }
 

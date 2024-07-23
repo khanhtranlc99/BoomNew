@@ -114,21 +114,23 @@ public class LevelData : SerializedMonoBehaviour
     {
         ShuffleBase();
         InitBase();
-        GameController.Instance.AnalyticsController.StartLevel(UseProfile.CurrentLevel);
+
     }    
     void InitBase()
     {
-        foreach (var item in lsSmiles)
-        {
-            item.Init();
-        }
-        if (lsBloomSoms.Count > 0)
-        {
-            foreach (var item in lsBloomSoms)
+      
+            foreach (var item in lsSmiles)
             {
                 item.Init();
             }
-        }
+            if (lsBloomSoms.Count > 0)
+            {
+                foreach (var item in lsBloomSoms)
+                {
+                    item.Init();
+                }
+            }
+     
     }
     public bool isAllSlimeDie
     {

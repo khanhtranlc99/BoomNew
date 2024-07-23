@@ -8,7 +8,7 @@ public class SlimeFSMController : MonoBehaviour
     public SlimeStateBase moveState;
     public SlimeStateBase hideState;
     public SlimeStateBase dieState;
-    private bool wasUse;
+    public bool wasUse;
     public SlimeStateBase currentState;
 
 
@@ -18,8 +18,18 @@ public class SlimeFSMController : MonoBehaviour
         moveState.Init(slimeBase);
         hideState.Init(slimeBase);
         dieState.Init(slimeBase);
-        wasUse = true;
-        ChangeState(StateType.Move);
+
+        if (UseProfile.CurrentLevel != 1)
+        {
+            wasUse = true;
+            ChangeState(StateType.Move);
+        }
+        else
+        {
+            slimeBase.animator.Play("Idle");
+           
+        }    
+
     }
 
     public void ChangeState(StateType newState )

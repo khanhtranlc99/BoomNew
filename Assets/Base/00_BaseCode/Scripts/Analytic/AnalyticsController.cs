@@ -90,13 +90,14 @@ public class AnalyticsController : MonoBehaviour
     public void LoadingComplete()
     {
 
-
+        //Debug.LogError("111111111111");
         if (!firebaseInitialized) return;
 
         if (!UseProfile.FirstLoading)
         {
             FirebaseAnalytics.LogEvent("first_loading_complete");
             UseProfile.FirstLoading = true;
+            //Debug.LogError("first_loading_complete");
         }
 
 
@@ -129,15 +130,17 @@ public class AnalyticsController : MonoBehaviour
     }
     public void StartLevel(int param)
     {
-        Debug.LogError("=----------firebaseInitialized");
+    
         if (!firebaseInitialized) return;
         if (param < 10)
         {
             FirebaseAnalytics.LogEvent("Start_level_" + "0" + param);
+            //Debug.LogError("Start_level_" + "0" + param);
         }
         else
         {
             FirebaseAnalytics.LogEvent("Start_level_" + param);
+            //Debug.LogError("Start_level_" + param);
         }
  
     }
@@ -275,9 +278,21 @@ public class AnalyticsController : MonoBehaviour
         }
     }
 
-    public void LogVideoRewardEligible()
+    public void LogVideoRewardShow()
     {
+        try
+        {
+            if (firebaseInitialized)
+            {
+                FirebaseAnalytics.LogEvent("Rewardshow");
+            }
+        }
+        catch
+        {
 
+        }
+    
+      
     }
 
     public void LogClickToVideoReward(string placement)
@@ -388,7 +403,7 @@ public class AnalyticsController : MonoBehaviour
         try
         {
             if (firebaseInitialized)
-                FirebaseAnalytics.LogEvent("ad_inter_show");
+                FirebaseAnalytics.LogEvent("Intershow");
 
         }
         catch
@@ -464,14 +479,14 @@ public class AnalyticsController : MonoBehaviour
     {
         int count = GetCount("new_total_inter_count");
         FirebaseAnalytics.SetUserProperty("Intershow_", count.ToString());
-        FirebaseAnalytics.LogEvent("Intershow_" +  count.ToString());
+        //FirebaseAnalytics.LogEvent("Intershow_" +  count.ToString());
     }
 
     public void HandleFireEvent_Total_Reward_Count()
     {
         int count = GetCount("new_total_reward_count");
         FirebaseAnalytics.SetUserProperty("Rewardshow_", count.ToString());
-        FirebaseAnalytics.LogEvent("Rewardshow_" +  count.ToString());
+        //FirebaseAnalytics.LogEvent("Rewardshow_" +  count.ToString());
     }
 
     public int GetCount(string s)

@@ -5,4 +5,5 @@ using UnityEngine;
 public class Tutorial_BoomInput : TutorialFunController
 {
     
+     
 }

@@ -118,10 +118,10 @@ public class IAPPack
 
         int value = 0;
         GiftType typeItem = GiftType.Coin;
-        if (type == TypePackIAP.PremiumPacks)
+        if (type == TypePackIAP.PremiumPacks || type == TypePackIAP.FirePacks  || type == TypePackIAP.BoomPacks)
         {
-            //UseProfile.WasBoughtStarterPack = true;
-            //EventDispatcher.EventDispatcher.Instance.PostEvent(EventID.BY_STARTER_PACK);
+         
+          
 
         }
         foreach (var item in itemsResult)

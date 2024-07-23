@@ -125,12 +125,20 @@ public class Bloomsom : BarrierBase
     }
     public void HandlePauseGame(object param)
     {
-        this.transform.DOPause();
-        for (int i = 0; i < lsLear.Count; i++)
+        try
         {
-            int index = i;
-            lsLear[index].transform.DOPause();
+            this.transform.DOPause();
+            for (int i = 0; i < lsLear.Count; i++)
+            {
+                int index = i;
+                lsLear[index].transform.DOPause();
+            }
         }
+        catch
+        {
+
+        }
+     
     }
     public void HandleStopPauseGame(object param)
     {

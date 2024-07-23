@@ -675,7 +675,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 15
+  m_Text: 215
 --- !u!114 &4864049738320035825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2163,3 +2163,4 @@ MonoBehaviour:
   txtCoinBuy: {fileID: 773537732789472624}
   btnBuy: {fileID: 773537733453073350}
   btnADS: {fileID: 6731962458372556174}
+  tvCountHeart: {fileID: 6681329788226962436}
