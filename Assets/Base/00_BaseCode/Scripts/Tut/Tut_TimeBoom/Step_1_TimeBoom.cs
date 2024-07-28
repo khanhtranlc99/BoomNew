@@ -42,4 +42,9 @@ public class Step_1_TimeBoom : TutorialBase
     {
 
     }
+    public override void OnEndTut()
+    {
+
+    }
+
 }

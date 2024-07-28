@@ -80,7 +80,10 @@ public class HomeScene : BaseScene
                 tvDifficut.text = "VeryHard";
                 imgLevelType.sprite = veryHardSprite;
                 break;
-
+            case Difficult.Boss:
+                tvDifficut.text = "VeryHard";
+                imgLevelType.sprite = veryHardSprite;
+                break;
         }
         infoDataLevel.Init();
     }

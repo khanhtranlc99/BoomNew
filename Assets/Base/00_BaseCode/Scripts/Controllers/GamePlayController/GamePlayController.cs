@@ -49,7 +49,7 @@ public class GamePlayController : Singleton<GamePlayController>
         //Debug.LogError("isSlimeTakeDame_" + playerContain.levelData.isSlimeTakeDame);
         if (stateGame == StateGame.Playing)
         {
-         
+
 
             //if (playerContain.levelData.isSlimeTakeDame)
             //{
@@ -57,7 +57,16 @@ public class GamePlayController : Singleton<GamePlayController>
             //}
             //else
             //{
-                if (playerContain.boomInputController.countBoom <= 0 && gameScene.targetController.isLose)
+            if (playerContain.boomInputController.countBoom <= 0 && gameScene.targetController.isLose && UseProfile.FastBoom_Item > 0 )
+            {
+                playerContain.tutorial_FastBoom.StartTut();
+            }
+            if (playerContain.boomInputController.countBoom <= 0 && gameScene.targetController.isLose && UseProfile.TimeBoom_Item > 0)
+            {
+                playerContain.tutorial_TimeBoom.StartTut();
+            }
+
+            if (playerContain.boomInputController.countBoom <= 0 && gameScene.targetController.isLose && UseProfile.FastBoom_Item <= 0 && UseProfile.TimeBoom_Item <= 0)
                 {
                  
                     if (stateGame == StateGame.Playing)

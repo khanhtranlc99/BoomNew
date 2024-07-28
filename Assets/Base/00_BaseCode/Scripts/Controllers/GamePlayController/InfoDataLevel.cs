@@ -39,7 +39,7 @@ public class InfoDataLevel : MonoBehaviour
         foreach(var item in levelDatas)
         {
             var temp = new InfoData();
-            temp.difficult = temp.difficult;
+            temp.difficult = item.difficult;
             if (item.isSlimeLevel)
             {
                 temp.isSlimeLevel = true;

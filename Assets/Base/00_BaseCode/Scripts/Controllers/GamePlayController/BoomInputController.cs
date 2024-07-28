@@ -16,6 +16,8 @@ public class BoomInputController : MonoBehaviour
     bool tweenText;
     public AudioClip click;
     public GameObject iconTut;
+    public Step_1_BoomInput step_1_BoomInput;
+    public Step_2_BoomInput step_2_BoomInput;
 
     public void Init (LevelData level)
     {
@@ -93,6 +95,7 @@ public class BoomInputController : MonoBehaviour
                             selectedObject.barrierBase.GetComponent<TimeBoom>().HandleExplosion();
                             return;
                         }
+                      
                     }
                     if (selectedObject.gameObject.tag == "Grid")
                     {
@@ -103,18 +106,22 @@ public class BoomInputController : MonoBehaviour
                         {
                             if(countBoom > 0)
                             {
+ 
                                 var boom = SimplePool2.Spawn(prefabBoomBase, selectedObject.transform.position, Quaternion.identity);
                                 selectedObject.barrierBase = boom;
                                 boom.gridBase = selectedObject;
                                 boom.Init();
                                 HandleSubtraction();
-          
+                                step_1_BoomInput.DeleteHand();
+                                step_2_BoomInput.DeleteHand();
                                 GamePlayController.Instance.playerContain.tutorial_TNT.StartTut();
                                 GamePlayController.Instance.playerContain.tutorial_Rocket.StartTut();
                                 GamePlayController.Instance.playerContain.tutorial_Freeze.StartTut();
                                 GamePlayController.Instance.playerContain.tutorial_Atom.StartTut();
                                 GameController.Instance.musicManager.PlayOneShot(click);
                                 MMVibrationManager.Haptic(HapticTypes.MediumImpact);
+
+                                
                             }
                             
                         }

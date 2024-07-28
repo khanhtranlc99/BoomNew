@@ -12,6 +12,7 @@ public class MoveStateIceSlime : SlimeStateBase
     {
         idOld = new List<int>();
         data = slimeBase;
+        isIdle = false;
     }
 
     public override void StartState()
@@ -37,12 +38,37 @@ public class MoveStateIceSlime : SlimeStateBase
         this.transform.DOKill();
     }
     int coutLoop = 0;
+    public int ran;
+    public bool isIdle;
     private void HandleMove()
     {
         //if (idOld.Count > 4)
         //{
         //    idOld.Remove(idOld[0]);
         //}
+        ran = Random.Range(0, 2);
+        if (ran == 0)
+        {
+            if (!data.wasTakeDame)
+            {
+                isIdle = true;
+                StartCoroutine(Helper.HandleActionPlayAndWait(data.animator, "Idle", delegate { HandleMove(); }));
+                return;
+            }
+
+
+
+        }
+        else
+        {
+            if (!data.wasTakeDame)
+            {
+                isIdle = false;
+                data.animator.Play("Move");
+            }
+
+
+        }
         if (nextGrid == null)
         {
 

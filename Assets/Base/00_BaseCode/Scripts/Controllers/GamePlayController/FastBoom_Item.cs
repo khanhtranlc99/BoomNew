@@ -19,7 +19,7 @@ public class FastBoom_Item : MonoBehaviour
         {
             icon.SetActive(true);
             tvNum.text = "" + UseProfile.FastBoom_Item;
-            GamePlayController.Instance.playerContain.tutorial_FastBoom.StartTut();
+            //GamePlayController.Instance.playerContain.tutorial_FastBoom.StartTut();
         }
         wasUseFastBoom = false;
         btnFastBoom.onClick.AddListener(delegate { HandleBtnFastBoom(); });
@@ -45,7 +45,7 @@ public class FastBoom_Item : MonoBehaviour
                 });
             });
         }
-        Debug.LogError("HandleShowFastBoom_Item_" + UseProfile.FastBoom_Item);
+   
     }
 
     public void ShowIcon(Action callBack)

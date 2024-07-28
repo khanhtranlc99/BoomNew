@@ -5,21 +5,20 @@ using UnityEngine;
 public class Step_2_BoomInput : TutorialBase
 {
     GameObject currentHand;
+    public Tutorial_BoomInput tutorial_BoomInput;
+    bool wasStart = false;
 
     public override bool IsCanEndTut()
     {
         if (currentHand != null)
         {
             Destroy(currentHand.gameObject);
-            foreach (var item in GamePlayController.Instance.playerContain.levelData.lsSmiles)
-            {
-                if(item != null)
-                {
-                    item.gameObject.GetComponent<SlimeBase>().fSMController.wasUse = true;
-                    item.gameObject.GetComponent<SlimeBase>().fSMController.ChangeState(StateType.Move);
-                }    
-            }    
+  
         }
+        if(wasStart)
+        {
+            tutorial_BoomInput.HandleSpawnBoss();
+        }    
         //if (PlayerPrefs.GetInt(StringHelper.IS_DONE_TUT + "Tutorial_BoomInput_Step_1") == 0)
         //{
         //    return false;
@@ -49,11 +48,23 @@ public class Step_2_BoomInput : TutorialBase
             currentHand = SimplePool2.Spawn(handTut);
             currentHand.transform.position = GamePlayController.Instance.playerContain.levelData.gridBasesId[14].transform.position;
             currentHand.transform.position += new Vector3(-0.5f, 0.5f, 0);
-
+            wasStart = true;
         }
     }
+    public void DeleteHand()
+    {
+        if (currentHand != null)
+        {
+            Destroy(currentHand.gameObject);
 
+        }
+
+    }
     protected override void SetNameTut()
+    {
+
+    }
+    public override void OnEndTut()
     {
 
     }

@@ -27,7 +27,7 @@ public class Step_1_BoomInput : TutorialBase
                 return;
             }
             GamePlayController.Instance.playerContain.boomInputController.enabled = false;
-            Invoke(nameof(HandleSetup),3.8f);
+            Invoke(nameof(HandleSetup),2);
         }
     }
     private void HandleSetup()
@@ -37,9 +37,22 @@ public class Step_1_BoomInput : TutorialBase
         currentHand.transform.position = GamePlayController.Instance.playerContain.levelData.gridBasesId[19].transform.position;
         currentHand.transform.position += new Vector3(-0.5f, 0.5f, 0);
     }    
+    public void DeleteHand()
+    {
+        if (currentHand != null)
+        {
+            Destroy(currentHand.gameObject);
+
+        }
+
+    }
 
     protected override void SetNameTut()
     {
      
+    }
+    public override void OnEndTut()
+    {
+      
     }
 }

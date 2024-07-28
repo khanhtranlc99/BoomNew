@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEditor;
-
+using System;
+using DG.Tweening;
 public enum Difficult
 {
     Normal,
     Hard,
-    VeryHard
+    VeryHard,
+    Boss
 
 }
 
 public class LevelData : SerializedMonoBehaviour
 {
     public Difficult difficult;
+    [ShowIf("difficult", Difficult.Boss)] public List<SlimeBase> lsBoss;
+
     public bool isSlimeLevel;
     public bool isTimeLevel;
 
@@ -44,7 +48,7 @@ public class LevelData : SerializedMonoBehaviour
    
     public GridBase GridBase(int id)
     {
-        Debug.LogError("GridBasesId.Count_" + gridBasesId.Count);
+        //Debug.LogError("GridBasesId.Count_" + gridBasesId.Count);
         for (int i = 0; i < gridBasesId.Count; i++)
         {
             if (gridBasesId[i].id == id)
@@ -56,7 +60,7 @@ public class LevelData : SerializedMonoBehaviour
     }
     public GridBase GridBaseNull()
     {
-        Debug.LogError("GridBasesId.Count_" + gridBasesId.Count);
+        //Debug.LogError("GridBasesId.Count_" + gridBasesId.Count);
         for (int i = 0; i < gridBasesId.Count; i++)
         {
            if(gridBasesId[i].barrierBase == null)
@@ -78,7 +82,7 @@ public class LevelData : SerializedMonoBehaviour
                     temp.Add(item);
                 }
             }
-            return temp[Random.Range(0, temp.Count)];
+            return temp[UnityEngine.Random.Range(0, temp.Count)];
         }   
     }
 
@@ -115,22 +119,70 @@ public class LevelData : SerializedMonoBehaviour
         ShuffleBase();
         InitBase();
 
-    }    
-    void InitBase()
+    }
+    public void InitBoss(Action callBack)
     {
-      
+        GamePlayController.Instance.gameScene.PlaySfxDrop();
+          
+        for(int i =0; i < lsBoss.Count; i++)
+        {
+            int index = i;
+            lsBoss[index].transform.DOJump(lsBoss[index].gridBase.transform.position, 2, 1, 0.5f).SetEase(Ease.Linear).OnComplete(delegate {
+
+                var temp = SimplePool2.Spawn(GamePlayController.Instance.gameScene.vfxPartycaleGround, lsBoss[index].gridBase.transform.position, Quaternion.identity);
+                temp.Play();
+                temp.transform.localEulerAngles = new Vector3(-120, 0, 0);
+                if (index >= lsBoss.Count -1)
+                {              
+                    this.transform.DOShakePosition(0.6f, 1, 20, 1).OnComplete(delegate {
+                        GamePlayController.Instance.gameScene.ShowBossPanel(delegate {
+
+                            callBack?.Invoke();
+                        });
+
+                    });
+                }    
+     
+            });
+
+
+        }    
+        
+        
+    }
+   public  void InitBase()
+    {
+            if(lsBoss.Count > 0)
+        {
+            InitBoss(delegate { Main(); });
+        }   
+            else
+        {
+            Main();
+        }    
+
+        void Main()
+        {
             foreach (var item in lsSmiles)
             {
-                item.Init();
+                if(item != null)
+                {
+                    item.Init();
+                }    
+            
             }
             if (lsBloomSoms.Count > 0)
             {
                 foreach (var item in lsBloomSoms)
                 {
-                    item.Init();
+                    if (item != null)
+                    {
+                        item.Init();
+                    }
                 }
             }
-     
+            GamePlayController.Instance.stateGame = StateGame.Playing;
+        } 
     }
     public bool isAllSlimeDie
     {

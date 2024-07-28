@@ -33,7 +33,7 @@ public class TimeBoom_Item : MonoBehaviour
         {
             icon.SetActive(true);
             tvNum.text = "" + UseProfile.TimeBoom_Item;
-            GamePlayController.Instance.playerContain.tutorial_TimeBoom.StartTut();
+            //GamePlayController.Instance.playerContain.tutorial_TimeBoom.StartTut();
         }
         btnTimeBoom.onClick.AddListener(delegate { HandleTimeBoom(); });
         EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.TIMEBOOM_ITEM, HandleShowTimeBoom_Itemp);

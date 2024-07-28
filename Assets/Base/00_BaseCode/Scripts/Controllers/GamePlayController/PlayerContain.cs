@@ -44,28 +44,28 @@ public class PlayerContain : MonoBehaviour
         {
             winStreakController.canvasGroup.gameObject.SetActive(false);
         }
-            prepageGame.Init(delegate
+        prepageGame.Init(delegate
+    {
+        if (UseProfile.WinStreak > 0 || UseProfile.Boom_Start == true || UseProfile.Fire_Start == true)
         {
-            if (UseProfile.WinStreak > 0 || UseProfile.Boom_Start == true|| UseProfile.Fire_Start == true)
+            winStreakController.Init(delegate
             {
-                winStreakController.Init(delegate
-                {
-                    levelData.Init(true);
-            
-                    SetUp();
-                });
-         
-            }
-            else
-            {
-               
-                levelData.Init();     
+                levelData.Init(true);
+
                 SetUp();
-            }
-            GameController.Instance.AnalyticsController.LoadingComplete();
-            GameController.Instance.AnalyticsController.StartLevel(UseProfile.CurrentLevel);
-     
-        });
+            });
+
+        }
+        else
+        {
+
+            levelData.Init(true);
+            SetUp();
+        }
+        GameController.Instance.AnalyticsController.LoadingComplete();
+        GameController.Instance.AnalyticsController.StartLevel(UseProfile.CurrentLevel);
+
+    });
         //levelData.Init(true);
         //cameraScale.Init();
         //SetUp();
@@ -87,11 +87,26 @@ public class PlayerContain : MonoBehaviour
             tutorial_BoomInput.StartTut();
             tutorial_FastBoom.Init();
             tutorial_TimeBoom.Init();
-            GamePlayController.Instance.stateGame = StateGame.Playing;
+        
         }
     }
 
-    
+    public void OffBoomInput()
+    {
+        boomInputController.enabled = false;
+    }   
+    public void OnBoomInput()
+    {
+        if(fastBoom_Item.wasUseFastBoom)
+        {
+            return;
+        }
+        if (timeBoom_Item.wasUseTimeBoom)
+        {
+            return;
+        }
+        boomInputController.enabled = true;
+    }    
 
 
 

@@ -20,6 +20,7 @@ public class DieState : SlimeStateBase
 
     public override void StartState()
     {
+ 
         data.animator.Play("Die");
     }
 
@@ -49,7 +50,6 @@ public class DieState : SlimeStateBase
             {
                 GamePlayController.Instance.gameScene.targetController.lsVfxDie.Remove(temp);
                 slimeTarget.HandleSubtraction();
-
                 SimplePool2.Despawn(temp.gameObject);
             });
         }

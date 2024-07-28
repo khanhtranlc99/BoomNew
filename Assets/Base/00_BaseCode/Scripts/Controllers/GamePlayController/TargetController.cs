@@ -96,6 +96,9 @@ public class TargetController : MonoBehaviour
             case Difficult.VeryHard:
                 imgPanel.color = new Color32(204, 80, 35, 255);
                 break;
+            case Difficult.Boss:
+                imgPanel.color = new Color32(204, 80, 35, 255);
+                break;
         }
 
      
@@ -160,12 +163,12 @@ public class TargetController : MonoBehaviour
     {
         Winbox.Setup().Show();
     }
-    //private void Update()
-    //{
-    //    if(Input.GetKeyDown(KeyCode.W))
-    //    {
-    //        GamePlayController.Instance.stateGame = StateGame.Win;
-    //        Invoke(nameof(ShowConfesti), 0.75f);
-    //    }    
-    //}
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            GamePlayController.Instance.stateGame = StateGame.Win;
+            Invoke(nameof(ShowConfesti), 0.75f);
+        }
+    }
 }

@@ -850,6 +850,12 @@ MonoBehaviour:
   countRight: 0
   countLeft: 0
   boom: {fileID: 8300000, guid: 8eab0202acaa867489538f74eef4d5af, type: 3}
+  flame_1: {fileID: 0}
+  flame_2: {fileID: 0}
+  flame_3: {fileID: 0}
+  animatorControllerParameter_1: {fileID: 9100000, guid: 65335fd11eb60224e800a6a07184726b, type: 2}
+  animatorControllerParameter_2: {fileID: 9100000, guid: 038a4934b0ede83428bc805e5102aa7f, type: 2}
+  animatorControllerParameter_3: {fileID: 9100000, guid: 7853815d1350c5944bd1027afc56be0f, type: 2}
 --- !u!58 &8921451642561202596
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -19823,6 +19829,7 @@ MonoBehaviour:
   moveState: {fileID: 8994820969929803454}
   hideState: {fileID: 7682994919436483239}
   dieState: {fileID: 5871485601503268862}
+  wasUse: 0
   currentState: {fileID: 0}
 --- !u!114 &8180992756620512140
 MonoBehaviour:
@@ -20662,6 +20669,7 @@ MonoBehaviour:
   moveState: {fileID: 4021693442945727593}
   hideState: {fileID: 1601210810870087779}
   dieState: {fileID: 1050130184616463551}
+  wasUse: 0
   currentState: {fileID: 0}
 --- !u!114 &7322103232274441460
 MonoBehaviour:
@@ -23949,6 +23957,12 @@ MonoBehaviour:
   countRight: 0
   countLeft: 0
   boom: {fileID: 8300000, guid: 8eab0202acaa867489538f74eef4d5af, type: 3}
+  flame_1: {fileID: 0}
+  flame_2: {fileID: 0}
+  flame_3: {fileID: 0}
+  animatorControllerParameter_1: {fileID: 9100000, guid: 65335fd11eb60224e800a6a07184726b, type: 2}
+  animatorControllerParameter_2: {fileID: 9100000, guid: 038a4934b0ede83428bc805e5102aa7f, type: 2}
+  animatorControllerParameter_3: {fileID: 9100000, guid: 7853815d1350c5944bd1027afc56be0f, type: 2}
 --- !u!58 &6109129144587983437
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -25148,6 +25162,12 @@ MonoBehaviour:
   countRight: 0
   countLeft: 0
   boom: {fileID: 8300000, guid: 8eab0202acaa867489538f74eef4d5af, type: 3}
+  flame_1: {fileID: 0}
+  flame_2: {fileID: 0}
+  flame_3: {fileID: 0}
+  animatorControllerParameter_1: {fileID: 9100000, guid: 65335fd11eb60224e800a6a07184726b, type: 2}
+  animatorControllerParameter_2: {fileID: 9100000, guid: 038a4934b0ede83428bc805e5102aa7f, type: 2}
+  animatorControllerParameter_3: {fileID: 9100000, guid: 7853815d1350c5944bd1027afc56be0f, type: 2}
 --- !u!58 &6485026770649524253
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -31491,6 +31511,12 @@ MonoBehaviour:
   countRight: 0
   countLeft: 0
   boom: {fileID: 8300000, guid: 8eab0202acaa867489538f74eef4d5af, type: 3}
+  flame_1: {fileID: 0}
+  flame_2: {fileID: 0}
+  flame_3: {fileID: 0}
+  animatorControllerParameter_1: {fileID: 9100000, guid: 65335fd11eb60224e800a6a07184726b, type: 2}
+  animatorControllerParameter_2: {fileID: 9100000, guid: 038a4934b0ede83428bc805e5102aa7f, type: 2}
+  animatorControllerParameter_3: {fileID: 9100000, guid: 7853815d1350c5944bd1027afc56be0f, type: 2}
 --- !u!58 &6849580722904985696
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -36957,6 +36983,7 @@ MonoBehaviour:
   moveState: {fileID: 1419304351961106853}
   hideState: {fileID: 5218514643591440783}
   dieState: {fileID: 6512266440855133736}
+  wasUse: 0
   currentState: {fileID: 0}
 --- !u!114 &4316604069040632714
 MonoBehaviour:
@@ -37303,6 +37330,7 @@ MonoBehaviour:
   moveState: {fileID: 4235069032412798601}
   hideState: {fileID: 3228685664832239384}
   dieState: {fileID: 8155971433613138574}
+  wasUse: 0
   currentState: {fileID: 0}
 --- !u!114 &5754465321639311119
 MonoBehaviour:
@@ -38106,6 +38134,7 @@ MonoBehaviour:
   moveState: {fileID: 4541943567368219628}
   hideState: {fileID: 1428973327431393333}
   dieState: {fileID: 5644362225384342029}
+  wasUse: 0
   currentState: {fileID: 0}
 --- !u!114 &3287787074096570211
 MonoBehaviour:
@@ -38368,6 +38397,7 @@ MonoBehaviour:
   moveState: {fileID: 7988482227476041322}
   hideState: {fileID: 5326808550991910533}
   dieState: {fileID: 101757804733599654}
+  wasUse: 0
   currentState: {fileID: 0}
 --- !u!114 &7120192772696549364
 MonoBehaviour:
@@ -45630,6 +45660,7 @@ MonoBehaviour:
   moveState: {fileID: 2554722693216710405}
   hideState: {fileID: 538507287334580300}
   dieState: {fileID: 1435220274233061963}
+  wasUse: 0
   currentState: {fileID: 0}
 --- !u!114 &1273397298657852847
 MonoBehaviour:
@@ -52945,6 +52976,7 @@ MonoBehaviour:
   moveState: {fileID: 5733238316816584960}
   hideState: {fileID: 6840311864650709641}
   dieState: {fileID: 1391331791580105167}
+  wasUse: 0
   currentState: {fileID: 0}
 --- !u!114 &2089071324468774451
 MonoBehaviour:
@@ -53707,6 +53739,12 @@ MonoBehaviour:
   countRight: 0
   countLeft: 0
   boom: {fileID: 8300000, guid: 8eab0202acaa867489538f74eef4d5af, type: 3}
+  flame_1: {fileID: 0}
+  flame_2: {fileID: 0}
+  flame_3: {fileID: 0}
+  animatorControllerParameter_1: {fileID: 9100000, guid: 65335fd11eb60224e800a6a07184726b, type: 2}
+  animatorControllerParameter_2: {fileID: 9100000, guid: 038a4934b0ede83428bc805e5102aa7f, type: 2}
+  animatorControllerParameter_3: {fileID: 9100000, guid: 7853815d1350c5944bd1027afc56be0f, type: 2}
 --- !u!58 &4724235432073627098
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -72654,6 +72692,12 @@ MonoBehaviour:
   countRight: 0
   countLeft: 0
   boom: {fileID: 8300000, guid: 8eab0202acaa867489538f74eef4d5af, type: 3}
+  flame_1: {fileID: 0}
+  flame_2: {fileID: 0}
+  flame_3: {fileID: 0}
+  animatorControllerParameter_1: {fileID: 9100000, guid: 65335fd11eb60224e800a6a07184726b, type: 2}
+  animatorControllerParameter_2: {fileID: 9100000, guid: 038a4934b0ede83428bc805e5102aa7f, type: 2}
+  animatorControllerParameter_3: {fileID: 9100000, guid: 7853815d1350c5944bd1027afc56be0f, type: 2}
 --- !u!58 &2308144830040794931
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -73243,6 +73287,12 @@ MonoBehaviour:
   countRight: 0
   countLeft: 0
   boom: {fileID: 8300000, guid: 8eab0202acaa867489538f74eef4d5af, type: 3}
+  flame_1: {fileID: 0}
+  flame_2: {fileID: 0}
+  flame_3: {fileID: 0}
+  animatorControllerParameter_1: {fileID: 9100000, guid: 65335fd11eb60224e800a6a07184726b, type: 2}
+  animatorControllerParameter_2: {fileID: 9100000, guid: 038a4934b0ede83428bc805e5102aa7f, type: 2}
+  animatorControllerParameter_3: {fileID: 9100000, guid: 7853815d1350c5944bd1027afc56be0f, type: 2}
 --- !u!58 &831959432828746718
 CircleCollider2D:
   m_ObjectHideFlags: 0

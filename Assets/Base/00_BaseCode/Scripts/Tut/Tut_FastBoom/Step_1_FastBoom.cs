@@ -43,4 +43,8 @@ public class Step_1_FastBoom : TutorialBase
     {
 
     }
+    public override void OnEndTut()
+    {
+
+    }
 }

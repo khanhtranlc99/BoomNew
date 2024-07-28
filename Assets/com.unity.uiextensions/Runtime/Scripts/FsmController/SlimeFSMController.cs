@@ -19,7 +19,13 @@ public class SlimeFSMController : MonoBehaviour
         hideState.Init(slimeBase);
         dieState.Init(slimeBase);
 
-        if (UseProfile.CurrentLevel != 1)
+        if(UseProfile.CurrentLevel > 1)
+        {
+            wasUse = true;
+            ChangeState(StateType.Move);
+            return;
+        }    
+        if (Tutorial_BoomInput.isTut)
         {
             wasUse = true;
             ChangeState(StateType.Move);

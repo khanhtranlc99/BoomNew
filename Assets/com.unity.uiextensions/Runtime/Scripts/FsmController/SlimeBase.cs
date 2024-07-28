@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Sirenix.OdinInspector;
+using System;
 public enum SlimeType
 {
     RED,
@@ -23,20 +25,29 @@ public class SlimeBase : BarrierBase
     public AudioSource takeDame;
     public AudioClip takeDameSFX;
     public HeartBarSlime heartBarSlime;
-   
+    public bool initDone = false;
+ 
+ 
+
     public override void Init()
     {
-        fSMController.Init(this);
-        EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.FREEZE , HandlePause);
-        EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.PAUSE, HandlePauseGame);
-        EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.STOPPAUSE, HandleStopPauseGame);
        
+            fSMController.Init(this);
+            EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.FREEZE, HandlePause);
+            EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.PAUSE, HandlePauseGame);
+            EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.STOPPAUSE, HandleStopPauseGame);
             heartBarSlime.Init();
+            initDone = true;
+     
+    
     }
+
+   
+
 
     public override void TakeDame()
     {
-        if (!wasTakeDame && GamePlayController.Instance.stateGame == StateGame.Playing)
+        if (!wasTakeDame && GamePlayController.Instance.stateGame == StateGame.Playing && initDone)
         {
             wasTakeDame = true;
             StartCoroutine(Helper.HandleActionPlayAndWait( animator, "Hit", delegate { animator.Play("Move"); }));
