@@ -62,9 +62,9 @@
   <ItemGroup>
     <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Editor\DefineSymbols\NiceVibrationsDefineSymbols.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Editor\MMNVBuildPostProcessor.cs" />
+    <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Editor\MMNVRumbleWaveFormAssetEditor.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Editor\MMNVAssetPostProcessor.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Editor\MMNVAndroidWaveFormAssetEditor.cs" />
-    <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Editor\MMNVRumbleWaveFormAssetEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Editor\MoreMountains.NiceVibrations.Editor.asmdef" />
@@ -432,6 +432,10 @@
     </Reference>
     <Reference Include="Firebase.Analytics">
       <HintPath>Library\PackageCache\com.google.firebase.analytics@be65f0d504f2\Firebase\Plugins\Firebase.Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Google.PackageManagerResolver">

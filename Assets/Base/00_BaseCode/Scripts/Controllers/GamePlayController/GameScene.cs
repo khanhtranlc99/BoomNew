@@ -128,4 +128,9 @@ public class GameScene : BaseScene
     {
          
     }
+
+    public void HandleShowRate()
+    {
+        DialogueRate.Setup().Show();
+    }    
 }

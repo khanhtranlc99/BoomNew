@@ -438,6 +438,10 @@
       <HintPath>Library\PackageCache\com.google.firebase.analytics@be65f0d504f2\Firebase\Plugins\Firebase.Analytics.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Google.PackageManagerResolver">
       <HintPath>Library\PackageCache\com.google.external-dependency-manager@a366070c64a8\ExternalDependencyManager\Editor\1.2.179\Google.PackageManagerResolver.dll</HintPath>
       <Private>False</Private>

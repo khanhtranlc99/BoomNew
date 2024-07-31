@@ -61,16 +61,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AppsFlyer\IAppsFlyerConversionData.cs" />
-    <Compile Include="Assets\AppsFlyer\IAppsFlyerValidateReceipt.cs" />
     <Compile Include="Assets\AppsFlyer\AppsFlyerAndroid.cs" />
     <Compile Include="Assets\AppsFlyer\AppsFlyeriOS.cs" />
+    <Compile Include="Assets\AppsFlyer\AFInAppEvents.cs" />
+    <Compile Include="Assets\AppsFlyer\AppsFlyer.cs" />
+    <Compile Include="Assets\AppsFlyer\IAppsFlyerValidateReceipt.cs" />
     <Compile Include="Assets\AppsFlyer\AFMiniJSON.cs" />
     <Compile Include="Assets\AppsFlyer\Windows\AppsFlyerWindows.cs" />
     <Compile Include="Assets\AppsFlyer\IAppsFlyerUserInvite.cs" />
-    <Compile Include="Assets\AppsFlyer\AFInAppEvents.cs" />
     <Compile Include="Assets\AppsFlyer\AppsFlyerObjectScript.cs" />
     <Compile Include="Assets\AppsFlyer\AppsFlyerEventArgs.cs" />
-    <Compile Include="Assets\AppsFlyer\AppsFlyer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AppsFlyer\AppsFlyer.asmdef" />
@@ -342,6 +342,10 @@
     </Reference>
     <Reference Include="Firebase.Analytics">
       <HintPath>Library\PackageCache\com.google.firebase.analytics@be65f0d504f2\Firebase\Plugins\Firebase.Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Serialization">

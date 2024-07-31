@@ -21,7 +21,7 @@ public class GamePlayController : Singleton<GamePlayController>
     public GameScene gameScene;
     public ItemInGame itemInGame;
     public Flame flame;
-
+    public GameObject vfxLose;
     
     protected override void OnAwake()
     {
@@ -74,6 +74,7 @@ public class GamePlayController : Singleton<GamePlayController>
                         GamePlayController.Instance.playerContain.boomInputController.enabled = true;
                         stateGame = StateGame.Lose;
                         GameController.Instance.musicManager.PlayLoseSound();
+                        vfxLose.SetActive(true);
                         Invoke(nameof(ShowLoseBox),2.5f);
                     }
                 }

@@ -61,16 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\BallDemo\Scripts\BallDemoManager.cs" />
-    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\CarDemo\Scripts\CarDemoManager.cs" />
-    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\BallDemo\Scripts\BallDemoBall.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\UI\MMFPSUnlock.cs" />
-    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\AHAPPresetsDemo\Scripts\PresetDemoRotator.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\ContinuousDemo\Scripts\ContinuousHapticsDemoManager.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\BallDemo\Scripts\BallDemoWall.cs" />
-    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\UI\MMSwitch.cs" />
-    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\V2DemoManager.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\UI\MMProgressBar.cs" />
-    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\BallDemo\Scripts\BallTouchZone.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\UI\MMKnob.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\UI\MMUIShaker.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\VersionNumber.cs" />
@@ -78,15 +72,21 @@
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\DemoManager.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\UI\MMTouchButton.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\RegularPresetsDemo\RegularPresetsDemoManager.cs" />
-    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\UI\MMSignal.cs" />
-    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\UI\Pagination.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\NiceVibrationsDemoHelpers.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\CarDemo\Scripts\PowerBarElement.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\UI\HapticCurve.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\BallDemo\Scripts\BallPusher.cs" />
-    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\TransientDemo\Scripts\TransientHapticsDemoManager.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_OLD\v1Demo\Scripts\NiceVibrationsDemoManager.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\UI\MMFPSCounter.cs" />
+    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\CarDemo\Scripts\CarDemoManager.cs" />
+    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\BallDemo\Scripts\BallDemoBall.cs" />
+    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\AHAPPresetsDemo\Scripts\PresetDemoRotator.cs" />
+    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\UI\MMSwitch.cs" />
+    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\V2DemoManager.cs" />
+    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\BallDemo\Scripts\BallTouchZone.cs" />
+    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\UI\MMSignal.cs" />
+    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\UI\Pagination.cs" />
+    <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\TransientDemo\Scripts\TransientHapticsDemoManager.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\WobbleDemo\Scripts\WobbleDemoManager.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\DemoAssets\AHAPPresetsDemo\Scripts\PresetDemoManager.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Demos\_Common\Scripts\UI\MMSpriteReplace.cs" />
@@ -443,6 +443,10 @@
     </Reference>
     <Reference Include="Firebase.Analytics">
       <HintPath>Library\PackageCache\com.google.firebase.analytics@be65f0d504f2\Firebase\Plugins\Firebase.Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Google.PackageManagerResolver">

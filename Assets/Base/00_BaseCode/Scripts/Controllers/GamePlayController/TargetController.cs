@@ -161,7 +161,15 @@ public class TargetController : MonoBehaviour
 
     private void ShowPopupWin()
     {
-        Winbox.Setup().Show();
+      
+        if(UseProfile.CurrentLevel == 4)
+        {
+            DialogueRate.Setup().Show();
+        }    
+        else
+        {
+            Winbox.Setup().Show();
+        }    
     }
     private void Update()
     {

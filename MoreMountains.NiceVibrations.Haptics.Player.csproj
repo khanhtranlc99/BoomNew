@@ -61,15 +61,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Haptics\MMNVRumbleWaveFormAsset.cs" />
-    <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Haptics\MMNVAHAP.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Haptics\MMNVAndroidWaveFormAsset.cs" />
-    <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Haptics\MMNVAndroid.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Haptics\MMNVEnumCondition.cs" />
+    <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Haptics\MMNVPlatform.cs" />
+    <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Haptics\MMNViOSCoreHaptics.cs" />
+    <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Haptics\MMNVAHAP.cs" />
+    <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Haptics\MMNVAndroid.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Haptics\MMNVInspectorButton.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Haptics\MMNVHapticTypes.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Haptics\MMNVAltThread.cs" />
-    <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Haptics\MMNVPlatform.cs" />
-    <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Haptics\MMNViOSCoreHaptics.cs" />
     <Compile Include="Assets\Base\3Party\NiceVibrations\Common\Scripts\Haptics\MMNViOS.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -342,6 +342,10 @@
     </Reference>
     <Reference Include="Firebase.Analytics">
       <HintPath>Library\PackageCache\com.google.firebase.analytics@be65f0d504f2\Firebase\Plugins\Firebase.Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Serialization">

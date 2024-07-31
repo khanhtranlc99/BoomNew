@@ -61,30 +61,42 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Tools\EditorTools.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Editors\KeepAliveBehaviourEditor.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredShortDrawer.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ACTkMenuItems.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\MigrateUtils.Routines.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Genuine\CodeHash\PostProcess\CodeHashGeneratorPostprocessor.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Tools\ReflectionTools.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Editors\ObscuredCheatingDetectorEditor.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Settings\SettingsProviderWrapper.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Injection\PostProcess\BuildPostProcessor.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Editors\TimeCheatingDetectorEditor.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\AssemblyInfo.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ACTkEditorConstants.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredBoolDrawer.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\PrefsEditor\Plist.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredDecimalDrawer.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Injection\UserWhitelistEditor.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Settings\SettingsUtils.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredQuaternionDrawer.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Editors\InjectionDetectorEditor.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\PrefsEditor\ACTkPrefsEditor.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Settings\ACTkSettings.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\PrefsEditor\ACTkPrefsEditor.UI.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Common\Tools\CSColorTools.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Settings\SettingsValidator.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Injection\AllowedAssembly.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ACTkMarker.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredUIntDrawer.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Settings\SymbolsData.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Tools\TextureTools.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Editors\WallHackDetectorEditor.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Settings\SettingsGUI.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Settings\ACTkEditorPrefsSettings.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredDoubleDrawer.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredVector3IntDrawer.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Tools\GUITools.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredLongDrawer.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Editors\KeepAliveBehaviourEditor.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredShortDrawer.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\MigrateUtils.Routines.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Tools\ReflectionTools.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Editors\ObscuredCheatingDetectorEditor.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Settings\SettingsProviderWrapper.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Editors\TimeCheatingDetectorEditor.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\AssemblyInfo.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredBoolDrawer.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Injection\UserWhitelistEditor.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Settings\ACTkSettings.cs" />
+    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\PrefsEditor\ACTkPrefsEditor.UI.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\MigrateUtils.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\PrefsEditor\PrefsRecord.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Editors\SpeedHackDetectorEditor.cs" />
@@ -92,26 +104,14 @@
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredVector3Drawer.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredFloatDrawer.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredVector2IntDrawer.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Injection\AllowedAssembly.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ACTkMarker.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredUIntDrawer.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredIntDrawer.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Settings\SymbolsData.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Tools\TextureTools.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Editors\WallHackDetectorEditor.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Injection\InjectionWhitelistBuilder.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Injection\InjectionRoutines.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Settings\SettingsGUI.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Settings\ACTkEditorPrefsSettings.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Processors\WallHackDetectorLinkerProcessor.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredDoubleDrawer.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Tools\DetectorTools.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredStringDrawer.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredULongDrawer.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredVector3IntDrawer.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Tools\GUITools.cs" />
     <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\Injection\InjectionConstants.cs" />
-    <Compile Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\Scripts\ObscuredTypes\PropertyDrawers\ObscuredLongDrawer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Base\3Party\CodeStage\AntiCheatToolkit\Editor\SharpZip\LICENSE.txt" />
@@ -481,6 +481,10 @@
     </Reference>
     <Reference Include="Firebase.Analytics">
       <HintPath>Library\PackageCache\com.google.firebase.analytics@be65f0d504f2\Firebase\Plugins\Firebase.Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Google.PackageManagerResolver">
