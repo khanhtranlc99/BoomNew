@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_glowbeam
+  m_Shader: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CoverageTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistortionTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EffectsLayer0Motion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EffectsLayer0Overlay:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EffectsLayer1Tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EffectsLayer2Tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EffectsLayer3Tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FrostTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: c2163606213e7b947bf2152e92d8c796, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SecondTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _AlphaCutoff: 0.5
+    - _Brightness: 1
+    - _Coverage: 0
+    - _DissolvePower: 0
+    - _DissolveTestLEAVEZERO: 0
+    - _DistortionIntensity: 0.1
+    - _EffectsLayer0HideTexture: 0
+    - _EffectsLayer0MotionSpeed: 0
+    - _EffectsLayer0PositionMotionX: 0
+    - _EffectsLayer0PositionMotionY: 0
+    - _EffectsLayer0PositionOffsetX: 0
+    - _EffectsLayer0PositionOffsetY: 0
+    - _EffectsLayer0RotationMotion: 0
+    - _EffectsLayer0RotationOffset: 0
+    - _EffectsLayer1Foreground: 0
+    - _EffectsLayer1PositionMotionX: 0
+    - _EffectsLayer1PositionMotionY: 0
+    - _EffectsLayer1PositionOffsetX: 0
+    - _EffectsLayer1PositionOffsetY: 0
+    - _EffectsLayer1Power: 0
+    - _EffectsLayer1RotationMotion: 0
+    - _EffectsLayer1RotationOffset: 0
+    - _EffectsLayer2PositionMotionX: 0
+    - _EffectsLayer2PositionMotionY: 0
+    - _EffectsLayer2PositionOffsetX: 0
+    - _EffectsLayer2PositionOffsetY: 0
+    - _EffectsLayer2Power: 0
+    - _EffectsLayer2Respect: 0
+    - _EffectsLayer2RotationMotion: 0
+    - _EffectsLayer2RotationOffset: 0
+    - _EffectsLayer3PositionMotionX: 0
+    - _EffectsLayer3PositionMotionY: 0
+    - _EffectsLayer3PositionOffsetX: 0
+    - _EffectsLayer3PositionOffsetY: 0
+    - _EffectsLayer3Power: 1
+    - _EffectsLayer3Respect: 0
+    - _EffectsLayer3RotationMotion: 0
+    - _EffectsLayer3RotationOffset: 0
+    - _EnableExternalAlpha: 0
+    - _FinalMix: 0.7
+    - _ForceX: 0.1
+    - _ForceY: 0.1
+    - _HDR: 0.7
+    - _HeatTime: 0
+    - _Intensity: 0
+    - _InvFade: 1
+    - _MainRotation: 0
+    - _MainTranslationX: 0
+    - _MainTranslationY: 0
+    - _MaskRotation: 0
+    - _MaskTranslationX: 0
+    - _MaskTranslationY: 0
+    - _Opacity: 0.2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Rotation: 0
+    - _Smooth: 0
+    - _Thickness: 3
+    - _TranslationX: 0
+    - _TranslationY: 0
+    - _Transparency: 0
+    - _UseDissolve: 0
+    - _UseDistortion: 0
+    - _UseFirstUVSetorSecond: 0
+    - _UseMask: 0
+    m_Colors:
+    - _Color: {r: 0.97510374, g: 0.97510374, b: 0.97510374, a: 0.5294118}
+    - _DissolveOffsetTiling: {r: 0, g: 0, b: 1, a: 1}
+    - _Distortion1OffsetTiling: {r: 1, g: 1, b: 0.5, a: 0.5}
+    - _Distortion2OffsetTiling: {r: -0.5, g: 0.5, b: 2, a: 2}
+    - _EffectsLayer0PivotScale: {r: 0.5, g: 0.5, b: 1, a: 1}
+    - _EffectsLayer0Position: {r: 0, g: 0, b: 0, a: 0}
+    - _EffectsLayer1Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EffectsLayer1PivotScale: {r: 0.5, g: 0.5, b: 1, a: 1}
+    - _EffectsLayer1Position: {r: 0, g: 0, b: 0, a: 0}
+    - _EffectsLayer2Color: {r: 1, g: 1, b: 1, a: 0.25}
+    - _EffectsLayer2PivotScale: {r: 0.5, g: 0.5, b: 1, a: 1}
+    - _EffectsLayer2Position: {r: 0, g: 0, b: 0, a: 0}
+    - _EffectsLayer3Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EffectsLayer3PivotScale: {r: 0.5, g: 0.5, b: 1, a: 1}
+    - _EffectsLayer3Position: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _MainTextureOffsetTiling: {r: 0, g: 0, b: 1, a: 1}
+    - _MaskOffsetTiling: {r: 0, g: 0, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+  m_BuildTextureStacks: []

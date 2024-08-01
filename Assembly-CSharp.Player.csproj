@@ -1007,8 +1007,8 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\util\Enums.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Utility\Event\ApplicationStart.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\FsmController\MoveStateGhostSlime.cs" />
-    <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Layout\CardUI\Superellipse Creation\Triangulator.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\Flame.cs" />
+    <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Layout\CardUI\Superellipse Creation\Triangulator.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Effects\ShineEffector.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x509\DistributionPointName.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\modes\gcm\IGcmMultiplier.cs" />
@@ -1052,8 +1052,8 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x509\X509NameEntryConverter.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\CameraController.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\PlatformSupport\IO\Infos.cs" />
-    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Extensions\Extensions.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Controls\ReorderableList\ReorderableListContent.cs" />
+    <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Extensions\Extensions.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x509\AlgorithmIdentifier.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\IAsn1ApplicationSpecificParser.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\AbstractTlsCipherFactory.cs" />
@@ -1423,6 +1423,7 @@
     <None Include="Assets\Base\00_BaseCode\VFX\Eplosion\alphaBlend_glow.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\com.unity.uiextensions\Runtime\Resources\Shaders\UIImageCrop.shader" />
+    <None Include="Assets\ParticleEffectForUGUI-3.3.10\Shaders\UIAdditive.shader" />
     <None Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\License.txt" />
     <None Include="Assets\Base\3Party\Joker2X\FileHelpers.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
@@ -2298,6 +2299,10 @@
     <ProjectReference Include="Unity.RenderPipelines.Universal.Config.Runtime.Player.csproj">
       <Project>{3E069BB3-4F5E-DCDE-4723-222CEAC4EF16}</Project>
       <Name>Unity.RenderPipelines.Universal.Config.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Coffee.UIParticle.Player.csproj">
+      <Project>{CD520E37-74CB-8EED-1954-91C7C5A7B9E5}</Project>
+      <Name>Coffee.UIParticle.Player</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.NiceVibrations.Demos.Player.csproj">
       <Project>{FACA5FDF-EC83-BC6D-2EF8-71714A83DD15}</Project>

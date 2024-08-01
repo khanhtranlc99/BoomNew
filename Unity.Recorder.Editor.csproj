@@ -103,8 +103,8 @@
     <Compile Include="Library\PackageCache\com.unity.recorder@4.0.2\Editor\Sources\Recorders\_Legacy\EXR\EXRRecorderSettingsEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.recorder@4.0.2\Editor\Sources\Recorders\ImageRecorder\ImageRecorderEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.recorder@4.0.2\Editor\Sources\RecorderController.cs" />
-    <Compile Include="Library\PackageCache\com.unity.recorder@4.0.2\Editor\Sources\InputPropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.recorder@4.0.2\Editor\Sources\BaseTextureRecorder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.recorder@4.0.2\Editor\Sources\InputPropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.recorder@4.0.2\Editor\Sources\FrameRateProperyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.recorder@4.0.2\Editor\Sources\Recorders\MovieRecorder\Encoder\EncoderSettingsAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.recorder@4.0.2\Editor\Sources\Recorders\_Inputs\RenderTexture\RenderTextureInputSettings.cs" />
