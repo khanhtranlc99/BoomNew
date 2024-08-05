@@ -741,6 +741,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   difficult: 0
+  lsBoss: []
   isSlimeLevel: 1
   isTimeLevel: 0
   conditionSlimes:

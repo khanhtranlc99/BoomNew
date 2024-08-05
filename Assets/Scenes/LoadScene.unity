@@ -215,6 +215,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: FX_Loading
       objectReference: {fileID: 0}
+    - target: {fileID: 5995195411269066330, guid: 91798cd53e4813b409fff429b4397693, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5995195411269066330, guid: 91798cd53e4813b409fff429b4397693, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5995195411269066330, guid: 91798cd53e4813b409fff429b4397693, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6436178514600901360, guid: 91798cd53e4813b409fff429b4397693, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6436178514600901360, guid: 91798cd53e4813b409fff429b4397693, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6436178514600901360, guid: 91798cd53e4813b409fff429b4397693, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

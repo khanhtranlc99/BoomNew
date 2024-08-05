@@ -24,7 +24,7 @@ public class PlayerContain : MonoBehaviour
     public TutorialFunController tutorial_TimeBoom;
     public CameraScale cameraScale;
     public int totalCoin;
-
+    public PackController packController;
     public void Init()
     {
         totalCoin = 0;
@@ -35,37 +35,77 @@ public class PlayerContain : MonoBehaviour
         levelData = Instantiate(Resources.Load<LevelData>(string.Format(pathLevel, UseProfile.CurrentLevel)));
         cameraScale.Init();
         GamePlayController.Instance.gameScene.Init(levelData);
-        if (UseProfile.WinStreak > 0 || UseProfile.Boom_Start == true || UseProfile.Fire_Start == true)
-        {
+        //if (UseProfile.WinStreak > 0 )
+        //{
 
+
+        //}
+        //else
+        //{
+        //    winStreakController.canvasGroup.gameObject.SetActive(false);
+        //}
+        //prepageGame.Init(delegate
+        //{
+        //if (UseProfile.WinStreak > 0 )
+        //{
+        //    winStreakController.Init(delegate
+        //    {
+        //        levelData.Init(true);
+        //        SetUp();
+        //    });
+
+        //}
+        //else
+        //{
+        
+        //    levelData.Init(true);
+        //    SetUp();
+
+        //}
+        //GameController.Instance.AnalyticsController.LoadingComplete();
+        //GameController.Instance.AnalyticsController.StartLevel(UseProfile.CurrentLevel);
+
+        //});
+
+      
+
+
+        if (UseProfile.WinStreak > 0)
+        {
+            //winStreakController.gameObject.SetActive(true);
+            //winStreakController.Init(delegate
+            //{
+                prepageGame.gameObject.SetActive(true);
+                prepageGame.Init(delegate
+                {
+                    GamePlayController.Instance.playerContain.winStreakController.HandleOpenBox(delegate {
+
+                        levelData.Init(true);
+                        SetUp();
+
+                    });
+                
+
+
+                });
+
+            //});
 
         }
         else
         {
-            winStreakController.canvasGroup.gameObject.SetActive(false);
-        }
-        prepageGame.Init(delegate
-    {
-        if (UseProfile.WinStreak > 0 || UseProfile.Boom_Start == true || UseProfile.Fire_Start == true)
-        {
-            winStreakController.Init(delegate
+            prepageGame.gameObject.SetActive(true);
+            prepageGame.Init(delegate
             {
                 levelData.Init(true);
-
                 SetUp();
-            });
-
-        }
-        else
-        {
-
-            levelData.Init(true);
-            SetUp();
+           
+            }, true);
         }
         GameController.Instance.AnalyticsController.LoadingComplete();
         GameController.Instance.AnalyticsController.StartLevel(UseProfile.CurrentLevel);
 
-    });
+
         //levelData.Init(true);
         //cameraScale.Init();
         //SetUp();
@@ -87,7 +127,7 @@ public class PlayerContain : MonoBehaviour
             tutorial_BoomInput.StartTut();
             tutorial_FastBoom.Init();
             tutorial_TimeBoom.Init();
-        
+            packController.Init();
         }
     }
 

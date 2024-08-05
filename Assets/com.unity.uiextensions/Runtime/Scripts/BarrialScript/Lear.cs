@@ -24,4 +24,8 @@ public class Lear : MonoBehaviour
             });     
         });
     }
+    private void OnDestroy()
+    {
+        transform.DOKill();
+    }
 }

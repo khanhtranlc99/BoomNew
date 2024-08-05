@@ -8,6 +8,8 @@ public class Bloomsom : BarrierBase
     int random = 0;
     public List< SlimeBase> slimeBase = new List<SlimeBase>();
     public List<Lear> lsLear;
+    public ParticleSystem fx_Grass;
+    public ParticleSystem fx_Grass_Break;
     public override void Init()
     {
         EventDispatcher.EventDispatcher.Instance.RegisterListener(EventID.FREEZE, HandlePause);
@@ -16,43 +18,51 @@ public class Bloomsom : BarrierBase
     }
     private void Update()
     {
-        if(gridBase.barrierBase != this)
+        if(gridBase.barrierBase != this && !wasTakeDame)
         {
-            Destroy(this.gameObject);
+            wasTakeDame = true;
+            fx_Grass_Break.Play();
+            for (int i = 0; i < lsLear.Count; i++)
+            {
+                int index = i;
+                lsLear[index].transform.DOKill();
+            }
+          
+
+            for (int i = 0; i < lsLear.Count; i++)
+            {
+                int index = i;
+
+                lsLear[index].gameObject.GetComponent<SpriteRenderer>().DOFade(0, 0.3f).OnComplete(delegate {
+
+
+                    if (index >= lsLear.Count - 1)
+                    {
+                        Destroy(this.gameObject);
+                    }
+
+                });
+
+            }
+     
+
         }    
     }
     public override void TakeDame()
     {
-        if (!wasTakeDame)
-        {
-            wasTakeDame = true;
+         
             Hp -= 1;
             transform.DOShakePosition(0.3f, 0.1f, 1, 1).OnComplete(delegate { wasTakeDame = false; });
             if (Hp <= 0)
             {
-              
+             
                 GameController.Instance.questController.HandleCheckCompleteQuest(questTargetType);
                 gridBase.barrierBase = null;
                 transform.DOKill();
-                for (int i = 0; i < lsLear.Count; i++)
-                {
-                    int index = i;
-                    lsLear[index].transform.DOKill();
-                }
-                transform.DOShakePosition(0.3f, 0.1f, 1, 1).OnComplete(delegate {
-                    spriteRenderer.DOFade(0, 0.3f).OnComplete(delegate {
-
-
-                      
-
-                        Destroy(this.gameObject); 
-                    
-                    
-                    });
-                });
+               
 
             }
-        }
+ 
     }
 
     public void HandleSlimeHide()
@@ -60,7 +70,8 @@ public class Bloomsom : BarrierBase
        
         random = Random.Range(0,2);
         barrierType = BarrierType.Block;
-        for(int i = 0; i < lsLear.Count; i ++)
+        fx_Grass.Play();
+        for (int i = 0; i < lsLear.Count; i ++)
         {
             int index = i;
             lsLear[index].HandleMove(delegate { 
@@ -89,7 +100,7 @@ public class Bloomsom : BarrierBase
     }
     private void HandleSlimeOut()
     {
-      
+        fx_Grass.Stop();
         barrierType = BarrierType.ComeThrough;
         for(int i = slimeBase.Count - 1; i >=  0; i --)
         {

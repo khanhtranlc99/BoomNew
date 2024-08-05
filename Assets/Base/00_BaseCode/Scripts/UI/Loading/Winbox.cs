@@ -24,7 +24,7 @@ public class Winbox : BaseBox
     public CoinHeartBar coinHeartBar;
     public Text tvCoin;
     public Text tvCoin_2;
-
+    public CanvasGroup canvasGroup;
     public void Init()
     {
         nextButton.onClick.AddListener(delegate { HandleNext();    });
@@ -39,8 +39,8 @@ public class Winbox : BaseBox
             UseProfile.CurrentLevel = 84;
         }    
         UseProfile.WinStreak += 1;
-        nextButton.transform.localScale = Vector3.zero;
-        nextButton.transform.DOScale(new Vector3(1,1,1),0.3f).SetDelay(3);
+        //nextButton.transform.localScale = Vector3.zero;
+        //nextButton.transform.DOScale(new Vector3(1,1,1),0.3f).SetDelay(3);
         //GamePlayController.Instance.playerContain.levelData.Pause();
         GamePlayController.Instance.playerContain.boomInputController.enabled = false;
         GameController.Instance.musicManager.PlayWinSound();
@@ -61,8 +61,13 @@ public class Winbox : BaseBox
         GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () => { Next(); }, actionWatchLog: "InterWinBox");
         void Next()
         {
-
-            Initiate.Fade("GamePlay", Color.black, 2f);
+   
+            Close();
+            GamePlayController.Instance.playerContain.winStreakController.Init(delegate {
+             
+                Initiate.Fade("GamePlay", Color.black, 2f);
+            });
+          
         }
     }
     private void HandleReward()
@@ -71,6 +76,7 @@ public class Winbox : BaseBox
         GameController.Instance.admobAds.ShowVideoReward(
                    actionReward: () =>
                    {
+                       Close();
                        //GameController.Instance.admobAds.HandleHideMerec();
                        GamePlayController.Instance.playerContain.totalCoin *= 3;
                        UseProfile.Coin += GamePlayController.Instance.playerContain.totalCoin;
@@ -78,8 +84,10 @@ public class Winbox : BaseBox
                        List<GiftRewardShow> giftRewardShows = new List<GiftRewardShow>();
                        giftRewardShows.Add(new GiftRewardShow() { amount = GamePlayController.Instance.playerContain.totalCoin, type = GiftType.Coin });
                        PopupRewardBase.Setup(false).Show(giftRewardShows, delegate {
-
-                           Initiate.Fade("GamePlay", Color.black, 2f);
+                           PopupRewardBase.Setup(false).Close();
+                           GamePlayController.Instance.playerContain.winStreakController.Init(delegate {
+                               Initiate.Fade("GamePlay", Color.black, 2f);
+                           });
                        });
 
                    },
@@ -96,6 +104,9 @@ public class Winbox : BaseBox
                    actionClose: null,
                    ActionWatchVideo.WinBox_Claim_Coin,
                    UseProfile.CurrentLevel.ToString());
-    }    
-
+    }
+    private void OnDestroy()
+    {
+        
+    }
 }

@@ -1524,6 +1524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7407383101841630505}
   - component: {fileID: 8150954945706145922}
+  - component: {fileID: 4582586390830260475}
   m_Layer: 5
   m_Name: Conetn
   m_TagString: Untagged
@@ -1568,6 +1569,18 @@ MonoBehaviour:
   ConformX: 1
   ConformY: 1
   Logging: 0
+--- !u!225 &4582586390830260475
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014528759654996657}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6167730404484992431
 GameObject:
   m_ObjectHideFlags: 0

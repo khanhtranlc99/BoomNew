@@ -1086,6 +1086,7 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Forms\HTTPFieldData.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\BufferedBlockCipher.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\generators\ECKeyPairGenerator.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\GamePlayController\PackController.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Controls\ReorderableList\ReorderableListDebug.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Utilities\UI_TweenScale.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\ocsp\ResponseBytes.cs" />
@@ -1134,6 +1135,7 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP521R1Field.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Popups\CongratulationBox\CongratulationBox.cs" />
     <Compile Include="Assets\Base\00_BaseCode\Scripts\Controllers\HomeController\ButtonShop.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\UI\BoosterPackBox.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SignalR\Messages\IServerMessage.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\WebSocket\Frames\WebSocketFrame.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecP128R1FieldElement.cs" />

@@ -8,6 +8,7 @@ using System;
 public class WinStreakBar : MonoBehaviour
 {
     public Image image;
+    public Transform postWinStreak;
    public void Init()
     {
         image.DOColor(new Color32(255, 255, 255, 255), 0.5f).OnComplete(delegate {

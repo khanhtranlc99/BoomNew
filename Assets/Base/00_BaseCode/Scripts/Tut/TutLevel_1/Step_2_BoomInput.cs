@@ -38,7 +38,7 @@ public class Step_2_BoomInput : TutorialBase
 
     public override void StartTut()
     {
-        Debug.LogError("Step_2222222222_BoomInput");
+     
         if (UseProfile.CurrentLevel == 1)
         {
             if (currentHand != null)

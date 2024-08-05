@@ -41,10 +41,12 @@ public class TargetController : MonoBehaviour
     }
 
     public ParticleSystem vfxConfesti_1;
-    public ParticleSystem vfxConfesti_2;
+    //public ParticleSystem vfxConfesti_2;
     public SkeletonGraphic vfxWin;
     public AudioClip confetiSfx;
     public AudioClip sfxVFXWin;
+    public GameObject objBoomb;
+    public GameObject objFlame;
     public void Init(LevelData levelData )
     {
         lsCurrentSlimeTargets = new List<SlimeTarget>();
@@ -101,7 +103,16 @@ public class TargetController : MonoBehaviour
                 break;
         }
 
-     
+        if (UseProfile.Boom_Start == true )
+        {
+            objBoomb.gameObject.SetActive(true);
+            GamePlayController.Instance.playerContain.levelData.boomLimit += 10;
+        }
+        if (UseProfile.Fire_Start == true)
+        {
+            objFlame.gameObject.SetActive(true);
+            UseProfile.FlameUp_Item += 1;
+        }
     }
     public bool isLose
     {
@@ -147,7 +158,7 @@ public class TargetController : MonoBehaviour
     {
         GameController.Instance.musicManager.PlayOneShot(confetiSfx);
        vfxConfesti_1.Play();
-        vfxConfesti_2.Play();
+        //vfxConfesti_2.Play();
         Invoke(nameof(ShowVfxWin), 1);
     }    
 

@@ -1,9 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Spine.Unity;
 using System;
 using DG.Tweening;
+using UnityEngine.Playables;
+using Sirenix.OdinInspector;
 
 public class WinStreakController : MonoBehaviour
 {
@@ -23,25 +25,27 @@ public class WinStreakController : MonoBehaviour
         }
     }
     public WinStreakGift winStreak;
-    public SkeletonGraphic giftAnim;
+ 
     public ItemInGame itemInGame;
     public CanvasGroup canvasGroup;
     public List<GiftInGame> lsGiftInGames;
-    public GameObject objPackWinStreak;
-    [Header("PackInShop")]
-    public GameObject objPackShop;
-    public SkeletonGraphic giftPackShop;
-    public List<GiftInGame> lsGiftPackInGames;
+ 
+ 
     public List<WinStreakBar> lsProgesst;
+
+
     public GameObject panelGift;
     public GameObject panelWinStreak;
     public Transform parentGift;
 
-    public void SetUp()
-    { 
-    
-    
-    }
+    public ParticleSystem vfxTrail;
+    public PlayableDirector giftAnimNew;
+    public GameObject vfxGift;
+
+    public GameObject bgBlack;
+    public GameObject vfxGiftTemp;
+    [Button]
+ 
     public void Init (Action callBack)
     {
 
@@ -50,10 +54,18 @@ public class WinStreakController : MonoBehaviour
 
         if (winStreak != null)
         {
+            bgBlack.SetActive(true);
+            panelWinStreak.SetActive(true);
             panelWinStreak.gameObject.SetActive(true);
-            panelGift.gameObject.SetActive(false);
-            //canvasGroup.gameObject.SetActive(true);
-            //canvasGroup.alpha = 1;
+            if(!vfxGift.activeSelf)
+            {
+                vfxGift = vfxGiftTemp;
+                panelGift = vfxGiftTemp;
+            }    
+            vfxGift.SetActive(true);
+            canvasGroup.gameObject.SetActive(true);
+            canvasGroup.alpha = 1;
+
             for (int i = 0; i < lsProgesst.Count; i++)
             {
                 int index = i;
@@ -68,147 +80,136 @@ public class WinStreakController : MonoBehaviour
             }
             void ActiveCanvasGift()
             {
-                panelGift.GetComponent<CanvasGroup>().DOFade(0, 0.5f).OnComplete(delegate {
-                    panelWinStreak.gameObject.SetActive(false);
-                    panelGift.gameObject.SetActive(true);
-                    panelGift.GetComponent<CanvasGroup>().alpha = 0;
-                    panelGift.GetComponent<CanvasGroup>().DOFade(1, 0.5f).OnComplete(delegate { ActionShow(); });
-                  
-                });
-            }
-            void ActionShow()
-            {
-               
-                lsGiftInGames = new List<GiftInGame>();
-                lsGiftPackInGames = new List<GiftInGame>();
-                canvasGroup.gameObject.SetActive(true);
-                canvasGroup.DOFade(1, 0.7f).OnComplete(delegate {
-                    giftAnim.SetAnimation("anim", false, delegate {
-                        giftAnim.SetAnimation("anim2", false, delegate {
-                            giftAnim.SetAnimation("anim3", false, delegate {
-                                for (int i = 0; i < winStreak.lsStreakGifts.Count; i++)
-                                {
-                                    lsGiftInGames.Add(new GiftInGame() { count = winStreak.lsStreakGifts[i].num, giftType = winStreak.lsStreakGifts[i].giftType });
-                                }
-                                for (int i = 0; i < lsGiftInGames.Count; i++)
-                                {
-                                    int index = i;
-                                    var temp = SimplePool2.Spawn(itemInGame);
-                                    temp.transform.parent = parentGift;
-                                    temp.transform.position = parentGift.position;
-                                    temp.transform.localScale = new Vector3(1, 1, 1);
 
-                                    temp.Init(lsGiftInGames[index], new Vector3(-i, 3, 0), delegate {
-                                        if (index >= lsGiftInGames.Count - 1)
-                                        {
-                                            canvasGroup.DOFade(0, 0.7f).OnComplete(delegate
-                                            {
-                                                callBack?.Invoke();
-                                                canvasGroup.gameObject.SetActive(false);
-                                            });
-                                        }
-                                    });
-                                }
-                            });
-                        });
-                    });
-                });
-                if (UseProfile.Boom_Start == true || UseProfile.Fire_Start == true)
+                for (int i = 0; i < winStreak.lsStreakGifts.Count; i++)
                 {
-                    objPackShop.SetActive(true);
-                    giftPackShop.SetAnimation("anim", false, delegate {
-                        giftPackShop.SetAnimation("anim2", false, delegate {
-                            giftPackShop.SetAnimation("anim3", false, delegate {
-                                if (UseProfile.Boom_Start == true)
+                    int index = i;
+                    var temp = SimplePool2.Spawn(GameController.Instance.dataContain.giftDatabase.GetAnimItem(winStreak.lsStreakGifts[i].giftType));
+                    temp.transform.position = lsProgesst[index + 1 ].postWinStreak.position;
+                    temp.transform.parent = parentGift;
+                    temp.transform.localScale = new Vector3(1, 1, 1);
+                    temp.transform.SetAsFirstSibling();
+                    temp.transform.DOMove(giftAnimNew.gameObject.transform.position, 0.5f ).OnComplete(delegate
+                    {
+
+
+                        if (index == UseProfile.WinStreak -1 || index == winStreak.lsStreakGifts.Count -1)
+                        {
+                            panelGift.transform.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 0.5f).SetDelay(0.5f).OnComplete(delegate
+                            {
+                                panelGift.transform.DOScale(new Vector3(1, 1, 1), 0.5f).OnComplete(delegate
                                 {
-                                    lsGiftPackInGames.Add(new GiftInGame() { count = 10, giftType = GiftType.Boom_Start });
-
-                                }
-                                if (UseProfile.Fire_Start == true)
-                                {
-                                    lsGiftPackInGames.Add(new GiftInGame() { count = 1, giftType = GiftType.Fire_Start });
-
-                                }
-                                for (int i = 0; i < lsGiftPackInGames.Count; i++)
-                                {
-                                    int index = i;
-                                    var temp = SimplePool2.Spawn(itemInGame);
-                                    temp.transform.parent = parentGift;
-                                    temp.transform.position = parentGift.position;
-                                    temp.transform.localScale = new Vector3(1, 1, 1);
-
-                                    temp.Init(lsGiftPackInGames[index], new Vector3(2 - i, 3, 0), delegate {
-
-                                    });
-                                }
+                                    callBack?.Invoke();
+                                });
                             });
-                        });
+                        }
+                        SimplePool2.Despawn(temp.gameObject);
                     });
                 }
 
+
+                //for (int i = 1; i < lsProgesst.Count; i++)
+                //{
+                //    int index = i;
+                //    if (index <= UseProfile.WinStreak)
+                //    {
+
+                //        var temp = SimplePool2.Spawn(vfxTrail);
+                //        temp.transform.position = lsProgesst[i].postWinStreak.position;
+                //        temp.transform.parent = parentGift;
+                //        temp.transform.localScale = new Vector3(13,13,13);
+                //        temp.transform.SetAsFirstSibling();
+                //        temp.transform.DOMove(giftAnimNew.gameObject.transform.position, 0.5f ).OnComplete(delegate {
+
+
+                //            if (index == UseProfile.WinStreak)
+                //            {
+                //                //giftAnimNew.Play();
+                //                //StartCoroutine(OnPlayableDirectorStopped());
+                //                panelGift.transform.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 0.5f).SetDelay(0.5f).OnComplete(delegate {
+
+                //                    panelGift.transform.DOScale(new Vector3(1, 1, 1), 0.5f).OnComplete(delegate {
+
+                //                        callBack?.Invoke();
+
+                //                    });
+
+
+                //                });
+
+                //            }
+                //            SimplePool2.Despawn(temp.gameObject);
+                //        });
+
+                //    }
+                //}
             }
+        
+         
             return;
         }
         else
         {
 
-            if (UseProfile.Boom_Start == true || UseProfile.Fire_Start == true)
-            {
-                panelWinStreak.gameObject.SetActive(false);
-                panelGift.gameObject.SetActive(true);
-                objPackShop.SetActive(true);
-                objPackWinStreak.SetActive(false);
-                lsGiftInGames = new List<GiftInGame>();
-                lsGiftPackInGames = new List<GiftInGame>();
-         
-                    giftPackShop.SetAnimation("anim", false, delegate {
-                        giftPackShop.SetAnimation("anim2", false, delegate {
-                            giftPackShop.SetAnimation("anim3", false, delegate {
-                                if (UseProfile.Boom_Start == true)
-                                {
-                                    lsGiftPackInGames.Add(new GiftInGame() { count = 10, giftType = GiftType.Boom_Start });
-
-                                }
-                                if (UseProfile.Fire_Start == true)
-                                {
-                                    lsGiftPackInGames.Add(new GiftInGame() { count = 1, giftType = GiftType.Fire_Start });
-
-                                }
-                                for (int i = 0; i < lsGiftPackInGames.Count; i++)
-                                {
-                                    int index = i;
-                                    var temp = SimplePool2.Spawn(itemInGame);
-                                    temp.transform.parent = parentGift;
-                                    temp.transform.position = parentGift.position;
-                                    temp.transform.localScale = new Vector3(1, 1, 1);
-
-                                    temp.Init(lsGiftPackInGames[index], new Vector3(1 - i, 3, 0), delegate {
-                                        if (index >= lsGiftPackInGames.Count - 1)
-                                        {
-                                            canvasGroup.DOFade(0, 0.7f).OnComplete(delegate
-                                            {
-                                                callBack?.Invoke();
-                                                canvasGroup.gameObject.SetActive(false);
-                                            });
-                                        }
-                                    });
-                                }
-                            });
-                        });
-                    });
-          
-            }
-            else
-            {
-                canvasGroup.gameObject.SetActive(false);
-                callBack?.Invoke();
-            }
+            canvasGroup.gameObject.SetActive(false);
+            callBack?.Invoke();
 
         }
 
 
 
     }
+    public void SetUp()
+    {
+    
+    }    
+
+    public void  HandleOpenBox(Action callBack)
+    {
+        panelWinStreak.gameObject.SetActive(true);
+        canvasGroup.gameObject.SetActive(true);
+        canvasGroup.alpha = 1;
+        bgBlack.SetActive(false);
+        panelWinStreak.SetActive(false);
+        giftAnimNew.Play();
+        StartCoroutine(OnPlayableDirectorStopped());
+        IEnumerator OnPlayableDirectorStopped()
+        {
+            Debug.LogError("OnPlayableDirectorStopped");
+            winStreak = new WinStreakGift();
+            winStreak = GetWinStreakGift;
+            yield return new WaitForSeconds(2);
+            vfxGift.SetActive(false);
+            lsGiftInGames = new List<GiftInGame>();
+
+            for (int i = 0; i < winStreak.lsStreakGifts.Count; i++)
+            {
+                lsGiftInGames.Add(new GiftInGame() { count = winStreak.lsStreakGifts[i].num, giftType = winStreak.lsStreakGifts[i].giftType });
+            }
+            for (int i = 0; i < lsGiftInGames.Count; i++)
+            {
+                int index = i;
+                var temp = SimplePool2.Spawn(itemInGame);
+                temp.transform.parent = parentGift;
+                temp.transform.position = vfxGift.transform.position;
+                temp.transform.localScale = new Vector3(1, 1, 1);
+
+                temp.Init(lsGiftInGames[index], new Vector3(i, 3, 0), delegate
+                {
+                    if (index >= lsGiftInGames.Count - 1)
+                    {
+                        canvasGroup.DOFade(0, 0.7f).OnComplete(delegate
+                        {
+                            callBack?.Invoke();
+                            canvasGroup.gameObject.SetActive(false);
+                        });
+                    }
+                });
+            }
+        }
+    
+    }
+
 
 
     private void ShowGift(Action callBack)

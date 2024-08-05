@@ -129,11 +129,26 @@ public class LevelData : SerializedMonoBehaviour
             int index = i;
             lsBoss[index].transform.DOJump(lsBoss[index].gridBase.transform.position, 2, 1, 0.5f).SetEase(Ease.Linear).OnComplete(delegate {
 
-                var temp = SimplePool2.Spawn(GamePlayController.Instance.gameScene.vfxPartycaleGround, lsBoss[index].gridBase.transform.position, Quaternion.identity);
-                temp.Play();
-                temp.transform.localEulerAngles = new Vector3(-120, 0, 0);
+            
+                if(UseProfile.CurrentLevel != 1)
+                {
+                    var temp = SimplePool2.Spawn(GamePlayController.Instance.gameScene.vfxPartycaleGround, lsBoss[index].gridBase.transform.position, Quaternion.identity);
+                    temp.Play();
+                }    
+                else
+                {
+                    if(index == lsBoss.Count -1)
+                    {
+                        var temp = SimplePool2.Spawn(GamePlayController.Instance.gameScene.vfxPartycaleGround, lsBoss[index].gridBase.transform.position, Quaternion.identity);
+                        temp.Play();
+                    }    
+                }
+              
+                //temp.transform.localEulerAngles = new Vector3(-120, 0, 0);
+                //temp.transform.position -= new Vector3(0,0.5f,0);
                 if (index >= lsBoss.Count -1)
-                {              
+                {
+                 
                     this.transform.DOShakePosition(0.6f, 1, 20, 1).OnComplete(delegate {
                         GamePlayController.Instance.gameScene.ShowBossPanel(delegate {
 

@@ -26,7 +26,7 @@ public class SlimeBase : BarrierBase
     public AudioClip takeDameSFX;
     public HeartBarSlime heartBarSlime;
     public bool initDone = false;
- 
+    public GameObject iceEfect;
  
 
     public override void Init()
@@ -131,7 +131,9 @@ public class SlimeBase : BarrierBase
             {
                 fSMController.currentState.GetComponent<MoveState>().StopAllCoroutines();
             }
-        }    
+        }
+        iceEfect.SetActive(true);
+        animator.Play("IceBooster");
         StartCoroutine(HandleFree());
     }
     public IEnumerator HandleFree()
@@ -146,6 +148,7 @@ public class SlimeBase : BarrierBase
             }    
   
         }
+        iceEfect.SetActive(false);
     }
     public void HandlePauseGame(object param)
     {

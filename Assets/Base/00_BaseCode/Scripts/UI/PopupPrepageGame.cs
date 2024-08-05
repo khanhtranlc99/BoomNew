@@ -13,17 +13,44 @@ public class PopupPrepageGame : MonoBehaviour
     public AudioClip tingTing;
     public void Init(Action callBack)
     {
-        tvLevel.text = "LEVEL " + UseProfile.CurrentLevel;
-      
-        parent.transform.DOScale(new Vector3(1, 1, 1), 0.5f).SetEase(Ease.OutBack).OnComplete(delegate {
 
-          
-            HandleOff(callBack);
-      
+        canvasGroup.alpha = 0;
+
+        canvasGroup.DOFade(1, 0.5f).OnComplete(delegate
+        {
+
+            tvLevel.text = "LEVEL " + UseProfile.CurrentLevel;
+
+            parent.transform.DOScale(new Vector3(1, 1, 1), 0.5f).SetEase(Ease.OutBack).OnComplete(delegate
+            {
+
+
+                HandleOff(callBack);
+
+            });
         });
+     
 
   
    
+    }
+    public void Init(Action callBack, bool noCanvas)
+    {
+        canvasGroup.alpha = 1;
+    
+            tvLevel.text = "LEVEL " + UseProfile.CurrentLevel;
+
+            parent.transform.DOScale(new Vector3(1, 1, 1), 0.5f).SetEase(Ease.OutBack).OnComplete(delegate {
+
+
+                HandleOff(callBack);
+
+            });
+    
+
+
+
+
     }
     public void HandleOff(Action callBack )
     {

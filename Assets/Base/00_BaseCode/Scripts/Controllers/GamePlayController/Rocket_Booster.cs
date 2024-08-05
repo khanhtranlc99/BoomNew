@@ -89,20 +89,23 @@ public class Rocket_Booster : MonoBehaviour
         {
             GamePlayController.Instance.playerContain.tutorial_Rocket.NextTut();
             var target = GamePlayController.Instance.playerContain.levelData.GetRandomSlimeForRocketBooster;
-            if(target != null)
+            if (target != null)
             {
                 UseProfile.Roket_Booster -= 1;
                 rocket_Btn.interactable = false;
-                var rocket = SimplePool2.Spawn(rocketVfx, post.position, Quaternion.identity);
+                var rocket = SimplePool2.Spawn(rocketVfx, target.transform.position, Quaternion.identity);
                 rocket.transform.parent = target.transform;
-                rocket.transform.position -= new Vector3(0, 0, 1);
-                rocket.transform.DOLocalMove(Vector3.zero, 0.5f).OnComplete(delegate {
+                rocket.transform.position = target.transform.position;
+                StartCoroutine(TakeDame(target, rocket));
+                //rocket.transform.position -= new Vector3(0, 0, 1);
+                //    rocket.transform.DOLocalMove(Vector3.zero, 0.5f).OnComplete(delegate {
 
 
-                    rocket.HandleDisable();
-                    target.TakeDame();
-                    rocket_Btn.interactable = true;
-                });
+                //        rocket.HandleDisable();
+                //        target.TakeDame();
+                //        rocket_Btn.interactable = true;
+                //    });
+                //} 
             } 
         }
         else
@@ -114,8 +117,15 @@ public class Rocket_Booster : MonoBehaviour
 
     }
 
+    private IEnumerator TakeDame(BarrierBase target, RocketVfx rocket)
+    {
+        yield return new WaitForSeconds(1);
+        rocket.HandleDisable();
+        target.TakeDame();
+        rocket_Btn.interactable = true;
+    }
 
- 
+
 
     public void ChangeText(object param)
     {
