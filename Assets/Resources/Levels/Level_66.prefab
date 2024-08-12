@@ -839,6 +839,7 @@ MonoBehaviour:
   gridBase: {fileID: 4865405002200861938}
   wasTakeDame: 0
   Hp: 0
+  shadow: {fileID: 0}
   flame: {fileID: 6872330641066631044, guid: 0cb53581e7204974c8bd9ed5c4e6fba3, type: 3}
   spacing: 1
   leftGridbase: []
@@ -7898,6 +7899,7 @@ MonoBehaviour:
   gridBase: {fileID: 8527363017703603946}
   wasTakeDame: 0
   Hp: 3
+  shadow: {fileID: 0}
   spriteHit_1: {fileID: 21300000, guid: 0e73b5b8026046c4aa276c16674f9511, type: 3}
   spriteHit_2: {fileID: 21300000, guid: 192932e327168444191b17c65922e2ad, type: 3}
   particleSystem: {fileID: 5021793418773462055}
@@ -19355,6 +19357,7 @@ MonoBehaviour:
   gridBase: {fileID: 7034816387267560836}
   wasTakeDame: 0
   Hp: 0
+  shadow: {fileID: 0}
   slimeBase: []
   lsLear:
   - {fileID: 4658679850458649854}
@@ -19366,6 +19369,8 @@ MonoBehaviour:
   - {fileID: 1975429643137065737}
   - {fileID: 4109908632062792138}
   - {fileID: 8364013818538493175}
+  fx_Grass: {fileID: 0}
+  fx_Grass_Break: {fileID: 0}
 --- !u!61 &5810689394881086983
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19805,6 +19810,7 @@ MonoBehaviour:
   gridBase: {fileID: 8488446960836314407}
   wasTakeDame: 0
   Hp: 2
+  shadow: {fileID: 0}
   Speed: 1.1
   slimeType: 5
   fSMController: {fileID: 1691001914251537885}
@@ -19813,6 +19819,8 @@ MonoBehaviour:
   takeDame: {fileID: 6670816614592429572}
   takeDameSFX: {fileID: 8300000, guid: fb61dc41c8a20ee448db107cf267bc99, type: 3}
   heartBarSlime: {fileID: 2906605505467719810}
+  initDone: 0
+  iceEfect: {fileID: 0}
 --- !u!114 &1691001914251537885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19877,6 +19885,8 @@ MonoBehaviour:
   nextGrid: {fileID: 0}
   tempGrid: {fileID: 0}
   idOld: 
+  ran: 0
+  isIdle: 0
 --- !u!58 &7760200054193482310
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20645,6 +20655,7 @@ MonoBehaviour:
   gridBase: {fileID: 5842980266058160312}
   wasTakeDame: 0
   Hp: 2
+  shadow: {fileID: 0}
   Speed: 1.1
   slimeType: 5
   fSMController: {fileID: 5261581954986487046}
@@ -20653,6 +20664,8 @@ MonoBehaviour:
   takeDame: {fileID: 3449204411228145605}
   takeDameSFX: {fileID: 8300000, guid: fb61dc41c8a20ee448db107cf267bc99, type: 3}
   heartBarSlime: {fileID: 6747460864039993401}
+  initDone: 0
+  iceEfect: {fileID: 0}
 --- !u!114 &5261581954986487046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20717,6 +20730,8 @@ MonoBehaviour:
   nextGrid: {fileID: 0}
   tempGrid: {fileID: 0}
   idOld: 
+  ran: 0
+  isIdle: 0
 --- !u!58 &3855751175252890056
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20998,6 +21013,7 @@ MonoBehaviour:
   gridBase: {fileID: 5410939092450512322}
   wasTakeDame: 0
   Hp: 3
+  shadow: {fileID: 0}
   spriteHit_1: {fileID: 21300000, guid: 0e73b5b8026046c4aa276c16674f9511, type: 3}
   spriteHit_2: {fileID: 21300000, guid: 192932e327168444191b17c65922e2ad, type: 3}
   particleSystem: {fileID: 1884486960025679037}
@@ -23946,6 +23962,7 @@ MonoBehaviour:
   gridBase: {fileID: 8963775898095518676}
   wasTakeDame: 0
   Hp: 0
+  shadow: {fileID: 0}
   flame: {fileID: 6872330641066631044, guid: 0cb53581e7204974c8bd9ed5c4e6fba3, type: 3}
   spacing: 1
   leftGridbase: []
@@ -25151,6 +25168,7 @@ MonoBehaviour:
   gridBase: {fileID: 6828381466115760318}
   wasTakeDame: 0
   Hp: 0
+  shadow: {fileID: 0}
   flame: {fileID: 6872330641066631044, guid: 0cb53581e7204974c8bd9ed5c4e6fba3, type: 3}
   spacing: 1
   leftGridbase: []
@@ -25613,6 +25631,7 @@ MonoBehaviour:
   gridBase: {fileID: 5262977620988999329}
   wasTakeDame: 0
   Hp: 0
+  shadow: {fileID: 0}
   particleSystem: {fileID: 4300063796590692056}
 --- !u!61 &2533109095470400088
 BoxCollider2D:
@@ -31361,7 +31380,7 @@ Transform:
   m_GameObject: {fileID: 3588510489584579023}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9190001, y: -1.82, z: 0}
+  m_LocalPosition: {x: -2.9190001, y: -2.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31500,6 +31519,7 @@ MonoBehaviour:
   gridBase: {fileID: 8722720945629571905}
   wasTakeDame: 0
   Hp: 0
+  shadow: {fileID: 0}
   flame: {fileID: 6872330641066631044, guid: 0cb53581e7204974c8bd9ed5c4e6fba3, type: 3}
   spacing: 1
   leftGridbase: []
@@ -36813,6 +36833,7 @@ MonoBehaviour:
   gridBase: {fileID: 6416937260418145477}
   wasTakeDame: 0
   Hp: 3
+  shadow: {fileID: 0}
   spriteHit_1: {fileID: 21300000, guid: 0e73b5b8026046c4aa276c16674f9511, type: 3}
   spriteHit_2: {fileID: 21300000, guid: 192932e327168444191b17c65922e2ad, type: 3}
   particleSystem: {fileID: 1484076828162045960}
@@ -36959,6 +36980,7 @@ MonoBehaviour:
   gridBase: {fileID: 5261401068776741121}
   wasTakeDame: 0
   Hp: 3
+  shadow: {fileID: 0}
   Speed: 1.7
   slimeType: 2
   fSMController: {fileID: 462698320133723009}
@@ -36967,6 +36989,8 @@ MonoBehaviour:
   takeDame: {fileID: 5553235975989586894}
   takeDameSFX: {fileID: 8300000, guid: fb61dc41c8a20ee448db107cf267bc99, type: 3}
   heartBarSlime: {fileID: 8075053808722204754}
+  initDone: 0
+  iceEfect: {fileID: 0}
 --- !u!114 &462698320133723009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37306,6 +37330,7 @@ MonoBehaviour:
   gridBase: {fileID: 125759971186191678}
   wasTakeDame: 0
   Hp: 3
+  shadow: {fileID: 0}
   Speed: 1.7
   slimeType: 2
   fSMController: {fileID: 6118938349581235911}
@@ -37314,6 +37339,8 @@ MonoBehaviour:
   takeDame: {fileID: 5254126622890526241}
   takeDameSFX: {fileID: 8300000, guid: fb61dc41c8a20ee448db107cf267bc99, type: 3}
   heartBarSlime: {fileID: 1759929059955794474}
+  initDone: 0
+  iceEfect: {fileID: 0}
 --- !u!114 &6118938349581235911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38110,6 +38137,7 @@ MonoBehaviour:
   gridBase: {fileID: 2062007194953724368}
   wasTakeDame: 0
   Hp: 3
+  shadow: {fileID: 0}
   Speed: 1.7
   slimeType: 2
   fSMController: {fileID: 4572589457752132227}
@@ -38118,6 +38146,8 @@ MonoBehaviour:
   takeDame: {fileID: 3956155072052516658}
   takeDameSFX: {fileID: 8300000, guid: fb61dc41c8a20ee448db107cf267bc99, type: 3}
   heartBarSlime: {fileID: 7214268565848879502}
+  initDone: 0
+  iceEfect: {fileID: 0}
 --- !u!114 &4572589457752132227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38373,6 +38403,7 @@ MonoBehaviour:
   gridBase: {fileID: 7674197043549206986}
   wasTakeDame: 0
   Hp: 2
+  shadow: {fileID: 0}
   Speed: 1.1
   slimeType: 5
   fSMController: {fileID: 3565022686384909483}
@@ -38381,6 +38412,8 @@ MonoBehaviour:
   takeDame: {fileID: 7579574220581442954}
   takeDameSFX: {fileID: 8300000, guid: fb61dc41c8a20ee448db107cf267bc99, type: 3}
   heartBarSlime: {fileID: 1191114075662089989}
+  initDone: 0
+  iceEfect: {fileID: 0}
 --- !u!114 &3565022686384909483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38445,6 +38478,8 @@ MonoBehaviour:
   nextGrid: {fileID: 0}
   tempGrid: {fileID: 0}
   idOld: 
+  ran: 0
+  isIdle: 0
 --- !u!58 &8933559679858398774
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -40414,6 +40449,7 @@ MonoBehaviour:
   gridBase: {fileID: 8730943657818721294}
   wasTakeDame: 0
   Hp: 3
+  shadow: {fileID: 0}
   spriteHit_1: {fileID: 21300000, guid: 0e73b5b8026046c4aa276c16674f9511, type: 3}
   spriteHit_2: {fileID: 21300000, guid: 192932e327168444191b17c65922e2ad, type: 3}
   particleSystem: {fileID: 6525265540392064655}
@@ -40644,7 +40680,7 @@ Transform:
   m_GameObject: {fileID: 4676259766050288012}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06, y: 9.13, z: 0}
+  m_LocalPosition: {x: 0.06, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41371,6 +41407,7 @@ MonoBehaviour:
   gridBase: {fileID: 6474398423470211438}
   wasTakeDame: 0
   Hp: 0
+  shadow: {fileID: 0}
   slimeBase: []
   lsLear:
   - {fileID: 5197702361410259902}
@@ -41382,6 +41419,8 @@ MonoBehaviour:
   - {fileID: 7820227763205069994}
   - {fileID: 7349248260493380413}
   - {fileID: 8589442802053438380}
+  fx_Grass: {fileID: 0}
+  fx_Grass_Break: {fileID: 0}
 --- !u!61 &4504965943392267876
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42817,6 +42856,7 @@ MonoBehaviour:
   gridBase: {fileID: 7221387004675196646}
   wasTakeDame: 0
   Hp: 0
+  shadow: {fileID: 0}
   particleSystem: {fileID: 223644167058358588}
 --- !u!61 &5334210489157354524
 BoxCollider2D:
@@ -45636,6 +45676,7 @@ MonoBehaviour:
   gridBase: {fileID: 5488677265478734990}
   wasTakeDame: 0
   Hp: 2
+  shadow: {fileID: 0}
   Speed: 1.1
   slimeType: 5
   fSMController: {fileID: 2734188847767434457}
@@ -45644,6 +45685,8 @@ MonoBehaviour:
   takeDame: {fileID: 5856442608926619948}
   takeDameSFX: {fileID: 8300000, guid: fb61dc41c8a20ee448db107cf267bc99, type: 3}
   heartBarSlime: {fileID: 7743242889036214729}
+  initDone: 0
+  iceEfect: {fileID: 0}
 --- !u!114 &2734188847767434457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45708,6 +45751,8 @@ MonoBehaviour:
   nextGrid: {fileID: 0}
   tempGrid: {fileID: 0}
   idOld: 
+  ran: 0
+  isIdle: 0
 --- !u!58 &5347042710046277913
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -46900,6 +46945,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   difficult: 1
+  lsBoss: []
   isSlimeLevel: 1
   isTimeLevel: 0
   conditionSlimes:
@@ -47222,6 +47268,7 @@ MonoBehaviour:
   gridBase: {fileID: 5494240109223264386}
   wasTakeDame: 0
   Hp: 0
+  shadow: {fileID: 0}
   slimeBase: []
   lsLear:
   - {fileID: 4022304142808927740}
@@ -47233,6 +47280,8 @@ MonoBehaviour:
   - {fileID: 1893457491135017692}
   - {fileID: 5084930952341797256}
   - {fileID: 5726801554293255124}
+  fx_Grass: {fileID: 0}
+  fx_Grass_Break: {fileID: 0}
 --- !u!61 &3745507110839772015
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52952,6 +53001,7 @@ MonoBehaviour:
   gridBase: {fileID: 306191268150896248}
   wasTakeDame: 0
   Hp: 2
+  shadow: {fileID: 0}
   Speed: 1.1
   slimeType: 5
   fSMController: {fileID: 6923292746658703683}
@@ -52960,6 +53010,8 @@ MonoBehaviour:
   takeDame: {fileID: 7644762409903415419}
   takeDameSFX: {fileID: 8300000, guid: fb61dc41c8a20ee448db107cf267bc99, type: 3}
   heartBarSlime: {fileID: 562865890860095035}
+  initDone: 0
+  iceEfect: {fileID: 0}
 --- !u!114 &6923292746658703683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53024,6 +53076,8 @@ MonoBehaviour:
   nextGrid: {fileID: 0}
   tempGrid: {fileID: 0}
   idOld: 
+  ran: 0
+  isIdle: 0
 --- !u!58 &3821282489576601974
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -53728,6 +53782,7 @@ MonoBehaviour:
   gridBase: {fileID: 5343245073865848976}
   wasTakeDame: 0
   Hp: 0
+  shadow: {fileID: 0}
   flame: {fileID: 6872330641066631044, guid: 0cb53581e7204974c8bd9ed5c4e6fba3, type: 3}
   spacing: 1
   leftGridbase: []
@@ -59986,6 +60041,7 @@ MonoBehaviour:
   gridBase: {fileID: 488025279107247606}
   wasTakeDame: 0
   Hp: 0
+  shadow: {fileID: 0}
   slimeBase: []
   lsLear:
   - {fileID: 8735439304461732127}
@@ -59997,6 +60053,8 @@ MonoBehaviour:
   - {fileID: 8860899392682630841}
   - {fileID: 9082449346385480769}
   - {fileID: 8395686214658322785}
+  fx_Grass: {fileID: 0}
+  fx_Grass_Break: {fileID: 0}
 --- !u!61 &6391012685606837920
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60451,7 +60509,7 @@ Transform:
   m_GameObject: {fileID: 7825240613716613710}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: -1.82, z: 0}
+  m_LocalPosition: {x: -2.5, y: -2.32, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -70062,6 +70120,7 @@ MonoBehaviour:
   gridBase: {fileID: 8862100697989087725}
   wasTakeDame: 0
   Hp: 0
+  shadow: {fileID: 0}
   particleSystem: {fileID: 2972912388080683533}
 --- !u!61 &4179444837087922029
 BoxCollider2D:
@@ -71216,6 +71275,7 @@ MonoBehaviour:
   gridBase: {fileID: 3012506004192941730}
   wasTakeDame: 0
   Hp: 0
+  shadow: {fileID: 0}
   particleSystem: {fileID: 4222258380727401345}
 --- !u!61 &4239883043451875006
 BoxCollider2D:
@@ -72681,6 +72741,7 @@ MonoBehaviour:
   gridBase: {fileID: 2349177585282020229}
   wasTakeDame: 0
   Hp: 0
+  shadow: {fileID: 0}
   flame: {fileID: 6872330641066631044, guid: 0cb53581e7204974c8bd9ed5c4e6fba3, type: 3}
   spacing: 1
   leftGridbase: []
@@ -72838,6 +72899,7 @@ MonoBehaviour:
   gridBase: {fileID: 117274796932339906}
   wasTakeDame: 0
   Hp: 0
+  shadow: {fileID: 0}
   particleSystem: {fileID: 7626975386695495294}
 --- !u!61 &1044574630835742749
 BoxCollider2D:
@@ -73276,6 +73338,7 @@ MonoBehaviour:
   gridBase: {fileID: 9174361975169471037}
   wasTakeDame: 0
   Hp: 0
+  shadow: {fileID: 0}
   flame: {fileID: 6872330641066631044, guid: 0cb53581e7204974c8bd9ed5c4e6fba3, type: 3}
   spacing: 1
   leftGridbase: []

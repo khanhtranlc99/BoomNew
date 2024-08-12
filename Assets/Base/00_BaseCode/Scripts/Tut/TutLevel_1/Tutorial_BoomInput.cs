@@ -16,17 +16,22 @@ public class Tutorial_BoomInput : TutorialFunController
         {
             SimplePool2.PoolPreLoad(slimeBoss.gameObject,1, GamePlayController.Instance.playerContain.levelData.transform);
             SimplePool2.PoolPreLoad(slimeRed.gameObject, 3, GamePlayController.Instance.playerContain.levelData.transform);
+            isTut = true;
         }    
     }
     public void HandleSpawnBoss()
     {
+        GamePlayController.Instance.playerContain.cameraScale.HandleZoom(9, delegate {
 
-        Invoke(nameof(SpawnBoss), 2.5f); ;
+            //Invoke(nameof(SpawnBoss), 1); ;
+            SpawnBoss();
+        });
+   
 
     }    
     private void SpawnBoss()
     {
-        isTut = true;
+
        
 
         var vec2 = GamePlayController.Instance.playerContain.levelData.GridBase(11) ;

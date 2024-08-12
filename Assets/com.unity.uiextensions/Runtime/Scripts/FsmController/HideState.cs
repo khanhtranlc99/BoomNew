@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class HideState : SlimeStateBase
 {
+
     public override void EndState()
     {
         data.HandleHide(true);
+      
     }
 
     public override void Init(SlimeBase slimeBase)
     {
         data = slimeBase;
+
     }
 
     public override void StartState()
@@ -22,6 +25,7 @@ public class HideState : SlimeStateBase
         {
             data.gridBase.barrierBase.gameObject.GetComponent<Bloomsom>().slimeBase.Add(data);
             data.gridBase.barrierBase.gameObject.GetComponent<Bloomsom>().HandleSlimeHide();
+       
         }
 
  
@@ -38,5 +42,7 @@ public class HideState : SlimeStateBase
         {
             data.fSMController.ChangeState(StateType.Die);
         }
+      
+
     }
 }

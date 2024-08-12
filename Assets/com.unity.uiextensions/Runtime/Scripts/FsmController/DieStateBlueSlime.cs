@@ -10,6 +10,7 @@ public class DieStateBlueSlime : SlimeStateBase
     public ItemInGame itemInGame;
     public int countCoin;
     GiftInGame currentGift;
+    public ParticleSystem vfxSpawn;
     public override void EndState()
     {
   
@@ -24,6 +25,8 @@ public class DieStateBlueSlime : SlimeStateBase
 
     public override void StartState()
     {
+ 
+        vfxSpawn.Play();
         data.animator.Play("Die");
     }
 
@@ -64,6 +67,7 @@ public class DieStateBlueSlime : SlimeStateBase
 
     private void SpawnRed()
     {
+
         var temp = new List<GridBase>();
         foreach (var item in data.gridBase.lsGridBase)
         {

@@ -54,6 +54,10 @@ public class GameScene : BaseScene
                 break;
 
         }
+        if(UseProfile.CurrentLevel <= 1)
+        {
+            settinBtn.interactable = false;
+        }    
     }
     public void HandleOnCheatLevel()
     {

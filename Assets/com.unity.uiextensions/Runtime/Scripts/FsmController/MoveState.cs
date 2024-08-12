@@ -32,6 +32,10 @@ public class MoveState : SlimeStateBase
         {
             data.fSMController.ChangeState(StateType.Die);
         }
+        if (data.shadow != null)
+        {
+            data.shadow.color = data.spriteRenderer.color;
+        }
     }
    
     public override void EndState()
@@ -424,7 +428,16 @@ public class MoveState : SlimeStateBase
                 }
                   catch
                 {
-                    idOld.Remove(idOld[idOld.Count - 1]);
+                    try
+                    {
+                        idOld.Remove(idOld[idOld.Count - 1]);
+                    }
+                    catch
+                    {
+                        idOld.Clear();
+         
+                    }
+               
                 }
                 coutLoop += 1;
                 if (coutLoop > 3)

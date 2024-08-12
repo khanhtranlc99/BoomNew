@@ -29,6 +29,17 @@ public class Step_1_BoomInput : TutorialBase
             GamePlayController.Instance.playerContain.boomInputController.enabled = false;
             Invoke(nameof(HandleSetup),2);
         }
+        if (UseProfile.CurrentLevel == 18)
+        {
+            if (currentHand != null)
+            {
+                return;
+            }
+            currentHand = SimplePool2.Spawn(handTut);
+            currentHand.transform.position = GamePlayController.Instance.playerContain.levelData.gridBasesId[23].transform.position;
+            currentHand.transform.position += new Vector3(-0.5f, 0.5f, 0);
+
+        }
     }
     private void HandleSetup()
     {

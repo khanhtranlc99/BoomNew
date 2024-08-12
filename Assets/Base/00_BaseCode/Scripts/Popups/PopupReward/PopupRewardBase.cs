@@ -70,10 +70,10 @@ public class PopupRewardBase : BaseBox
                 mainPanel.DOScale(1, 0.5f).SetUpdate(true).SetEase(Ease.OutBack).OnComplete(() => { });
             }
         }
-
+        ClearPool();
         base.Show();
         _actionClaim = actionClaim;
-        ClearPool();
+    
         // BoxController.Instance.isLockEscape = true;
         canvasRewardContent.sortingLayerID = SortingLayer.NameToID("Popup");
         canvasRewardContent.sortingOrder = popupCanvas.sortingLayerID + 2;
@@ -231,7 +231,12 @@ public class PopupRewardBase : BaseBox
 
 
     }
+    public override void Close()
+    {
 
+        base.Close();
+        Destroy(this.gameObject);
+    }
     private IEnumerator Closeee()
     {
         yield return new WaitForSeconds(0.5f);

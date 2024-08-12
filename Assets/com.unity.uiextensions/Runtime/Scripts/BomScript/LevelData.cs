@@ -165,7 +165,43 @@ public class LevelData : SerializedMonoBehaviour
         
         
     }
-   public  void InitBase()
+
+    public void HandleScaleOff()
+    {
+        foreach (var item in lsSmiles )
+        {
+            if (item != null && !lsBoss.Contains(item.GetComponent<SlimeBase>()))
+            {
+                item.transform.localScale = new Vector3(0,0,0);
+            }
+        }
+    }
+    public void HandleScaleOn( Action callBack)
+    {
+        bool allIsBoss = true;
+        for  (int i = 0; i <  lsSmiles.Count; i ++)
+        {
+            int index = i;
+            if (lsSmiles[index] != null && !lsBoss.Contains(lsSmiles[index].GetComponent<SlimeBase>()))
+            {
+                lsSmiles[index].transform.DOScale(new Vector3(1,1,1),0.75f).OnComplete(delegate {
+                
+                    if(index == lsSmiles.Count -1)
+                    {
+                        callBack?.Invoke();
+                    }
+                });
+                allIsBoss = false;
+            }
+        }
+        if(allIsBoss)
+        {
+            callBack?.Invoke();
+
+        }    
+    }
+
+    public  void InitBase()
     {
             if(lsBoss.Count > 0)
         {

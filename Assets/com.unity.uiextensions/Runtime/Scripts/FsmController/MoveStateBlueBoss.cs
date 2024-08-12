@@ -33,6 +33,10 @@ public class MoveStateBlueBoss : SlimeStateBase
         {
             data.fSMController.ChangeState(StateType.Die);
         }
+        if (data.shadow != null)
+        {
+            data.shadow.color = data.spriteRenderer.color;
+        }
     }
 
     public override void EndState()

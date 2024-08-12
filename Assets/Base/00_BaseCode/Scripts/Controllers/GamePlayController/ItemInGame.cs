@@ -251,7 +251,7 @@ public class ItemInGame : MonoBehaviour
     }
     public void HandleJump(Vector3 paramPost, Action callBack)
     {
-        this.transform.DOJump(paramPost, 1,1,1).SetEase(Ease.Linear).OnComplete(delegate {
+        this.transform.DOJump(paramPost, 1,1,0.5f).SetEase(Ease.Linear).OnComplete(delegate {
          
             if(callBack != null)
             {

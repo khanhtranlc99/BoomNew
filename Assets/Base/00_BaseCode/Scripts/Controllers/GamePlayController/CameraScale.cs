@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
+using DG.Tweening;
 public class CameraScale : MonoBehaviour
 {
     private Camera cam;
@@ -39,4 +40,14 @@ public class CameraScale : MonoBehaviour
         Vector3 viewportPoint = cam.WorldToViewportPoint(point);
         return viewportPoint.x >= 0 && viewportPoint.x <= 1 && viewportPoint.y >= 0 && viewportPoint.y <= 1;
     }
+
+    public void HandleZoom(float param, Action callBack)
+    {
+
+        cam.DOOrthoSize(param, 2).SetEase(Ease.Linear).OnComplete(delegate {
+
+
+            callBack?.Invoke();
+        });
+    }    
 }

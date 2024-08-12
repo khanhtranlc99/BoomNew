@@ -20,6 +20,7 @@ public abstract class BarrierBase : MonoBehaviour
      public GridBase gridBase;
     public bool wasTakeDame = false;
     public int Hp;
+    public SpriteRenderer shadow;
     public abstract void Init();
     public abstract void TakeDame();
     

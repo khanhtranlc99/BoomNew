@@ -6,6 +6,7 @@ using System;
 using DG.Tweening;
 using UnityEngine.Playables;
 using Sirenix.OdinInspector;
+using UnityEngine.UI;
 
 public class WinStreakController : MonoBehaviour
 {
@@ -44,11 +45,15 @@ public class WinStreakController : MonoBehaviour
 
     public GameObject bgBlack;
     public GameObject vfxGiftTemp;
-    [Button]
- 
+
+    public GameObject prefabParent;
+    public Text tvWinStreak;
+
     public void Init (Action callBack)
     {
-
+        tvWinStreak.text = "Win Streak";
+        callBackGift = callBack;
+        countWinStreak = 0;
         winStreak = new WinStreakGift();
         winStreak = GetWinStreakGift;
 
@@ -81,71 +86,40 @@ public class WinStreakController : MonoBehaviour
             void ActiveCanvasGift()
             {
 
-                for (int i = 0; i < winStreak.lsStreakGifts.Count; i++)
+                for (int i = 1; i < lsProgesst.Count; i++)
                 {
                     int index = i;
-                    var temp = SimplePool2.Spawn(GameController.Instance.dataContain.giftDatabase.GetAnimItem(winStreak.lsStreakGifts[i].giftType));
-                    temp.transform.position = lsProgesst[index + 1 ].postWinStreak.position;
-                    temp.transform.parent = parentGift;
-                    temp.transform.localScale = new Vector3(1, 1, 1);
-                    temp.transform.SetAsFirstSibling();
-                    temp.transform.DOMove(giftAnimNew.gameObject.transform.position, 0.5f ).OnComplete(delegate
+                    if(lsProgesst[index].gameObject.activeSelf)
                     {
+                        lsProgesst[index  ].postWinStreak.gameObject.GetComponent<Animator>().Play("WinStreak_" + index);
+                    }
+                 
+                    //var temp = SimplePool2.Spawn(GameController.Instance.dataContain.giftDatabase.GetAnimItem(winStreak.lsStreakGifts[i].giftType));
+                    //temp.transform.position = lsProgesst[index + 1 ].postWinStreak.position;
+                    //temp.transform.parent = panelGift.gameObject.transform;
+                    //temp.transform.localScale = new Vector3(1, 1, 1);
+                    //temp.transform.SetAsFirstSibling();
+                    //MoveInCurve(temp, delegate {
 
+                    //    if (index == UseProfile.WinStreak - 1 || index == winStreak.lsStreakGifts.Count - 1)
+                    //    {
+                    //        panelGift.transform.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 0.5f).SetDelay(0.5f).OnComplete(delegate
+                    //        {
+                    //            panelGift.transform.DOScale(new Vector3(1, 1, 1), 0.5f).OnComplete(delegate
+                    //            {
+                    //                callBack?.Invoke();
+                    //            });
+                    //        });
+                    //    }
+                    //    SimplePool2.Despawn(temp.gameObject);
 
-                        if (index == UseProfile.WinStreak -1 || index == winStreak.lsStreakGifts.Count -1)
-                        {
-                            panelGift.transform.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 0.5f).SetDelay(0.5f).OnComplete(delegate
-                            {
-                                panelGift.transform.DOScale(new Vector3(1, 1, 1), 0.5f).OnComplete(delegate
-                                {
-                                    callBack?.Invoke();
-                                });
-                            });
-                        }
-                        SimplePool2.Despawn(temp.gameObject);
-                    });
+                    //});
+                    //temp.transform.DOMove(giftAnimNew.gameObject.transform.position, 0.5f ).OnComplete(delegate
+                    //{
+
+                    //});
                 }
-
-
-                //for (int i = 1; i < lsProgesst.Count; i++)
-                //{
-                //    int index = i;
-                //    if (index <= UseProfile.WinStreak)
-                //    {
-
-                //        var temp = SimplePool2.Spawn(vfxTrail);
-                //        temp.transform.position = lsProgesst[i].postWinStreak.position;
-                //        temp.transform.parent = parentGift;
-                //        temp.transform.localScale = new Vector3(13,13,13);
-                //        temp.transform.SetAsFirstSibling();
-                //        temp.transform.DOMove(giftAnimNew.gameObject.transform.position, 0.5f ).OnComplete(delegate {
-
-
-                //            if (index == UseProfile.WinStreak)
-                //            {
-                //                //giftAnimNew.Play();
-                //                //StartCoroutine(OnPlayableDirectorStopped());
-                //                panelGift.transform.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 0.5f).SetDelay(0.5f).OnComplete(delegate {
-
-                //                    panelGift.transform.DOScale(new Vector3(1, 1, 1), 0.5f).OnComplete(delegate {
-
-                //                        callBack?.Invoke();
-
-                //                    });
-
-
-                //                });
-
-                //            }
-                //            SimplePool2.Despawn(temp.gameObject);
-                //        });
-
-                //    }
-                //}
-            }
-        
-         
+            }             
             return;
         }
         else
@@ -155,17 +129,65 @@ public class WinStreakController : MonoBehaviour
             callBack?.Invoke();
 
         }
+    }
+
+    int countWinStreak = 0;
+    Action callBackGift;
+    public void HandleWinStreak()
+    {
+        countWinStreak += 1;
+        if(countWinStreak >= UseProfile.WinStreak)
+        {
+            panelGift.transform.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 0.5f).OnComplete(delegate
+            {
+                panelGift.transform.DOScale(new Vector3(1, 1, 1), 0.5f).OnComplete(delegate
+                {
+                    callBackGift?.Invoke();
+                });
+            });
+        }
+    }
+
+    public void MoveInCurve(GameObject param, Action callBack)
+    {
+
+        Vector3 center = new Vector3((param.transform.position.x + param.transform.parent.position.x) / 2, (param.transform.position.y + param.transform.parent.position.y) / 2);
+
+        Vector3 center_2 = new Vector3((center.x + param.transform.parent.position.x) / 2 - 3, (center.y) + 2);
+        Vector3 centerUp = new Vector3((center.x + param.transform.parent.position.x) / 2 - 2, (center.y + param.transform.parent.position.y) / 2 + 2);
+        Vector3 centerDown = new Vector3((param.transform.position.x + center.x) / 2 - 2, (param.transform.position.y + center.y) / 2 + 1);
 
 
+
+        //var tempCenterUp = Instantiate(prefabParent, centerUp, Quaternion.identity);
+        //tempCenterUp.transform.parent = panelGift.gameObject.transform;
+        //tempCenterUp.transform.localScale = new Vector3(1, 1, 1);
+
+        //var tempCenter = Instantiate(prefabParent, center_2, Quaternion.identity);
+        //tempCenter.transform.parent = panelGift.gameObject.transform;
+        //tempCenter.transform.localScale = new Vector3(1, 1, 1);
+
+        //var tempCenterDown = Instantiate(prefabParent, centerDown, Quaternion.identity);
+        //tempCenterDown.transform.parent = panelGift.gameObject.transform;
+        //tempCenterDown.transform.localScale = new Vector3(1, 1, 1);
+
+        param.transform.DOMove(centerDown, 0.2f).SetEase(Ease.Linear).OnComplete(delegate
+        {
+            param.transform.DOMove(center_2, 0.2f).SetEase(Ease.Linear).OnComplete(delegate
+            {
+                param.transform.DOMove(centerUp, 0.2f).SetEase(Ease.Linear).OnComplete(delegate
+                {
+                    param.transform.DOMove(panelGift.gameObject.transform.position, 0.2f).SetEase(Ease.Linear).OnComplete(delegate { callBack?.Invoke(); });
+
+                });
+            });
+        });
 
     }
-    public void SetUp()
-    {
-    
-    }    
 
     public void  HandleOpenBox(Action callBack)
     {
+        tvWinStreak.text = "Win Streak Prize";
         panelWinStreak.gameObject.SetActive(true);
         canvasGroup.gameObject.SetActive(true);
         canvasGroup.alpha = 1;
@@ -175,7 +197,7 @@ public class WinStreakController : MonoBehaviour
         StartCoroutine(OnPlayableDirectorStopped());
         IEnumerator OnPlayableDirectorStopped()
         {
-            Debug.LogError("OnPlayableDirectorStopped");
+           
             winStreak = new WinStreakGift();
             winStreak = GetWinStreakGift;
             yield return new WaitForSeconds(2);
@@ -198,7 +220,7 @@ public class WinStreakController : MonoBehaviour
                 {
                     if (index >= lsGiftInGames.Count - 1)
                     {
-                        canvasGroup.DOFade(0, 0.7f).OnComplete(delegate
+                        canvasGroup.DOFade(0, 0.5f).OnComplete(delegate
                         {
                             callBack?.Invoke();
                             canvasGroup.gameObject.SetActive(false);

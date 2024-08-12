@@ -2973,6 +2973,15 @@ MonoBehaviour:
     conditionSlimes:
       lsDataSlime:
       - slimeType: 0
+        countSlime: 10
+    conditionTime:
+      time: 0
+  - difficult: 0
+    isSlimeLevel: 1
+    isTimeLevel: 0
+    conditionSlimes:
+      lsDataSlime:
+      - slimeType: 0
         countSlime: 8
     conditionTime:
       time: 0
@@ -2982,18 +2991,9 @@ MonoBehaviour:
     conditionSlimes:
       lsDataSlime:
       - slimeType: 0
-        countSlime: 4
-    conditionTime:
-      time: 0
-  - difficult: 0
-    isSlimeLevel: 1
-    isTimeLevel: 0
-    conditionSlimes:
-      lsDataSlime:
-      - slimeType: 0
-        countSlime: 6
+        countSlime: 12
       - slimeType: 1
-        countSlime: 2
+        countSlime: 4
     conditionTime:
       time: 0
   - difficult: 3
@@ -3003,6 +3003,8 @@ MonoBehaviour:
       lsDataSlime:
       - slimeType: 0
         countSlime: 6
+      - slimeType: 1
+        countSlime: 1
     conditionTime:
       time: 0
   - difficult: 0
@@ -3024,7 +3026,7 @@ MonoBehaviour:
     conditionSlimes:
       lsDataSlime:
       - slimeType: 2
-        countSlime: 4
+        countSlime: 6
     conditionTime:
       time: 0
   - difficult: 1
@@ -3033,13 +3035,13 @@ MonoBehaviour:
     conditionSlimes:
       lsDataSlime:
       - slimeType: 0
-        countSlime: 2
+        countSlime: 3
       - slimeType: 1
         countSlime: 1
       - slimeType: 2
-        countSlime: 1
+        countSlime: 3
       - slimeType: 3
-        countSlime: 2
+        countSlime: 3
     conditionTime:
       time: 0
   - difficult: 0
@@ -3052,7 +3054,7 @@ MonoBehaviour:
       - slimeType: 1
         countSlime: 1
       - slimeType: 3
-        countSlime: 2
+        countSlime: 5
     conditionTime:
       time: 0
   - difficult: 0
@@ -3158,7 +3160,7 @@ MonoBehaviour:
     conditionSlimes:
       lsDataSlime:
       - slimeType: 0
-        countSlime: 8
+        countSlime: 12
     conditionTime:
       time: 0
   - difficult: 0
@@ -4276,7 +4278,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _img: {fileID: 1442970928}
-  _img2: {fileID: 0}
   _x: 0
   _y: 0.02
 --- !u!1 &1326992088

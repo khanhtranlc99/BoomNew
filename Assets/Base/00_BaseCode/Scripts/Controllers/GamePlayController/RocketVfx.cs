@@ -8,7 +8,7 @@ public class RocketVfx : MonoBehaviour
  
     public void HandleDisable()
     {
-        flame.Play();
+        //flame.Play();
  
         Invoke(nameof(OffRocket), 0.3f);
     }

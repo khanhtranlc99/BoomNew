@@ -9,6 +9,7 @@ public class PackInShop : MonoBehaviour
     public Button btnBuy;
     public Text tvBuy;
     public Text tvBuy_2;
+
     public virtual void Init()
     {
         //tvBuy.text = "" + ;
@@ -16,7 +17,9 @@ public class PackInShop : MonoBehaviour
         tvBuy.text =  "" + GameController.Instance.iapController.GetPrice(this.typePackIAP);
         tvBuy_2.text = "" + GameController.Instance.iapController.GetPrice(this.typePackIAP);
         btnBuy.onClick.AddListener(delegate { ButtonOnClick(); });
-    
+   
+
+
     }
 
     public void ButtonOnClick()

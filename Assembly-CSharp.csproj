@@ -237,6 +237,7 @@
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\parameters\DsaParameters.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x9\X962Parameters.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\custom\sec\SecT163K1Curve.cs" />
+    <Compile Include="Assets\Base\00_BaseCode\Scripts\TestHandle.cs" />
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Primitives\UIGridRenderer.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\math\ec\abc\ZTauElement.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\DerUniversalString.cs" />
@@ -1055,6 +1056,7 @@
     <Compile Include="Assets\com.unity.uiextensions\Runtime\Scripts\Controls\ReorderableList\ReorderableListContent.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\Extensions\Extensions.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\x509\AlgorithmIdentifier.cs" />
+    <Compile Include="Assets\PremiumPackBox.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\asn1\IAsn1ApplicationSpecificParser.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\AbstractTlsCipherFactory.cs" />
     <Compile Include="Assets\Base\3Party\Best HTTP (Pro)\BestHTTP\SecureProtocol\crypto\tls\AbstractTlsSigner.cs" />

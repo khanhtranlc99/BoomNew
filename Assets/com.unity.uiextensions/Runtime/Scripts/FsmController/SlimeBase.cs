@@ -28,7 +28,6 @@ public class SlimeBase : BarrierBase
     public bool initDone = false;
     public GameObject iceEfect;
  
-
     public override void Init()
     {
        

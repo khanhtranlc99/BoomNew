@@ -1587,7 +1587,7 @@ MonoBehaviour:
   contentPanel: {fileID: 0}
   isNotStack: 0
   isPopup: 1
-  isAnim: 1
+  isAnim: 0
   popupCanvas: {fileID: 0}
   isBoxSave: 0
   btnClose: {fileID: 3494665097949542285}

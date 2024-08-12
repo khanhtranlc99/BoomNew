@@ -88,6 +88,7 @@ public static class StringHelper
 
 public class PathPrefabs
 {
+    public const string PREMIUM_PACK_BOX = "UI/Popups/PremiumPackBox";
     public const string BOOSTER_PACK_BOX = "UI/Popups/BoosterPackBox";
     public const string POPUP_REWARD_BASE = "UI/Popups/PopupRewardBase";
     public const string CONFIRM_POPUP = "UI/Popups/ConfirmBox";

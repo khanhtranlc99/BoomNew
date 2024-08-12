@@ -6,6 +6,7 @@ using DG.Tweening;
 public class SlimeBaseBlueBoss : SlimeBase
 {
     public SlimeBase redSlime;
+    public ParticleSystem vfxSpawn;
     public override void Init()
     {
         base.Init();
@@ -75,6 +76,7 @@ public class SlimeBaseBlueBoss : SlimeBase
 
     private void SpawnRed()
     {
+        vfxSpawn.Play();
         var temp = new List<GridBase>();
         foreach (var item in  GamePlayController.Instance.playerContain.levelData.gridBasesId)
         {

@@ -398,6 +398,9 @@ GameObject:
   - component: {fileID: 1858922161069779529}
   - component: {fileID: 4472617107319306541}
   - component: {fileID: 1337772885568676195}
+  - component: {fileID: 1996593011696006738}
+  - component: {fileID: 8897830275692895603}
+  - component: {fileID: 785886659644722339}
   m_Layer: 5
   m_Name: PremiumPackBox
   m_TagString: Untagged
@@ -497,6 +500,64 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 55
+--- !u!95 &1996593011696006738
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288420393995270391}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7e37d282a8ffcf64ab5ccd63ec4637d5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8897830275692895603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288420393995270391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56976be6547c1024f8b4597335e8c40d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainPanel: {fileID: 3454311356902454683}
+  contentPanel: {fileID: 0}
+  isNotStack: 0
+  isPopup: 1
+  isAnim: 1
+  popupCanvas: {fileID: 0}
+  isBoxSave: 0
+  btnClose: {fileID: 8607972276993714084}
+  iapPack: {fileID: 785886659644722339}
+--- !u!114 &785886659644722339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288420393995270391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6fb3fc830438344e8b319fbf91b0fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typePackIAP: 0
+  btnBuy: {fileID: 7519445742622209080}
+  tvBuy: {fileID: 1251439743980692634}
+  tvBuy_2: {fileID: 6070223767501643147}
 --- !u!1 &1531252121203491421
 GameObject:
   m_ObjectHideFlags: 0
@@ -2148,7 +2209,7 @@ RectTransform:
   m_GameObject: {fileID: 7227985316267086494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8286567882631264169}
