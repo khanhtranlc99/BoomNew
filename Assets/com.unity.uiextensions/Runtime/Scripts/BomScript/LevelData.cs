@@ -203,12 +203,15 @@ public class LevelData : SerializedMonoBehaviour
 
     public  void InitBase()
     {
+  
             if(lsBoss.Count > 0)
         {
+
             InitBoss(delegate { Main(); });
         }   
             else
         {
+
             Main();
         }    
 

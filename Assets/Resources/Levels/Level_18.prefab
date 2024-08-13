@@ -688,7 +688,7 @@ MonoBehaviour:
       countSlime: 12
   conditionTime:
     time: 0
-  boomLimit: 25
+  boomLimit: 13
   row: 0
   cow: 0
   parentGrid: {fileID: 3864449149577863630}
@@ -11282,6 +11282,10 @@ PrefabInstance:
       propertyPath: lsSlimeBases.Array.data[0]
       value: 
       objectReference: {fileID: 2343997275207472829, guid: 7fd97e77370cde04d8840a81402737a2, type: 3}
+    - target: {fileID: 6310504951055521509, guid: e2733fa47d8aaee42ba0cbfd43384a92, type: 3}
+      propertyPath: lsSlimeBases.Array.data[1]
+      value: 
+      objectReference: {fileID: 7070618898779168026, guid: da903997e05db4147a153fcb5af1eb16, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12244,7 +12248,7 @@ PrefabInstance:
     - target: {fileID: 6310504951055521509, guid: e2733fa47d8aaee42ba0cbfd43384a92, type: 3}
       propertyPath: lsSlimeBases.Array.data[1]
       value: 
-      objectReference: {fileID: 2343997275207472829, guid: 7fd97e77370cde04d8840a81402737a2, type: 3}
+      objectReference: {fileID: 7070618898779168026, guid: da903997e05db4147a153fcb5af1eb16, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

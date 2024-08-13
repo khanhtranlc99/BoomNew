@@ -10035,7 +10035,7 @@ MonoBehaviour:
       countSlime: 5
   conditionTime:
     time: 0
-  boomLimit: 35
+  boomLimit: 17
   row: 0
   cow: 0
   parentGrid: {fileID: 459498045118947046}

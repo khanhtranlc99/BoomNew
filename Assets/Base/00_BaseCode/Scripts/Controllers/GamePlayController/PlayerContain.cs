@@ -41,9 +41,11 @@ public class PlayerContain : MonoBehaviour
                 prepageGame.gameObject.SetActive(true);
                 prepageGame.Init(delegate
                 {
+             
                     GamePlayController.Instance.playerContain.winStreakController.HandleOpenBox(delegate {
-
+  
                         levelData.HandleScaleOn(delegate {
+             
                             levelData.Init(true);
                             SetUp();
 

@@ -9,6 +9,7 @@ public class WoodenBox : BarrierBase
     public float randomGift;
     public GiftInGame currentGift;
     public ParticleSystem particleSystem;
+    public bool isCustom;
     public override void Init()
     {
 
@@ -43,15 +44,24 @@ public class WoodenBox : BarrierBase
     }
     private void HandleDestroy()
     {
+
         randomGift = Random.RandomRange(0,100);
         currentGift = new GiftInGame();
-        foreach (var item in lsGiftInGames)
+        if(!isCustom)
         {
-            if(randomGift >= item.percentDown && randomGift < item.percentUp)
+            foreach (var item in lsGiftInGames)
             {
-                currentGift = item;
+                if (randomGift >= item.percentDown && randomGift < item.percentUp)
+                {
+                    currentGift = item;
+                }
             }
-        }
+        }    
+        else
+        {
+            currentGift = lsGiftInGames[Random.RandomRange(0, lsGiftInGames.Count)];
+        }    
+  
         var temp = SimplePool2.Spawn(itemInGame  );
         temp.transform.parent =  GamePlayController.Instance.gameScene.canvas.transform;
         temp.transform.position = this.transform.position;

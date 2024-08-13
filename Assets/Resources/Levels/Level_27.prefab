@@ -809,7 +809,7 @@ MonoBehaviour:
       countSlime: 5
   conditionTime:
     time: 0
-  boomLimit: 35
+  boomLimit: 16
   row: 0
   cow: 0
   parentGrid: {fileID: 108764284694643495}

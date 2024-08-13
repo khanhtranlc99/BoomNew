@@ -48,38 +48,64 @@ public class MoveStateIronBoss : SlimeStateBase
     int coutLoop = 0;
     public int ran;
     public bool wasRun = false;
+    public int countSkillIronBoss = 0;
     public void HandleMove()
     {
-        //if (idOld.Count > 4)
-        //{
-        //    idOld.Remove(idOld[0]);
-        //}
-         
-          if(!wasRun)
+        if (idOld.Count > 4)
+        {
+            idOld.Remove(idOld[0]);
+        }
+
+        if (countSkillIronBoss >= 2)
+        {
+            if (!data.wasTakeDame)
             {
-                wasRun = true;
-                if (!data.wasTakeDame)
-                {
-                    isIdle = false;
-                    data.animator.Play("Move");
-                }
-            }   
-          else
+
+                isIdle = true;
+                countSkillIronBoss = 0;
+                data.initDone = false;
+                StartCoroutine(Helper.HandleActionPlayAndWait(data.animator, "Def", delegate { HandleMove(); data.initDone = true; wasRun = false; }));
+
+                return;
+            }
+        }
+        else
+        {
+            if (!data.wasTakeDame)
             {
-                if (!data.wasTakeDame)
-                {
-                    isIdle = true;
-                    data.initDone = false;
-                    StartCoroutine(Helper.HandleActionPlayAndWait(data.animator, "Def", delegate { HandleMove(); data.initDone = true; wasRun = false;  }));
+                isIdle = false;
+                data.animator.Play("Move");
+                countSkillIronBoss += 1;
+            }
+        }
 
 
-                    return;
-                }
-            }    
-        
+        //if (!wasRun)
+        //    {
+        //        wasRun = true;
+        //        if (!data.wasTakeDame)
+        //        {
+        //            isIdle = false;
+        //            data.animator.Play("Move");
+        //        }
+        //    }   
+        //  else
+        //    {
 
 
-     
+
+        //    if (!data.wasTakeDame)
+        //    {
+        //        isIdle = true;
+        //        data.initDone = false;
+        //        StartCoroutine(Helper.HandleActionPlayAndWait(data.animator, "Def", delegate { HandleMove(); data.initDone = true; wasRun = false; }));
+        //        return;
+        //    }
+        //}    
+
+
+
+
 
         if (nextGrid == null)
         {

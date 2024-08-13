@@ -72,6 +72,10 @@ public class SlimeBox : BarrierBase
             {
                 temp.Add(item);
             }
+            if (item.barrierBase != null && item.barrierBase.barrierType == BarrierType.Boom)
+            {
+                temp.Add(item);
+            }
         }
         if (temp.Count >= 3)
         {

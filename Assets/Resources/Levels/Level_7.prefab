@@ -7925,7 +7925,7 @@ MonoBehaviour:
       countSlime: 3
   conditionTime:
     time: 0
-  boomLimit: 40
+  boomLimit: 15
   row: 0
   cow: 0
   parentGrid: {fileID: 4415530528900899463}
@@ -14906,6 +14906,118 @@ PrefabInstance:
       propertyPath: gridBase
       value: 
       objectReference: {fileID: 4281505062159982961}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: isCustom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[0].count
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[1].count
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[0].giftType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[1].giftType
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[2].giftType
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[3].giftType
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[4].giftType
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[5].giftType
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[6].giftType
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[7].giftType
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[0].percentUp
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[1].percentUp
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[2].percentUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[3].percentUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[4].percentUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[5].percentUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[6].percentUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[7].percentUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[0].percentDown
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[1].percentDown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[2].percentDown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[3].percentDown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[4].percentDown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[5].percentDown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[6].percentDown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654534025234303234, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
+      propertyPath: lsGiftInGames.Array.data[7].percentDown
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1654534025234303237, guid: 1af80ce0f4552b04fa35003c523d88ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.579

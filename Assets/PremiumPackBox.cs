@@ -32,7 +32,7 @@ public class PremiumPackBox : BaseBox
     }
     public void InitState()
     {
-
+         
     }
     private void ShowButtonClose()
     {
